@@ -1,0 +1,15 @@
+{
+	"name" : "wikidata-annotation-feeder",
+	"version" : "0.1.0",
+	"author" : "Amanpreet Singh <apsdehal@gmail.com>",
+	"description" : "A browser plugin based on Pundit annotation software that helps you create annotations and feed them on wikidata from websites",
+	"repository": {
+	    "type": "git",
+	    "url": "https://github.com/apsdehal/WikidataAnnotationFeeder.git"
+	}, "
+	dependencies": {
+		"qunitjs" : "1.x.x",
+		"jquery" : "2.x.x"
+    },
+
+}
