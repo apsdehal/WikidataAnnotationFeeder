@@ -5,25 +5,32 @@
  *
  * @param url string URL of the api you want to interact with, default => Wikidata's API
  * @param lang string Language in which you want to query Wiki's api, default => 'en'
+ * @param cb function Callback function to execute
  */
 
 dojo.require("dojo.io.script");
 var api = {
 	url: 'https://www.wikidata.org/w/api.php',
 	lang: 'en',
-	type: 'jsonp',
-	handle: this,
-	searchEntity: function( type, search ){
+	searchEntity: function( type, search, cb ){
+		var handle = this;
 		var params = {
-			action: 'wbsearchentities'
+			action: 'wbsearchentities',
 			type:type,
-			language: this.lang;
+			format: 'json',
+			language: this.lang,
 			search: search,
-			callback: ''
-		}
-		return dojo.io.script.get(
+		};
+
+		var dojoObject = dojo.io.script.get({
 				url: handle.url,
+				handleAs: 'json',
 				content: params,
-			)
-	}
+				callbackParamName: 'callback',
+				load: function( response ) {
+						if( response.success == 1 )
+							cb( response.search );
+				},
+		});
+	},
 }
