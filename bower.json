@@ -6,10 +6,11 @@
 	"repository": {
 	    "type": "git",
 	    "url": "https://github.com/apsdehal/WikidataAnnotationFeeder.git"
-	}, "
-	dependencies": {
-		"qunitjs" : "1.x.x",
-		"jquery" : "2.x.x"
-    },
+	},
+	"dependencies": {
+		"qunit" : "1.x.x",
+		"jquery" : "2.x.x",
+		"dojo" : "1.9.x"
+    }
 
 }
