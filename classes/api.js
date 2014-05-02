@@ -14,17 +14,18 @@ var API = {
 	lang: 'en',
 
 	/**
-	 * Function to get a specific type of entity from wikiapi
+	 * Basic setup function for taking up various type of actions for AJAX requests
 	 *
-	 * @param type string Defines what to search among Item and Properties
-	 * @param search string Basic parameter to be searched
-	 * @param cb function Callback to be applied on the result.
+	 * @param action string Action parameter based on what given and required on Wikidata API
+	 * @param type string type of the search query, defaults to item
+	 * @param search string the query to be searched through the Wikibase API
+	 * @param cb function Callback function to be called on the result of the query that happened.
 	 */
 
-	searchEntities: function( type, search, cb ){
+	basicCall: function( action, type, search , cb ){
 		var handle = this;
 		var params = {
-			action: 'wbsearchentities',
+			action: action,
 			type:type,
 			format: 'json',
 			language: this.lang,
@@ -41,6 +42,18 @@ var API = {
 							cb( response.search );
 				},
 		});
+	},
+
+	/**
+	 * Function to get a specific type of entity from wikiapi
+	 *
+	 * @param type string Defines what to search among Item and Properties
+	 * @param search string Basic parameter to be searched
+	 * @param cb function Callback to be applied on the result.
+	 */
+
+	searchEntities: function( type, search, cb ){
+		this.basicCall('wbsearchentities', type, search, cb);
 	},
 
 	/**
