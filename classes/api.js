@@ -1,5 +1,5 @@
 /**
- * Class for querying any wiki api
+ * Class for querying any wiki's api
  * @author Amanpreet Singh <apsdehal@gmail.com>
  * dependencies: dojo.js <http://dojotoolkit.org/
  *
