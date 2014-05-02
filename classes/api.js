@@ -5,14 +5,23 @@
  *
  * @param url string URL of the api you want to interact with, default => Wikidata's API
  * @param lang string Language in which you want to query Wiki's api, default => 'en'
- * @param cb function Callback function to execute
  */
 
+//Including the required dojo js file
 dojo.require("dojo.io.script");
-var api = {
+var API = {
 	url: 'https://www.wikidata.org/w/api.php',
 	lang: 'en',
-	searchEntity: function( type, search, cb ){
+
+	/**
+	 * Function to get a specific type of entity from wikiapi
+	 *
+	 * @param type string Defines what to search among Item and Properties
+	 * @param search string Basic parameter to be searched
+	 * @param cb function Callback to be applied on the result.
+	 */
+
+	searchEntities: function( type, search, cb ){
 		var handle = this;
 		var params = {
 			action: 'wbsearchentities',
@@ -33,4 +42,37 @@ var api = {
 				},
 		});
 	},
+
+	/**
+	 * Function to get an arsenal of items from wikiapi
+	 *
+	 * @param search string Basic parameter to be searched
+	 * @param cb function Callback to be applied on the result.
+	 */
+
+	searchItems: function( search, cb ){
+		this.searchEntities('item', search, cb);
+	},
+
+
+	/**
+	 * Function to get an arsenal of properties from wikiapi
+	 *
+	 * @param search string Basic parameter to be searched
+	 * @param cb function Callback to be applied on the result.
+	 */
+
+	searchProperties: function( search, cb ){
+		this.searchEntities('property', search, cb);
+	},
+
+	/**
+	 * Function to get an arsenal of value items from wikiapi
+	 *
+	 * @param search string Basic parameter to be searched
+	 * @param cb function Callback to be applied on the result.
+	 */
+	searchValues: function( search, cb ){
+		this.searchEntities('item', search, cb);
+	}
 }
