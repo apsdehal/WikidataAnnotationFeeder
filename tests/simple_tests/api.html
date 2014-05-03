@@ -10,14 +10,17 @@
 	<script src="../../classes/api.js" type="text/javascript"></script>
 	<script>
 		API.searchItems('Hello', function (results) {
-			console.log(results);
+			console.log(results.search);
 		});
 		API.searchProperties('Location', function (results) {
-			console.log(results);
+			console.log(results.search);
 		});
 		API.searchValues('London', function (res) {
-			console.log(res);
+			console.log(res.search);
 		});
+		API.getEntities('Q42', function (result){
+			console.log(result.entities);
+		})
 	</script>
 </body>
 </html>

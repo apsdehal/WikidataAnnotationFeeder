@@ -16,31 +16,22 @@ var API = {
 	/**
 	 * Basic setup function for taking up various type of actions for AJAX requests
 	 *
-	 * @param action string Action parameter based on what given and required on Wikidata API
-	 * @param type string type of the search query, defaults to item
-	 * @param search string the query to be searched through the Wikibase API
+	 * @param params object Parameters to be passed to AJAX call
 	 * @param cb function Callback function to be called on the result of the query that happened.
 	 */
 
-	basicCall: function( action, type, search , cb ){
+	basicCall: function( params , cb ){
 		var handle = this;
-		var params = {
-			action: action,
-			type:type,
-			format: 'json',
-			language: this.lang,
-			search: search,
-		};
 
-		var dojoObject = dojo.io.script.get({
-				url: handle.url,
-				handleAs: 'json',
-				content: params,
-				callbackParamName: 'callback',
-				load: function( response ) {
-						if( response.success == 1 )
-							cb( response.search );
-				},
+		dojo.io.script.get({
+			url: handle.url,
+			handleAs: 'json',
+			content: params,
+			callbackParamName: 'callback',
+			load: function( response ) {
+					if( response.success == 1 )
+						cb( response );
+			},
 		});
 	},
 
@@ -53,7 +44,14 @@ var API = {
 	 */
 
 	searchEntities: function( type, search, cb ){
-		this.basicCall('wbsearchentities', type, search, cb);
+		var params = {
+			action: 'wbsearchentities',
+			type:type,
+			format: 'json',
+			language: this.lang,
+			search: search,
+		};
+		this.basicCall( params, cb );
 	},
 
 	/**
@@ -85,7 +83,17 @@ var API = {
 	 * @param search string Basic parameter to be searched
 	 * @param cb function Callback to be applied on the result.
 	 */
+
 	searchValues: function( search, cb ){
 		this.searchEntities('item', search, cb);
+	},
+
+	getEntities: function( id, cb ){
+		var params = {
+			action: 'wbgetentities',
+			ids:id,
+			format: 'json',
+		};
+		this.basicCall(params, cb);
 	}
 }
