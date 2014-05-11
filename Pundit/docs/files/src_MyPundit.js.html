@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;MyPundit.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;MyPundit.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.myPundit
+ * @extends pundit.baseComponent
+ * @description Handles the authentication workflow and stores informations
+ * about the logged in user, like username, notebooks and other useful stuff.&lt;br&gt;
+ * Checks if the user is logged in at startup, and request him to log in 
+ * if needed.
+ *&#x2F;
+
+&#x2F;&#x2F; TODO: move auth+user&#x27;s code from authRequests.js to here .. !
+
+dojo.provide(&quot;pundit.MyPundit&quot;);
+dojo.declare(&quot;pundit.MyPundit&quot;, pundit.BaseComponent, {
+
+    opts: {
+        loginServer: &#x27;&#x27;
+    },
+
+    &#x2F;&#x2F; TODO: move this comment to some @property and some into the class declaration
+    &#x2F;*
+    * @constructor
+    * @description Initializes the component
+    * @param options {object}
+    * @param options.debug {boolean} wether or not to .showFilteringOptions debug mode for this component
+    *&#x2F;
+    constructor: function(options) {
+        var self = this,
+            my = &#x27;&lt;span class=&quot;pundit-gui-button&quot; id=&quot;pundit-mypundit-login-button&quot;&gt;Log in&lt;&#x2F;span&gt;&#x27;+
+                &#x27;&lt;span class=&quot;pundit-gui-button&quot; id=&quot;pundit-mypundit-loggedin-button&quot;&gt;&lt;&#x2F;span&gt;&#x27; +
+                &#x27;&lt;span class=&quot;pundit-gui-button&quot; id=&quot;pundit-mypundit-this-page-button&quot;&gt;Annotations&lt;span class=&quot;pundit-icon-page&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x27; + 
+                &#x27;&lt;span class=&quot;pundit-gui-button&quot; id=&quot;pundit-mypundit-myitems-button&quot;&gt;My Items&lt;span id=&quot;pundit-new-myitems&quot;&gt;(+1)&lt;&#x2F;span&gt;&lt;span class=&quot;pundit-icon-favorite&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x27;;
+
+        dojo.query(&#x27;#pundit-gui-topbar&#x27;).append(my);
+
+        self.store = new pundit.RemoteStorageHandler({debug: self.opts.debug});
+        
+        self.initBehaviors();
+        self.logged = false;
+		
+		
+		self.user = {};
+
+        requester.checkLogin(function(data) {
+            self.setLogged(data.loginStatus == 1, data);
+            self.opts.loginServer = data.loginServer;
+        });
+        
+        requester.onLogin(function(data) {
+            self.setLogged(true, data);
+        });
+        
+        _PUNDIT.init.onInitDone(function(){
+            
+        });
+        
+        self.highlightingMode = _PUNDIT.config.highlightingModeDefault;
+        
+        self.log(&quot;MyPundit up and running&quot;);
+        
+    }, &#x2F;&#x2F; constructor()
+	
+    &#x2F;**
+        Gets the current annotations visibility mode in an asynchronous fashion 
+        @method getAnnotationVisibility
+        @param callback {function} the function to be called with the visibility mode as a parameter
+    *&#x2F;
+    getAnnotationVisibility: function(callback) {
+        var self = this;
+        if (typeof(self.annotationVisibility) === &#x27;undefined&#x27;) {
+            self.store.read(&quot;mode&quot;);
+            self.store.onStoreRead(function(mode){
+                var mymode = mode.value;
+            
+                if (typeof(mymode) === &#x27;undefined&#x27;) {
+            		if (_PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].defaultFilteringOption !== &#x27;undefined&#x27;) {
+            			mymode= _PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].defaultFilteringOption;
+                        self.setAnnotationVisibility(mymode);
+            		}    
+                }
+            
+                self.annotationVisibility = mymode;
+                callback(self.annotationVisibility);
+            
+            });
+        } else {
+            callback(self.annotationVisibility);
+        }
+    },
+    
+	setAnnotationVisibility: function(scope) {
+		var self = this;
+		self.annotationVisibility = scope;
+        self.store.save(&#x27;mode&#x27;, scope);
+		tooltip_viewer.refreshAnnotations();
+	},
+
+    setLogged: function(flag, data) {
+        var self = this;
+        if (flag) {
+			&#x2F;&#x2F;TODO: as soon as the server receives a proper field...use the proper one
+			var screenName = (data.fullName) ? data.fullName : &quot;User: &quot; + data.id;
+            self.logged = true;
+
+            dojo.query(&#x27;#pundit-mypundit-loggedin-button&#x27;).html(screenName + &quot;&lt;span class=&#x27;pundit-icon-loggedin&#x27;&gt;&lt;&#x2F;span&gt;&quot;);
+
+
+            &#x2F;&#x2F; TODO: WHY IS MYPUNDIT SHOWING THE TOPBAR!!!!1! Move this code into the topbar ...............
+            &#x2F;&#x2F; dojo.addClass(dojo.byId(&#x27;pundit-gui-topbar&#x27;), &#x27;pundit-loggedin&#x27;);
+            dojo.query(&#x27;#pundit-gui-topbar&#x27;).addClass(&#x27;pundit-logged-in pundit-loggedin&#x27;).removeClass(&#x27;pundit-logged-off&#x27;);
+            
+            &#x2F;&#x2F; Save user&#x27;s information for future use
+            self.user = {
+                email: data.email,
+                firstName: data.firstName,
+                lastName: data.lastName,
+                id: data.id,
+                uri: data.uri,
+                openid: data.openid
+            };
+
+        } else {
+            self.logged = false;
+
+            self.user = {};
+
+            &#x2F;&#x2F;TODO Send a message?
+            &#x2F;&#x2F;mySemlibInfoContainer doesn&#x27;t exist anymore&#x27;
+            &#x2F;&#x2F;if (typeof(data.msg) !== &#x27;undefined&#x27;)
+            &#x2F;&#x2F;    dojo.query(&#x27;#mySemlibInfoContainer&#x27;).html(data.msg);
+        }
+    },
+
+    initBehaviors: function() {
+        var self = this;
+
+        dojo.connect(dojo.byId(&#x27;pundit-mypundit-loggedin-button&#x27;), &#x27;onclick&#x27;, function(e) {
+            var pos = dojo.position(e.target).x - 20;
+            &#x2F;&#x2F;TODO: this call to getAnnotationVisibility ensures that the self.annotationVisibility is bound when shwing the action menu. IT SUCKS but works!
+            self.getAnnotationVisibility(function(mode){
+                cMenu.show(pos, 20, &#x27;&#x27;, &#x27;semlibUserMenu&#x27;, &#x27;pundit-cm-bottom&#x27;);    
+            });
+            
+        });
+
+        dojo.connect(dojo.byId(&#x27;pundit-mypundit-login-button&#x27;), &#x27;onclick&#x27;, function(e){
+            if (!self.logged) {
+                requester.showLoginForm(self.opts.loginServer);
+                requester.openLoginPopUp();
+            }
+        });
+        
+        dojo.connect(dojo.byId(&#x27;pundit-mypundit-this-page-button&#x27;), &#x27;onclick&#x27;, function(e){
+            var pos = dojo.position(e.target).x - 20;
+            var item = _PUNDIT[&#x27;items&#x27;].getItemByUri(window.location.href);
+            if (typeof item === &#x27;undefined&#x27;)
+                item =_PUNDIT[&#x27;pageHandler&#x27;].createItemFromPage();
+            cMenu.show(pos, 20, item, &#x27;punditThisPageMenu&#x27;, &#x27;pundit-cm-bottom&#x27;);
+        });
+        
+        cMenu.addAction({
+            type: [&#x27;semlibUserMenu&#x27;],
+            name: &#x27;semlibLogout&#x27;,
+            label: &#x27;Sign out&#x27;,
+            showIf: function(xp) { 
+                return true;
+            },
+            onclick: function(xp) {
+                requester.logout(function(msg) {
+                    self.setLogged(false, msg);
+                });
+                dojo.removeClass(dojo.byId(&#x27;pundit-gui-topbar&#x27;), &#x27;pundit-loggedin&#x27;);
+                return true;
+            }
+        });
+        
+        if (_PUNDIT.config.showSettings) {
+
+            cMenu.addAction({
+                type: [&#x27;semlibUserMenu&#x27;],
+                name: &#x27;semlibSettings&#x27;,
+                label: &#x27;Settings&#x27;,
+                showIf: function() { 
+                    return true;
+                },
+                onclick: function() {
+                    alert(&#x27;soon enough&#x27;);
+                    return true;
+                }
+            });
+			
+        }
+
+        if (_PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].active === true) {
+			
+            self.notebookManager = new pundit.NotebookManager({
+                name: &quot;NotebookManager&quot;,
+                title: &quot;Notebook Manager&quot;,
+                drag:true,
+                width:500
+            });
+			
+            cMenu.addAction({
+                type: [&#x27;semlibUserMenu&#x27;],
+                name: &#x27;punditManageNotebooks&#x27;,
+                label: &#x27;Manage Notebooks&#x27;,
+                showIf: function() { 
+                    return true;
+                },
+                onclick: function() {
+                    self.notebookManager.show(150,150,{
+                        title: &quot;Notebook Manager&quot;
+                    });
+                }
+            });
+			
+        }
+
+
+        if (_PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].showFilteringOptions === true) {
+		
+            cMenu.addAction({
+                type: [&#x27;semlibUserMenu&#x27;],
+                name: &#x27;punditAnnotationsVisibilityShowAll&#x27;,
+                label: &#x27;View all notebooks&#x27;,
+                showIf: function() {
+                    return myPundit.annotationVisibility != &#x27;all&#x27;;
+                },
+                onclick: function() {
+                    semlibWindow.closeAllPanels();
+                    self.setAnnotationVisibility(&#x27;all&#x27;);
+                    return true;
+                }
+            });
+
+            cMenu.addAction({
+                type: [&#x27;semlibUserMenu&#x27;],
+                name: &#x27;punditAnnotationsVisibilityShowActive&#x27;,
+                label: &#x27;View active notebooks only&#x27;,
+                showIf: function() { 
+                    return self.annotationVisibility != &#x27;active&#x27;;
+                },
+                onclick: function() {
+                    semlibWindow.closeAllPanels();
+                    self.setAnnotationVisibility(&#x27;active&#x27;);
+                    return true;
+                }
+            });
+           
+			
+        }
+
+        &#x2F;&#x2F; TODO: move me to some other button somewhere else?
+        cMenu.addAction({
+            type: [&#x27;punditThisPageMenu&#x27;],
+            name: &#x27;showAllAnnotations&#x27;,
+            label: &#x27;Show all annotations&#x27;,
+            showIf: function() {
+                &#x2F;&#x2F; Dont show the button if we are refresing annotations
+                return !_PUNDIT.tooltipViewer.isRefreshingAnnotations;
+            },
+            onclick: function() {
+                tooltip_viewer.showAllAnnotations();
+                return true;
+            }
+        });
+
+        &#x2F;&#x2F; TODO: move me to some other button somewhere else?
+        cMenu.addAction({
+            type: [&#x27;punditThisPageMenu&#x27;],
+            name: &#x27;closeAllOpenedAnnotations&#x27;,
+            label: &#x27;Close all annotations&#x27;,
+            showIf: function() { 
+                return semlibWindow.isSomePanelOpen();
+            },
+            onclick: function() {
+                semlibWindow.closeAllPanels();
+                return true;
+            }
+        });
+        
+        if (_PUNDIT.config.enablePageBookmark) {
+        
+            cMenu.addAction({
+                type: [&#x27;punditThisPageMenu&#x27;],
+                name: &#x27;AddPageToMyItems&#x27;,
+                label: &#x27;Add This Page to My Items&#x27;,
+                showIf: function() {
+                    var item = _PUNDIT[&#x27;items&#x27;].itemContainers.MyItems.getItemFromUri(window.location.href);
+                    return (typeof(item) === &#x27;undefined&#x27;);
+                },
+                onclick: function() {
+                    var item = _PUNDIT[&#x27;pageHandler&#x27;].createItemFromPage();
+                    previewer.buildPreviewForItem(item);
+                    semlibMyItems.addItem(item, true);
+                    &#x2F;&#x2F;semlibWindow.show_pundittabmyitems();
+                    semlibMyItems.show_pundittabfiltermyitemspages();
+                    return true;
+                }
+            });
+
+        }
+        
+        cMenu.addAction({
+            type: [&#x27;punditThisPageMenu&#x27;],
+            name: &#x27;TurnHighlightingOn&#x27;,
+            label: &#x27;Turn Highlighting On&#x27;,
+            showIf: function() { 
+                return _PUNDIT.config.enableHighlightingMode &amp;&amp; !self.highlightingMode;
+            },
+            onclick: function() {
+                self.highlightingMode = true;
+                tooltip_viewer.consolidate();
+                return true;
+            }
+        });
+        
+        cMenu.addAction({
+            type: [&#x27;punditThisPageMenu&#x27;],
+            name: &#x27;TurnHighlightingOff&#x27;,
+            label: &#x27;Turn Highlighting Off&#x27;,
+            showIf: function() { 
+                return _PUNDIT.config.enableHighlightingMode &amp;&amp; self.highlightingMode;
+            },
+            onclick: function() {
+                self.highlightingMode = false;
+                tooltip_viewer.consolidate();
+                return true;
+            }
+        });
+        
+
+    } &#x2F;&#x2F; initBehaviors();
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

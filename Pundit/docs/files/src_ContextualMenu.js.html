@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;ContextualMenu.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;ContextualMenu.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.contextualMenu
+ * @extends pundit.baseComponent
+ * @description Provides methods and callbacks to open a contextual
+ * menu with customizable options and actions. &lt;br&gt;
+ * The actions are organized by &quot;types&quot;, various components can activate
+ * the contextual menu for a certain type, and all of the actions
+ * subscribed with that type will be shown.&lt;br&gt;
+ * Each action can have its own function which decides wether to show it
+ * or not, and its own onClick callback to be executed.&lt;br&gt;
+ * When the contextual menu is shown, an unique identifier or a complex
+ * data structure must be passed in, allowing each action to run their 
+ * showIf() function, and eventually the onclick().
+ *&#x2F;
+dojo.provide(&quot;pundit.ContextualMenu&quot;);
+dojo.declare(&quot;pundit.ContextualMenu&quot;, pundit.BaseComponent, {
+
+    opts: {
+        hideTimerMS: 2500,
+        hideMouseLeaveMS: 500
+    },
+
+    &#x2F;&#x2F; TODO: move this comment to some @property and some into the class declaration
+    &#x2F;*
+    * @constructor
+    * @description Initializes pundit!
+    * @param options {object}
+    * @param options.debug {boolean} wether or not to activate debug of the component&lt;br&gt;
+    * @param options.hideTimerMS {number, milliseconds} Time to wait before automatically
+    * hide the contextual menu if the mouse has never entered it.&lt;br&gt;
+    * @param options.hideMouseLeaveMS {number, milliseconds} Time to wait before automatically
+    * hide the contextual menu when the mouse exits its elements.
+    *&#x2F;
+    constructor: function(options) {
+        var self = this;
+        
+        self.initHTML();
+        self.initBehaviors();
+
+        self.currentURL = &#x27;&#x27;;
+        self.currentType = &#x27;&#x27;;
+
+	    self.actions = {};
+	    self.hideTimer = null;
+        
+        self.customclass = &#x27;&#x27;;
+        self.log(&quot;Contextual menu up and running!&quot;);
+    },
+
+    initHTML: function() {
+        var c;
+            c = &#x27;&lt;div id=&quot;pundit-cm&quot; class=&quot;pundit-base pundit-hidden&quot;&gt;&#x27;;
+        &#x2F;&#x2F; TODO: add a title?
+        &#x2F;&#x2F; c += &#x27;&lt;span class=&quot;pundit-cm-header&quot;&gt;Un titolo ad effetto&lt;&#x2F;span&gt;&#x27;;
+        c += &#x27;&lt;&#x2F;div&gt;&#x27;;
+
+        dojo.query(&#x27;body&#x27;).append(c);
+
+    },
+
+    initBehaviors: function() {
+        var self = this;
+        
+        &#x2F;&#x2F; Hide the menu on mouse out
+        dojo.connect(dojo.byId(&#x27;pundit-cm&#x27;), &#x27;onmouseleave&#x27;, function(e) { 
+            clearTimeout(self.hideTimer);
+            self.hideTimer = (function(_e){return setTimeout(function() { self.hide(_e);}, self.opts.hideMouseLeaveMS)})(e);
+        });
+
+        &#x2F;&#x2F; Highlight the xpointer on mouse in, if it&#x27;s an xpointer
+        dojo.connect(dojo.byId(&#x27;pundit-cm&#x27;), &#x27;onmouseenter&#x27;, function() { 
+            clearTimeout(self.hideTimer);
+			&#x2F;&#x2F; tooltip_viewer.highlightByXpointer(self.currentURL);
+        });
+
+        &#x2F;&#x2F; Cancel any scroll event when hovering the contextual menu
+        dojo.connect(dojo.byId(&#x27;pundit-cm&#x27;), (!dojo.isMozilla ? &quot;onmousewheel&quot; : &quot;DOMMouseScroll&quot;), function(e){
+            dojo.stopEvent(e);
+        });
+
+        &#x2F;&#x2F; Hide contextual menu if the page.. or everything scrolls
+        dojo.connect(dojo.query(&#x27;body&#x27;)[0], (!dojo.isMozilla ? &quot;onmousewheel&quot; : &quot;DOMMouseScroll&quot;), function(e){
+            self.hide(e);
+        });
+
+
+    }, &#x2F;&#x2F; initBehaviors()
+    
+    &#x2F;**
+     * Adds an action for the given types.&lt;br&gt;
+     * Example of the action object: &lt;br&gt;
+     * &lt;pre&gt;{
+     * ....type: [&#x27;myUniqueType&#x27;],
+     * ....name: &#x27;removeMyItem&#x27;,
+     * ....label: &#x27;Remove this DOM item&#x27;,
+     * ....showIf: function(id) { 
+     * ........return dojo.query(&#x27;#&#x27;+id).length !== 0;
+     * ....},
+     * .....onclick: function(id) {
+     * ........dojo.destroy(id);
+     * ....}
+     * }&lt;&#x2F;pre&gt;
+     * This action will destroy a DOM node with the given id. The menu option
+     * will be shown if an element with the given id exists.
+     * @method addAction
+     * @param action {object}
+     * @param action.type {array of strings}: List of types to subscribe this action to. &lt;br&gt;
+     * The special type &quot;__all&quot; means that this action must be shown disregarding the
+     * type passed to the show() function.
+     * @param action.name (string): Unique name of this action, used for HTML classes, so no
+     * spaces or strange characters are allowed. To be safe just use camelcase
+     * letters.&lt;br&gt;
+     * @param action.label {string}: Label to be displayed for this menu action.
+     * @param action.showIf(data) {function}: function which decides wether or not show this
+     * action in the menu. The data parameter passed in is the same parameter
+     * passed when showing the menu. Usually an URI or an identifier useful
+     * to the subscribing component to make its job.
+     * @param action.onclick(data) {function}: Function to be called when the users clicks
+     * on this action. The data parameter passed to the callback is an unique
+     * identifier of the item we are showing the menu for, or an equivalent
+     * complex structure. Usually just an identifier or an URI. &lt;br&gt;
+     * If the onclick() function returns true, the contextual menu will be hidden.
+     *&#x2F;
+    addAction: function(action) {
+        var self = this,
+            ob = {},
+            selector = &#x27;#pundit-cm span.pundit-cm-button.&#x27;+action.name;
+
+        &#x2F;&#x2F; Add a behavior for this button
+        ob[selector] = {&#x27;onclick&#x27;: function(e) { self.menuItemMouseClickHandler(e, action.name); }};
+        dojo.behavior.add(ob);
+        dojo.behavior.apply();
+
+        &#x2F;&#x2F;for (var i in action.type) {
+        for (var i = action.type.length; i--;) {
+            var t = action.type[i];
+
+            &#x2F;&#x2F; Create the callbacks if needed
+            self.addTypeCallbacks(t);
+
+            &#x2F;&#x2F; Create the new action type if needed
+            if (typeof(self.actions[t]) === &#x27;undefined&#x27;)
+                self.actions[t] = {};
+        
+            self.actions[t][action.name] = action;
+            
+            if (dojo.query(&#x27;#pundit-cm span.pundit-cm-button.&#x27;+action.name).length === 0)
+                dojo.query(&#x27;#pundit-cm&#x27;).append(&#x27;&lt;span class=&quot;pundit-cm-button pundit-gui-button &#x27;+action.name+&#x27;&quot;&gt;&#x27;+action.label+&#x27;&lt;&#x2F;span&gt;&#x27;);
+        
+            self.log(&#x27;Added the action &#x27;+action.name+&#x27; for type &#x27;+t);
+        }
+        
+    }, &#x2F;&#x2F; addAction()
+    
+    &#x2F;**
+     * Shows the contextual menu for the given type and identifier, at
+     * the given x,y coordinates. &lt;br&gt;
+     * Each component can open a contextual menu for a given type, passing
+     * in an identifier which will be used by showIf() and onclick() functions
+     * to do their job.
+     * @method show
+     * @param x {number} x coordinate where to show the contextual menu
+     * @param y {number} y coordinate where to show the contextual menu
+     * @param url {string} unique identifier to identify the clicked resource
+     * @param type {string} type of actions to show
+     *&#x2F;
+    show: function(x, y, url, type, position) {
+        var self = this,
+            actions = self.actions[type] || {};
+        
+        for (var i in self.actions[&#x27;__all&#x27;]) &#x2F;&#x2F;ok object
+            actions[i] = self.actions[&#x27;__all&#x27;][i];
+        
+        self.currentURL = url;
+        self.currentType = type;
+
+        if (typeof self[&#x27;fireOnTypeShow_&#x27;+type] !== &#x27;undefined&#x27;){
+            &#x2F;&#x2F; Call the onTypeShow callbacks for this type
+            self[&#x27;fireOnTypeShow_&#x27;+type].call(self, url);
+        }else{
+            console.log(&#x27;No action defined for menu&#x27; + type);
+            return;
+        }
+
+        &#x2F;&#x2F; TODO: add a generator for the title of this thing..
+        &#x2F;&#x2F; dojo.query(&#x27;#pundit-cm .pundit-cm-header&#x27;).html(openAnnNum+&#x27; of &#x27;+annNum + &#x27; annotations shown.&#x27;);
+
+        dojo.query(&#x27;#pundit-cm .pundit-cm-button&#x27;).forEach(function(i){
+            dojo.addClass(i, &#x27;pundit-hidden&#x27;);
+        });
+
+        &#x2F;&#x2F; Hide the menu item if there&#x27;s a showIf function and it return false
+        for (var ac in actions) {
+            dojo.query(&#x27;#pundit-cm .pundit-cm-button.&#x27;+ac).removeClass(&#x27;pundit-hidden&#x27;)
+            if (typeof(actions[ac].showIf) === &#x27;function&#x27; &amp;&amp; !actions[ac].showIf(url))
+                dojo.query(&#x27;#pundit-cm .pundit-cm-button.&#x27;+ac).addClass(&#x27;pundit-hidden&#x27;)
+        }
+        
+        &#x2F;&#x2F; TODO: if there&#x27;s nothing to show.. just return ?
+        if (dojo.query(&#x27;#pundit-cm .pundit-cm-button:not(.pundit-hidden)&#x27;).length === 0) {
+            self.log(&#x27;ERROR: tried to open a contextual menu with no buttons? type: &#x27;+type+&#x27;, url: &#x27;+url);
+            return;
+        }
+
+
+        &#x2F;&#x2F; Position the menu: defaults to the right
+        var corrX, corrY,
+            position = position || &#x27;pundit-cm-right&#x27;;
+        if (position === &#x27;pundit-cm-bottom&#x27;) {
+            corrX = 0;
+            corrY = 15;
+        } else {
+            corrX = 25;
+            corrY = -15;
+        }
+
+        dojo.style(&#x27;pundit-cm&#x27;, &#x27;top&#x27;, y+corrY + &#x27;px&#x27;);
+        dojo.style(&#x27;pundit-cm&#x27;, &#x27;left&#x27;, x+corrX + &#x27;px&#x27;);
+        dojo.removeClass(&#x27;pundit-cm&#x27;, &#x27;pundit-hidden pundit-cm-bottom pundit-cm-right&#x27;);
+        dojo.addClass(&#x27;pundit-cm&#x27;, position);
+
+        self.log(&#x27;Opened contextual menu for type &#x27;+type+&#x27;: &#x27;+url);
+
+        clearTimeout(self.hideTimer);
+        self.hideTimer = setTimeout(function(e) { self.hide(e); }, self.opts.hideTimerMS);
+
+    }, &#x2F;&#x2F; show()
+
+    &#x2F;*
+     * Adds the onTypeShow_* and onTypeHide_* callbacks, where * is a type. 
+     * All of the types passed to addAction will generate automatically their
+     * two callbacks.
+     * @method addTypeCallbacks
+     * @param type {string} name of the contextual menu type we want to generate 
+     * the callbacks for
+     *&#x2F;
+    addTypeCallbacks: function(type) {
+        var self = this,
+            show = &quot;TypeShow_&quot;+type,
+            hide = &quot;TypeHide_&quot;+type;
+
+        if (typeof(self[&#x27;on&#x27;+show]) !== &#x27;function&#x27;)
+            self.createCallback([show, hide]);
+
+    }, &#x2F;&#x2F; addTypeCallbacks()
+    
+    &#x2F;*
+     * Hides the contextual menu.
+     * @method hide
+     *&#x2F;
+    hide: function (e) {
+        var self = this;
+        &#x2F;&#x2F; If it is shown, hide it
+        if (!dojo.hasClass(&#x27;pundit-cm&#x27;, &#x27;pundit-hidden&#x27;)) {
+            dojo.addClass(&#x27;pundit-cm&#x27;, &#x27;pundit-hidden&#x27;);
+
+            &#x2F;&#x2F; Call the onTypeHide callbacks for this type
+            self[&#x27;fireOnTypeHide_&#x27;+self.currentType].call(self, self.currentURL, e);
+        }
+    },
+    
+    menuItemMouseClickHandler: function(e, action) {
+        var self = this,
+            actions = self.actions[self.currentType] || {};
+            
+        for (var i in self.actions[&#x27;__all&#x27;])
+            actions[i] = self.actions[&#x27;__all&#x27;][i];
+
+        &#x2F;&#x2F; DEBUG: do we need this check? If we have an action.. it 
+        &#x2F;&#x2F; has been added and its safe? OR NOT?!
+        if (typeof(actions[action]) !== &#x27;undefined&#x27;) {
+            self.log(&#x27;Clicked on item &#x27;+action+&#x27; for type &#x27;+self.currentType);
+            if (actions[action].onclick(self.currentURL, e))
+                self.hide(e);
+        }
+        
+        return;
+
+    } &#x2F;&#x2F; menuItemMouseClickHandler()
+
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

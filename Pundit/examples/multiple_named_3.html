@@ -1,0 +1,72 @@
+<!--
+    Pundit: a novel semantic web annotation tool
+    Copyright (c) 2013 Net7 SRL, <http://www.netseven.it/>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    See LICENSE.TXT or visit http://thepund.it for the full text of the license.
+-->
+<html>
+<meta charset="utf-8" />
+<head>
+    <title>[Pundit demo] Multiple named contents</title>
+
+
+    <!-- Get Pundit + Dojo + conf, Init! -->
+    <link rel="stylesheet" href="../css/pundit.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script src="../dojo/dojo/dojo.js.uncompressed.js" type="text/javascript" charset="utf-8"></script>
+    <script src="pundit-conf.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        dojo.registerModulePath("pundit", "../../src");
+        dojo.require('pundit.Init');
+    </script>
+
+    <style>
+        body > section { margin-left: 200px; margin-top: 50px; }
+        body > nav { position: fixed; }
+        .pundit-content {
+            padding: 10px;
+            margin: 10px;
+            border: 2px dashed #666;
+        }
+        img.small {
+            width: 500px;
+        }
+    
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="multiple_named_index.html">Index</a></li>
+            <li><a href="multiple_named_1.html">1st paragraph</a></li>
+            <li><a href="multiple_named_2.html">2nd paragraph</a></li>
+            <li><a href="multiple_named_3.html">3rd paragraph</a></li>
+            <li><a href="multiple_named_4.html">4th paragraph</a></li>
+        </ul>
+    </nav>
+
+<section>
+
+            <div class="pundit-content" about="http://thepund.it/multiple_named_3">
+                <h3>Paragraph number 3</h3>
+                <p>Ut commodo tempus lorem, eget vehicula enim rutrum ac. Fusce facilisis libero quis hendrerit congue. Donec a posuere metus. Mauris vitae porta mi. Ut mattis, sapien quis vehicula rhoncus, magna tortor consequat magna, ut tincidunt ante tortor quis purus. Nam lacinia in lorem id lobortis. Nulla enim libero, malesuada suscipit enim non, hendrerit mattis elit. Sed porttitor urna sed tellus eleifend porta quis sed turpis. Aliquam sollicitudin nisi et congue gravida.</p>
+            </div>
+
+</section>
+
+    </body>
+</html>

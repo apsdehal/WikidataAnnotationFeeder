@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;ResourcesPanel.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;ResourcesPanel.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.ResourcesPanel
+ * @extends pundit.BasePanel
+ * @description Provides a GUI (floating Panel) for showing items grouped according 
+ * from their provenance (&#x27;My Item&#x27;, &#x27;Page Items&#x27;, Vocabularies)
+ *&#x2F;
+dojo.provide(&quot;pundit.ResourcesPanel&quot;);
+dojo.declare(&quot;pundit.ResourcesPanel&quot;, pundit.BasePanel, {
+
+    &#x2F;&#x2F; TODO: move this comment to some @property and some into the class declaration
+    &#x2F;&#x2F; TODO: WTF same comment recognizer AND comment panel ??!
+    &#x2F;*
+    * @constructor
+    * @description Initializes the component
+    * @param options {object}
+    * @param options.name {string} the name of the panel used to create a unique id
+    * @param options.title {string} the title of the panel 
+    * @param options.drag {boolean} if set to true it enable the panel to be dragged
+    * @param options.preview {boolean} if set to true enable the preview visualization (
+    * otherwise the normal preview (in Pundit Window) is used
+    * assigned explicitly dojo&#x27;s &#x27;declaredClass&#x27; field will be used.
+    * @param options.keyInputTimerLength {number} The number of milliseconds to
+    * to wait after a keystroke before querying the service. Default:500
+    * @param options.maxShownItems {number} Max number of items shown in each source container.
+    * Default = 4
+    * @param options.suggestionPanels {object} .
+    * &lt;br&#x2F;&gt;
+    * An object representing the source used for the recognition.
+    * Example:&lt;br&#x2F;&gt;
+    * &lt;code&gt;{&lt;br&#x2F;&gt;
+    *   myitems: {&lt;br&#x2F;&gt;
+    *       label:&#x27;My Items&#x27;&lt;br&#x2F;&gt;
+    *       }, &lt;br&#x2F;&gt;
+    *   pageitems: {&lt;br&#x2F;&gt;
+    *       label: &#x27;Page Items&#x27;&lt;br&#x2F;&gt;
+    *       }, &lt;br&#x2F;&gt;
+    *   properties: {&lt;br&#x2F;&gt;
+    *       label: &#x27;Properties&#x27;,&lt;br&#x2F;&gt;
+    *       expanded: true&lt;br&#x2F;&gt;
+    *       }&lt;br&#x2F;&gt;
+    * }&lt;code&#x2F;&gt;&lt;br&#x2F;&gt;
+    * Where label represent the shown label. Containers are collapsed by defualt unless
+    * expanded is set to true.
+    * @param options.namedEntitiesSources {object} An object representing the source 
+    * used for the lookup. Default is {} meaning that there is no lookup.&lt;br&gt;
+    * To enable lookup from Freebase and Dbpedia:&lt;br&gt;
+    * {&lt;br&#x2F;&gt;
+    *   freebase:{label: &#x27;Freebase&#x27;},&lt;br&gt;
+    *   dbpedia:{label:&#x27;DBpedia&#x27;},&lt;br&gt;
+    *   wordnet:{label:&#x27;Wordnet&#x27;}&lt;br&gt;
+    * }&lt;br&gt;
+    * @param options.searchType {string} The type of search that is performed. Two
+    * kind of searches are supported.&lt;br&gt; 
+    * Default is &#x27;filter&#x27; which filters the items according to input string 
+    * restricting the shown items&lt;br&gt;
+    * &#x27;search&#x27; search in all the items source
+    *&#x2F;
+   
+    &#x2F;&#x2F;TODO use opts for parameters as in selector.js
+   
+    &#x2F;&#x2F;TODO Use parameter to create the different container
+    constructor: function(options) {
+        var self = this;
+        self._lastKeyword = &quot;&quot;;
+        self.previewTimer = null;
+        
+        self.keywordMinimumLength = 3;
+        &#x2F;&#x2F; Ms to wait after a keystroke before querying the service
+        self.keyInputTimerLength = 500;
+        
+        self.maxShownItems = options.maxShownItems || 4;
+        
+        self.suggestionPanels = options.suggestionPanels || {
+                myitems: {
+                    label:&#x27;My Items&#x27;,
+                    expanded: true
+                }, 
+                pageitems: {
+                    label: &#x27;Page Items&#x27;
+                }, 
+                properties: {
+                    label: &#x27;Properties&#x27;,
+                    expanded: true
+                }
+            };
+            
+        self.namedEntitiesSources = options.namedEntitiesSources || {
+&#x2F;&#x2F;            Freebase:{label: &#x27;Freebase&#x27;},
+&#x2F;&#x2F;            DBPedia:{label:&#x27;DBpedia&#x27;},
+&#x2F;&#x2F;            Wordnet:{label:&#x27;Wordnet&#x27;}
+        };
+        
+        &#x2F;&#x2F;DEBUG Find a better way to do this...
+        &#x2F;&#x2F;Do I need an object or is enought an array????
+        self.panels = {};
+        for (var attrname in self.suggestionPanels) {self.panels[attrname] = self.suggestionPanels[attrname];}
+        for (var attrname in self.namedEntitiesSources) {self.panels[attrname] = self.namedEntitiesSources[attrname];}
+
+        &#x2F;&#x2F;TODO Pass directly the function to be used in the search?
+        self.searchType = options.searchType || &#x27;filter&#x27;;
+        
+        &#x2F;&#x2F;What if no vocabs have to been loaded???
+        if (_PUNDIT.config.vocabularies.length !== 0){
+            _PUNDIT[&#x27;vocab&#x27;].onVocabsLoaded(function(){
+                &#x2F;&#x2F;TODO These should be options
+                &#x2F;&#x2F;Add vocabs to suggestion panels
+                self.log(&#x27;Vocab loaded. Init HTML Resource panel&#x27;)
+                for (var i in _PUNDIT.vocab.vocabs){
+                    self.suggestionPanels[i] = {label: _PUNDIT.vocab.vocabs[i].label};
+                    self.panels[i] = i;
+                }
+
+                self.initHTML();
+                self.initDnD();
+                self.initContextMenu();
+                self.initBehaviors(); 
+            });
+        }else{
+            self.initHTML();
+            self.initDnD();
+            self.initContextMenu();
+            self.initBehaviors();
+        }
+        
+        
+        self.createCallback(&#x27;itemAdded&#x27;);
+        
+        self.log(&quot;Resource Panel up and running&quot;);
+        dojo.behavior.apply();              
+    }, &#x2F;&#x2F; constructor
+    
+    &#x2F;&#x2F;Add the HTML to the basePanel content
+    initHTML: function(){
+        var self= this;
+        self.log(&#x27;Init HTML Resource Panel&#x27;);
+        &#x2F;&#x2F;Add content to the base container
+        self.log(&#x27;Resource Panel Contructor&#x27;);
+        self.expandedClass;
+        var  c = &#x27;              &lt;div class=&quot;pundit-rp-literal-panel pundit-hidden&quot;&gt;&#x27;;
+            c += &#x27;                  &lt;div class=&quot;pundit-rp-container-literal&quot;&gt;&#x27;;
+            c += &#x27;                      &lt;span class=&quot;class=&quot;pundit-pane-title&quot; pundit-rp-subtitle&quot;&gt;Insert text (dates should be in YYYY-MM-DD format):&lt;&#x2F;span&gt;&#x27;;
+            c += &#x27;                      &lt;section contenteditable=&quot;true&quot; class=&quot;pundit-rp-literal-text pundit-stop-wheel-propagation&quot; &gt;&lt;&#x2F;section&gt;&#x27;;
+            c += &#x27;                      &lt;div class=&quot;pundit-rp-literal-panel-buttons&quot;&gt;&#x27;;
+            &#x2F;&#x2F;c += &#x27;                          &lt;input class=&quot;pundit-rp-literal-panel-close&quot; type=&quot;button&quot; value=&quot;Close&quot;&#x2F;&gt;&lt;input class=&quot;pundit-rp-literal-panel-done&quot; disabled=&quot;true&quot; type=&quot;button&quot; value=&quot;Done&quot;&#x2F;&gt;&#x27;;
+            c += &#x27;                          &lt;button class=&quot;pundit-rp-literal-panel-close&quot; value=&quot;Close&quot;&gt;Close&lt;&#x2F;button&gt;&lt;button class=&quot;pundit-rp-literal-panel-done&quot; disabled=&quot;true&quot;&gt;Done&lt;&#x2F;button&gt;&#x27;;
+            c += &#x27;                      &lt;&#x2F;div&gt;&#x27;;
+            c += &#x27;                  &lt;&#x2F;div&gt;&#x27;;
+            c += &#x27;              &lt;&#x2F;div&gt;&#x27;;
+            c += &#x27;              &lt;div class=&quot;pundit-rp-search-panel&quot;&gt;&#x27;;
+            c += &#x27;                  &lt;div class=&quot;pundit-rp-container-search&quot;&gt;&#x27;;
+            c += &#x27;                      &lt;span class=&quot;pundit-pane-title pundit-rp-subtitle&quot;&gt;Search:&lt;&#x2F;span&gt;&#x27;;
+            c += &#x27;                      &lt;div&gt;&#x27;;
+            c += &#x27;                          &lt;input class=&quot;pundit-rp-search-input pundit-dialog-input&quot; row=&quot;1&quot; placeholder=&quot;...type here&quot; value=&quot;&quot; type=&quot;text&quot;&#x2F;&gt;&amp;nbsp;&amp;nbsp;&lt;button class=&quot;pundit-rp-add-literal&quot; &gt;Literal&lt;&#x2F;button&gt;&#x27;;
+            c += &#x27;                      &lt;&#x2F;div&gt;&#x27;;
+            c += &#x27;                      &lt;div class=&quot;pundit-rp-suggestions&quot;&gt;&lt;&#x2F;div&gt;&#x27;;
+            c += &#x27;                  &lt;&#x2F;div&gt;&#x27;;
+            c += &#x27;              &lt;&#x2F;div&gt;&#x27;;
+        self.addHTMLContent(c);
+            
+        &#x2F;&#x2F;Add panels for showing suggestions from different sources
+        for (var i in self.suggestionPanels){
+            self.expandedClass = &#x27;&#x27;;
+            if (self.suggestionPanels[i].expanded)
+                self.expandedClass = &#x27;pundit-expanded&#x27;;
+            c =  &#x27;          &lt;div id=&quot;&#x27;+ self._id + &#x27;-container-suggestions-&#x27; + i + &#x27;&quot; class=&quot;pundit-rp-container-suggestions pundit-suggestions fillheight &#x27; + self.expandedClass +&#x27;&quot;&gt;&#x27;;
+            c += &#x27;              &lt;div&gt;&lt;span class=&quot;pundit-icon-collapse pundit-fp-collapsed&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;pundit-fp-source-name&quot;&gt;&#x27; + self.suggestionPanels[i].label + &#x27;&lt;&#x2F;span&gt;&lt;span class=&quot;pundit-items-number&quot;&gt;(0)&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&#x27;;
+            c += &#x27;              &lt;ul id=&quot;&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + i + &#x27;&quot; class=&quot;pundit-rp-suggestions-list pundit-view-list pundit-items list pundit-item-add-button pundit-stop-wheel-propagation&quot;&gt;&lt;&#x2F;ul&gt;&#x27;;
+            c += &#x27;          &lt;&#x2F;div&gt;&#x27;;
+            dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-suggestions&#x27;).append(c);
+        }
+        for (var i in self.namedEntitiesSources){
+            self.expandedClass = &#x27;&#x27;;
+            if (self.namedEntitiesSources[i].expanded)
+                self.expandedClass = &#x27;pundit-expanded&#x27;;
+            c =  &#x27;          &lt;div id=&quot;&#x27;+ self._id + &#x27;-container-suggestions-&#x27; + i + &#x27;&quot; class=&quot;pundit-rp-container-suggestions pundit-items-container pundit-lookup pundit-visible fillheight  &#x27; + self.expandedClass +&#x27;&quot;&gt;&#x27;;
+            c += &#x27;              &lt;div&gt;&lt;span class=&quot;pundit-icon-collapse pundit-fp-collapsed&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;pundit-fp-source-name&quot;&gt;&#x27; + self.namedEntitiesSources[i].label + &#x27;&lt;&#x2F;span&gt;&lt;span class=&quot;pundit-items-number&quot;&gt;(0)&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&#x27;;
+            c += &#x27;              &lt;ul id=&quot;&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + i + &#x27;&quot; class=&quot;pundit-rp-suggestions-list pundit-view-list pundit-items list pundit-item-add-button pundit-stop-wheel-propagation&quot;&gt;&lt;&#x2F;ul&gt;&#x27;;
+            c += &#x27;              &lt;span class=&quot;pundit-error-message&quot;&gt;&#x27; + self.namedEntitiesSources[i].label +&#x27; is not responding&lt;&#x2F;span&gt;&#x27;;
+            c += &#x27;          &lt;&#x2F;div&gt;&#x27;;
+            dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-suggestions&#x27;).append(c);
+        }    
+    },
+    
+    &#x2F;&#x2F;init the itemsDnD for the various container
+    initDnD: function() {
+        var self = this;
+        
+        for (var i in self.suggestionPanels){
+            self[&#x27;itemsDnD&#x27; + i] = new dojo.dnd.Source(self._id + &quot;-suggestions-list-&quot;  + i, {
+                copyOnly: true, 
+                creator: semlibItems.itemNodeCreator,
+                checkAcceptance: function() {return false;}
+            });
+        }
+        for (var i in self.namedEntitiesSources){
+            self[&#x27;itemsDnD&#x27; + i] = new dojo.dnd.Source(self._id + &quot;-suggestions-list-&quot;  + i, {
+                copyOnly: true, 
+                creator: semlibItems.itemNodeCreator,
+                checkAcceptance: function() {return false;}
+            });
+        }
+    }, &#x2F;&#x2F; initDnD
+    
+	
+    performSearch: function(keyword) {
+        var self = this;
+        &#x2F;&#x2F;TODO Consider to include minimum length for the word?
+        if (keyword !== self._lastKeyword){
+            &#x2F;&#x2F;TODO should I pass the search function as parameter?
+            self._lastKeyword = keyword;
+            if (self.searchType === &#x27;filter&#x27;){
+                self.filterItemsByTerm(keyword);
+            &#x2F;&#x2F;Always search in freebase and dbpedia?
+            } else if (self.searchType === &#x27;search&#x27;){
+                self.searchItemsByTerm(keyword);
+            &#x2F;&#x2F;Always search in freebase and dbpedia    
+            }
+			        
+            self.searchNamedEntities(keyword);
+					
+        }
+		
+    },
+	
+    &#x2F;&#x2F;Init the behaviors of the component
+    initBehaviors: function() {
+        var self = this;
+        
+        &#x2F;&#x2F;TODO Do I need a callback to better handle this?
+        dojo.connect(dojo.query(&#x27;body&#x27;)[0], (!dojo.isMozilla ? &quot;onmousewheel&quot; : &quot;DOMMouseScroll&quot;), function(e) {
+            if (e.target.id === &#x27;pundit-tc-triples-container&#x27; &amp;&amp; self.inShowing) {
+                self.hide();
+                dojo.stopEvent(e);
+            }            
+        });
+        
+        dojo.connect(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-search-input&#x27;)[0], &#x27;onkeyup&#x27;, function(e) {
+            &#x2F;&#x2F;self.setLoading(false);
+            clearTimeout(self.keyInputTimer);
+			var keyword = dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-search-input&#x27;)[0].value;
+            self.keyInputTimer = setTimeout(function(){self.performSearch(keyword)}, self.keyInputTimerLength);
+        });
+        
+        dojo.connect(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-add-literal&#x27;)[0], &#x27;onclick&#x27;, function(e) {
+            self.showLiteralPanel(true,false);
+        });
+        
+        dojo.connect(dojo.query(&#x27;#&#x27; +self._id+&#x27; .pundit-rp-literal-text&#x27;)[0], &#x27;onkeyup&#x27;, function(e){
+            if (dojo.query(e.target)[0].innerHTML.replace(&#x2F;&lt;(?:.|\n)*?&gt;&#x2F;gm, &#x27;&#x27;) !== &#x27;&#x27;)
+                dojo.attr(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-panel-done&#x27;)[0], &#x27;disabled&#x27;, false);
+            else
+                dojo.attr(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-panel-done&#x27;)[0], &#x27;disabled&#x27;, true);
+        });
+        
+        dojo.connect(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-panel-close&#x27;)[0], &#x27;onclick&#x27;, function() {
+            self.showLiteralPanel(false,false);
+        });
+        
+        dojo.connect(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-panel-done&#x27;)[0], &#x27;onclick&#x27;, function() {
+            self.createLiteralItem();
+        });
+        
+        &#x2F;&#x2F;Make parametrics this behaviors
+        var beh = {};
+        
+        
+        for (var i in self.panels){
+            (function(_sp){
+                beh[&#x27;#&#x27;+ self._id + &#x27; span.pundit-icon-collapse&#x27;] = {
+                    &#x27;onclick&#x27;: function(e){
+                        var parent = dojo.query(e.target).parent().parent()[0];
+                        if (dojo.hasClass(parent,&#x27;pundit-expanded&#x27;)){
+                            dojo.removeClass(parent,&#x27;pundit-expanded&#x27;);
+                            dojo.style(dojo.query(parent).children(&#x27;ul&#x27;)[0], &#x27;height&#x27; , &#x27;0px&#x27;);
+                            self.adjustPreviewHeight();
+                        }else{
+                           dojo.addClass(parent,&#x27;pundit-expanded&#x27;);
+                           self.adjustPanelsHeight();
+                        }
+                    }
+                };    
+                beh[&#x27;#&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + _sp + &#x27; li.dojoDndItem&#x27;] = {
+                    &#x27;onmouseover&#x27;:function(e){
+                        var img =&#x27;&#x27;,
+                        node,
+                        nodeUri;
+
+                        if (e.target.nodeName === &#x27;LI&#x27;){
+                            node = dojo.query(e.target);
+                        }else{
+                            node = dojo.query(dojo.query(e.target).parent()[0]);
+                            }
+                    
+                        nodeUri = self[&#x27;itemsDnD&#x27; + _sp].getItem(node[0].id).data.value;
+                        &#x2F;&#x2F;previewer.selectAndPreviewItemWithId(node[0].id, nodeUri);
+                        self.showPreview(nodeUri);
+                    },
+                    &#x2F;&#x2F;MULTIPLOP Force the selection of the clicked node to avoid multiple drag
+                    &#x27;onclick&#x27;:function(e) {
+                        var target = e.target;
+                        while (!dojo.hasClass(dojo.query(target)[0], &#x27;dojoDndItem&#x27;))
+                            target = dojo.query(target).parent()[0];
+                        var id = target.id;
+                        self[&#x27;itemsDnD&#x27; + _sp].selectNone();
+                        self[&#x27;itemsDnD&#x27; + _sp].selection[id] = 1;
+                    }
+                };
+                beh[&#x27;#&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + _sp + &#x27; li.dojoDndItem span.pundit-item-label&#x27;] = {
+                    &#x27;onclick&#x27;: function(e) {
+                        var item, node;
+                        
+                        if (e.target.nodeName === &#x27;LI&#x27;){
+                            node = dojo.query(e.target);
+                        }else{
+                            node = dojo.query(dojo.query(e.target).parent()[0]);
+                        }
+
+                        item = self[&#x27;itemsDnD&#x27; + _sp].getItem(node[0].id);  
+                        
+                        self.fireOnItemAdded(item.data);
+                    }          
+                };
+				&#x2F;&#x2F;TODO: merge this code with the previous one...
+                beh[&#x27;#&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + _sp + &#x27; li.dojoDndItem span.pundit-item-add-button&#x27;] = {
+                    &#x27;onclick&#x27;: function(e) {
+                        var item, node;
+                        
+                        if (e.target.nodeName === &#x27;LI&#x27;){
+                            node = dojo.query(e.target);
+                        }else{
+                            node = dojo.query(dojo.query(e.target).parent()[0]);
+                        }
+
+                        item = self[&#x27;itemsDnD&#x27; + _sp].getItem(node[0].id);  
+                        
+                        self.fireOnItemAdded(item.data);
+                    }          
+                };
+                beh[&#x27;#&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + _sp + &#x27; li.dojoDndItem span.pundit-icon-context-button&#x27;] = {
+                    &#x27;onclick&#x27;:function(e) {
+                        var node = dojo.query(dojo.query(e.target).parent()[0]), 
+                        uri = self[&#x27;itemsDnD&#x27; + _sp].getItem(node[0].id).data.value;
+                    
+                        cMenu.show(e.pageX - window.pageXOffset, e.pageY - window.pageYOffset, uri, &#x27;resourceItem&#x27;);
+                    }
+                };
+            
+            })(i);
+            }
+        dojo.behavior.add(beh);   
+        dojo.behavior.apply();  
+    }, &#x2F;&#x2F; initBehaviors
+    
+	
+	searchNamedEntities: function(keyword) {
+		var self = this;
+        &#x2F;&#x2F;Lookup check
+        
+        if (typeof keyword !== &#x27;undefined&#x27;){
+            if(keyword !== &#x27;&#x27;){
+                dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-search-input&#x27;)[0].value = keyword;
+                self.namedEntitiesLookup(keyword);
+            }
+        }
+        self.adjustPanelsHeight();
+	},
+	
+    initContextMenu:function(){
+        var self = this;
+        
+        cMenu.addAction({
+            type: [&#x27;resourceItem&#x27;],
+            name: &#x27;openResourceItemWebPage&#x27;,
+            label: &#x27;Open Web page&#x27;,
+            showIf: function(uri) {
+                var item = _PUNDIT.items.getItemByUri(uri);
+                if (typeof item !== &#x27;undefined&#x27;){
+                    &#x2F;&#x2F;Add check to vocabs???
+                    if (_PUNDIT.items.isTerm(item))
+                        return true;
+                    else
+                        return false;                    
+                }else{
+                    item = _PUNDIT.vocab.getItemsForTerm(uri);
+                    if (typeof item !== &#x27;undefined&#x27;)
+                        return true;
+                    else
+                        return false;    
+                }
+
+            },
+            onclick: function(uri) {
+                window.open(uri, &#x27;SemLibOpenedWebPage&#x27;);
+                return true;
+            }
+        });
+        
+        cMenu.addAction({
+            type: [&#x27;resourceItem&#x27;],
+            name: &#x27;openSemlibResourceWebPage&#x27;,
+            label: &#x27;Show in origin page&#x27;,
+            showIf: function(xp) {
+                
+                var item = _PUNDIT.items.getItemByUri(xp),
+                    pCont = window.location.href;
+                    if (pCont.indexOf(&#x27;#xpointer&#x27;) !== -1)
+                        pCont = pCont.substring(0, pCont.indexOf(&#x27;#&#x27;));
+                    
+                if ((typeof item !== &#x27;undefined&#x27;) 
+                    &amp;&amp; (typeof tooltip_viewer.xpointersAnnotationsId[xp] === &#x27;undefined&#x27;)
+                    &amp;&amp; ((dojo.indexOf(item.rdftype, ns.fragments.text) !== -1) || (dojo.indexOf(item.rdftype, ns.image) !== -1))){
+                        return !tooltip_viewer.xpointersClasses[xp];
+                    }
+                return false;
+            },
+            onclick: function(xp) {
+                var item = _PUNDIT.items.getItemByUri(xp),
+                    fragment = xp.split(&#x27;#&#x27;)[1],
+                    uri = item.pageContext + &#x27;#&#x27; + fragment;
+                window.open(uri, &#x27;SemLibOpenedWebPage&#x27;);
+                self.log(&#x27;Opened a new window to URL &#x27;+uri);
+                return true;
+            }
+        });
+    }, &#x2F;&#x2F; initContextMenu
+    
+
+    clearPanel: function() {
+        var self = this;
+        
+        &#x2F;&#x2F;Stop loading
+        self.lastSearchedTerm = &#x27;&#x27;;
+        for (var i in self.namedEntitiesSources){
+            _PUNDIT[i].cancelRequests();
+            self.setLoading(self._id + &#x27;-container-suggestions-&#x27; + i, false);
+        }
+        
+        dojo.query(&#x27;#&#x27; + self._id + &#x27; div.pundit-rp-container-suggestions.pundit-suggestions&#x27;).forEach(function(item){
+            dojo.removeClass(item, &#x27;pundit-visible&#x27;);
+        });
+        
+        if (typeof dojo.query(&#x27;#&#x27; + self._id + &#x27; input.pundit-rp-search-input&#x27;)[0] !== &#x27;undefined&#x27;){
+            dojo.query(&#x27;#&#x27; + self._id + &#x27; input.pundit-rp-search-input&#x27;)[0].value = &quot;&quot;;
+        }
+            
+        for (var i in self.suggestionPanels){
+            dojo.empty(dojo.byId(self._id + &#x27;-suggestions-list-&#x27; + i));
+            self[&#x27;itemsDnD&#x27; + i].clearItems();
+        }
+        
+    }, &#x2F;&#x2F; clearDnD
+    
+    &#x2F;**
+    * @method load
+    * @description Load the items to be displayed in the panel
+    * @param itemsObject {object} 
+    * (An object representing the items to show gruoped by type. An example object:
+    *       {
+    *            myitems: {
+    *                label:&#x27;My Items&#x27;,
+    *                items: [Array of items object]
+    *            }, 
+    *            pageitems: {
+    *                label: &#x27;Page Items&#x27;,
+    *                items: [Array of items object]
+    *            }, 
+    *            vacab1: {
+    *                label: &#x27;Vocab 1&#x27;,
+    *                items: [Array of items object]
+    *            }
+    *        })
+    * @param term {string} the searched term to be shown in the search input
+    *&#x2F;
+    &#x2F;&#x2F;TODO Move also position in the params object?
+    load:function(itemsObject){
+        var self = this;
+        self.clearPanel(); &#x2F;&#x2F;This should hide all the containers
+        
+        for (var i in itemsObject){
+            if (itemsObject[i].items.length &gt;0){
+                dojo.addClass(dojo.byId(self._id + &#x27;-container-suggestions-&#x27; + i), &#x27;pundit-visible&#x27;);
+                &#x2F;&#x2F;for (var j in itemsObject[i].items){
+                for (var j = itemsObject[i].items.length; j--;){
+                    self[&#x27;itemsDnD&#x27; + i].insertNodes(false, [itemsObject[i].items[j]]);
+                }
+                dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + i + &#x27; span.pundit-items-number&#x27;)[0].innerHTML = &#x27;(&#x27; + self[&#x27;itemsDnD&#x27; + i].getAllNodes().length + &#x27;)&#x27;;
+            }
+        }
+               
+    },
+    
+    &#x2F;**
+    * @method show
+    * @description Show the panel.
+    * @param x {integer} (optionThe x coordinate of the panel
+    * @param y {integer} The x coordinate of the panel
+    * @param params {object}
+    * @param params.title {string} The title of the panel  
+    * @param params.arrow {string} Allow to display an arrow on top of the panel. 
+    * Three position are possible: &quot;left&quot;, &quot;right&quot; and &quot;center&quot;
+    * @param params.literalMode {string} Activate the visualization of the literal panel. 
+    * Two value are possible: &quot;literalEnabled&quot; enable the literal panel showing 
+    * the &quot;Literal&quot; button to pass from item visualization to the literal panel;
+    * &quot;literalOnly&quot; show only the literal panel.
+    *&#x2F;
+    &#x2F;&#x2F;TODO Move also x,y in the params object?
+    show:function(x,y, params){
+        this.inherited(arguments);
+        var self = this;
+        self._lastKeyword = &quot;&quot;;
+        dojo.style(self._id, &#x27;top&#x27;, y+15 + &#x27;px&#x27;);
+        dojo.style(self._id, &#x27;left&#x27;, x + &#x27;px&#x27;);
+		
+        dijit.focus(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-search-input&#x27;)[0]); 
+        
+        if (typeof params !== &#x27;undefined&#x27;){
+            &#x2F;&#x2F;Handle Literals
+            if (typeof params.literalMode !== &#x27;undefined&#x27;){
+                if (params.literalMode === &#x27;literalEnabled&#x27;){
+                    self.enableLiteralButton(true);
+                }else if (params.literalMode === &#x27;literalOnly&#x27;){
+                    self.showLiteralPanel(true,true);
+                }
+            }else{
+                self.enableLiteralButton(false);
+                self.showLiteralPanel(false,false);
+            }
+            &#x2F;&#x2F;Set Title different from default
+            if (typeof params.title !== &#x27;undefined&#x27;){
+                dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-fp-title&#x27;)[0].innerHTML = params.title;
+            }
+            
+            if (typeof params.arrow !== &#x27;undefined&#x27;){
+                if (params.arrow === &#x27;left&#x27;){
+                    dojo.removeClass(dojo.query(&#x27;#&#x27; +self._id + &#x27;.pundit-fp&#x27;)[0], [&#x27;pundit-arrow-right&#x27;, &#x27;pundit-arrow-center&#x27;]);
+                    dojo.addClass(dojo.query(&#x27;#&#x27; +self._id + &#x27;.pundit-fp&#x27;)[0], &#x27;pundit-arrow-left&#x27;); 
+                }else if (params.arrow === &#x27;right&#x27;){
+                    dojo.removeClass(dojo.query(&#x27;#&#x27; +self._id + &#x27;.pundit-fp&#x27;)[0], [&#x27;pundit-arrow-left&#x27;, &#x27;pundit-arrow-center&#x27;]);
+                    dojo.addClass(dojo.query(&#x27;#&#x27; +self._id + &#x27;.pundit-fp&#x27;)[0], &#x27;pundit-arrow-right&#x27;);  
+                }else if (params.arrow === &#x27;center&#x27;){
+                    dojo.removeClass(dojo.query(&#x27;#&#x27; +self._id + &#x27;.pundit-fp&#x27;)[0], [&#x27;pundit-arrow-left&#x27;, &#x27;pundit-arrow-right&#x27;]);
+                    dojo.addClass(dojo.query(&#x27;#&#x27; +self._id + &#x27;.pundit-fp&#x27;)[0], &#x27;pundit-arrow-center&#x27;);  
+                }
+            }
+        }       
+        dojo.behavior.apply();
+		self.adjustPanelsHeight();
+    },
+    
+    &#x2F;**
+    * @method hide
+    * @description Hide the panel (empting the literal panel)
+    *&#x2F;
+    &#x2F;&#x2F;TODO Move this in a specific component 
+    hide: function() {
+        this.inherited(arguments);
+        var self = this;
+        
+        if (self.inShowing) {            
+            self.inShowing = false;            
+            self.showLiteralPanel(false,false);
+            dojo.empty(dojo.query(&#x27;#&#x27; +self._id+&#x27; .pundit-rp-literal-text&#x27;)[0]);
+            self._lastKeyword = &quot;&quot;;
+        }
+        
+        &#x2F;&#x2F;Stop loading
+        self.lastSearchedTerm = &#x27;&#x27;;
+        for (var i in self.namedEntitiesSources){
+            _PUNDIT[i].cancelRequests();
+            self.setLoading(self._id + &#x27;-container-suggestions-&#x27; + i, false);
+        }    
+    }, &#x2F;&#x2F; hide
+    
+    &#x2F;**
+    * @method filterItems
+    * @description Filter between the loaded items according to the word
+    * @param startingWord {string} The word used to filter the items
+    *&#x2F;
+    &#x2F;&#x2F;TODO Improve the search
+    filterItemsByTerm: function(startingWord) {
+        var self = this;
+        
+        &#x2F;&#x2F;DEBUG Do I need this???
+        &#x2F;&#x2F;previewer.deselectCurrentSelectedItem();
+        
+        if (startingWord === &#x27;&#x27;) {
+            for (var i in self.suggestionPanels){
+                var nodes = dojo.query(&#x27;#&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + i + &#x27; li&#x27;);
+                nodes.forEach(function(node) {
+                    dojo.removeClass(node, &#x27;pundit-hidden&#x27;);
+                });
+            }  
+        } else {
+            for (var i in self.suggestionPanels){
+                self.rankItems(self[&#x27;itemsDnD&#x27; + i], startingWord);
+&#x2F;&#x2F;                for (var itemId in self[&#x27;itemsDnD&#x27; + i].map) {
+&#x2F;&#x2F;                    var items =self[&#x27;itemsDnD&#x27; + i].getItem(itemId);
+&#x2F;&#x2F;                    if (items.data.label.toLowerCase().indexOf(startingWord.toLowerCase()) === -1) {
+&#x2F;&#x2F;                        dojo.style(dojo.query(&#x27;#&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + i + &#x27; li#&#x27; + itemId)[0], &#x27;display&#x27;, &#x27;none&#x27;);
+&#x2F;&#x2F;                    } else {
+&#x2F;&#x2F;                        dojo.style(dojo.query(&#x27;#&#x27;+ self._id + &#x27;-suggestions-list-&#x27; + i + &#x27; li#&#x27; + itemId)[0], &#x27;display&#x27;, &#x27;block&#x27;);
+&#x2F;&#x2F;                    }
+&#x2F;&#x2F;                }
+            }
+
+        }
+        &#x2F;&#x2F;Update Items Number
+        for (var i in self.suggestionPanels){
+            dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + i + &#x27; span.pundit-items-number&#x27;)[0].innerHTML = &#x27;(&#x27; + self.getShownItemsNumber(self[&#x27;itemsDnD&#x27; + i]) + &#x27;)&#x27;;
+        }
+		self.adjustPanelsHeight();
+    }, &#x2F;&#x2F; filterItems
+    
+    searchItemsByTerm: function(term){
+        var self = this,
+            itemsObject = _PUNDIT[&#x27;recognizer&#x27;].createItemsObject(term);
+        self.clearPanel();
+        self.load(itemsObject,term);
+    },
+    
+    getShownItemsNumber:function(itemsDnd){
+        var n = 0;
+        itemsDnd.getAllNodes().forEach(function(item){
+            if (dojo.style(item,&#x27;display&#x27;) !== &#x27;none&#x27;)
+                n++;
+        });
+        return n;
+    },
+    
+    &#x2F;&#x2F;Enable the literal button
+    enableLiteralButton: function(enabled) {        
+        var self = this;
+        &#x2F;&#x2F;TODO Optimize this!
+        &#x2F;&#x2F;Add the class to entire literal container to handle this togheter
+        if (enabled) {
+            &#x2F;&#x2F;dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-search-input&#x27;)[0], &#x27;pundit-button-enabled&#x27;);
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-add-literal&#x27;)[0], &#x27;pundit-literal-enabled&#x27;);
+        } else {
+            &#x2F;&#x2F;dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-search-input&#x27;)[0], &#x27;pundit-button-enabled&#x27;);
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-add-literal&#x27;)[0], &#x27;pundit-literal-enabled&#x27;);
+        }
+        dojo.addClass(dojo.query(&#x27;#&#x27; + self.Id + &#x27; .&#x27;))
+    }, &#x2F;&#x2F; enableLiteralButton
+    
+    &#x2F;&#x2F;Show the literal panel
+    &#x2F;&#x2F;if showLiteralPanelOnly === true only the literal panel is shown
+    showLiteralPanel: function(literalPanelEnabled, showLiteralPanelOnly) {
+		var self = this;
+        if (literalPanelEnabled) {
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-search-panel&#x27;)[0], &#x27;pundit-hidden&#x27;);
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-panel&#x27;)[0], &#x27;pundit-hidden&#x27;);
+            dijit.focus(dojo.query(&#x27;#&#x27;+self._id+ &#x27; .pundit-rp-literal-text&#x27;)[0]);
+        } else {            
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-panel&#x27;)[0], &#x27;pundit-hidden&#x27;);
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-search-panel&#x27;)[0], &#x27;pundit-hidden&#x27;);
+        }
+		if (showLiteralPanelOnly) {
+			dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-panel-close&#x27;)[0], &#x27;pundit-hidden&#x27;);
+		} else {
+			dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-panel-close&#x27;)[0], &#x27;pundit-hidden&#x27;);
+		}
+    }, &#x2F;&#x2F; showLiteralPanel
+    
+
+    &#x2F;&#x2F;TODO This should be on an extended version of the component
+    createLiteralItem: function() {        
+        var self = this,
+            literalContent = dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-literal-text&#x27;)[0].innerHTML,
+            literalItem = semlibLiterals.createLiteralItem(literalContent);
+
+        self.fireOnItemAdded(literalItem);
+        self.hide();
+    }, &#x2F;&#x2F; createLiteralItem
+    
+    adjustPanelsHeight:function(){
+        var self = this,
+            panel,
+            itemNumber = 0;
+        &#x2F;&#x2F;TODO Create a common function
+        for (var i in self.suggestionPanels){
+            panel = dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + i)[0];
+            if (dojo.hasClass(panel,&#x27;pundit-expanded&#x27;)){
+                itemNumber = self.getShownItemsNumber(self[&#x27;itemsDnD&#x27; + i]);
+                if (itemNumber &lt; self.maxShownItems){
+                    dojo.style(dojo.query(panel).children(&#x27;ul&#x27;)[0], &#x27;height&#x27;, itemNumber * 27 + 1 + &#x27;px&#x27;);
+                }else{
+                    dojo.style(dojo.query(panel).children(&#x27;ul&#x27;)[0], &#x27;height&#x27;, self.maxShownItems * 27 + 1 + &#x27;px&#x27;);
+                }
+            }
+        }
+        for (var i in self.namedEntitiesSources){
+            panel = dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + i)[0];
+            if (dojo.hasClass(panel,&#x27;pundit-expanded&#x27;)){
+                itemNumber = self.getShownItemsNumber(self[&#x27;itemsDnD&#x27; + i]);
+                if (itemNumber &lt; self.maxShownItems){
+                    dojo.style(dojo.query(panel).children(&#x27;ul&#x27;)[0], &#x27;height&#x27;, itemNumber * 27 + 1 + &#x27;px&#x27;);
+                }else{
+                    dojo.style(dojo.query(panel).children(&#x27;ul&#x27;)[0], &#x27;height&#x27;, self.maxShownItems * 27 + 1 + &#x27;px&#x27;);
+                }
+            }
+        }
+        self.adjustPreviewHeight();
+    },
+    
+    namedEntitiesLookup:function(term){
+        var self = this;
+		self.lastSearchedTerm = term;
+        for (var i in self.namedEntitiesSources){
+            self.setLoading(self._id + &#x27;-container-suggestions-&#x27; + i, true);
+            _PUNDIT[i].getItemsForTerm(term,
+            (function(_i){
+                return function(items,term){
+                    if (self.lastSearchedTerm === term){
+                        dojo.removeClass(self._id + &#x27;-container-suggestions-&#x27; + _i, &#x27;pundit-lookup-error&#x27;);
+                        &#x2F;&#x2F;for (var j in items){
+                        for (var j = items.length; j--;){
+                            previewer.buildPreviewForItem(items[j]);
+                        }
+                        dojo.empty(dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + _i + &#x27; ul&#x27;));
+                        self[&#x27;itemsDnD&#x27; + _i].selectAll();
+                        self[&#x27;itemsDnD&#x27; + _i].deleteSelectedNodes();
+                        self[&#x27;itemsDnD&#x27; + _i].sync()
+                        &#x2F;&#x2F;dojo.empty(dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + _i + &#x27; ul&#x27;)[0]);
+
+                        if (items.length === 0) {
+                            &#x2F;&#x2F;TODO This happen only if the function is called
+                            &#x2F;&#x2F;Make invisible 
+                            &#x2F;&#x2F;dojo.removeClass(self._id + &#x27;-container-suggestions-&#x27; + i, &#x27;pundit-visible&#x27;);
+                            self.setLoading(self._id + &#x27;-container-suggestions-&#x27; + _i, false);
+                            dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + _i + &#x27; span.pundit-items-number&#x27;).html(&#x27;(&#x27; + self.getShownItemsNumber(self[&#x27;itemsDnD&#x27; + _i]) + &#x27;)&#x27;);
+                        
+                        } else {
+                            &#x2F;&#x2F;TODO This happen only if the function is called
+                            &#x2F;&#x2F;Make visible
+                            &#x2F;&#x2F;dojo.addClass(self._id + &#x27;-container-suggestions-&#x27; + i, &#x27;pundit-visible&#x27;);
+                            self[&#x27;itemsDnD&#x27; + _i].sync();
+                            self[&#x27;itemsDnD&#x27; + _i].insertNodes(false, items);
+                            dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + _i + &#x27; span.pundit-items-number&#x27;).html(&#x27;(&#x27; + self.getShownItemsNumber(self[&#x27;itemsDnD&#x27; + _i]) + &#x27;)&#x27;);
+                            self.setLoading(self._id + &#x27;-container-suggestions-&#x27; + _i, false);
+                            dojo.behavior.apply();
+                        }
+                        self.adjustPanelsHeight();
+
+                    }
+                }
+            })(i),
+            (function(_i){
+                return function(){
+                    self.setLoading(self._id + &#x27;-container-suggestions-&#x27; + _i, false);
+                    dojo.query(&#x27;#&#x27; + self._id + &#x27;-container-suggestions-&#x27; + _i + &#x27; span.pundit-items-number&#x27;).html(&#x27;(&#x27; + 0 + &#x27;)&#x27;);
+                    dojo.addClass(self._id + &#x27;-container-suggestions-&#x27; + _i, &#x27;pundit-lookup-error&#x27;);
+                }
+            })(i));
+        }
+    },
+    setLoading: function(panelId, v) {
+        var self = this,
+            r = dojo.query(&#x27;#&#x27; + panelId),
+            c = &#x27;pundit-panel-loading&#x27;;
+        return (v) ? r.addClass(c) : r.removeClass(c);
+    },
+    rankItems:function(container, word){
+        var rankedItems = [];
+        for (var i in container.map){
+            rankedItems.push([i, container.map[i].data.label.score(word)]);
+        }
+        rankedItems.sort((function(a, b) {return b[1] - a[1]}));
+        &#x2F;&#x2F;Don&#x27;t revert this loop!
+        &#x2F;&#x2F;for (var i in rankedItems){
+        for (var i = 0; i &lt; rankedItems.length; i++){
+            var node = dojo.byId(rankedItems[i][0]);
+            dojo.destroy(rankedItems[i][0]);
+            dojo.query(&#x27;#&#x27; + container.node.id).append(node);
+            if (rankedItems[i][1] === 0){
+                dojo.addClass(rankedItems[i][0], &#x27;pundit-hidden&#x27;);
+            }else{
+                dojo.removeClass(rankedItems[i][0], &#x27;pundit-hidden&#x27;);
+            }
+        }
+    },
+    adjustPreviewHeight:function(){
+        var self = this;
+        clearTimeout(self.previewTimer);
+        self.previewTimer = setTimeout(function(){
+            var h = dojo.position(dojo.query(&#x27;#&#x27; + self._id+ &#x27; .pundit-fp-content-list&#x27;)[0]).h - 10;
+            dojo.style(dojo.query(&#x27;#&#x27; + self._id+ &#x27; .pundit-fp-preview&#x27;)[0], &#x27;height&#x27;,  h +&#x27;px&#x27;);
+        },1200);
+    }
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

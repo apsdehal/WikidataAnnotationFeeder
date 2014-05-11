@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;Init.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;Init.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+    The Pundit system!
+    Aims at providing all of the needed components to create stand-off markup
+    on any web page.
+    @module pundit
+    @main pundit
+*&#x2F;
+ 
+dojo.require(&quot;dojo.io.iframe&quot;);
+&#x2F;&#x2F; BaseComponent, DummySelector
+dojo.require(&quot;pundit.BaseComponent&quot;);
+
+dojo.require(&quot;pundit.Crypto&quot;);
+
+dojo.require(&quot;pundit.BasePanel&quot;);
+
+&#x2F;&#x2F; NamespaceHelper
+dojo.require(&quot;pundit.NamespaceHelper&quot;);
+
+&#x2F;&#x2F; ReconSelector
+dojo.require(&#x27;dojo.io.script&#x27;);
+dojo.require(&quot;dijit.Dialog&quot;);
+dojo.require(&quot;dijit.layout.BorderContainer&quot;);
+dojo.require(&quot;dijit.layout.ContentPane&quot;);
+dojo.require(&quot;dojo.behavior&quot;);
+dojo.require(&quot;dojo.NodeList-traverse&quot;);
+
+&#x2F;&#x2F; TripleComposer
+dojo.require(&quot;dojo.dnd.Source&quot;);
+dojo.require(&quot;dojox.fx&quot;);
+dojo.require(&quot;pundit.TripleComposer&quot;);
+
+&#x2F;&#x2F; AnnotationReader and Writer
+dojo.require(&#x27;dojo.io.script&#x27;);
+dojo.require(&quot;pundit.AnnotationReader&quot;);
+dojo.require(&quot;pundit.AnnotationWriter&quot;);
+
+&#x2F;&#x2F; TextFragmentHandler
+dojo.require(&quot;dojo.NodeList-manipulate&quot;);
+dojo.require(&quot;pundit.TextFragmentHandler&quot;);
+dojo.require(&quot;pundit.FastTextHandler&quot;);
+
+&#x2F;&#x2F; ImageFragmentHandler
+dojo.require(&quot;pundit.ImageFragmentHandler&quot;);
+
+dojo.require(&quot;pundit.PageHandler&quot;);
+
+&#x2F;&#x2F; TooltipAnnotationViewer
+dojo.require(&quot;dojo.behavior&quot;);
+dojo.require(&quot;dojox.layout.DragPane&quot;);
+dojo.require(&quot;dojox.fx.scroll&quot;);
+dojo.require(&quot;pundit.TooltipAnnotationViewer&quot;);
+
+&#x2F;&#x2F; TriplesBucket
+dojo.require(&quot;pundit.TriplesBucket&quot;);
+
+&#x2F;&#x2F; VocabSelector
+dojo.require(&quot;dojo.io.script&quot;);
+dojo.require(&quot;dijit.layout.BorderContainer&quot;);
+dojo.require(&quot;dijit.layout.ContentPane&quot;);
+dojo.require(&quot;dojo.behavior&quot;);
+dojo.require(&quot;dojo.NodeList-traverse&quot;);
+dojo.require(&quot;dojo.data.ItemFileReadStore&quot;);
+dojo.require(&quot;dojo.store.Memory&quot;);
+dojo.require(&quot;dojo.data.ObjectStore&quot;);
+dojo.require(&quot;dijit.tree.TreeStoreModel&quot;);
+dojo.require(&quot;dijit.tree.dndSource&quot;); &#x2F;&#x2F;required for drag and drop
+dojo.require(&quot;dijit.Tree&quot;);
+dojo.require(&quot;dojox.layout.FloatingPane&quot;);
+
+&#x2F;&#x2F; XpointersHelper
+dojo.require(&quot;pundit.XpointersHelper&quot;);
+
+&#x2F;&#x2F; Storage
+dojo.require(&quot;pundit.RemoteStorageHandler&quot;);
+dojo.require(&quot;pundit.LocalStorageHandler&quot;);
+dojo.require(&quot;pundit.CookiesStorageHandler&quot;);
+
+&#x2F;&#x2F; GUI
+dojo.require(&quot;pundit.GUI&quot;);
+
+&#x2F;&#x2F; ItemContainerManger
+dojo.require(&quot;pundit.Items&quot;);
+dojo.require(&quot;pundit.ItemContainerManager&quot;);
+
+&#x2F;&#x2F; Literals
+dojo.require(&quot;pundit.Literals&quot;);
+
+&#x2F;&#x2F; DbpediaSpotlight
+dojo.require(&quot;pundit.DbpediaSpotlight&quot;);
+&#x2F;&#x2F; DataTXT
+dojo.require(&quot;pundit.DataTxt&quot;);
+&#x2F;&#x2F; Civet
+dojo.require(&quot;pundit.Civet&quot;);
+
+&#x2F;&#x2F; CommentTag
+dojo.require(&quot;dojox.xml.DomParser&quot;);
+dojo.require(&quot;pundit.CommentTag&quot;);
+
+&#x2F;&#x2F; ResourcesPanel
+dojo.require(&quot;pundit.ResourcesPanel&quot;);
+
+dojo.require(&quot;pundit.RecognizerPanel&quot;);
+dojo.require(&quot;pundit.CommentTagPanel&quot;);
+
+&#x2F;&#x2F; AuthenticatedRequests
+dojo.require(&quot;pundit.AuthenticatedRequests&quot;);
+
+&#x2F;&#x2F; MyPundit
+dojo.require(&quot;dijit.form.DropDownButton&quot;);
+dojo.require(&quot;dijit.Menu&quot;);
+dojo.require(&quot;dijit.MenuItem&quot;);
+dojo.require(&quot;pundit.MyPundit&quot;);
+
+
+&#x2F;&#x2F; ContextualMenu
+dojo.require(&quot;pundit.ContextualMenu&quot;);
+
+&#x2F;&#x2F; Previewer
+dojo.require(&quot;pundit.Previewer&quot;);
+
+&#x2F;&#x2F; LoadingBox
+dojo.require(&quot;pundit.LoadingBox&quot;);
+
+&#x2F;&#x2F; Configuration
+dojo.require(&quot;pundit.Configuration&quot;);
+
+&#x2F;&#x2F; Annotators
+dojo.require(&quot;pundit.annotators.AnnotatorsConductor&quot;);
+dojo.require(&quot;pundit.annotators.AnnotatorsBase&quot;);
+
+&#x2F;**
+ * @class pundit.Init
+ * @extends pundit.baseComponent
+ * @description Init class: initializes all of the pundit components. The init object
+ * is saved in the global pundit live namespace under the name of &#x27;init&#x27;, for future
+ * use. Since the global live namespace name defaults to &quot;punditLive&quot;, the init
+ * object is accessible by default with punditLive.init
+ *&#x2F;
+dojo.provide(&quot;pundit.Init&quot;);
+dojo.declare(&quot;pundit.Init&quot;, pundit.BaseComponent, {
+
+    opts: {
+        liveNamespace: &#x27;punditLive&#x27;
+    },
+
+    &#x2F;&#x2F; TODO: move this comment to some @property and some into the class declaration
+    &#x2F;*
+     * @constructor
+     * @description Initializes pundit!
+     * @param options {object} 
+     * @param options.debug {boolean} wether or not to activate debug of all components
+     * @param options.liveNamespace {string} name for the pundit global live namespace 
+     * object. This name is also stored in the PunditLiveNamespaceName variable, globally
+     * accessible. &lt;br&gt;
+     * Moreover, the same object is accessible using the &#x27;_PUNDIT&#x27; name.
+     *&#x2F;
+	constructor: function(options) {
+        var self = this, p;
+
+        self.log(&#x27;Initializing Pundit...&#x27;);
+        
+        self.addScoreFunction();
+        
+        &#x2F;&#x2F; Register pundit global live namespace under window object and 
+        &#x2F;&#x2F; keep track of its name for other components to use. Register the
+        &#x2F;&#x2F; _PUNDIT object as well.
+        if (typeof(window[self.opts.liveNamespace]) === &#x27;undefined&#x27;)
+            window[self.opts.liveNamespace] = {};
+
+        p = window[self.opts.liveNamespace];
+        window[&#x27;_PUNDIT&#x27;] = window[self.opts.liveNamespace];
+        window[&#x27;PunditLiveNamespaceName&#x27;] = self.opts.liveNamespace;
+
+        self.log(&quot;Registered &#x27;&quot;+self.opts.liveNamespace +&quot;&#x27; variable: pundit global namespace object. Also known as &#x27;_PUNDIT&#x27;.&quot;);
+
+        p[&#x27;init&#x27;] = self;
+        p[&#x27;configuration&#x27;] = new pundit.Configuration();
+
+
+        &#x2F;**
+         * @event onInitDone
+         * @param f() {function} function to be called, no parameters.
+         * @description Called when all of the needed modules has been 
+         * correctly initialized. Should be used to initialize cross-component
+         * behaviors, like subscribing to each other&#x27;s callbacks.
+         *&#x2F;
+        self.createCallback([&#x27;initDone&#x27;]);
+        
+        self.loadJobs = [];
+        
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        ns = new pundit.NamespaceHelper();
+        p[&#x27;ns&#x27;] = ns;
+        
+
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        previewer = new pundit.Previewer();
+        p[&#x27;previewer&#x27;] = previewer;
+        
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        cMenu = new pundit.ContextualMenu();
+        p[&#x27;cMenu&#x27;] = cMenu;
+        
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        requester = new pundit.AuthenticatedRequests();
+        p[&#x27;requester&#x27;] = requester;
+        
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        &#x2F;&#x2F; and rename it to GUI!!!
+        semlibWindow = new pundit.GUI();
+        p[&#x27;GUI&#x27;] = semlibWindow;
+        
+        
+        p[&#x27;loadingBox&#x27;] = new pundit.LoadingBox();
+
+        p[&#x27;items&#x27;] = new pundit.ItemContainerManager();
+        
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        fragmentHandler = new pundit.TextFragmentHandler({debug: false});
+        p[&#x27;fragmentHandler&#x27;] = fragmentHandler;
+
+        p[&#x27;fasttexthandler&#x27;] = new pundit.FastTextHandler({
+            name: &quot;fast-text-handler&quot;,
+            title: &quot;Connect text&quot;,
+            drag: true
+        });
+        
+        p[&#x27;pageHandler&#x27;] = new pundit.PageHandler({debug:false});
+        
+
+        &#x2F;&#x2F; Bookmarklet: dojo&#x27;s build system greps dojo.require to grasp the files
+        &#x2F;&#x2F; to include into it. We cannot require dinamicly for a bookmarklet, so just
+        &#x2F;&#x2F; put a dojo.require as workaround
+        if (false) {
+            dojo.require(&#x27;pundit.annotators.TextFragmentAnnotator&#x27;);
+        }
+        
+        var _foorequire = dojo.require;
+        p[&#x27;conductor&#x27;] = new pundit.annotators.AnnotatorsConductor();
+        for (var an in p.config.modules.annotators) {
+            
+            var conf = p.config.modules.annotators[an];
+            if (conf.active === true) {
+                self.log(&#x27;Loading annotator &#x27; + an);
+                _foorequire(&#x27;pundit.annotators.&#x27; + an);
+                p.conductor.registerAnnotator(new pundit.annotators[an](conf));
+            }
+        }
+
+
+        &#x2F;&#x2F; Always load the base selector class and the special vocab selector
+        dojo.require(&quot;pundit.selectors.SelectorBase&quot;);
+        dojo.require(&quot;pundit.selectors.VocabSelector&quot;);
+        p[&#x27;vocab&#x27;] = new pundit.selectors.VocabSelector();
+
+        &#x2F;&#x2F; bookmarklet workaround: same as above
+        if (false) {
+            dojo.require(&quot;pundit.selectors.DBPediaSelector&quot;);
+            dojo.require(&quot;pundit.selectors.FreebaseSelector&quot;);
+            dojo.require(&quot;pundit.selectors.KorboBasketSelector&quot;);
+            dojo.require(&quot;pundit.selectors.WordnetSelector&quot;);
+            dojo.require(&quot;pundit.selectors.EuropeanaSelector&quot;);
+            dojo.require(&quot;pundit.selectors.BibServerSelector&quot;);
+        }
+
+        &#x2F;&#x2F; Used for other components initialization
+        p.config.activeSelectorsName = [];
+        for (var se in p.config.modules.selectors) {
+
+            var conf = p.config.modules.selectors[se];
+            if (conf.active === true) {
+                self.log(&#x27;Loading selector &#x27; + se);
+                _foorequire(&#x27;pundit.selectors.&#x27; + se + &#x27;Selector&#x27;);
+                p[conf.name + &#x27;Selector&#x27;] = new pundit.selectors[se + &#x27;Selector&#x27;](conf);
+                p.config.activeSelectorsName.push(se);
+            }
+        }
+
+        &#x2F;&#x2F; TODO -&gt; imageFragmentHandler
+        semlibImageFragmentHandler = new pundit.ImageFragmentHandler();
+
+
+        if (p.config.isModuleActive(&#x27;pundit.NotebookManager&#x27;)) {
+            dojo.require(&quot;pundit.NotebookManager&quot;);
+        }
+
+
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        &#x2F;&#x2F; rename to literals creator? handler? whatever
+        semlibLiterals = new pundit.Literals();
+        p[&#x27;literals&#x27;] = semlibLiterals;
+        
+        if (_PUNDIT.config.entityExtractor === &quot;dbpedia-spotlight&quot;) {
+            &#x2F;&#x2F; TODO -&gt; DbpediaSpotlight
+            entityExtractor = new pundit.DbpediaSpotlight();	
+        } else if (_PUNDIT.config.entityExtractor === &quot;data-txt&quot;) {
+            entityExtractor = new pundit.DataTxt();	
+        } else if (_PUNDIT.config.entityExtractor === &quot;civet&quot;) {
+            entityExtractor = new pundit.Civet();	
+        }
+
+        &#x2F;&#x2F; Used by recognizers all around to know which selectors to
+        &#x2F;&#x2F; extract entities from
+        p.config.activeEntitySources = {};
+        for (var k = p.config.activeSelectorsName.length; k--;) {
+            var se = p.config.activeSelectorsName[k],
+                conf = p.config.modules.selectors[se];
+            p.config.activeEntitySources[conf.name + &quot;Selector&quot;] = {label: conf.label};
+        }
+
+        &#x2F;&#x2F; Recognizer
+        if (p.config.isModuleActive(&#x27;pundit.Recognizer&#x27;)) {
+            dojo.require(&quot;pundit.Recognizer&quot;);
+            p[&#x27;recognizer&#x27;] = new pundit.Recognizer();
+        }
+
+        p[&#x27;commentTag&#x27;] = new pundit.CommentTagPanel({
+            name: &#x27;commentTag&#x27;,
+            preview: true,
+            drag: true,
+            searchType: &#x27;search&#x27;,
+            namedEntitiesSources: p.config.activeEntitySources
+        });
+
+
+        &#x2F;&#x2F; TODO: remove this and use annotators instead
+        if (_PUNDIT.config.enableImageFragmentAnnotation) {
+
+            dojo.require(&quot;pundit.ImageAnnotationPanel&quot;);
+            p[&#x27;imageAnnotationPanel&#x27;] = new pundit.ImageAnnotationPanel({
+                name: &#x27;imageAnnotationPanel&#x27;,
+                width: 600,
+                height: 400,
+                drag: true
+            });
+
+        }
+
+
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        tripleComposer = new pundit.TripleComposer();
+        p[&#x27;tripleComposer&#x27;] = tripleComposer;
+        
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        &#x2F;&#x2F; dont use _ !
+        tooltip_viewer = new pundit.TooltipAnnotationViewer();
+        p[&#x27;tooltipViewer&#x27;] = tooltip_viewer;
+        
+            
+        &#x2F;&#x2F; TODO: sanitize use of this global var, and remove it
+        myPundit = new pundit.MyPundit();
+        p[&#x27;myPundit&#x27;] = myPundit;
+        
+        
+        &#x2F;&#x2F; TODO: x Marco do we have to do this here? Is it related to annotation view? Consolidation?
+        &#x2F;&#x2F; Something else? NOT HERE.
+        &#x2F;&#x2F; Fix problem in case of html and body position set to relative
+        dojo.style(dojo.query(&#x27;html&#x27;)[0], &#x27;position&#x27;, &#x27;static&#x27;);
+        dojo.style(dojo.query(&#x27;body&#x27;)[0], &#x27;position&#x27;, &#x27;static&#x27;);
+        dojo.addClass(dojo.query(&#x27;body&#x27;)[0], &#x27;tundra&#x27;);
+        
+        self.checkBeforeInit();
+        self.log(&#x27;Pundit suite components initialization completed!&#x27;);
+
+    }, &#x2F;&#x2F; constructor()
+    
+    waitBeforeInit: function() {
+        var self = this,
+            jobId = &#x27;job&#x27; + (0|Math.random()*999999);
+
+        self.loadJobs.push(jobId);
+        &#x2F;&#x2F; TODO: Add a timeout? A timer? Something?
+        
+        self.log(&quot;A component is asking to wait for him. Job &quot;+jobId);
+        return jobId;
+    },
+    
+    doneBeforeInit: function(jobId) {
+        var self = this;
+        
+        if (self.loadJobs.indexOf(jobId) !== -1) {
+            self.log(&#x27;Job &#x27;+jobId+&#x27; is done. (&#x27; + self.loadJobs.indexOf(jobId)+&#x27;)&#x27;);
+            self.loadJobs.splice(self.loadJobs.indexOf(jobId), 1);
+        } else {
+            self.log(&#x27;Non-existent job &#x27;+jobId+&#x27; is done. Cool.&#x27;);
+        }
+            
+        self.checkBeforeInit();
+    },
+     
+    checkBeforeInit: function() {
+        var self = this;
+        
+        if (self.loadJobs.length === 0) {
+            self.log(&quot;No Load Jobs to wait for: Asynchronous component initialization is done!&quot;);
+            self.fireOnInitDone();
+        } else {
+            self.log(&quot;Still &quot;+self.loadJobs.length+&quot; jobs to wait for ...&quot;);
+        }
+    },
+    
+    &#x2F;&#x2F;DEBUG Add it somewhere else?
+    addScoreFunction: function(){
+        
+        String.prototype.score = function(abbreviation, fuzziness) {
+            &#x2F;&#x2F; If the string is equal to the abbreviation, perfect match.
+            if (this === abbreviation) return 1;
+            &#x2F;&#x2F;if it&#x27;s not a perfect match and is empty return 0
+            if (abbreviation === &quot;&quot;) return 0;
+            
+            var total_character_score = 0,
+            abbreviation_length = abbreviation.length,
+            string = this,
+            string_length = string.length,
+            start_of_string_bonus,
+            abbreviation_score,
+            fuzzies=1,
+            final_score;
+            
+            &#x2F;&#x2F; Walk through abbreviation and add up scores.
+            for (var i = 0, character_score, index_in_string, c, index_c_lowercase, index_c_uppercase, min_index;
+                i &lt; abbreviation_length;
+                ++i) {
+                
+                &#x2F;&#x2F; Find the first case-insensitive match of a character.
+                c = abbreviation.charAt(i);
+                
+                index_c_lowercase = string.indexOf(c.toLowerCase());
+                index_c_uppercase = string.indexOf(c.toUpperCase());
+                min_index = Math.min(index_c_lowercase, index_c_uppercase);
+                index_in_string = (min_index &gt; -1) ? min_index : Math.max(index_c_lowercase, index_c_uppercase);
+                
+                if (index_in_string === -1) { 
+                    if (fuzziness) {
+                        fuzzies += 1-fuzziness;
+                        continue;
+                    } else {
+                        return 0;
+                    }
+                } else {
+                    character_score = 0.1;
+                }
+                
+                &#x2F;&#x2F; Set base score for matching &#x27;c&#x27;.
+                
+                &#x2F;&#x2F; Same case bonus.
+                if (string[index_in_string] === c) { 
+                    character_score += 0.1; 
+                }
+                
+                &#x2F;&#x2F; Consecutive letter &amp; start-of-string Bonus
+                if (index_in_string === 0) {
+                    &#x2F;&#x2F; Increase the score when matching first character of the remainder of the string
+                    character_score += 0.6;
+                    if (i === 0) {
+                        &#x2F;&#x2F; If match is the first character of the string
+                        &#x2F;&#x2F; &amp; the first character of abbreviation, add a
+                        &#x2F;&#x2F; start-of-string match bonus.
+                        start_of_string_bonus = 1; &#x2F;&#x2F;true;
+                    }
+                } else {
+                    &#x2F;&#x2F; Acronym Bonus
+                    &#x2F;&#x2F; Weighing Logic: Typing the first character of an acronym is as if you
+                    &#x2F;&#x2F; preceded it with two perfect character matches.
+                    if (string.charAt(index_in_string - 1) === &#x27; &#x27;) {
+                        character_score += 0.8; &#x2F;&#x2F; * Math.min(index_in_string, 5); &#x2F;&#x2F; Cap bonus at 0.4 * 5
+                    }
+                }
+                
+                &#x2F;&#x2F; Left trim the already matched part of the string
+                &#x2F;&#x2F; (forces sequential matching).
+                string = string.substring(index_in_string + 1, string_length);
+                
+                total_character_score += character_score;
+            } &#x2F;&#x2F; end of for loop
+            
+            &#x2F;&#x2F; Uncomment to weigh smaller words higher.
+            &#x2F;&#x2F; return total_character_score &#x2F; string_length;
+            
+            abbreviation_score = total_character_score &#x2F; abbreviation_length;
+            &#x2F;&#x2F;percentage_of_matched_string = abbreviation_length &#x2F; string_length;
+            &#x2F;&#x2F;word_score = abbreviation_score * percentage_of_matched_string;
+            
+            &#x2F;&#x2F; Reduce penalty for longer strings.
+            &#x2F;&#x2F;final_score = (word_score + abbreviation_score) &#x2F; 2;
+            final_score = ((abbreviation_score * (abbreviation_length &#x2F; string_length)) + abbreviation_score) &#x2F; 2;
+            
+            final_score = final_score &#x2F; fuzzies;
+            
+            if (start_of_string_bonus &amp;&amp; (final_score + 0.15 &lt; 1)) {
+                final_score += 0.15;
+            }
+            
+            return final_score;
+        };   
+        
+    }
+    
+});
+
+dojo.ready(function(){
+	var init = new pundit.Init();
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

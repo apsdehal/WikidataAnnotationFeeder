@@ -1,0 +1,2915 @@
+/* 
+    Pundit: a novel semantic web annotation tool
+    Copyright (c) 2013 Net7 SRL, <http://www.netseven.it/>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    See LICENSE.TXT or visit http://thepund.it for the full text of the license.
+*/
+/* @override 
+	http://localhost/semlib/css/pundit.css */
+
+/*********************************************************************
+ ****** Dojo CSS
+ *********************************************************************/
+
+@import "dojo-wrapped.css";
+@import "https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dijit/themes/tundra/tundra.css";
+/*
+@import "https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojox/layout/resources/FloatingPane.css";
+@import "https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojox/layout/resources/ResizeHandle.css";
+*/
+@import "http://fonts.googleapis.com/css?family=Rambla:400,700";
+
+/*********************************************************************
+ ****** General css 
+ *********************************************************************/
+
+.pundit-display-none {
+    display: none;
+}
+
+/*********************************************************************
+ ****** General css reset for our panels
+ *********************************************************************/
+
+#pundit-gui *, #pundit-aw *, #pundit-cm *, #pundit-gui-topbar *,
+div.pundit-rp *, 
+div.pundit-fp *
+{
+    font-family: 'Rambla', sans-serif;
+    font-size: 13px;
+}
+
+/*********************************************************************
+ ****** More info Panel
+ *********************************************************************/
+.pundit-moreinfo-panel {
+    background-color: rgba(230, 230, 230, 0.95);
+	z-index: 100;
+	margin: 0px;
+	padding: 2px;
+	border-radius: 0px 0px 4px 4px;
+	min-height: 116px;
+}
+.pundit-moreinfo-panel img {
+    margin: 1em 0em 0.5em 0.5em;
+    border: 1px solid black;
+    max-height: 75px;
+    min-height: 30px;
+    max-width: 140px;
+    min-width: 50px;
+	float: right;
+}
+
+.pundit-moreinfo-panel img.pundit-image-preview-large{
+    display:block;
+    max-height: 300px;
+}
+
+.pundit-moreinfo-panel div.pundit-preview-main-info{
+    min-height: 136px;
+}
+
+.pundit-moreinfo-panel h2 {
+	margin: 10px 3px;
+	font-weight: 100;
+	text-transform: capitalize;
+	font-size: 1.2em !important;
+}
+.pundit-moreinfo-panel h4 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+}
+.pundit-moreinfo-panel h5 {
+    margin: 10px 3px;
+    padding: 0px;
+    font-style: italic;
+	font-weight: 100;
+}
+
+.pundit-moreinfo-panel p {
+    font-size: 1em;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+    line-height: 1.2em;
+    text-align: justify;
+    white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+	/*min-height: 86px;*/
+}
+
+.pundit-moreinfo-panel ul {
+    list-style: none;
+    padding: 0px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 10px 0px 10px 3px !important;
+	widows: 100% !important;
+}
+.pundit-moreinfo-panel ul li {
+    padding: 0px 0px 0px 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    display: block !important;
+}
+
+.pundit-moreinfo-panel ul li.header {
+    padding: 0px;
+    color: #009bff;
+    
+}
+.pundit-moreinfo-panel em {
+	color: #009bff;
+}
+.pundit-panel-loading {
+    background: rgba(255, 255, 255, 0.75) url('img/preview_loading.gif') no-repeat right -7px;
+}
+.pundit-panel-loading *{
+    opacity: 0.3;
+}
+.pundit-panel-loading.pundit-aw-panel {
+    background: rgba(255, 255, 255, 0.75) url('img/preview_loading2.gif') no-repeat left -7px;
+}
+
+#pundit-gui #pundit-gui-left {
+    -webkit-transition-property: opacity, height;
+    -webkit-transition-duration: 1s, 1s;
+    -moz-transition-property: opacity, height;
+    -moz-transition-duration: 1s, 1s;
+}
+#pundit-gui.pundit-hidden #pundit-gui-left {
+    opacity: 0;
+    overflow: hidden;
+}
+#pundit-gui.pundit-shown #pundit-gui-left {
+    opacity: 1.0;
+}
+
+/*********************************************************************
+ ****** SEMLIB ITEMS
+ *********************************************************************/
+
+/* Recon Selector Header items */
+/* TODO Remove
+#reconSelectorContainer input {
+	margin: 3px;
+	height: 22px;
+	font-size: 1.2em;
+	width: 99%;
+}
+#reconSelectorContainer{
+	overflow-y: hidden;
+}
+#reconMessage {
+	height: 24px;
+	margin-left: 10px;
+	font-variant: small-caps;
+}
+*/
+
+/* Semlib Items Filters */
+.pundit-item-filter-list {
+    margin: 0px;
+    border: 0;
+    padding: 0px;
+    list-style: none;
+    height: 24px;
+    display: inline-block;
+}
+ul.pundit-item-filter-list li {
+    line-height: 25px;
+    height: 25px;
+    display: inline-block;
+    padding: 0px 6px;
+    margin-right: 1px;
+    font-size: 0.9.em;
+    border-radius: 4px 4px 0px 0px;
+    background: rgba(17, 169, 254, 0.5);
+    color: white;
+}
+.pundit-item-filter-list li:hover {
+    cursor: context-menu;
+    background: rgb(17, 169, 254);
+    color: white;
+}
+.pundit-item-filter-list li.pundit-selected {
+    color: black;
+    opacity: 1.0;
+    background-color: rgb(234, 234, 234);
+}
+
+.pundit-item-filter-list li.pundit-hidden {
+    display: none;
+}
+
+/* Items inside the various DnD containers */
+ul.pundit-items {
+    margin: 0px;
+    border: 0px;
+    padding: 3px;
+    heigth: auto;
+    list-style: none;
+    overflow: auto;
+}
+
+ul.pundit-items li {
+    position: relative;
+    padding: 0px 12px 0px 0px;
+    opacity: 0;
+    vertical-align: baseline;
+    border-radius: 2px;
+    line-height: 24px;
+    border: 1px solid #fff;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 1s;
+}
+
+ul.pundit-items.pundit-small-items li {
+    margin: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+    border-radius: 2px;
+    line-height: 16px;
+    border: 1px solid #fff;
+}
+
+ul.pundit-items.pundit-view-list li {
+    display: block;
+    margin: 1px 2px 1px 1px;
+    padding: 0px 12px 0px 0px;
+}
+
+ul.pundit-items.pundit-view-tile li {
+    display: inline-block;
+    margin: 2px;
+}
+
+ul.pundit-items li.pundit-shown {
+    opacity: 1.0;
+}
+
+ul.pundit-items li.pundit-hidden {
+    display: none;
+    opacity: 0;
+}
+
+ul.pundit-items li span.pundit-icon-context-button {
+    position: absolute;
+	margin-right: 10px;
+	height: 24px;
+	width: 20px;
+	float: left;
+    opacity: 0.5;
+    border-radius: 3px;
+    background: #009bff url('img/gear-medium.png') no-repeat 2px 4px;
+    text-indent: -900px;
+} 
+ul.pundit-items li span.pundit-icon-context-button:hover {
+    vertical-align: text-top;
+    opacity: 1;
+    background: #009bff url('img/gear-medium.png') no-repeat 2px 4px;
+} 
+
+ul.pundit-items.pundit-small-items li span.pundit-icon-context-button {
+	margin-right: 2px;
+	height: 16px;
+	width: 11px;
+    background: #009bff url('img/gear-small.png') no-repeat -2px 0px;
+}
+ul.pundit-items.pundit-small-items li span.pundit-icon-context-button:hover {
+    opacity: 1;
+}
+ul.pundit-items.pundit-small-items li span.pundit-icon-context-button:hover {
+    opacity: 1;
+}
+ul.pundit-items li span.pundit-trim{
+    display:inline-block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+ul.pundit-items li span.pundit-trim.pundit-item-label{
+    max-width: 85%;
+    box-sizing: border-box;
+    padding-left: 26px;
+}
+ul.pundit-items li span.pundit-trim.pundit-notebook-creator{
+    float:right;
+}
+#pundit-rp ul.pundit-items li span.pundit-trim.pundit-item-label{
+    max-width:50%;
+}
+ul.pundit-items li span.pundit-trim.pundit-item-rdftype{
+    width: 15%;
+    text-align: right;
+}
+#pundit-rp ul.pundit-items li span.pundit-trim.pundit-item-rdftype{
+    text-align: right;
+    width:25%;
+    margin-right: 7px;
+}
+.pundit-tc-dnd-container.collapsed ul.pundit-items li span.pundit-trim.pundit-item-rdftype{
+    display:none;
+}
+.pundit-tc-dnd-container.expanded ul.pundit-items li span.pundit-trim.pundit-item-rdftype{
+    display:inline-block;
+}
+ul.pundit-items li span.pundit-item-rdftype{
+    float:right;
+}
+ul.pundit-items.pundit-view-tile li span.pundit-item-rdftype,
+ul.pundit-items.showsRemoveButton li span.pundit-item-rdftype{
+    display: none;
+}
+ul.pundit-items.pundit-item-add-button li span.pundit-item-rdftype{
+    display: none;
+}
+#pundit-rp ul.pundit-items.pundit-item-add-button li span.pundit-item-rdftype{
+    display: block;
+}
+ul.pundit-items li span.pundit-item-add-button {
+	float: right;
+	background-image:url(img/add-icon.png);
+	width:16px;
+	height:16px;
+	display: none;
+}
+ul.pundit-items li span.pundit-item-remove-button {
+	float: right;
+	background-image:url(img/delete-icon.png);
+	width:16px;
+	height:16px;
+	display: none;
+}
+ul.pundit-items.pundit-item-add-button li span.pundit-item-add-button {
+	margin-top:4px;
+	display:block;	
+}
+ul.pundit-items.showsRemoveButton li span.pundit-item-remove-button {
+	margin-top:4px;
+	display:block;
+}
+ul.pundit-items.pundit-view-tile li span.pundit-trim.pundit-item-label{
+    max-width:100px;
+}
+ul.pundit-items li.pundit-object { 
+   background-color: rgba(204, 102, 102, 0.2)
+}
+ul.pundit-items li.pundit-subject {
+
+}
+ul.pundit-items li.pundit-predicate {
+	background-color: rgba(204, 204, 102, 0.4);
+}
+
+.pundit-tc-dnd .dojoDndItemOver, .pundit-items-selected {
+    background-color: #ededed;
+    cursor: default;
+}
+.pundit-tc-dnd span.pundit-icon-context-button{
+    cursor: pointer;
+}
+
+ul.pundit-items li.dojoDndItemSelected, 
+ul.pundit-items li.dojoDndItemAnchor {
+    border: 1px solid white;
+}
+
+ul.pundit-items li span.pundit-item-created{
+    float:right;
+    max-width: 20%;
+}
+
+ul.pundit-items li span.pundit-item-visibility{
+    float:right;
+    margin-top: 4px;
+    margin-left: 10px;
+    width: 16px;
+    height:16px;
+    display: inline-block;
+}
+
+ul.pundit-items li span.pundit-item-activation{
+    float:right;
+    margin-top: 4px;
+    margin-left: 10px;
+    width: 16px;
+    height:16px;
+    display: inline-block;
+}
+
+ul.pundit-items li span.pundit-item-sharing{
+    float:right;
+    margin-top: 4px;
+    margin-left: 10px;
+    width: 16px;
+    height:16px;
+    display: inline-block;
+}
+
+ul.pundit-items li.pundit-public span.pundit-item-visibility{
+    float:right;
+    width: 16px;
+    height:16px;
+    background: url('img/globe.png') no-repeat;
+}
+
+ul.pundit-items li.pundit-private span.pundit-item-visibility{
+    float:right;
+    width: 16px;
+    height:16px;
+    background: url('img/lock.png') no-repeat;
+}
+
+ul.pundit-items li.pundit-activated span.pundit-item-activation{
+    float:right;
+    width: 16px;
+    height:16px;
+    background: url('img/eye.png') no-repeat;
+}
+
+ul.pundit-items li.pundit-activated span.pundit-item-sharing{
+    float:right;
+    width: 16px;
+    height:16px;
+    background: url('img/share.png') no-repeat;
+}
+
+ul.pundit-items li.pundit-disactivated span.pundit-item-activation{
+    float:right;
+    width: 16px;
+    height:16px;
+    background: url('img/eye_not.png') no-repeat;
+}
+
+ul.pundit-items li span.pundit-item-editability{
+    float:right;
+    width: 16px;
+    height:16px;
+    margin-top: 4px;
+    margin-left: 10px;
+    background: transparent;
+    display: inline-block;
+}
+ul.pundit-items li.pundit-current span.pundit-item-editability{
+    float:right;
+    background: url('img/pencil.png') no-repeat;
+    width: 16px;
+    height:16px;
+}
+ul.pundit-items li.pundit-current{
+    background-color: rgba(17, 169, 254, 0.2);
+}
+
+ul#pundit-ctp-tag-list li.dojoDndItemSelected,
+ul#pundit-ctp-tag-list li.dojoDndItemAnchor,
+ul#pundit-ctp-tag-list li.pundit-selected,
+ul#moreTagList li.dojoDndItemSelected,
+ul#moreTagList li.dojoDndItemAnchor,
+ul#moreTagList li.pundit-selected,
+ul#pundit-rp-suggestions-list li.dojoDndItemSelected,
+ul#pundit-rp-suggestions-list li.dojoDndItemAnchor,
+ul#pundit-rp-suggestions-list li.pundit-selected {
+    border: 1px solid white;
+}
+
+ul.pundit-items li.dojoDndItemOver, ul.pundit-items li.pundit-items-selected {
+    background-color: rgba(17, 169, 254, 0.2);
+}
+
+/*********************************************************************
+ ****** Triple Composer
+ *********************************************************************/
+
+
+#pundit-tc-triples-container {
+	height: 95px;
+    min-width: 450px;
+    overflow: auto;
+}
+
+#pundit-tc-labels-container {
+    height:1.4em;
+    font-size:0.9em
+}
+
+.pundit-tc-dnd-container{
+    clear:both;
+}
+
+.pundit-tc-dnd-container.expanded ul,
+.pundit-tc-dnd-container.expanded .pundit-tc-dndButtons {
+    height: 40px;
+    padding: 2px;
+    margin: 2px;
+}
+.pundit-tc-dnd-container.collapsed ul,
+.pundit-tc-dnd-container.collapsed .pundit-tc-dndButtons {
+    height: 20px;
+    padding: 2px;
+    margin: 2px;
+}
+.pundit-tc-dndButtons span {
+    margin: 1px;
+}
+.pundit-tc-dndButtons span {
+	cursor: pointer;
+}
+
+.pundit-tc-dnd-container ul {
+    margin: 0px;
+    padding: 5px;
+    height: 55px;
+    float: left;
+    width: 128px;
+    list-style: none;
+    overflow-x: hidden;
+    border: 0px solid white;
+    cursor: pointer;
+    -webkit-border-radius: 3px;
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-border-radius: 3px;
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+.pundit-tc-dnd-container ul.pundit-tc-dnd.sub {
+    background-color: rgba(153, 204, 153, 0.2);
+}
+.pundit-tc-dnd-container ul.pundit-tc-dnd.sub:hover {
+    background-color: rgba(153, 204, 153, 0.6);
+}
+.pundit-tc-dnd-container ul.pundit-tc-dnd.pre {
+    background-color: rgba(204, 204, 102, 0.2);
+}
+.pundit-tc-dnd-container ul.pundit-tc-dnd.pre:hover {
+    background-color: rgba(204, 204, 102, 0.6);
+}
+.pundit-tc-dnd-container ul.pundit-tc-dnd.obj {
+    background-color: rgba(204, 102, 102, 0.2);
+}
+.pundit-tc-dnd-container ul.pundit-tc-dnd.obj:hover {
+    background-color: rgba(204, 102, 102, 0.6);
+}
+
+.pundit-tc-dnd-container ul.dnd_selected.sub {
+    background-color: rgba(153, 204, 153, 0.9);
+}
+.pundit-tc-dnd-container ul.dnd_selected.pre {
+    background-color: rgba(204, 204, 102, 0.9);
+}
+.pundit-tc-dnd-container ul.dnd_selected.obj {
+    background-color: rgba(204, 102, 102, 0.9);
+}
+
+.pundit-tc-dnd-container .pundit-tc-dndButtons { 
+    float: left;
+    border: 0px;
+    padding: 5px;
+}
+.pundit-tc-dnd-container .pundit-tc-dndButtons span { 
+    display: block;
+}
+.pundit-tc-dnd-container ul li { 
+    width:125px;
+}
+#pundit-tc-container .pundit-tc-dnd-container li.dojoDndItem {
+    font-size: 0.8em;
+}
+
+#pundit-tc-reset-button {
+    float: right;
+    display: none;
+}
+#pundit-tc-edit-msg {
+    float: right;
+    background: rgba(255, 0, 0, 0.8) url('img/exclamation-button.png') no-repeat 2px 2px;
+    border-radius: 3px;
+    height: 21px;
+    line-height: 21px;
+    padding-left: 20px;
+    padding-right: 3px;
+    margin-right: 2px;
+    color: white;
+    display: none;
+}
+
+#pundit-tc-container.pundit-edit-mode #pundit-tc-reset-button, 
+#pundit-tc-container.pundit-edit-mode #pundit-tc-edit-msg {
+    display: inline-block;
+} 
+
+
+/*********************************************************************
+ ****** Zoom on text fragment effect
+ *********************************************************************/
+#pundit-zoomed-fragment {
+	-webkit-transition-property: opacity, box-shadow, margin-top, margin-left;
+	-webkit-transition-duration: 1s, 1s;
+    -moz-transition-property: opacity, box-shadow, margin-top, margin-left;
+	-moz-transition-duration: 1s, 1s;
+	border: 1px solid #009BFF;
+	position: fixed;
+        pointer-events: none;
+        z-index: 1990;
+}
+#pundit-zoomed-fragment.pundit-hidden {
+	opacity: 0;
+	box-shadow: 0 0 0px 0px #333;
+}
+
+#pundit-zoomed-fragment.pundit-shown {
+	opacity: 0.75;	
+	-moz-box-shadow: 0 0 100px 100px #333;
+	-webkit-box-shadow: 0 0 100px 100px #333;
+	box-shadow: 0 0 200px 100px #333;
+}
+#pundit-zoomed-fragment span.pundit-icon-close {
+    pointer-events: auto;
+	background: url('img/cross-white.png') no-repeat 0px 0px;	
+	opacity: 0.75;
+	cursor: pointer;
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	top: -10px;
+	left: -10px;
+	border-radius: 5px;
+}
+#pundit-zoomed-fragment span.pundit-icon-close:hover {
+	opacity: 1.0;
+}
+
+/*********************************************************************
+ ****** Annotation window 
+ *********************************************************************/
+
+#pundit-aw {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    z-index: 1995;
+    border-left: 1px dotted #000;
+    -webkit-transition-property: width, box-shadow, margin-top;
+    -webkit-transition-duration: 1s, 1s, 1s;
+    -moz-transition-property: width, box-shadow, margin-top;
+    -moz-transition-duration: 1s, 1s, 1s;
+}
+
+/* TODO: these are obsoleted by the new semlib window resize method */
+body.pundit-gui-shown #pundit-aw {
+    margin-top: 150px;
+}
+body.pundit-gui-hidden #pundit-aw {
+    margin-top: 25px;
+}
+
+#pundit-aw.startup {
+    display: none;
+}
+#pundit-aw.pundit-hidden {
+    top: 0px;
+    width: 0px;
+    background: rgba(0,0,0, .80);
+}
+#pundit-aw.pundit-shown {
+    top: 0px;
+    width: 300px;
+    background: rgba(0,0,0, .70);
+}
+
+#pundit-aw div.pundit-shown-content {
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 1s;
+    opacity: 1.0;
+    position: absolute;
+    top: 0px;
+}
+#pundit-aw.pundit-shown div.pundit-shown-content { 
+    width: 300px;
+    opacity: 1;
+}
+
+/* Annotation window buttons */
+#pundit-aw div.awButtons {
+    position: absolute;
+    left: -35px;
+}
+#pundit-aw div.awButtons .pundit-gui-button {
+    float: left;
+    margin-top: 10px;
+    margin-left: 2px;
+    padding: 2px 10px 2px 9px;
+    width: 10px;
+    font-weight: 700;
+}
+
+/* Annotation window panels */
+#pundit-aw .pundit-aw-panel {
+    position: absolute;
+    display: block;
+	box-shadow: 10px 5px 15px #222;
+}
+
+#pundit-aw .pundit-aw-panel-content span {
+	display: block;
+}
+
+/* Delete/edit buttons hidden when aw is hidden */
+#pundit-aw.pundit-hidden .pundit-gui-button {
+    display: none;
+}
+/* Delete/edit buttons hidden when annoation is collapsed */
+#pundit-aw .pundit-hidden .pundit-gui-button {
+    display: none;
+}
+
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-buttons {
+	position: absolute;	
+	left: -65px;
+    width: 65px;
+    padding-bottom: 5px;
+    border-radius: 10px 0px 3px 0px;
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-buttons span {
+    float: right;
+    opacity: 1.0;
+    margin: 1px;
+    margin-right: 3px;
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-buttons span.pundit-gui-button {
+    padding: 3px 10px;
+    height: 14px;
+}
+
+.pundit-button-color {
+    padding: 0xp; 
+	border: 2px solid #333;
+    width: 12px;
+	height: 16px;
+	margin: 0px;
+	display: block;
+	cursor: pointer;
+	color: #009bff;
+	border-radius: 3px;
+	text-indent:-999px;
+	overflow: hidden;
+}
+
+#pundit-aw .pundit-broken-ann .pundit-aw-panel-header {
+    background-color: #fc0;
+}
+
+#pundit-aw .pundit-broken-ann .pundit-error-msg {
+    background: rgba(255,0,0,0.5) url('img/exclamation-button.png') no-repeat 2px 15px;
+    padding-left: 24px;
+}
+
+#pundit-aw .pundit-aw-panel-header {
+    background-color: #009bff;
+    min-height: 20px;
+    display: block;
+    color: #222;
+    padding: 3px;
+    line-height: 20px;
+}
+
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-header span.pundit-aw-panel-title {
+	display: inline-block;
+	width: 230px;
+}
+
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-header span.pundit-aw-button {
+	display: block;
+	height: 20px;
+	width: 20px;
+	float: right;
+	border: 0px;
+	text-indent: -9999px;
+	opacity: 0.5;
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-header span.pundit-icon-close {
+    background: url('img/cross-white.png') no-repeat 2px 1px;   
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-header span.pundit-icon-close:hover {
+    background: url('img/cross-white.png') no-repeat 2px 1px rgba(17, 169, 254, 0.8);   
+    opacity: 1.0;
+    cursor: pointer;
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-header span.pundit-icon-collapse.pundit-expanded {
+	background: url('img/chevron.png') no-repeat 2px 2px;	
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-header span.pundit-icon-collapse.pundit-expanded:hover {
+	background: url('img/chevron.png') no-repeat 2px 2px rgba(17, 169, 254, 0.8);	
+	cursor: pointer;
+	opacity: 1.0;
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-header span.pundit-icon-collapse.pundit-collapsed {
+	background: url('img/chevron-expand.png') no-repeat 2px 2px;	
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-header span.pundit-icon-collapse.pundit-collapsed:hover {
+	background: url('img/chevron-expand.png') no-repeat 2px 2px rgba(17, 169, 254, 0.8);	
+	cursor: pointer;
+	opacity: 1.0;
+}
+#pundit-aw .pundit-aw-panel {
+	-webkit-transition-property: height, top;
+	-webkit-transition-duration: 0.5s, 1s;
+    -moz-transition-property: height, top;
+	-moz-transition-duration: 0.5s, 1s;
+}
+#pundit-aw .pundit-aw-panel .pundit-aw-panel-content {
+	-webkit-transition-property: height, opacity, min-height;
+	-webkit-transition-duration: 1s, 1s, 1s;
+    -moz-transition-property: height, opacity, min-height;
+	-moz-transition-duration: 1s, 1s, 1s;
+    min-height: 80px;
+    opacity: 1.0;
+    padding: 0em 0px 0em 0px;    
+    overflow: hidden;
+    background: #aaa;
+    width: 299px;
+}
+
+/* Annotation Window collapsed: hide header/content */
+#pundit-aw.pundit-hidden .pundit-aw-panel-content,
+#pundit-aw.pundit-hidden .pundit-aw-panel-header {
+	display: none;
+}
+
+/* Hidden annotation content */
+#pundit-aw .pundit-hidden .pundit-aw-panel-content {
+	height: 0px;
+	min-height: 0px;
+	opacity: 0;
+}
+.pundit-aw-panel-content div.pundit-metadata span {
+    padding: 2px;
+    background: #eee;
+    margin: 1px;
+}
+.pundit-aw-panel-content div.pundit-metadata span em {
+    color: #009BFF;
+}
+
+#pundit-aw span.pundit-icon-page{
+    float: left;
+    width: 22px;
+    height: 16px;
+    margin-left: -2px;
+    background: url('img/page.png') no-repeat 4px 0px;  
+}
+
+div.pundit-statement {
+	border-top: 1px solid black;
+	padding: 2px;
+	background-color: #e0e0e0;
+}
+
+div.pundit-statement .pundit-subject {
+
+}
+div.pundit-statement .pundit-predicate {
+	margin-left: 15px;
+}
+div.pundit-statement .pundit-object {
+	margin-left: 15px;
+}
+
+div.pundit-statement span {
+	background-color: #fff;
+}
+
+div.pundit-statement span.pundit-moreinfo { 
+	padding: 1px 1px 1px 5px;
+	margin-top: 1px;
+}
+div.pundit-statement span.pundit-moreinfo:hover { 
+	text-decoration: underline; cursor: context-menu; 
+}
+
+div.pundit-statement .pundit-moreinfo-subpanel {
+	padding-left: 3px;
+	margin-left: 15px;
+	margin-bottom: 3px;
+	background-color: #eee;
+	overflow: auto;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-radius: 0pc 0px 0px 4px;
+}
+
+div.pundit-statement .pundit-moreinfo-subpanel img {
+    vertical-align: middle;
+    margin: 4px;
+    max-width: 200px;
+    max-height: 150px;
+    border: 1px solid black;
+}
+div.pundit-statement .pundit-moreinfo-subpanel.pundit-hidden { 
+	border: 0px;
+	height: 0px; 
+	overflow: hidden;
+	margin: 0px;
+}
+div.pundit-statement ul {
+	margin: 0px; 
+	padding: 5px;
+}
+div.pundit-statement ul li {
+    padding: 1px;
+    white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.90);
+    max-height: 160px;
+    overflow-y: auto;
+}
+div.pundit-statement ul li:last-child	 { 
+    border-bottom: 0px;
+}
+
+div.pundit-statement ul li em {
+    color: #009BFF;
+    margin-right: 4px;
+}
+
+div.pundit-statement a.go_to {
+    color: #009BFF;
+    text-decoration: none;
+    box-shadow: 0px 1px 0px 0px #009BFF
+}
+
+div.pundit-statement a.go_to:hover {
+    box-shadow: 0px 2px 0px 0px #fc0;
+}
+div.pundit-statement a.zoom {
+    color: black;
+    text-decoration: none;
+}
+div.pundit-statement a.zoom:hover {
+    text-decoration: underline;
+}
+
+/*********************************************************************
+ ****** Fragment Colors
+ *********************************************************************/
+
+/* Consolidated images */
+span.cons img {
+    border: 1px solid black;
+}
+span.cons.active img {
+ 	-webkit-transition: opacity 250ms linear;
+     border: 1px solid #fc0; 
+     opacity: 0.4;
+}
+
+/* Common colors */
+
+.pundit-button-color.col1,
+div.pundit-statement .col1, 
+span.cons.col1 { background-color: rgba(153, 153, 204, 0.5); }
+span.cons.col1 img { border: 4px solid rgba(153, 153, 204, 0.5); }
+
+.active.pundit-button-color.col1,
+div.pundit-statement .active.col1,
+span.cons.active.col1 { background-color: rgba(153, 153, 204, 0.2); }
+span.cons.active.col1 img {border: 4px solid rgba(153, 153, 204, 0.5); }
+
+
+.pundit-button-color.col2,
+div.pundit-statement .col2, 
+span.cons.col2 { background-color: rgba(51, 204, 51, 0.5); }
+span.cons.col2 img { border: 4px solid rgba(51, 204, 51, 0.5); }
+
+.active.pundit-button-color.col2,
+div.pundit-statement .active.col2, 
+span.cons.active.col2 { background-color: rgba(51, 204, 51, 0.2); }
+span.cons.active.col2 img { border: 4px solid rgba(51, 204, 51, 0.5); }
+
+.pundit-button-color.col3,
+div.pundit-statement .col3, 
+span.cons.col3 { background-color: rgba(0, 204, 204, 0.5); }
+span.cons.col3 img { border: 4px solid rgba(0, 204, 204, 0.5); }
+
+.active.pundit-button-color.col3,
+div.pundit-statement .active.col3, 
+span.cons.active.col3 { background-color: rgba(0, 204, 204, 0.2); }
+span.cons.active.col3 img { border: 4px solid rgba(0, 204, 204, 0.5); }
+
+.pundit-button-color.col4,
+div.pundit-statement .col4, 
+span.cons.col4 { background-color: rgba(255, 204, 0, 0.5); }
+span.cons.col4 img { border: 4px solid rgba(255, 204, 0, 0.5); }
+
+.active.pundit-button-color.col4,
+div.pundit-statement .active.col4, 
+span.cons.active.col4 { background-color: rgba(255, 204, 0, 0.2); }
+span.cons.active.col4 img { border: 4px solid rgba(255, 204, 0, 0.5); }
+
+.pundit-button-color.col5,
+div.pundit-statement .col5, 
+span.cons.col5 { background-color: rgba(255, 102, 0, 0.5); }
+span.cons.col5 img { border: 4px solid rgba(255, 102, 0, 0.5); }
+
+.active.pundit-button-color.col5,
+div.pundit-statement .active.col5,
+span.cons.active.col5 { background-color: rgba(255, 102, 0, 0.2); }
+span.cons.active.col5 img { border: 4px solid rgba(255, 102, 0, 0.5); }
+
+
+.pundit-button-color.col6,
+div.pundit-statement .col6, 
+span.cons.col6 { background-color: rgba(204, 153, 51, 0.5); }
+span.cons.col6 img { border: 4px solid rgba(204, 153, 51, 0.5); }
+
+.active.pundit-button-color.col6,
+div.pundit-statement .active.col6, 
+span.cons.active.col6 { background-color: rgba(204, 153, 51, 0.2); }
+span.cons.active.col6 img { border: 4px solid rgba(204, 153, 51, 0.5); }
+
+.pundit-button-color.col7,
+div.pundit-statement .col7, 
+span.cons.col7 { background-color: rgba(153, 0, 0, 0.5); }
+span.cons.col7 img { border: 4px solid rgba(153, 0, 0, 0.5); }
+
+.active.pundit-button-color.col7,
+div.pundit-statement .active.col7, 
+span.cons.active.col7 { background-color: rgba(153, 0, 0, 0.2); }
+span.cons.active.col7 img { border: 4px solid rgba(153, 0, 0, 0.5); }
+
+.pundit-button-color.col8,
+div.pundit-statement .col8, 
+span.cons.col8 { background-color: rgba(255, 102, 102, 0.5); }
+span.cons.col8 img { border: 4px solid rgba(255, 102, 102, 0.5); }
+
+.active.pundit-button-color.col8,
+div.pundit-statement .active.col8,
+span.cons.active.col8 { background-color: rgba(255, 102, 102, 0.2); }
+span.cons.active.col8 img { border: 4px solid rgba(255, 102, 102, 0.5); }
+
+.pundit-button-color.col9,
+div.pundit-statement .col9, 
+span.cons.col9 { background-color: rgba(255, 0, 204, 0.5); }
+span.cons.col9 img { border: 4px solid rgba(255, 0, 204, 0.5); }
+
+.active.pundit-button-color.col9,
+div.pundit-statement .active.col9, 
+span.cons.active.col9 { background-color: rgba(255, 0, 204, 0.2); }
+span.cons.active.col9 img { border: 4px solid rgba(255, 0, 204, 0.5); }
+
+.pundit-button-color.col10,
+div.pundit-statement .col10, 
+span.cons.col10 { background-color: rgba(123, 104, 238, 0.5); }
+span.cons.col10 img { border: 4px solid rgba(123, 104, 238, 0.5); }
+
+.active.pundit-button-color.col10,
+div.pundit-statement .active.col10, 
+span.cons.active.col10 { background-color: rgba(123, 104, 238, 0.2); }
+span.cons.active.col10 img { border: 4px solid rgba(123, 104, 238, 0.5); }
+
+.pundit-button-color.col11,
+div.pundit-statement .col11, 
+span.cons.col11 { background-color: rgba(176, 48, 96, 0.5); }
+span.cons.col11 img { border: 4px solid rgba(176, 48, 96, 0.5); }
+
+.active.pundit-button-color.col11,
+div.pundit-statement .active.col11, 
+span.cons.active.col11 { background-color: rgba(176, 48, 96, 0.2); }
+span.cons.active.col11 img { border: 4px solid rgba(176, 48, 96, 0.5); }
+
+.pundit-button-color.col12,
+div.pundit-statement .col12, 
+span.cons.col12 { background-color: rgba(60 ,179, 113, 0.5); }
+span.cons.col12 img { border: 4px solid rgba(60 ,179, 113, 0.5); }
+
+.active.pundit-button-color.col12,
+div.pundit-statement .active.col12, 
+span.cons.active.col12 { background-color: rgba(60 ,179, 113, 0.2); }
+span.cons.active.col12 img { border: 4px solid rgba(60 ,179, 113, 0.5); }
+
+.pundit-button-color.col13,
+div.pundit-statement .col13, 
+span.cons.col13 { background-color: rgba(255, 192, 203, 0.5); }
+span.cons.col13 img { border: 4px solid rgba(255, 192, 203, 0.5); }
+
+.active.pundit-button-color.col13,
+div.pundit-statement .active.col13, 
+span.cons.active.col13 { background-color: rgba(255, 192, 203, 0.2); }
+span.cons.active.col13 img { border: 4px solid rgba(255, 192, 203, 0.5); }
+
+.pundit-button-color.col14,
+div.pundit-statement .col14, 
+span.cons.col14 { background-color: rgba(255, 160, 122, 0.5); }
+span.cons.col14 img { border: 4px solid rgba(255, 160, 122, 0.5); }
+
+.active.pundit-button-color.col14,
+div.pundit-statement .active.col14, 
+span.cons.active.col14 { background-color: rgba(255, 160, 122, 0.2); }
+span.cons.active.col14 img { border: 4px solid rgba(255, 160, 122, 0.5); }
+
+.pundit-button-color.col15,
+div.pundit-statement .col15, 
+span.cons.col15 { background-color: rgba(152, 251, 152, 0.5); }
+span.cons.col15 img { border: 4px solid rgba(152, 251, 152, 0.5); }
+
+.active.pundit-button-color.col15,
+div.pundit-statement .active.col15, 
+span.cons.active.col15 { background-color: rgba(152, 251, 152, 0.2); }
+span.cons.active.col15 img { border: 4px solid rgba(152, 251, 152, 0.5); }
+
+.pundit-button-color.col16,
+div.pundit-statement .col16, 
+span.cons.col16 { background-color: rgba(238, 221, 130, 0.5); }
+span.cons.col16 img { border: 4px solid rgba(238, 221, 130, 0.5); }
+
+.active.pundit-button-color.col16,
+div.pundit-statement .active.col16, 
+span.cons.active.col16 { background-color: rgba(238, 221, 130, 0.2); }
+span.cons.active.col16 img { border: 4px solid rgba(238, 221, 130, 0.5); }
+
+.pundit-button-color.col17,
+div.pundit-statement .col17, 
+span.cons.col17 { background-color: rgba(154, 205, 50, 0.5); }
+span.cons.col17 img { border: 4px solid rgba(154, 205, 50, 0.5); }
+
+.active.pundit-button-color.col17,
+div.pundit-statement .active.col17, 
+span.cons.active.col17 { background-color: rgba(154, 205, 50, 0.2); }
+span.cons.active.col17 img { border: 4px solid rgba(154, 205, 50, 0.5); }
+
+.pundit-button-color.col18,
+div.pundit-statement .col18, 
+span.cons.col18 { background-color: rgba(32, 178, 170, 0.5); }
+span.cons.col18 img { border: 4px solid rgba(32, 178, 170, 0.5); }
+
+.active.pundit-button-color.col18,
+div.pundit-statement .active.col18, 
+span.cons.active.col18 { background-color: rgba(32, 178, 170, 0.2); }
+span.cons.active.col18 img { border: 4px solid rgba(32, 178, 170, 0.5); }
+
+.pundit-button-color.col19,
+div.pundit-statement .col19, 
+span.cons.col19 { background-color: rgba(65, 105, 225, 0.5); }
+span.cons.col19 img { border: 4px solid rgba(65, 105, 225, 0.5); }
+
+.active.pundit-button-color.col19,
+div.pundit-statement .active.col19, 
+span.cons.active.col19 { background-color: rgba(65, 105, 225, 0.2); }
+span.cons.active.col19 img { border: 4px solid rgba(65, 105, 225, 0.5); }
+
+.pundit-button-color.col20,
+div.pundit-statement .col20, 
+span.cons.col20 { background-color: rgba(135, 206, 250, 0.5); }
+span.cons.col20 img { border: 4px solid rgba(135, 206, 250, 0.5); }
+
+.active.pundit-button-color.col20,
+div.pundit-statement .active.col20, 
+span.cons.active.col20 { background-color: rgba(135, 206, 250, 0.2); }
+span.cons.active.col20 img { border: 4px solid rgba(135, 206, 250, 0.5); }
+
+.pundit-button-color.col21,
+div.pundit-statement .col21, 
+span.cons.col21 { background-color: rgba(190, 190, 190, 0.5); }
+span.cons.col21 img { border: 4px solid rgba(190, 190, 190, 0.5); }
+
+.active.pundit-button-color.col21,
+div.pundit-statement .active.col21, 
+span.cons.active.col21 { background-color: rgba(190, 190, 190, 0.2); }
+span.cons.active.col21 img { border: 4px solid rgba(190, 190, 190, 0.5); }
+
+.pundit-button-color.col22,
+div.pundit-statement .col22, 
+span.cons.col22 { background-color: rgba(186, 85, 211, 0.5); }
+span.cons.col22 img { border: 4px solid rgba(186, 85, 211, 0.5); }
+
+.active.pundit-button-color.col22,
+div.pundit-statement .active.col22, 
+span.cons.active.col22 { background-color: rgba(186, 85, 211, 0.2); }
+span.cons.active.col22 img { border: 4px solid rgba(186, 85, 211, 0.5); }
+
+.pundit-button-color.col23,
+div.pundit-statement .col23, 
+span.cons.col23 { background-color: rgba(205, 175, 149, 0.5); }
+span.cons.col23 img { border: 4px solid rgba(205, 175, 149, 0.5); }
+
+.active.pundit-button-color.col23,
+div.pundit-statement .active.col23, 
+span.cons.active.col23 { background-color: rgba(244, 164, 96, 0.2); }
+span.cons.active.col23 img { border: 4px solid rgba(244, 164, 96, 0.5); }
+
+.pundit-button-color.col24,
+div.pundit-statement .col24, 
+span.cons.col24 { background-color: rgba(244, 164, 96, 0.5); }
+span.cons.col24 img { border: 4px solid rgba(244, 164, 96, 0.5); }
+
+.active.pundit-button-color.col24,
+div.pundit-statement .active.col24, 
+span.cons.active.col24 { background-color: rgba(188, 143, 143, 0.2); }
+span.cons.active.col24 img { border: 4px solid rgba(188, 143, 143, 0.5); }
+
+.pundit-button-color.col25,
+div.pundit-statement .col25, 
+span.cons.col25 { background-color: rgba(255, 192, 203, 0.5); }
+span.cons.col25 img { border: 4px solid rgba(255, 192, 203, 0.5); }
+
+.active.pundit-button-color.col25,
+div.pundit-statement .active.col25, 
+span.cons.active.col25 { background-color: rgba(255, 192, 203, 0.2); }
+span.cons.active.col25 img { border: 4px solid rgba(255, 192, 203, 0.5); }
+
+/* Active: mouseovered or highlighted someway */
+span.cons.active {
+    background: #fc0;
+    opacity: 1.0;
+	-webkit-transition-property: background;
+	-webkit-transition-duration: 1s;
+    -moz-transition-property: background;
+	-moz-transition-duration: 1s;
+    border-bottom: 1px solid #fd0;
+}
+
+div.pundit-statement .active.red, 
+span.cons.active.red { background: #f66; }
+
+div.pundit-statement .active.blue, 
+span.cons.active.blue { background: #39f; }
+
+div.pundit-statement .active.green, 
+span.cons.active.green { background: #393; }
+
+
+
+/* Colored consolidated text fragments: blend experiments .. */
+span.cons.blue.red { background: #E6CCCC; }
+span.cons.green.red { background: #CCB34D; }
+span.cons.green.blue { background: #B3E680; }
+
+
+
+/*********************************************************************
+ ****** Semlib window 
+ *********************************************************************/
+#pundit-gui {
+	position: fixed;
+	z-index: 1996;
+    left: 0px;
+	top: 25px;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+    height:auto;
+}
+#pundit-gui.startup {
+	top: -5px;
+	height: 25px;
+    display: none;
+}
+
+#pundit-gui.pundit-hidden {
+    top: 25px;
+	background-color: #666;
+/*  background-color: #CCC; */
+	box-shadow: 0;
+}
+#pundit-gui.pundit-hidden .pundit-gui-button.pundit-selected{
+    padding-bottom: 0px;
+}
+#pundit-gui.pundit-shown {
+	box-shadow: 0px 10px 35px #666;
+	background-color: #cccccc;
+}
+
+/* Things resized when resizing the semlib window */
+#pundit-gui, #pundit-gui-panel-container, #pundit-gui-left, #pundit-gui-center, #pundit-gui-right, .pundit-tab-content {
+	-webkit-transition-property: height, box-shadow, top, background-color;
+	-webkit-transition-duration: 1s, 1s, 1s, 1s;
+    -moz-transition-property: height, box-shadow, top, background-color;
+	-moz-transition-duration: 1s, 1s, 1s, 1s;
+}
+
+
+body .pundit-window-expand-icon,
+body .pundit-annotations-expand-icon {
+	display: block;
+	width: 16px;
+	border: 0px solid red;
+	height: 100%;
+}
+body.pundit-gui-shown .pundit-window-expand-icon {
+    background: url('img/control-up.png') no-repeat 0px 0px;
+}
+body.pundit-gui-hidden .pundit-window-expand-icon {
+    background: url('img/control-down.png') no-repeat 0px 0px;
+}
+
+body.pundit-aw-hidden .pundit-annotations-expand-icon {
+    background: url('img/control-left.png') no-repeat 0px 0px;
+}
+body.pundit-aw-shown .pundit-annotations-expand-icon {
+    background: url('img/control-right.png') no-repeat 0px 0px;
+}
+
+body #pundit-aw-expander,
+body #pundit-gui-expander,
+body #tabMySemlib {
+    float: right;
+}
+body #pundit-aw-expander,
+body #pundit-gui-expander {
+    width: 16px;
+}
+
+body #pundit-gui-footer {
+    position: absolute;
+    left: 0px;
+    bottom: -10px;
+    width: 100%;
+    height: 35px;
+}
+
+body #pundit-gui-footer .pundit-gui-button {
+    -webkit-transition-property: padding-bottom;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: padding-bottom;
+    -moz-transition-duration: 1s;
+}
+
+span.pundit-gui-button {
+    padding: 2px 10px; 
+
+    -webkit-transition-property: padding-bottom;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: padding-bottom;
+    -moz-transition-duration: 1s;
+
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+    background-color: #333;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    color: #009bff;
+    border-radius: 3px;
+    background: #45484d; /* Old browsers */
+    background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
+    background: linear-gradient(top,  #45484d 0%,#000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+    vertical-align: middle;
+}
+span.pundit-gui-button:hover {
+    background: #ededed; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ededed 0%, #cccccc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ededed 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ededed 0%,#cccccc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ededed 0%,#cccccc 100%); /* IE10+ */
+    background: linear-gradient(top,  #ededed 0%,#cccccc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+span.pundit-gui-button.pundit-selected {
+    background: #ededed; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ededed 0%, #cccccc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ededed 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ededed 0%,#cccccc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ededed 0%,#cccccc 100%); /* IE10+ */
+    background: linear-gradient(top,  #ededed 0%,#cccccc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+
+span.pundit-gui-button.pundit-button-disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    color: #009bff;
+    background: #45484d; 
+}
+span.pundit-gui-button.pundit-button-disabled:hover {
+    color: #009bff;
+}
+
+
+span.pundit-gui-button .pundit-bicon {
+    margin: -4px;
+    margin-right: 4px;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    text-align: middle;
+    border: 0px;
+}
+
+body .pundit-icon {
+    margin: 2px;
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    text-align: middle;
+    border: 0px;
+}
+
+/* Icons used for pundit-gui-buttons and other stuff */
+body .pundit-add-triple-icon {
+    background: url('img/plus-button.png') no-repeat 0px 0px;
+}
+body .pundit-save-icon {
+    background: url('img/network-clouds.png') no-repeat 0px 0px;
+}
+body .pundit-remove-icon {
+    background: url('img/cross-button.png') no-repeat 0px 0px;
+}
+body .pundit-zoom-in-icon {
+    background: url('img/magnifier-zoom-in.png') no-repeat 0px 0px;
+}
+body .pundit-zoom-out-icon {
+    background: url('img/magnifier-zoom-out.png') no-repeat 0px 0px;
+}
+body .pundit-tag-icon {
+    background: url('img/tag.png') no-repeat 0px 0px;
+}
+body .pundit-favorite-icon {
+    background: url('img/star.png') no-repeat 0px 0px;
+}
+body .pundit-delete-icon {
+    background: url('img/bin-metal-full.png') no-repeat 0px 0px;
+}
+body .pundit-draw-polygon-icon {
+    background: url('img/layer-shape-polygon.png') no-repeat 0px 0px;
+}
+body .pundit-lifebuoy-icon {
+    background: url('img/lifebuoy.png') no-repeat 0px 0px;
+}
+
+/* Image Fragment Handler image */
+body .pundit-ifh-annotate-image {
+	background: rgba(0,0,0, 0.8) url('img/balloon.png') no-repeat 0px -2px;
+    width: 32px;
+    height: 28px;
+    cursor: pointer;
+    border-radius: 3px;
+	box-shadow: 3px 3px 5px #333;
+    z-index: 1000;
+}
+body .pundit-ifh-annotate-image:hover {
+	background: #009bff url('img/balloon.png') no-repeat 0px -2px;
+}
+
+
+#pundit-gui-topbar,
+#pundit-gui,
+#pundit-aw,
+.pundit-disable-annotation {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; 
+}
+
+/** Semlib window panels **/
+body #pundit-gui-panel-container {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	bottom: 25px;
+	height: 125px;
+    overflow-y: visible;
+    width:100%;
+/*	padding-right: 100px;*/
+}
+#pundit-gui-left.previewVisible{
+    overflow-y: visible;
+}
+#pundit-gui-center, #pundit-gui-left, #pundit-gui-right {
+/*	margin: 5px 0px 5px 5px;*/
+    margin: 0px 0px 0px 0.5%;
+	min-height: 100px;
+/*	position: absolute;*/
+	background-color: rgba(255, 255, 255, 0.6);
+    overflow-y: hidden;
+}
+#pundit-gui-footer-center, 
+#pundit-gui-footer-left, 
+#pundit-gui-footer-right {
+    /* TODO: 0.5%?!?? WTF */
+    margin: 0px 0px 0px 0.5%;
+    height: 35px;
+}
+.pundit-hidden #pundit-gui-footer,
+.pundit-hidden #pundit-gui-footer-center, 
+.pundit-hidden #pundit-gui-footer-left, 
+.pundit-hidden #pundit-gui-footer-right {
+    height: 1px;
+    display: none;
+}
+
+
+#pundit-gui-center, #pundit-gui-footer-center {
+    width:44%;
+}
+
+#pundit-gui-footer .pundit-gui-button {
+    margin-top: 3px;
+    margin-right: 2px;
+}
+
+#pundit-gui-footer .pundit-gui-button.pundit-selected {
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+#pundit-tab-page-items{
+    float:right;
+}
+#pundit-tab-vocabs{
+    float:right;
+}
+
+#pundit-gui-left{
+    overflow-y: visible;
+}
+#pundit-gui-left, #pundit-gui-footer-left {
+/*	width: 210px;*/
+    width:19.5%;
+}
+#pundit-gui-right, #pundit-gui-footer-right {
+/*	right: 5px;
+	width: 450px;*/
+/*        min-width: 400px;
+            max-width:800px;*/
+width:34.5%;
+}
+
+#pundit-gui.pundit-hidden #pundit-gui-resize-handler {
+    display: none;
+}
+
+#pundit-gui-resize-handler {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 150px;
+    border: 0px;
+    height: 5px;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    cursor: ns-resize;
+    z-index: 3000;
+}
+
+#pundit-gui-resize-handler.dragging {
+    border-top: 2px dashed #999;
+}
+
+span.pundit-items-number {
+    padding-right: 6px;
+    color: #ca0;
+}
+
+/*******************************
+* TAB
+********************************/
+.pundit-tab {
+    min-width: 450px;
+    display: none;
+}
+.pundit-tab.pundit-selected {
+    display: block;
+}
+/** Container Header **/
+.pundit-tab-header {
+	height: 24px;
+	background-color: #cccccc;
+}
+/** Sort items **/
+.pundit-tab-header .pundit-sort-items {
+	position: relative;
+	top: 0px;
+	width: 20px;
+	height: 24px;
+	display: block;
+	float: right;
+	opacity: 0.5;
+}
+.pundit-tab-header .pundit-sort-items:hover {
+	cursor: context-menu;
+	opacity: 1.0;
+}
+.pundit-tab-header .pundit-sort-items.pundit-selected {
+	opacity: 1.0;
+}
+
+.pundit-tab-header .pundit-sort-items.pundit-view-tile {
+	background: url('img/application-tile.png') no-repeat 2px 4px rgba(17, 169, 254, 0.5);	
+}
+.pundit-tab-header .pundit-sort-items.pundit-view-list {
+	background: rgba(17, 169, 254, 0.5) url('img/application-tile-vertical.png') no-repeat 2px 4px;	
+}
+/** Container Content **/
+.pundit-tab-content {
+    height: 75px;
+    overflow: auto;
+}
+.pundit-tab-content div.semlib-panel{
+    display:none;
+}
+div.pundit-tab-content.semlibnoscrolly{
+    overflow-y:hidden;
+} 
+
+.pundit-tab-content div.semlib-panel.semlib-selected {
+    display:block;
+}
+
+
+/** Body + pundit-gui **/
+body {
+	-webkit-transition-property: margin-top, background-position-y, margin-right, scroll-top, scrollTop;
+	-webkit-transition-duration: 1s, 1s, 1s, 1s;
+    -moz-transition-property: margin-top, background-position-y, margin-right, scroll-top, scrollTop;
+	-moz-transition-duration: 1s, 1s, 1s, 1s;
+}
+body.pundit-gui-hidden {
+	margin-top: 25px;
+	background-position-y: 25px;
+}
+body.pundit-gui-shown {
+	margin-top: 150px;
+	background-position-y: 150px;
+}
+body.pundit-aw-hidden {
+	margin-right: 0px;
+}
+body.pundit-aw-shown {
+	margin-right: 300px;
+}
+
+
+/*********************************************************************
+ ****** TextSelectionHelper 
+ *********************************************************************/
+/*
+#textSelectionHelper {
+    background: rgba(227, 60, 70, 0.75) url(img/TextSelectionHelper.png) top left no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+	box-shadow: 1px 1px 2px #666;
+	-webkit-transition-property: box-shadow;
+	-webkit-transition-duration: 1s;
+}
+#textSelectionHelper:hover {
+    background: rgba(227, 60, 70, 1) url(img/TextSelectionHelper.png) top left no-repeat;
+	box-shadow: 4px 4px 5px #666;
+	cursor: pointer;
+}
+#textSelectionHelper.pundit-hidden {
+    display: none;
+}
+
+
+/** Annotation_icon **/
+.pundit-icon-annotation {
+    width: 20px;
+    height: 16px;
+	text-indent: -9999px;
+	display: inline-block;
+    border: 0;
+    background: url(img/baloon.png) top left no-repeat;
+}
+/** selected_fragment_icon **/
+.pundit-icon-annotation.selected_fragment_icon {
+    width: 20px;
+    height: 16px;
+	text-indent: -9999px;
+	display: inline-block;
+    border: 0;
+    background: url(img/star.png) top left no-repeat;
+}
+.pundit-icon-annotation:hover {
+    cursor: pointer;
+}
+.pundit-icon-annotation.close {
+    background: url(img/cross-white.png) no-repeat 2px 0px;
+    opacity: 0.5;
+}
+.pundit-icon-annotation.close:hover {
+    opacity: 1;
+}
+
+
+/*********************************************************************
+ ****** LoginPopup
+ *********************************************************************/
+
+#pundit-login-popup-content div {
+    height: 60px;
+    display: none;
+    padding-left: 70px;
+}
+#pundit-login-popup-content div p {
+	margin-bottom: 5px;
+	font-size: 1.0em;
+}
+#pundit-login-popup-content div span.username {
+	font-size:1.0em;
+}
+
+#pundit-login-popup-content.off div.off {
+    display: block;
+    background: rgba(255, 255, 255, 0.75) url('img/openid-icon.png') no-repeat 10px 0px;
+}
+#pundit-login-popup-content.waiting div.waiting {
+    display: block;
+    background: rgba(255, 255, 255, 0.75) url('img/preview_loading.gif') no-repeat 15px 0px;
+}
+#pundit-login-popup-content.logged div.logged {
+    display: block;
+}
+
+#pundit-login-popup-content.logged span#pundit-login-open-button {
+    display: none;
+}
+#pundit-login-popup-content div#pundit-login-popup-buttons {
+    background: #666;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    height: 42px;
+}
+#pundit-login-popup-content div#pundit-login-popup-buttons span {
+    padding: 3px 10px 0px; 
+	background-color: #333;
+	height: 20px;
+	cursor: pointer;
+	color: #009bff;
+	margin-right: 2px;
+	border-radius: 3px;
+	line-height: 17px;
+	display: inline-block;
+    font-size: 14px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 0.4s;
+    -moz-transition-property: background-color;
+	-moz-transition-duration: 0.4s;
+}
+#pundit-login-popup-content div#pundit-login-popup-buttons span:hover {
+	background-color: #ddd;
+}
+
+/*********************************************************************
+ ****** ContextualMenu
+ *********************************************************************/
+#pundit-cm {
+    z-index: 4000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border: 0;
+    color: white;
+    padding: 2px;
+    background: rgba(204, 204, 204, 0.9);
+    box-shadow: 5px 10px 15px #333;
+}
+
+#pundit-cm span.pundit-cm-header {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: block;
+    height: 25px;
+    background: rgba(51, 51, 51, 0.5);
+    color: white;
+}
+
+#pundit-cm.pundit-cm-bottom {
+    border-top: 3px solid #333; /* rgba(204, 204, 204, 0.0);*/
+}
+#pundit-cm.pundit-cm-right {
+    border-left: 3px solid #333; /* rgba(204, 204, 204, 0.0);*/
+}
+#pundit-cm.pundit-hidden {
+    display: none;
+}
+
+#pundit-cm span.pundit-cm-button.pundit-hidden {
+    display: none;
+}
+#pundit-cm span.pundit-cm-button {
+    display: block;
+    cursor: pointer;
+    clear: both;
+    margin: 1px;
+    line-height: 17px;
+}
+
+
+
+#pundit-cm.pundit-cm-bottom:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    display: block; 
+    width: 0;
+    top: 0px;
+    top: -27px;
+    left: 80px;
+    border-width: 12px 12px 12px 12px;
+    border-color: transparent transparent #333 transparent;
+}
+
+
+
+#pundit-cm.pundit-cm-right:after {
+    content:"";
+    position:absolute;
+    border-style:solid;
+
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+    top: 0px; /* controls vertical position */
+
+    left: -15px; /* value = - border-left-width - border-right-width */
+    bottom:auto;
+    border-width: 12px 12px 12px 0;
+    border-color:transparent #333;
+}
+
+/*********************************************************************
+ ****** ResourcesPanel
+ *********************************************************************/
+div.pundit-fp div.pundit-rp-container-suggestions{
+    display: none;
+}
+div.pundit-fp div.pundit-rp-container-suggestions.pundit-visible{
+    display: block;
+}
+div.pundit-fp div.pundit-rp-container-suggestions ul{
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: height;
+    -moz-transition-duration: 1s;
+    height:0px;
+    margin:0px;
+    padding:0px;
+    border:none;
+}
+/*div.pundit-fp div.pundit-rp-container-suggestions.pundit-expanded ul{
+    display:block;
+    height:136px;
+}*/
+
+.pundit-rp {
+    z-index: 1999;
+    display:none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    border: 0;
+    color: white;
+    padding: 2px;
+    background: rgba(204, 204, 204, 0.9);
+    border-top: 3px solid #333; /* rgba(204, 204, 204, 0.0);*/
+    box-shadow: 5px 10px 15px #333;
+    width:400px;
+}
+
+.pundit-rp .pundit-dialog-input {
+    border:groove 1px;
+    width:100%;
+    padding:2px;
+    margin-bottom:2px
+}
+
+.pundit-fp.pundit-arrow-left:after {
+    content:" ";
+    position:absolute;
+    border-style:solid;
+    display:block; 
+    width:0;
+    top: 0px;
+    top: -27px;
+    left: 55px;
+    border-width: 12px 12px 12px 12px;
+    border-color:transparent transparent #333 transparent;
+}
+
+.pundit-fp.pundit-arrow-center:after {
+    content:" ";
+    position:absolute;
+    border-style:solid;
+    display:block; 
+    width:0;
+    top: 0px;
+    top: -27px;
+    left: 185px;
+    border-width: 12px 12px 12px 12px;
+    border-color:transparent transparent #333 transparent;
+}
+
+.pundit-fp.pundit-arrow-right:after {
+    content:" ";
+    position:absolute;
+    border-style:solid;
+    display:block; 
+    width:0;
+    top: 0px;
+    top: -27px;
+    left: 320px;
+    border-width: 12px 12px 12px 12px;
+    border-color:transparent transparent #333 transparent;
+}
+
+.pundit-rp span.pundit-rp-title {
+    font-weight: bold;
+    color: #000;
+    position:absolute;
+    margin-top:2px;
+    padding-left:4px;
+}
+
+/*Panel Header*/
+.pundit-rp-header {
+    height:20px;
+}
+.pundit-rp-header span.pundit-icon-close {
+    background: url('img/cross-white.png') no-repeat 0px 0px;	
+    opacity: 0.75;
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    padding-right:4px
+}
+
+.pundit-rp-container {
+    background: #f2f2f2;
+    max-width: 400px;    
+}
+
+/*.pundit-rp-search-panel,*/
+.pundit-rp-literal-panel {
+    border:1px solid #aaa;
+}
+
+
+.pundit-rp-date-panel.pundit-hidden,
+.pundit-rp-search-panel.pundit-hidden,
+.pundit-rp-literal-panel.pundit-hidden {
+    display:none;
+}
+
+.pundit-rp-literal-panel-buttons{
+    text-align:right;
+    margin:6px;
+}
+
+.pundit-rp-date-input:valid {
+    border-color: #2f2;
+    background-color: rgba(153, 204, 153, 0.3);
+}
+.pundit-rp-date-input:invalid {
+    border-color: #f22;
+    background-color: rgba(204, 102, 102, 0.3);
+}
+
+
+/*Button for closing the literal panel back to common suggested item panel*/
+.pundit-rp-literal-panel-close{
+    display: inline;
+}
+.pundit-rp-literal-panel-close.pundit-hidden{
+    display: none;
+}
+
+.pundit-rp-literal-text{
+    background:#fff;
+    border:groove 1px;
+    padding:2px;
+    margin-top:2px;
+    margin-bottom:2px;
+    width:385px;
+    min-width:385px;
+    max-width:385px;
+    height:120px;
+    overflow-y:auto;
+    color:#000
+}
+
+.pundit-rp-container-search,
+.pundit-rp-container-literal {
+    display:block;
+    width:392px;
+    margin-left:4px
+}
+
+.pundit-rp-container span.pundit-rp-subtitle,
+.pundit-rp-container-literal span.pundit-rp-subtitle {
+    display:block;
+    position:relative;
+    font-weight: bold;
+    color: #000;
+    padding-top:8px;
+}
+
+.pundit-rp-container-suggestions {
+    width: 392px;
+    margin: 4px 4px;    
+}
+
+.pundit-rp-container-suggestions ul {
+    width:386px;
+    border:groove 1px;
+    margin-bottom:5px;
+    padding:2px;
+    height: 100%;
+    /*min-height:50px;
+    max-height: 400px;*/
+    background:#eaeaea;
+    overflow-y:auto;
+    color:#000;
+    font-size: 1.0em;
+}
+
+.pundit-rp-suggestions-list{
+/*    max-height: 100px;*/
+}
+
+input.pundit-rp-search-input{
+    min-width: 228px;
+    max-width: 400px;
+    width: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pundit-rp-add-literal,
+.pundit-rp-add-date {
+    display: none;
+}
+.pundit-rp-add-literal.pundit-literal-enabled,
+.pundit-rp-add-date.pundit-literal-enabled {
+    display: inline;
+}
+.pundit-fp .pundit-rp-tags{
+    min-height: 50px;
+    background: #EAEAEA;
+}
+div.pundit-fp div.pundit-rp-panel-tags-container ul.pundit-rp-tags{
+    min-height: 50px;
+    max-height: 109px;
+    height: auto;
+    offset-y: auto;
+}
+
+/*********************************************************************
+ ****** Selectors
+ *********************************************************************/
+
+#vocabSelectorContent .pundit-sel-dialog-input {
+	margin: 3px;
+	height: 22px;
+	font-size: 1.2em;
+	width: 99%;
+}
+#vocabSelectorContent .pundit-sel-message {
+	height: 24px;
+	margin-left: 10px;
+	font-variant: small-caps;
+}
+
+#vocabSelectorContent .pundit-vocabs-icon {
+    width: 20px;
+    height: 24px;
+    margin-right: 5px;
+    opacity: 0.5;
+    border-radius: 3px;
+    background: #009bff url('img/gear-medium.png') no-repeat 2px 4px;
+}
+#vocabSelectorContent .pundit-vocabs-icon:hover {
+    opacity: 1;
+}
+
+
+
+/**********************************************
+* Floating Panel
+**********************************************/
+div.pundit-floating-panel{
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 1s;
+    display: block;
+    position:static;
+    background: transparent;
+    box-shadow: 5px 10px 15px #333;
+}
+div.pundit-floating-panel-header{
+    background: #CCC;
+}
+div.pundit-floating-panel ul{
+    background: #f2f2f2;
+}
+div.pundit-floating-panel ul li{
+	margin-left: 4px;
+}
+div.pundit-floating-panel span.pundit-ctp-title{
+    font-weight: bold;
+}
+div.pundit-floating-panel span.pundit-icon-close {
+    background: url('img/cross-white.png') no-repeat 0px 0px;   
+    opacity: 0.75;
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+}
+.pundit-floating-panel-container{
+    padding: 2px 5px 2px 5px;
+}
+.pundit-container-fill-height{
+    height:100%;
+    overflow-y:auto;
+}
+
+ul.pundit-horizontal-list{
+    list-style: none;
+    margin:0px; 
+    padding:0px;
+    overflow-y:auto;
+    overflow-x:display;
+    display:block;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: width;
+    -moz-transition-duration: 1s;
+    /*width:310px;*/
+}
+ul.pundit-horizontal-list li{
+    vertical-align: top;
+    display: inline-block;
+    overflow-x:display;
+    overflow-y:auto;
+}
+
+/***********************************************
+* CommentTag Panel
+***********************************************/
+#pundit-ctp-container{
+    width:600px;
+}
+/*The floating container */
+#pundit-ctp{
+    position:fixed;
+    top:100px;
+    left:200px;
+    z-index:1998;
+    border:groove 3px;
+    opacity:0;
+}
+/*The floating container header*/
+#pundit-ctp-header{
+    height:20px;
+    padding-top:3px;
+    z-index:1998;
+}
+#pundit-ctp-header span.pundit-ctp-title{
+    margin-top:4px;
+    padding-left:4px;
+}
+/*The comment tag panel close button*/
+#pundit-ctp-close{
+    padding-right:4px;
+}
+/*The ctp list used to create the horizontal layout for annotation panel e preview*/
+#pundit-ctp-content-list{
+    position: relative;
+    overflow: hidden;
+}
+/*The ctp container of the comment*/
+#pundit-ctp-comment-container{
+    max-height:120px;
+    width:300px;
+}
+#pundit-ctp-comment-container div{
+    display:block;
+}
+.pundit-ctp-comment-input {
+    margin-top: 2px;
+    min-height: 50px;
+}
+.pundit-ctp-comment-input,
+section.pundit-rp-literal-text {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+    user-select: text; 
+}
+
+.pundit-ctp-comment-input section{
+    background:#fff;
+    border:groove 1px;
+    padding:2px;
+    margin-top:2px;
+    margin-bottom:2px;
+    width:380px;
+    min-width:294px;
+    max-width:500px;
+    min-height: 100px;
+    height: 40px;
+    max-height:80px;
+    overflow-y:auto
+}
+.pundit-ctp-comment-input a.pundit-selected {
+    background-color:#fffd57;
+}
+/*The ctp container for more tag search and selection*/
+#pundit-ctp-more-tags-container{
+    width:300px;
+    margin-top:5px
+}
+#pundit-ctp-tag-list{
+    border:groove 1px;
+    padding:2px;
+    width:294px;
+    min-height:30px;
+    max-height:70px;
+    background:#eaeaea;
+}
+#pundit-ctp-tag-list li.pundit-selected{
+  border: 1px solid blue;
+}
+#pundit-ctp-tag-search{
+    display:inline;
+}
+#pundit-ctp-more-tags-input{
+    border:groove 1px;
+    padding:2px;
+    margin-top:2px;
+    margin-bottom:2px;
+    width:71%;
+}
+#pundit-ctp-suggestion-container{
+    margin-top: 5px;
+}
+#pundit-ctp-more-tags-list{
+    background:#eaeaea;
+    border:groove 1px;
+    padding:2px;
+    width:294px;
+    min-height:30px;
+    max-height:150px;
+    z-index:2;
+}
+/*The ctp save button*/
+.pundit-rp-save-button {
+    float: right;
+}
+.pundit-rp-save-button {
+    float: right;
+}
+/*The ctp extract tags button*/
+#pundit-ctp-extract-tags {
+    float: right;
+    margin-right: 5px;
+}
+/*The ctp preview container*/
+#pundit-ctp-preview{
+    position:absolute;
+    left:310px;
+    top:0px;
+    width:210px;
+}
+#pundit-ctp-preview.pundit-floating-panel-container{
+    width:210px;
+}
+#pundit-ctp li.pundit-lookup-error{
+    display:block;
+    border:none;
+    color:#f00;
+}
+#pundit-ctp ul.pundit-preview{
+    width: 530px;
+}
+
+#pundit-ctp-tag-preview {
+    overflow-y: auto;
+    max-height: 350px;
+}
+/*Simone will put too this*/
+#pundit-ctp-tag-preview{
+    max-height:350px;
+    overflow-y: auto; 
+}
+
+
+/**********************************************
+* Help / Introduction / Contact ...
+**********************************************/
+
+/*
+#pundit-intro-top iframe {
+    border: 0px;
+    width: 580px;
+    overflow: auto;
+}
+#pundit-intro-bottom {
+    margin-top: 15px;
+    background: #666;
+    padding: 10px;
+    text-align: center;
+}
+#pundit-intro-bottom .pundit-gui-button {
+    margin: 2px;
+}*/
+
+.pundit-dialog-bottom .pundit-intro-dont-open-label {
+    color: white;
+}
+
+.pundit-dialog-bottom {
+    margin-top: 15px;
+    background: #666;
+    padding: 10px;
+    text-align: center;
+}
+.pundit-dialog-bottom .pundit-gui-button {
+    margin: 2px;
+}
+
+.pundit-dialog-top .pundit-dialog-content {
+    border: 0px;
+    width: 100%;
+    overflow: auto;
+}
+
+.pundit-contact-form label {
+    display: block;
+    margin: 2px 0px;
+}
+.pundit-contact-form input {
+    padding: 4px 6px;
+    width: 450px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.pundit-contact-form textarea {
+    padding: 4px 6px;
+    width: 450px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.tundra .dijitDialogPaneContent.pundit-panel-loading {
+    background: rgba(255, 255, 255, 0.95) url('img/preview_loading.gif') no-repeat 170px 160px;
+    cursor: wait;
+}
+.tundra .dijitDialogPaneContent.pundit-panel-loading * {
+    cursor: wait;
+}
+.tundra .dijitDialogPaneContent.pundit-panel-loading::before {
+    content: "Saving ...";
+    position: absolute;
+    top: 185px;
+    left: 220px;
+    font-size: 1.8em;
+}
+
+.tundra div.dijitDialogPaneContent.pundit-panel-done .pundit-dialog-bottom,
+.tundra div.dijitDialogPaneContent.pundit-panel-loading .pundit-dialog-bottom{
+    visibility: hidden;
+}
+
+
+.tundra div.dijitDialogPaneContent.pundit-panel-done {
+    background: rgba(255, 255, 255, 0.95) url('img/tick-button.png') no-repeat 170px 170px;
+}
+.tundra .dijitDialogPaneContent.pundit-panel-done * {
+    opacity: 0.3;
+}
+
+.tundra .dijitDialogPaneContent.pundit-panel-done::before {
+    content: "Message sent!";
+    position: absolute;
+    top: 188px;
+    left: 195px;
+    font-size: 1.8em;
+}
+
+/*  TODO: pundit-dialog-bottom display none or visibility hidden */
+
+/**********************************************
+* Top Bar
+**********************************************/
+#pundit-gui-topbar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 26px; /*Fix the white line appearing with 25px*/
+    width: 100%;
+    z-index: 1997;
+    background: black;
+}
+
+#pundit-gui-topbar .pundit-gui-button {
+	margin-top: 2px;
+	margin-right: 3px;
+	line-height: 17px;
+}
+
+
+#pundit-gui-topbar.pundit-logged-off #pundit-mypundit-myitems-button,
+#pundit-gui-topbar.pundit-logged-off #pundit-mypundit-this-page-button,
+#pundit-gui-topbar.pundit-logged-off #pundit-gui-expander,
+#pundit-gui-topbar.pundit-logged-off #pundit-aw-expander {
+    display: none; 
+}
+
+#pundit-gui-topbar #pundit-mypundit-login-button {
+    float: right;
+}
+#pundit-gui-topbar #pundit-mypundit-loggedin-button {
+	padding-right: 24px;
+    display: none;
+    float: right;
+}
+#pundit-mypundit-loggedin-button .pundit-icon-loggedin {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background: url('img/gear-medium.png') no-repeat 4px 0px;   
+}
+
+#pundit-gui-topbar.pundit-loggedin #pundit-mypundit-login-button {
+    display: none;
+}
+#pundit-gui-topbar.pundit-loggedin #pundit-mypundit-loggedin-button {
+    display: block;
+}
+
+#pundit-mypundit-this-page-button {
+    float: right;
+    padding-right: 24px;
+}
+
+#pundit-mypundit-myitems-button {
+    float: right;
+    padding-right: 24px;
+}
+
+#pundit-mypundit-this-page-button span.pundit-icon-page {
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    background: url('img/page.png') no-repeat 4px 0px;  
+}
+
+#pundit-mypundit-myitems-button span.pundit-icon-favorite {
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    background: url('img/star.png') no-repeat 4px 0px;  
+}
+
+#pundit-new-myitems {
+    margin-left: 5px;
+    color: #CA0;
+    display: none;
+}
+
+#pundit-new-myitems.pundit-visible {
+    display: inline-block;
+}
+
+#pundit-gui-topbar-title {
+    position: absolute;
+    margin-left: 47px;
+    color: #fc0;
+    font-size: 17px;
+    text-shadow: 1px 2px 4px #999;
+    line-height: 25px;
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 2.5s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 2.5s;
+    opacity: 1;
+}
+#pundit-gui-topbar-title.pundit-hidden {
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 0s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 0s;
+    opacity: 0;
+}
+
+#pundit-help-button {
+    float: right;
+}
+
+/* Loading Box */
+
+#pundit-lbw-box.pundit-hidden .pundit-lbw-box-message { 
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1.5s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 1.5s;
+    opacity: 0;
+}
+
+#pundit-lbw-box {
+    display: inline;
+    float: left;
+    height: 25px;
+    width: 350px;
+}
+#pundit-lbw-box .pundit-lbw-box-icon {
+    position: absolute;
+    width: 41px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 9px 0px;
+}
+.pundit-state-ko .pundit-lbw-box-icon {
+    background: #555 url('img/exclamation-button.png') no-repeat 13px 5px;
+}
+.pundit-state-ok .pundit-lbw-box-icon {
+    background: #555 url('img/tick-button.png') no-repeat 13px 5px;
+}
+#pundit-lbw-box.pundit-state-wait .pundit-lbw-box-icon {
+    background: #555 url('img/topbar_loading.gif') no-repeat 5px -3px;
+}
+#pundit-lbw .pundit-state-wait .pundit-lbw-box-icon {
+    background: #555 url('img/topbar_loading.gif') no-repeat 4px 4px;
+}
+
+#pundit-lbw-box .pundit-lbw-box-message {
+    margin-left: 48px;
+    line-height: 25px;
+    font-size: 1.2em;
+    color: #009bff;
+}
+
+
+/* LoadingBoxWindow */
+#pundit-lbw {
+    -webkit-transition-property: opacity;
+    -webkit-transition-duration: 1.5s;
+    -moz-transition-property: opacity;
+    -moz-transition-duration: 1.5s;
+    position: fixed;
+    left: 0px;
+    top: 25px;
+    display: block;
+    border: 3px sold red;
+    background: #555;
+    opacity: 0.95;
+    border-radius: 0px 0px 5px 0px;
+    z-index: 9999;
+    box-shadow: 2px 3px 6px #333;
+}
+#pundit-lbw .pundit-lbw-box-icon {
+    display: inline-block;
+    width: 40px;
+    height: 21px;
+    background-position-y: 2px;
+}
+
+#pundit-lbw ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+#pundit-lbw ul li span {
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+    float: left;
+    height: 21px;	
+    font-size: 1.0em;
+    color: #fc0;
+}
+#pundit-lbw ul li {
+    height: 21px;	
+    padding: 0px 10px 0px 0px;
+    margin: 0px;
+    line-height: 20px;
+    border-bottom: 1px solid #444;
+}
+#pundit-lbw ul li:last-child {
+    border-bottom: 0px;
+}
+
+#pundit-lbw li.pundit-hidden {
+    -webkit-transition-property: opacity, height;
+    -webkit-transition-duration: 1.5s, 2s;
+    -moz-transition-property: opacity, height;
+    -moz-transition-duration: 1.5s, 2s;
+    opacity: 0;
+    height: 0px;
+    overflow: hidden;
+    border: 0px;
+}
+
+/******************************/
+/****** FLoating Panel ********/
+/******************************/
+/*The floating container */
+.pundit-fp{
+    position:fixed;
+    top:100px;
+    left:200px;
+    z-index:1998;
+    border:groove 3px;
+    opacity:0;
+    -webkit-transition-property: opacity, width;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: opacity, width;
+    -moz-transition-duration: 1s;
+    display: block;
+    background: #F2F2F2;
+    box-shadow: 5px 10px 15px #333;
+}
+.pundit-fp.pundit-hidden{
+    display:none;
+}
+.pundit-fp ul{
+    background: #f2f2f2;
+}
+.pundit-fp span.pundit-icon-close {
+    background: url('img/cross-white.png') no-repeat 0px 0px;	
+    opacity: 0.75;
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+}
+.pundit-fp span.pundit-icon-fullscreen {
+    background: url('img/chevron.png') no-repeat 0px 0px;
+    opacity: 0.75;
+    display: block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px
+}
+
+/*The comment tag panel close button*/
+.pundit-fp-close{
+    padding-right:4px;
+}
+/*The floating container header*/
+.pundit-fp-header{
+    height:20px;
+    padding-top:3px;
+    z-index:1998;
+    background: #CCC;
+}
+.pundit-fp-header span.pundit-fp-title{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.pundit-fp-header span.pundit-fp-title{
+    margin-top:4px;
+    padding-left:4px;
+}
+.pundit-fp .pundit-fp-content-list{
+    position: relative;
+    width: 400px;   
+    /*max-height: 600px;*/
+    overflow:hidden;
+}
+
+/*.pundit-fp-content-list li{
+    overflow:hidden;
+}*/
+.pundit-fp-content-list.pundit-preview{
+    /*width: 650px;*/
+}
+.pundit-fp .pundit-fp-content-list li.pundit-fp-preview-list{
+    width: 0px;
+    display:none;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: width;
+    -moz-transition-duration: 1s;
+    position:absolute;
+    left:400px;
+    top:0;
+}
+.pundit-fp .pundit-fp-content-list.pundit-preview li.pundit-fp-preview-list{
+    width: 250px;
+    display:inline-block;
+}
+/*.pundit-fp li.pundit-fp-preview-list.pundit-preview{
+    width: 250px;
+}*/
+.pundit-fp .pundit-fp-container{
+    padding: 2px 5px 2px 5px;
+}
+
+.pundit-fp div.pundit-fp-preview{
+    overflow:auto;
+/*    min-height: 300px;
+    max-height: 400px;*/
+}
+
+.pundit-fp span.pundit-icon-collapse{
+    width: 20px;
+    height: 16px;
+    display:inline-block
+}
+.pundit-fp div.pundit-rp-container-suggestions.pundit-expanded span.pundit-icon-collapse{
+	background: url('img/chevron.png') no-repeat 2px 2px;
+}
+.pundit-fp div.pundit-rp-container-suggestions span.pundit-icon-collapse {
+	background: url('img/chevron-expand.png') no-repeat 2px 2px;
+}
+.pundit-fp span.pundit-items-number {
+    display:inline-block
+}
+.pundit-fp .pundit-fp-source-name{
+    display:inline-block;
+    font-size: 14px;
+}
+
+div.pundit-rp-button-container{
+    height: 30px;
+}
+button.pundit-rp-save-button{
+    margin-top: 5px;
+    margin-right: 5px;
+    float:right;
+}
+
+/****************/
+/* RECOGNIZER */
+#pundit-fp-recognize .pundit-fp-content-list{
+    min-height: 300px;
+}
+
+/****************/
+/*Lookup Error*/
+/****************/
+.pundit-items-container.pundit-lookup-error ul{
+    display: none;
+}
+.pundit-items-container span.pundit-error-message{
+    display: none;
+}
+.pundit-items-container.pundit-lookup-error span.pundit-error-message{
+    display: block;
+    margin-left: 10px;
+    color: red;
+}
+
+span.pundit-pane-title{
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+div.pundit-panel{
+    margin-top:5px;
+}
+
+
+/****************************/
+/* Image Annotation Panel   */
+/****************************/
+ul.pundit-vertical-list li{
+    display: block;
+}
+
+/*********************************************************************
+ ****** Server Pages
+ *********************************************************************/
+
+.pundit-notebook-name-content {
+	margin-top: 5px;
+	font-size: 1.5em;
+	color: #009bff;
+}
+
+.pundit-activate-message {	
+	margin-top: 10px;
+	font-size: 1.0em;
+	color: #888;
+}
+
+
+
+
+
+
+
+
+/*********************************************************************
+ ****** Fast text handler
+ *********************************************************************/
+
+
+.pundit-fth-container .pundit-fth-fragment {
+	line-height: 1.4em;
+	vertical-align: middle;
+    font-size: 1.2em;
+    background-color: #ccc;
+    color: #555;
+    margin: 3px 0px;
+    padding: 0px 15px;
+	font-style: italic;
+	max-height: 100px;
+	overflow-y: auto;
+}
+
+ 
+#pundit-fp-fast-text-handler .pundit-fth-container .pundit-fth-message-0,
+#pundit-fp-fast-text-handler .pundit-fth-container .pundit-fth-message-1 {
+	margin: 10px 0px;
+	text-align: center;
+	line-height: 2em;
+    font-size: 2em;
+    background-color: #666;
+    color: #fc0;
+    font-weight: 800;
+}
+
+.pundit-fth-container .pundit-gui-button {
+	margin: 4px 0px;
+	width: 100px;
+	text-align: center;
+}
+#pundit-fth-save-button {
+	float: right;
+}
+#pundit-fp-fast-text-handler li { 
+    width: 100%; 
+}
+
+.pundit-fth-container.pundit-fth-state-1 .pundit-fth-message-0 {
+    display: none;
+}
+.pundit-fth-container.pundit-fth-state-0 .pundit-fth-message-1 {
+    display: none;
+}
+.pundit-fth-container.pundit-fth-state-0 #pundit-fth-save-button {
+	display: none;
+}
+
+#pundit-fp-commentTag {
+    z-index:1999;
+    text-align: left;
+}

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;ImageAnnotationPanel.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;ImageAnnotationPanel.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.ImageAnnotationPanel
+ * @extends pundit.BasePanel
+ * @description Provides a GUI (floating Panel) for showing items grouped according 
+ * from their provenance (&#x27;My Item&#x27;, &#x27;Page Items&#x27;, Vocabularies)
+ *&#x2F;
+dojo.provide(&quot;pundit.ImageAnnotationPanel&quot;);
+dojo.declare(&quot;pundit.ImageAnnotationPanel&quot;, pundit.BasePanel, {
+
+    constructor:function(options){
+        var self= this;
+        &#x2F;&#x2F;Lazy loading kinetic lib
+        &#x2F;&#x2F;TODO Embed using dojo style
+        (function() {   
+            var h = document.getElementsByTagName(&#x27;head&#x27;)[0],
+            d = document.createElement(&#x27;script&#x27;);
+            d.type = &#x27;text&#x2F;javascript&#x27;,
+            d.src = &#x27;http:&#x2F;&#x2F;thepund.it&#x2F;lib&#x2F;kinetic&#x2F;kinetic-v4.0.1.js&#x27;;
+            h.appendChild(d);
+        })();
+        
+        &#x2F;&#x2F;Zoom and canvas parameters
+        self.deltaScale = 0.1;
+        self.dotRadius = 5; &#x2F;&#x2F;Screen pixel dimension
+        self.strokeWidth = 2; &#x2F;&#x2F;
+        self.dashArray = [10, 5, 1, 5];
+        
+        self.crypto = new pundit.Crypto();
+        
+        self.createdShapes = [];
+        self.selectedShape = null;
+        
+        &#x2F;&#x2F;Make this programable
+        self.containerSize = {
+            w:480,
+            h:360
+        };
+        
+        cMenu.addAction({
+            type: [&#x27;imageSelectionHelper&#x27;],
+            name: &#x27;AnnotateImage&#x27;,
+            label: &#x27;Annotate this image&#x27;,
+            showIf: function(item) {
+                return true
+            },
+            onclick: function(item) {
+                self.initialize(item.image);
+                return true;
+            }
+        });
+    },
+    initialize:function(imageSrc){
+        var self = this;
+		
+		&#x2F;&#x2F;It has to forget the shapes drown in previous panels !
+		self.createdShapes = [];
+		
+        if (typeof (Kinetic) === &#x27;undefined&#x27;){
+            alert(&#x27;Kinetic Lib not loaded Yet... Try again! :P&#x27;);
+            return;
+        }
+        self.imageSrc = imageSrc;
+        self.initHTML();
+        self.initBehavior();
+        self.initAnnotationCanvas();
+        self.show();
+        dojo.behavior.apply();
+    },
+    initHTML:function(){
+        var self= this;
+        self.log(&#x27;Init HTML Resource Panel&#x27;);
+        &#x2F;&#x2F;Add content to the base container
+        self.log(&#x27;Resource Panel Contructor&#x27;);
+        var c =  &#x27;&lt;ul id =&quot;&#x27; + self._id + &#x27;-image-ann-container&quot; class=&quot;pundit-horizontal-list&quot;&gt;&#x27;;
+        c += &#x27;  &lt;li style=&quot;width:100px&quot;&gt;&#x27;;
+        c += &#x27;      &lt;span id=&quot;pundit-image-annotation-zoom&quot; class=&quot;pundit-zoom-in-icon&quot; style=&quot;display:block;width:25px;height:25px;margin-left:auto;margin-right:auto;&quot;&gt;&lt;&#x2F;span&gt;&lt;span style=&quot;display:block;text-align:center;&quot;&gt;Zoom in&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&#x27;;
+        c += &#x27;      &lt;span id=&quot;pundit-image-annotation-pan&quot; class=&quot;pundit-zoom-out-icon&quot; style=&quot;display:block;width:25px;height:25px;margin-left:auto;margin-right:auto;&quot;&gt;&lt;&#x2F;span&gt;&lt;span style=&quot;display:block;text-align:center;&quot;&gt;Zoom out&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&#x27;;
+        c += &#x27;      &lt;span id=&quot;pundit-image-annotation-polygon&quot; class=&quot;pundit-draw-polygon-icon&quot; style=&quot;display:block;width:25px;height:25px;margin-left:auto;margin-right:auto;&quot;&gt;&lt;&#x2F;span&gt;&lt;span style=&quot;display:block;text-align:center;&quot;&gt;Draw Polygon&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&#x27;;
+        c += &#x27;      &lt;span id=&quot;pundit-image-annotation-delete&quot; class=&quot;pundit-delete-icon&quot; style=&quot;display:block;width:25px;height:25px;margin-left:auto;margin-right:auto;&quot;&gt;&lt;&#x2F;span&gt;&lt;span style=&quot;display:block;text-align:center;&quot;&gt;Delete Selected&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&#x27;;
+        c += &#x27;      &lt;span id=&quot;pundit-image-annotation-myitem&quot; class=&quot;pundit-favorite-icon&quot; style=&quot;display:block;width:25px;height:25px;margin-left:auto;margin-right:auto;&quot;&gt;&lt;&#x2F;span&gt;&lt;span style=&quot;display:block;text-align:center;&quot;&gt;Add to My Item&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&#x27;;
+        c += &#x27;      &lt;span id=&quot;pundit-image-annotation-add-comment&quot;&quot; class=&quot;pundit-tag-icon&quot; style=&quot;display:block;width:25px;height:25px;margin-left:auto;margin-right:auto;&quot;&gt;&lt;&#x2F;span&gt;&lt;span style=&quot;display:block;text-align:center;&quot;&gt;Add Comment&#x2F;Tag&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&#x27;;
+        c += &#x27;  &lt;&#x2F;li&gt;&#x27;;
+        c += &#x27;  &lt;li&gt;&#x27;;
+        c += &#x27;      &lt;div id=&quot;&#x27; + self._id + &#x27;-image-annotation-container&quot; class=&quot;pundit-stop-wheel-propagation pundit-rp-image-annotation-container&quot; style=&quot;width:480px;height:360px;overflow:auto;z-index:1000000000;background:lightGrey&quot;&gt;&lt;&#x2F;div&gt;&#x27;;
+        c += &#x27;&lt;&#x2F;li&gt;&lt;&#x2F;ul&gt;&#x27;;
+        self.addHTMLContent(c);
+    },
+    initAnnotationCanvas:function(imageUrl){
+        var self = this,
+        imageObj = new Image();
+        
+        &#x2F;&#x2F;Stage    
+        self.stage = new Kinetic.Stage({
+            container: self._id + &quot;-image-annotation-container&quot;
+        &#x2F;&#x2F;draggable: true 
+        });
+        
+        &#x2F;&#x2F;Draw Layer
+        self.layer = new Kinetic.Layer({
+        });
+        
+        self.isDrawing = true;
+        
+        &#x2F;&#x2F;Init behavior of canvas
+        self.layer.drawingNewLine = false;
+        self.layer.finishedDrawingNewLine = false;
+        self.newDots = [];
+        
+        dojo.connect(self.stage.getDOM(), &#x27;onclick&#x27;, function(e){
+            &#x2F;&#x2F;Check drawing
+            if (!self.isDrawing) 
+                return;
+            &#x2F;&#x2F;TODO check different type of shapes
+            
+            &#x2F;&#x2F;Do I need to check the line?
+            if (self.layer.finishedDrawingNewLine)
+                return;
+            
+            var pos = self.stage.getMousePosition(),
+                scale = self.stage.getScale(),
+                len,
+                strokeWidth,
+                dashArray = [];
+            
+            len = self.newDots.length;
+                
+            &#x2F;&#x2F;Compensate scale and offset
+            self.newDots[len] = self.buildAnchor(self.layer, (pos.x - self.stage.getX())&#x2F;scale.x, (pos.y - self.stage.getY())&#x2F;scale.y);
+               
+            &#x2F;&#x2F;Attach event on first dot!
+            &#x2F;&#x2F;On click close the line and remove the event handler;   
+            strokeWidth = self.strokeWidth &#x2F; self.stage.getScale().x;
+            
+            &#x2F;&#x2F;for (var i in self.dashArray){
+            for (var i = self.dashArray.length; i--;){
+                dashArray.push(self.dashArray[i] &#x2F; self.stage.getScale().x)
+            }
+            self.layer.newLine = new Kinetic.Line({
+                dashArray: dashArray,
+                strokeWidth: strokeWidth,
+                stroke: &quot;#f00&quot;,
+                lineCap: &quot;round&quot;,
+                alpha: 1,
+                name: &#x27;tempLine&#x27;
+            });
+            
+            self.layer.add(self.layer.newLine);
+            self.layer.draw();
+            self.layer.drawingNewLine = true;
+        });
+        
+        &#x2F;&#x2F;Disable shape drag and modify when clicking on the stage
+        self.stage.on(&#x27;click&#x27;, function(){
+            &#x2F;&#x2F;if (self.modifyingShape){
+            self.deselectShape();
+            self.layer.draw();
+        });        
+        
+        &#x2F;&#x2F;Draw to update the line
+        self.stage.on(&#x27;mousemove&#x27;, function(evt) {
+            if (!self.layer.drawingNewLine) return;
+                self.stage.draw();
+        });
+
+
+        self.layer.beforeDraw(function() {
+            if (self.layer.newLine){
+                self.updateNewLine(self.layer);
+            }
+            if (self.selectedShape !== null){
+            &#x2F;&#x2F;if (self.modifyingShape){
+                self.updatePoly(self.selectedShape);
+            }
+        });
+        
+        &#x2F;&#x2F;On background image loaded
+        imageObj.onload = function() {
+            &#x2F;&#x2F;Positionate the image at the center of the canvas
+            var scale = 1,
+            image = new Kinetic.Image({
+                x: 0,
+                y: 0,
+                image: imageObj
+            }),
+            iw = imageObj.width,
+            ih = imageObj.height;
+            
+            self.iw = iw;
+            self.ih = ih;
+            
+            &#x2F;&#x2F;Set image as background
+            self.layer.background = image;
+            self.layer.add(image);
+            image.moveToBottom();
+            
+            &#x2F;&#x2F;Set the right scale
+            scale = Math.min(self.containerSize.w &#x2F; iw, self.containerSize.h &#x2F; ih);
+            &#x2F;&#x2F;Resize stage
+            self.stage.setWidth(parseInt(iw * scale));
+            self.stage.setHeight(parseInt(ih * scale));
+            self.stage.setScale({
+                x:scale, 
+                y:scale
+            });
+            
+            if (iw &gt; ih){
+                self.isPanImg = true;
+                if (iw &lt; self.containerSize.w){
+                    &#x2F;&#x2F;should I this to center canvas
+                    dojo.style(dojo.query(self.stage.getDOM())[0], {
+                        left: parseInt(0.5 * (self.containerSize.w - iw * scale)),
+                        top: parseInt(0.5 * (self.containerSize.h - ih * scale)),
+                        width: parseInt(iw * scale),
+                        height: parseInt(ih * scale)
+                    });
+                }
+                else{
+                    self.centerCanvasContainer();
+                }
+                
+            }else{
+                self.isPanImg = false;
+                if (ih &lt; self.containerSize.h){
+                    dojo.style(dojo.query(self.stage.getDOM())[0], {
+                        left: parseInt(0.5 * (self.containerSize.w - iw * scale)),
+                        top: parseInt(0.5 * (self.containerSize.h - ih * scale)),
+                        width: parseInt(iw * scale),
+                        height: parseInt(ih * scale)
+                    });
+                }
+                else{
+                    self.centerCanvasContainer();
+                }
+            }
+            self.stage.draw();
+        }
+        
+        imageObj.src = self.imageSrc;
+        self.stage.add(self.layer);
+        self.stage.draw();
+        
+    },
+    initBehavior:function(){
+        var self= this;
+        
+        &#x2F;&#x2F;Cannot use stage event for this... For some weird reason some event are lost...
+        dojo.connect(dojo.byId(&quot;pundit-image-annotation-zoom&quot;),&#x27;onclick&#x27;, function(){
+            &#x2F;&#x2F;console.log(&#x27;STAGE: &#x27; + self.stage.getWidth() + &#x27;, &#x27; + self.stage.getHeight() + &#x27;, &#x27; + self.stage.getScale().x);
+            var scale = self.stage.getScale();
+            scale.x += self.deltaScale;
+            scale.y += self.deltaScale;
+            
+            self.stage.setWidth(parseInt(self.stage.getWidth() * (1 + self.deltaScale)));
+            self.stage.draw();
+            self.stage.setHeight(parseInt(self.stage.getHeight() * (1 + self.deltaScale)));
+            self.stage.setScale({x:self.stage.getWidth()&#x2F;self.iw,y:self.stage.getHeight()&#x2F;self.ih});
+            
+            self.centerCanvasContainer();
+            
+            &#x2F;&#x2F;TODO THis has to be done after centering the image
+            &#x2F;&#x2F;Fix this to scrool!
+&#x2F;&#x2F;            self.stage.setDragBounds({
+&#x2F;&#x2F;                left:(self.containerSize.w - dim.width * scale.x),
+&#x2F;&#x2F;                right: 0,
+&#x2F;&#x2F;                top: (self.containerSize.h - dim.height * scale.y),
+&#x2F;&#x2F;                bottom: 0
+&#x2F;&#x2F;            });
+            
+            self.updateShapeRendering(scale.x);
+            
+            self.stage.draw();
+        });
+        dojo.connect(dojo.byId(&quot;pundit-image-annotation-pan&quot;),&#x27;onclick&#x27;, function(){
+            var scale = null;
+            scale = self.stage.getScale();
+            scale.x = scale.x - self.deltaScale;
+            scale.y = scale.y - self.deltaScale;
+            
+            self.stage.setWidth(parseInt(self.stage.getWidth() * (1 - self.deltaScale)));
+            self.stage.setHeight(parseInt(self.stage.getHeight() * (1 - self.deltaScale)));
+            
+            self.stage.setScale({x:self.stage.getWidth()&#x2F;self.iw,y:self.stage.getHeight()&#x2F;self.ih});
+            
+            self.centerCanvasContainer();
+
+            self.updateShapeRendering(scale.x);
+            self.stage.draw();
+        });
+    
+        dojo.connect(dojo.byId(&quot;pundit-image-annotation-polygon&quot;),&#x27;onclick&#x27;, function(){
+            if (self.isDrawing)
+                return
+            else{
+                if (self.createdShapes.length &gt; 0){
+                    return;
+                }
+                self.isDrawing = true;
+                self.layer.finishedDrawingNewLine = false;
+                self.deselectShape();
+            }
+            
+            &#x2F;&#x2F;TODO Add a shape type
+        });
+        
+        dojo.connect(dojo.byId(&quot;pundit-image-annotation-delete&quot;),&#x27;onclick&#x27;, function(){
+            if (self.selectedShape !== null){
+            &#x2F;&#x2F;if (self.modifyingShape){
+                &#x2F;&#x2F;self.modifyingShape = false;
+                self.isDrawing = false;
+                var dots = self.stage.get(&#x27;.dot-&#x27; + self.selectedShape.getId());
+                &#x2F;&#x2F;for (var i in dots){
+                for (var i = dots.length; i--;){
+                    self.layer.remove(dots[i]);
+                }
+                
+                self.layer.remove(self.selectedShape);
+                
+                for (var i = self.createdShapes.length; i--;){
+                    if (self.createdShapes[i].getId() === self.selectedShape.getId())
+                        self.createdShapes.splice(i,1);
+                }
+                
+                self.selectedShape = null;
+                
+                self.layer.finishedDrawingNewLine = true;
+                self.stage.draw();
+            }
+        });
+        
+        dojo.connect(dojo.byId(&quot;pundit-image-annotation-myitem&quot;),&#x27;onclick&#x27;, function(){
+            if (self.createdShapes.length &gt; 0) {
+                var item = self.createItemFromCreatedShape();
+                if (!semlibMyItems.uriInItems(item.value)) {
+                    &#x2F;&#x2F; Create the needed bucket and init the preview for this item
+                    item.rdfData = semlibItems.createBucketForImageRegionFragment(item).bucket;
+                    previewer.buildPreviewForItem(item);
+                        
+                    semlibMyItems.addItem(item, true);
+                    &#x2F;&#x2F;semlibWindow.show_pundittabmyitems();
+                    semlibMyItems.show_pundittabfiltermyitemsimagesfragment();
+                }
+                self.selectedShape = null;
+                self.hide();
+            }
+
+        });
+        
+        dojo.connect(dojo.byId(&quot;pundit-image-annotation-add-comment&quot;),&#x27;onclick&#x27;, function(){
+            
+            if (self.createdShapes.length &gt; 0) {
+                &#x2F;&#x2F;Create Item
+                var item = self.createItemFromCreatedShape();
+                item.rdfData = semlibItems.createBucketForImageRegionFragment(item).bucket;
+            
+                self.selectedShape = null;
+            
+                self.hide();
+                _PUNDIT[&#x27;commentTag&#x27;].initPanel(item, &quot;Comment and tags&quot;);    
+
+            } else {
+
+                &#x2F;&#x2F;TODO: Alert the user: &quot;DRAW A POLYGON FIRST&quot;
+                
+            }
+            
+            
+
+        });
+        
+    },
+
+    &#x2F;&#x2F;Update the newLine which is draw to help in polygon creation
+    updateNewLine:function(layer){
+        var self= this,
+        pos = self.stage.getMousePosition(),
+        len = self.newDots.length,
+        points = [];
+        if (typeof pos === &#x27;undefined&#x27;)
+            return false;
+        for (var i=0; i&lt;len; i++) 
+            points = points.concat([self.newDots[i].attrs.x, self.newDots[i].attrs.y]);
+            
+        if (layer.drawingNewLine)
+            points = points.concat((pos.x - self.stage.getX()) &#x2F; self.stage.getScale().x, (pos.y - self.stage.getY())&#x2F;self.stage.getScale().y);
+        else 
+            points = points.concat([self.newDots[0].attrs.x, self.newDots[0].attrs.y]);
+        
+        layer.newLine.setPoints(points); 
+
+        layer.newLine.setZIndex(1);
+        
+    },
+    &#x2F;&#x2F;Build an anchor point of the polygon (when creating the polygon)
+    buildAnchor:function(layer, x, y) {
+
+        var self= this,
+            len,
+            radius = self.dotRadius &#x2F; self.stage.getScale().x,
+            strokeWidth = self.strokeWidth &#x2F; self.stage.getScale().x,
+            anchor = new Kinetic.Circle({
+                x: x,
+                y: y,
+                radius: radius,
+                stroke: &quot;#666&quot;,
+                fill: &quot;#ddd&quot;,
+                strokeWidth: strokeWidth,
+                draggable: false,
+                name: &#x27;dot&#x27;
+            });
+        
+        &#x2F;&#x2F;Add special behavior for the first dot to close the line and draw the polygon
+        len = self.newDots.length;
+        if (len === 0) {
+            &#x2F;&#x2F; add hover styling
+            anchor.on(&quot;mouseover&quot;, function(evt) {
+                document.body.style.cursor = &quot;pointer&quot;;
+                this.setStrokeWidth((self.strokeWidth + 1)&#x2F; self.stage.getScale().x);
+            });
+
+            anchor.on(&quot;mouseout&quot;, function() {
+                document.body.style.cursor = &quot;default&quot;;
+                this.setStrokeWidth(self.strokeWidth &#x2F; self.stage.getScale().x);
+                &#x2F;&#x2F;console.log(&#x27;anchor out&#x27;);
+                layer.draw();
+            });
+            
+            anchor.on(&#x27;click&#x27;, function(evt) {
+                var len = self.newDots.length,
+                    strokeWidth,
+                    unixTimestamp,
+                    id,
+                    points = [],
+                    lines,
+                    poly,
+                    dots;
+                self.layer.finishedDrawingNewLine = true;                        
+                self.newDots[0].off(&#x27;click&#x27;);
+                self.layer.drawingNewLine = false;
+                self.layer.draw();
+                evt.cancelBubble = true;
+                
+                &#x2F;&#x2F;Draw the filled polygon
+                points = [];
+                for (var i=0; i&lt;len; i++) 
+                    points = points.concat([self.newDots[i].attrs.x, self.newDots[i].attrs.y]);
+                points.concat([self.newDots[0].attrs.x, self.newDots[0].attrs.y]);
+                strokeWidth = self.strokeWidth &#x2F; self.stage.getScale().x;
+                poly = new Kinetic.Polygon({
+                    points: points,
+                    fill: &#x27;#00D2FF&#x27;,
+                    stroke: &#x27;black&#x27;,
+                    strokeWidth: strokeWidth,
+                    opacity: 0.3
+                });
+                
+                
+                unixTimestamp = new Date().getTime();
+                id = &#x27;poly&#x27; + self.crypto.hex_md5(self.imageSrc + unixTimestamp + dojo.toJson(points));
+                poly.setId(id);
+                
+                &#x2F;&#x2F;Make a function for this!
+                dots = self.newDots;
+                &#x2F;&#x2F;for (var i in dots){
+                for (var i = dots.length; i--;){
+                    self.layer.remove(dots[i]);
+                }
+                self.newDots = [];
+                
+                &#x2F;&#x2F;Make a function for this
+                lines = self.stage.get(&#x27;.tempLine&#x27;);
+                &#x2F;&#x2F;for (var i in lines){
+                for (var i = lines.length; i--;){
+                    self.layer.remove(lines[i]);
+                }
+                  
+                poly.on(&#x27;click&#x27;, function(e){
+                    e.cancelBubble = true;
+                    
+                    if (typeof self.selectedShape === &#x27;undefined&#x27; || self.selectedShape !== this){
+                    &#x2F;&#x2F;if (!self.modifyingShape){
+                        self.selectShape(this);
+                    }
+                    self.layer.draw();
+                });
+
+                poly.on(&#x27;dragstart&#x27;,function(){
+                    &#x2F;&#x2F;self.modifyingShape = false;
+                    self.selectedShape = null;
+                    var dots = self.stage.get(&#x27;.dot-&#x27; + this.getId());
+                    &#x2F;&#x2F;for (var i in dots){
+                    for (var i = dots.length; i--;){
+                        self.layer.remove(dots[i]);
+                    }
+                    self.layer.draw();
+                });
+                poly.on(&#x27;dragend&#x27;,function(){
+                    &#x2F;&#x2F;self.modifyingShape = true;
+                    self.selectedShape = this;
+                    var pos = this.getPosition(),
+                        dots = this.getPoints();
+                    &#x2F;&#x2F;for (var i in dots){
+                    for (var i = dots.length; i--;){
+                        self.dragPoints.push(self.buildTempAnchor(self.layer, this.getId(), dots[i].x + pos.x, dots[i].y + pos.y));
+                    }
+                    
+                    this.setPosition({
+                        x:0,
+                        y:0
+                    });
+                    self.updatePoly(this);
+                    self.layer.draw();
+                });
+                    
+                    
+                self.createdShapes.push(poly);
+                self.layer.add(poly);
+                  
+                self.layer.newLine = null;
+                self.layer.drawingNewLine = false;    
+                self.isDrawing = false;
+                
+                self.layer.draw();
+                    
+                
+                return;
+            });
+        }
+
+        layer.add(anchor);
+        return anchor;
+    },
+    &#x2F;&#x2F;Update poligon
+    updatePoly:function(pol){
+        var self = this,
+            shapeType = pol.shapeType;
+        
+        &#x2F;&#x2F;Polygon
+        if (shapeType === &quot;Polygon&quot; ){
+            var dots = self.layer.get(&#x27;.dot-&#x27; + pol.getId()),
+                len = dots.length,
+                points = [];
+            for (var i=0; i&lt;len; i++) 
+                points = points.concat([dots[i].attrs.x, dots[i].attrs.y]);
+            points.concat([dots[0].attrs.x, dots[0].attrs.y]);
+            pol.setPoints(points);
+        }
+        
+        &#x2F;&#x2F;Handle others shapes
+
+    },
+    &#x2F;&#x2F;Create a temp anchor when modifying the polygon
+    buildTempAnchor:function(layer, classId, x, y) {
+
+        var self= this,
+        radius = self.dotRadius &#x2F; self.stage.getScale().x,
+        strokeWidth = self.strokeWidth &#x2F; self.stage.getScale().x,
+        anchor = new Kinetic.Circle({
+            x: x,
+            y: y,
+            radius: radius,
+            stroke: &quot;#666&quot;,
+            fill: &quot;#ddd&quot;,
+            strokeWidth: strokeWidth,
+            draggable: true,
+            name: &#x27;dot-&#x27; + classId
+        });
+        
+        &#x2F;&#x2F; add hover styling
+        anchor.on(&quot;mouseover&quot;, function(evt) {
+            document.body.style.cursor = &quot;pointer&quot;;
+            this.setStrokeWidth((self.strokeWidth + 1) &#x2F; self.stage.getScale().x);
+            layer.draw();
+        });
+
+        anchor.on(&quot;mouseout&quot;, function() {
+            document.body.style.cursor = &quot;default&quot;;
+            this.setStrokeWidth(strokeWidth);
+            layer.draw();
+        });
+
+        layer.add(anchor);
+        return anchor;
+    },
+    hide:function(){
+        this.inherited(arguments);
+        var self = this;
+        dojo.destroy(self._id + &#x27;-image-ann-container&#x27;);
+    },
+    &#x2F;&#x2F;Create the item associated to the created shape
+    createItemFromCreatedShape:function(){
+        &#x2F;&#x2F;TODO Create multiple selector
+        &#x2F;&#x2F;At the current state only one selector is used
+        var self= this,
+            unixTimestamp = new Date().getTime(),
+            points,
+            scale = self.stage.getScale(),
+            sw = self.stage.getWidth(),
+            sh = self.stage.getHeight(),
+            selectors = [],
+            item;
+        
+        &#x2F;&#x2F;for (var i in self.createdShapes){
+        for (var i = self.createdShapes.length; i--;){
+            &#x2F;&#x2F;Shape is Polygon
+            if (self.createdShapes[i].shapeType === &#x27;Polygon&#x27;){
+                points = self.createdShapes[i].getPoints();
+                &#x2F;&#x2F;for (var j in points){
+                for (var j = points.length; j--;){
+                    points[j].x = ((points[j].x *scale.x)&#x2F;sw);
+                    points[j].y = ((points[j].y *scale.y)&#x2F;sh);
+                }
+                var shape = {
+                    type: self.createdShapes[i].shapeType.toLowerCase(), 
+                    points: points
+                }
+                &#x2F;&#x2F;Add Created Shapes
+                selectors.push(shape);
+            }&#x2F;&#x2F;Shape is Polygon
+            
+            &#x2F;&#x2F;TODO More shapes
+        }
+        
+        var parentImageXpointer;
+        var imgs = dojo.query(&#x27;img&#x27;);
+        for (var ii= 0; ii &lt; imgs.length; ii++) {
+            &#x2F;&#x2F; the control on the class attribute avoids preview from being considered
+            if (imgs[ii].src === self.imageSrc &amp;&amp; (imgs[ii].getAttribute(&quot;class&quot;) == null || imgs[ii].getAttribute(&quot;class&quot;).indexOf(&quot;pundit-&quot;) === -1) ) {
+                var helper = new pundit.XpointersHelper();
+                parentImageXpointer = helper.getXpFromNode(imgs[ii]);
+            }
+        }
+        
+        item = {
+            type: [&#x27;subject&#x27;],
+            rdftype: [ns.fragments.image],
+            &#x2F;&#x2F;TODO User should add a label and a description for this item
+            label: &#x27;Fragment of &#x27; + self.imageSrc.substring(self.imageSrc.lastIndexOf(&#x27;&#x2F;&#x27;) + 1, self.imageSrc.length),
+            description: &#x27;This fragment represents a part of the image &#x27; + self.imageSrc.substring(self.imageSrc.lastIndexOf(&#x27;&#x2F;&#x27;) + 1, self.imageSrc.length),
+            &#x2F;&#x2F;Make Item unique even if has the same selector of other
+            value: ns.fragmentBaseUri + &#x27;image&#x2F;&#x27; + self.crypto.hex_md5(self.imageSrc + unixTimestamp + dojo.toJson(selectors)),
+            image: self.imageSrc,
+            parentItemXP: parentImageXpointer,
+            &#x2F;&#x2F;Add a pundit-image-content for the images (so that you can handle different image resolution)
+            &#x2F;&#x2F;In this case use this as isPartOf (otherwise use the uri of the image)
+            isPartOf: self.imageSrc,
+            pageContext: window.location.href,
+            selectors: selectors
+        };
+        &#x2F;&#x2F;self.createdShapes = [];
+        return item;
+    },
+    
+    selectShape:function(shape){
+        var self = this;
+        
+        &#x2F;&#x2F;Deselect other shape
+        self.deselectShape();
+
+        &#x2F;&#x2F;Select the shape and make it draggable
+        if (shape.shapeType === &quot;Polygon&quot;){
+            var dots = shape.getPoints();
+            self.dragPoints = [];
+            &#x2F;&#x2F;for (var i in dots){
+            for (var i = dots.length; i--;){
+                self.dragPoints.push(self.buildTempAnchor(self.layer, shape.getId(), dots[i].x, dots[i].y));
+            }
+            shape.setDraggable(true);
+        }
+        
+        self.selectedShape = shape;
+    },
+    
+    &#x2F;&#x2F;TODO extend with multiple shape selectable
+    deselectShape:function(){
+        var self = this;
+        
+        if (self.selectedShape === null)
+            return;
+        
+        if (self.selectedShape.shapeType === &quot;Polygon&quot;){
+            var anchors = self.layer.get(&#x27;.dot-&#x27; + self.selectedShape.getId());
+            &#x2F;&#x2F;for (var i in anchors){
+            for (var i = anchors.length; i--;){
+                var anchor = anchors[i];
+                self.layer.remove(anchor);   
+            }
+            self.selectedShape.setDraggable(false);
+        }
+        self.selectedShape = null;
+        self.stage.draw();
+    },
+    
+    &#x2F;&#x2F;Update dot and line dimension when zooming the image to have the same dimension at every scale
+    &#x2F;&#x2F;DEBUG Not working properly :-(
+    updateShapeRendering:function(scale){
+        var self = this,
+            shapes = self.layer.getChildren();
+        
+        &#x2F;&#x2F;for (var i in shapes){
+        for (var i = shapes.length; i--;){
+            var shape = shapes[i];
+            if (typeof shape.attrs[&#x27;strokeWidth&#x27;] !== &#x27;undefined&#x27;){
+                shape.setStrokeWidth(self.strokeWidth &#x2F; scale);
+            }
+            if (typeof shape.attrs[&#x27;radius&#x27;] !== &#x27;undefined&#x27;){
+                shape.setRadius(self.dotRadius &#x2F; scale);
+            }
+            if (typeof shape.attrs[&#x27;dashArray&#x27;] !== &#x27;undefined&#x27;){
+                var dashArray = [];
+                &#x2F;&#x2F;for (var j in self.dashArray){
+                for (var j = self.dashArray.length; j--;){
+                    dashArray.push(self.dashArray &#x2F; scale);
+                }
+                shape.attrs[&#x27;dashArray&#x27;] = dashArray;
+            }
+        }
+    },
+    centerCanvasContainer:function(){
+        var self = this;
+        if (self.stage.getWidth() &lt; self.containerSize.w){
+            dojo.style(dojo.query(self.stage.getDOM())[0], {
+                left: 0.5 * (self.containerSize.w - self.stage.getWidth())
+            });
+        }else{
+            dojo.style(dojo.query(self.stage.getDOM())[0], {
+                left: 0
+            });
+        }           
+        if (self.stage.getHeight() &lt; self.containerSize.h){
+            dojo.style(dojo.query(self.stage.getDOM())[0], {
+                top: 0.5 * (self.containerSize.h - self.stage.getHeight())
+            });
+        }else{
+            dojo.style(dojo.query(self.stage.getDOM())[0], {
+                top: 0
+            });
+        }
+    }
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

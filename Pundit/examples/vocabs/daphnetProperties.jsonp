@@ -1,0 +1,33 @@
+_PUNDIT.vocab.initJsonpVocab({
+    "name": "daphnet_relations",
+    "label": "Daphnet Relations",
+    "description": "Some properties relating text to concepts",
+    "type": "relations",
+	"items": [
+        {
+            "type":["predicate"],
+            "rdftype":["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+            "label":"defines",
+            "domain":[],
+            "range":[],
+            "value":"http://purl.org/daphnet/vocab/defines"
+        },
+		{
+            "type":["predicate"],
+            "rdftype":["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+            "label":"comments",
+            "domain":[],
+            "range":[],
+            "value":"http://purl.org/daphnet/vocab/comments"
+        },
+		{
+	            "type":["predicate"],
+	            "rdftype":["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
+	            "label":"explains",
+	            "domain":[],
+	            "range":[],
+	            "value":"http://purl.org/daphnet/vocab/explains"
+	    }
+	]
+});
+

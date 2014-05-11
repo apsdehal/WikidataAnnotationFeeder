@@ -1,0 +1,13 @@
+{
+    "name": "Pundit",
+    "description": "Augment web pages with semantically structured annotations.",
+    "version": "{pundit-version}",
+    "url": "http://thepund.it/docs",
+    "logo": "http://thepund.it/assets/img/pundit_500.png",
+    "options": {
+        "linkNatives": "false",
+        "attributesEmit": "false",
+        "paths": ["src/"],
+        "outdir": "./docs"
+    }
+}

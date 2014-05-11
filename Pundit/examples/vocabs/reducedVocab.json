@@ -1,0 +1,12 @@
+{
+    identifier: 'id',
+    label: 'name',
+    items: [
+        {   id: 'http://purl.org/pundit/vocab/author', 
+            name: 'Authors', 
+            type: ['http://purl.org/pundit/vocab/category'],
+            comment: 'SOMEONE who produces written work, e.g. a poet, a novelist, a philosopher'
+        }
+                   
+    ]
+}

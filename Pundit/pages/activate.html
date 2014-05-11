@@ -1,0 +1,71 @@
+<html> 
+    <meta charset="utf-8" />
+    <head> 
+        <title>Pundit - Activate Notebook</title> 
+        <!-- Get Pundit + Dojo + conf, Init! -->
+        <link rel="stylesheet" href="../css/pundit.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <script src="../dojo/dojo/dojo.js.uncompressed.js" type="text/javascript" charset="utf-8"></script>
+        <!--<script src="pundit-conf.js" type="text/javascript" charset="utf-8"></script>-->
+        <script>
+            dojo.registerModulePath("pundit", "../../src"); 
+            dojo.require('pundit.Init');
+			
+			dojo.addOnLoad(
+			  function(){
+				var id = window.location.search.split('id=')[1];
+				myPundit.notebookManager.reader.getNotebookMetadata(id, function(id, metadata){
+					var notebookName = metadata[ns.notebooksNamespace + id][ns.rdfs_label][0].value;
+					var creatorUrl = metadata[ns.notebooksNamespace + id][ns.pundit_authorURI][0].value;
+					var creatorId = creatorUrl.split("/")[creatorUrl.split("/").length-1];
+					myPundit.notebookManager.reader.getUserMetadata(creatorId, function(id, metadata){
+						var userName = metadata[ns.usersNamespace + id][ns.pundit_userName][0].value;
+						dojo.query('#pundit-username-content').append('<span class="pundit-activate-message" id="pundit-notebook-message">' + userName + '</span>');
+					});
+					dojo.query('#pundit-message-content').append('<span class="pundit-activate-message" id="pundit-notebook-message"> published the following notebook:</span><div class="pundit-notebook-name-content">' + notebookName+ '</div>');
+				});
+				myPundit.notebookManager.reader.checkNotebook(id, function(id,checked) {
+					if (checked == '0') {
+						createActivateButton(id);
+					} else if (checked == '1') {
+						createDeactivateButton(id);
+					}
+				});
+			  }
+			);
+
+			function createActivateButton(id) {
+				dojo.destroy('pundit-activate-msg');
+				dojo.destroy('pundit-deactivate-button');
+				dojo.query('#pundit-activate-button-content').append('<div id="pundit-activate-msg" class="pundit-activate-message"><p>To put this notebook in your active notebooks list just click the button below.</p><p>Annotations included in this notebook will then be visible in Pundit while you browse in "active filter" mode.</p></div><span id="pundit-activate-button" class="pundit-gui-button" style="font-family: \'Convergence\', sans-serif; font-size: 1.5em; line-height: 40px; height: 40px;">Activate this notebook</span>');	
+				dojo.connect(dojo.byId('pundit-activate-button'), 'onclick', function() { 
+		            myPundit.notebookManager.activateNotebook(id, '1', function(id,state){
+						self.createDeactivateButton(id);
+	                });
+		        });
+			}
+			
+			function createDeactivateButton(id) {
+				dojo.destroy('pundit-activate-msg');
+				dojo.destroy('pundit-activate-button');
+				dojo.query('#pundit-activate-button-content').append('<div id="pundit-activate-msg" class="pundit-activate-message"><p>This notebook is already active.</p></div><span id="pundit-deactivate-button" class="pundit-gui-button" style="font-family: \'Convergence\', sans-serif; font-size: 1.5em; line-height: 40px; height: 40px;">Deactivate this notebook</span>');
+				dojo.connect(dojo.byId('pundit-deactivate-button'), 'onclick', function() { 
+		            myPundit.notebookManager.activateNotebook(id, '0', function(id,state){
+						self.createActivateButton(id);
+	                });
+		        });
+			}
+			
+        </script>
+
+    </head> 
+    <body> 
+
+		<div id = "pundit-main-content">
+			<br/><br/>
+			<span id="pundit-username-content"></span>	
+			<span id="pundit-message-content"></span>
+			<div id="pundit-notebook-name-content"></div>
+			<div id="pundit-activate-button-content"></div>	
+		</div>	
+    </body> 
+</html>

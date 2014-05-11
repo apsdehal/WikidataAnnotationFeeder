@@ -1,0 +1,655 @@
+<html> 
+    <meta charset="utf-8" />
+    <head> 
+        <title></title> 
+        <style>
+            #suggestionDialog_underlay { background-color:green; }
+            #suggestionContainer ul, .moreInfoPane ul {
+                padding: 0px;
+                list-style: none;
+                margin: 0px;
+            }
+            .moreInfoPane h3 {
+                margin: 2px;
+            }
+            .moreInfoPane span.getMoreInfo {
+                margin-top: 15px;
+                display: block;
+            }
+            .moreInfoPane span.getMoreInfo:hover {
+                /* mi sa che non serve... almeno no sulla descrizione 
+			sull'attuale get more info ho messo direttamente un link
+		*/
+                /*cursor: pointer;
+                            text-decoration: underline;*/
+            }
+            .moreInfoPane ul li {
+                padding: 1px;
+                border-bottom: 1px solid #eee;
+            }
+            .selectedTag{
+                padding: 2px;
+                background: #dfd;
+                margin-bottom: 1px;
+            }
+            .baseTag {
+                padding: 2px;
+                background: #ddd;
+                margin-bottom: 1px;
+            }
+            /* #suggestionContainer li {
+                        padding: 2px;
+                        background: #ddd;
+                        margin-bottom: 1px;
+                    }*/
+            /*#suggestionContainer li:hover {
+                        background: #dfd;
+            }*/
+            .moreInfoPane {
+                overflow: auto;
+            }
+            .dialogAddedTagsContainer {
+                border: 1px solid #eee;
+            }
+            /*.dialogAddedTagsContainer span {
+                        padding: 2px; margin: 2px; 
+                        border-bottom: 1px solid #eff;
+                        background: #eee;
+               	}*/
+
+            .dialogAddedVocabContainer ul,
+            .dialogAddedTagsContainer ul {
+                margin-left: 2px;
+                padding-left: 2px;
+                margin-top: 2px;
+                padding-top: 2px;
+                height:50px;
+                overflow:auto;
+            }
+
+            .dialogAddedVocabContainer ul li,
+            .dialogAddedTagsContainer ul li {
+                display: inline-block;
+                list-style-type: none;
+                margin:2px;
+                background: #ddd;
+            }
+            .dialogAddedVocabContainer ul li:hover,
+            .dialogAddedTagsContainer ul li:hover {
+                background: #dfd;
+            }
+
+            .dialogAddedVocabContainer ul li:span,
+            .dialogAddedTagsContainer ul li span {
+                position:relative;
+                top:0px;
+            }
+            .dialogAddedTagsContainer ul li img{
+                position:relative;
+                top:4px;
+            }
+            #suggestionContainer.loading ul {
+                background: #666;
+                color: #ccc;
+                border: 2px solid red;
+            }
+            #suggestionContainer.loading ul li {
+                background: #666;
+                color: #000;
+            }
+            .no_results {
+                border: 2px solid #eee;
+                padding: 3px;
+                margin: 2px;
+            }
+            span.hidden {
+                display: none;
+            }
+            #punditFilters {
+                margin: 0px;
+                border: 0;
+                padding: 1px;
+                list-style: none;
+            }
+            #punditFilters li {
+                display: inline-block;
+                padding: 0px 5px;
+                margin: 0px 3px;
+                -webkit-border-radius: 3px;
+                font-size: 0.9em;
+            }
+
+            #punditFilterA { background-color: rgba(204, 204, 204, 0.2); border: 1px solid white; }
+            #punditFilterS { background-color: rgba(153, 204, 153, 0.2); border: 1px solid white;  }
+            #punditFilterP { background-color: rgba(204, 204, 102, 0.2); border: 1px solid white;  }
+            #punditFilterO { background-color: rgba(204, 102, 102, 0.2); border: 1px solid white;  }
+            #punditFilterA:hover { background-color: rgba(204, 204, 204, 0.6); cursor: pointer; }
+            #punditFilterS:hover { background-color: rgba(153, 204, 153, 0.6); cursor: pointer; }
+            #punditFilterP:hover { background-color: rgba(204, 204, 102, 0.6); cursor: pointer; }
+            #punditFilterO:hover { background-color: rgba(204, 102, 102, 0.6); cursor: pointer; }
+            #punditFilterA.dnd_selected { background-color: rgba(204, 204, 204, 0.8); border: 1px solid black; }
+            #punditFilterS.dnd_selected { background-color: rgba(153, 204, 153, 0.8); border: 1px solid #060; }
+            #punditFilterP.dnd_selected { background-color: rgba(204, 204, 102, 0.8); border: 1px solid #f90; }
+            #punditFilterO.dnd_selected { background-color: rgba(204, 102, 102, 0.8); border: 1px solid #900; }
+
+            #punditItems {
+                margin: 0px;
+                border: 0px;
+                padding: 5px;
+                height: 105px;
+                list-style: none;
+                overflow: auto;
+            }
+            #punditItems li { 
+                display: inline-block;
+                margin: 1px;
+                padding: 2px;
+                -webkit-border-radius: 4px;
+            }
+
+            #punditItems li img.remove,
+            .punditDnDContainer img.remove {
+                vertical-align: text-top;
+                opacity: 0.5;
+                height: 14px;
+            } 
+            #punditItems li img.remove:hover,
+            .punditDnDContainer img.remove:hover {
+                opacity: 1.0;
+            } 
+
+            #punditTriplesContainer {
+                overflow: auto;
+            }
+
+
+            .punditDnDContainer.expanded ul,
+            .punditDnDContainer.expanded .punditDnDButtons {
+                /*                height: 55px;*/
+                height: 40px;
+                padding: 2px;
+                margin: 2px;
+            }
+            .punditDnDContainer.collapsed ul,
+            .punditDnDContainer.collapsed .punditDnDButtons {
+                height: 30px;
+                padding: 2px;
+                margin: 2px;
+            }
+            .punditDnDButtons span {
+                margin: 1px;
+            }
+
+            .punditDnDContainer ul {
+                margin: 0px;
+                padding: 5px;
+                height: 55px;
+                float: left;
+                width: 165px;
+                list-style: none;
+                overflow: auto;
+                border: 1px solid white;
+                -webkit-border-radius: 3px;
+                -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            }
+            .punditDnDContainer ul.punditDnD.sub {
+                background-color: rgba(153, 204, 153, 0.2);
+            }
+            .punditDnDContainer ul.punditDnD.sub:hover {
+                background-color: rgba(153, 204, 153, 0.6);
+            }
+            .punditDnDContainer ul.punditDnD.pre {
+                background-color: rgba(204, 204, 102, 0.2);
+            }
+            .punditDnDContainer ul.punditDnD.pre:hover {
+                background-color: rgba(204, 204, 102, 0.6);
+            }
+            .punditDnDContainer ul.punditDnD.obj {
+                background-color: rgba(204, 102, 102, 0.2);
+            }
+            .punditDnDContainer ul.punditDnD.obj:hover {
+                background-color: rgba(204, 102, 102, 0.6);
+            }
+
+            .punditDnDContainer ul.dnd_selected.sub {
+                background-color: rgba(153, 204, 153, 0.9);
+                border: 1px solid #060;
+            }
+            .punditDnDContainer ul.dnd_selected.pre {
+                background-color: rgba(204, 204, 102, 0.9);
+                border: 1px solid #f90;
+            }
+            .punditDnDContainer ul.dnd_selected.obj {
+                background-color: rgba(204, 102, 102, 0.9);
+                border: 1px solid #900;
+            }
+
+            .punditDnDContainer .punditDnDButtons { 
+                float: left;
+                border: 0px;
+                padding: 5px;
+            }
+            .punditDnDContainer .punditDnDButtons span { 
+                display: block;
+            }
+
+            #punditItems .dojoDndItem { 
+                border: 1px solid #9cc;
+                padding:3px; 
+            }
+
+            #punditItems .dojoDndItem.object { 
+                border: 2px solid #f00;
+            }
+            #punditItems .dojoDndItem.subject { 
+                border-top: 2px solid #7a7;
+                border-left: 2px solid #7a7;
+                border-bottom: 2px solid #f00;
+                border-right: 2px solid #f00;
+            }
+            #punditItems .dojoDndItem.predicate { 
+                border: 2px solid #fc0;
+            }
+
+            .dojoDndItemOver {
+                background-color: #ededed;
+                cursor:pointer;
+            }
+
+            #punditItems .dojoDndItemSelected, 
+            #punditItems .dojoDndItemAnchor, 
+            #punditItems .dojoDndItemSelected 
+            .punditDnDContainer .dojoDndItemSelected, 
+            .punditDnDContainer .dojoDndItemAnchor, 
+            .punditDnDContainer .dojoDndItemSelected {
+                background-color: #ddd;
+            }
+
+            .dojoDndItemOver .dojoDndItemAnchor {
+                background-color: #ededed;
+            }
+
+            .tooltip_annotation_content {
+                overflow-y: auto;
+                height: 200px;
+            }
+            .tooltip_annotation_content * {
+                border: 1px solid green;
+                margin: 5px; padding: 3px;
+            }
+            .tooltip_annotation_content span {
+                display: block;
+                border: 0px;
+                border-bottom: 1px dashed red;
+            }
+
+            span.active {
+                background: #fc0;
+
+                -webkit-transition-property: background;
+                -webkit-transition-duration: 1s;
+                border-bottom: 1px solid #fd0;
+            }
+
+            span.active img {
+                -webkit-transition: border 250ms linear;
+                border: 4px solid #fc0;
+            }
+
+            #loadingSpan { 
+                background: transparent url(src/loading.gif) top left no-repeat;
+                width: 128px;
+                height: 15px;
+                position: absolute;
+                margin-left: 10px;
+                visibility:hidden;
+            }
+            #tagSearchContainer.loading {
+                /*                background: #eee;*/
+            }
+            #tagSearchContainer.loading #loadingSpan {
+                visibility: visible;
+            }
+
+        </style>
+
+<!--        <link rel="stylesheet" href="dojo/dojo/resources/dojo.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+        <link rel="stylesheet" href="dojo/dojo/resources/dnd.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+        <link rel="stylesheet" href="dojo/dojox/layout/resources/FloatingPane.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+        <link rel="stylesheet" href="dojo/dojox/layout/resources/ResizeHandle.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+
+        <link rel="stylesheet" href="dojo/dijit/themes/tundra/tundra.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+        <script src="dojo/dojo/dojo.js.uncompressed.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="src/customDialog.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/baseComponent.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/textFragmentHandler.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/vocabSelector.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/reconSelector.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/dummySelector.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/pundit.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/tooltipAnnotationViewer.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/xpointersHelper.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="src/triplesBucket.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/semlibAnnotationWriter.js" type="text/javascript" charset="utf-8"></script>
+        <script src="src/semlibAnnotationReader.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="src/ns.js" type="text/javascript" charset="utf-8"></script>
+
+        <script type="text/javascript" charset="utf-8">
+            dojo.ready(function(){
+                getFragmentButton = dojo.byId("getFragment");
+                addFragmentButton = dojo.byId("addFragment");
+	    
+                debug = true;
+                fragmentHandler = new semlib.TextFragmentHandler({debug: debug});
+                recon = new semlib.ReconSelector({debug: debug});
+                vocab = new semlib.VocabSelector({debug: debug});
+                //triplesViewer = new semlib.TriplesViewer({debug: debug});
+                dummy = new semlib.DummySelector({debug: debug});
+                pundit = new semlib.Pundit({debug: debug});
+                tooltip_viewer = new semlib.TooltipAnnotationViewer({debug: debug});
+                
+                //                tooltip_viewer.onConsolidated(function(i) {
+                //                    alert('viva la vida');
+                //                });
+                
+                
+                dojo.connect(getFragmentButton, "onclick", function(evt) {
+                    var xpNew = fragmentHandler.getCleanSelectedXpointer(),
+                    xpOld = THCTagCore.XPath.getXPointerFromSelection();
+                    dojo.byId("selectedXPointer").value = fragmentHandler.getCleanSelectedXpointer();
+                    console.log("New: "+xpNew);
+                    console.log("Old: "+xpOld);
+                    console.log("=== "+(xpNew === xpOld));
+                });
+
+                dojo.connect(addFragmentButton, "onclick", function(evt) {
+                    fragmentHandler.wrapFragmentFromXpointer(dojo.byId("selectedXPointer").value);
+                })
+
+                dojo.connect(dojo.byId('addTagsButton'), 'onclick', function (evt) {
+                    recon.openDialog();
+                });
+                dojo.connect(dojo.byId('addVocabButton'), 'onclick', function (evt) {
+                    vocab.openDialog();
+                });
+                dojo.connect(dojo.byId('getNotebookAnnButton'), 'onclick', function (evt) {
+                    triplesViewer.openDialog();
+                });
+        
+                dojo.connect(dojo.byId('suggestionTerm'), 'onkeyup', function (evt) {
+                    if (evt.keyCode == dojo.keys.ENTER) {
+                        // TODO: add loading here
+                        recon.getSuggestionsForTerm(dojo.byId('suggestionTerm').value);
+                    }
+            
+                });
+            });
+                //                dojo.connect(this, (!dojo.isMozilla ? "onmousewheel" : "DOMMouseScroll"), function(e){
+                //                    // except the direction is REVERSED, and the event isn't normalized! one more line to normalize that:
+                //                    var scroll = e[(!dojo.isMozilla ? "wheelDelta" : "detail")] * (!dojo.isMozilla ? 1 : -1);
+                //                    
+                //                    console.log(scroll);
+                //                    
+                //                    dojo.style("vocabAnnotatorPane", 'position', 'absolute');
+                //                    var pa = dojo.position('vocabAnnotatorPane',true);
+                //                    var pr = dojo.position('vocabAnnotatorPane');
+                //                    
+                //                    //var scroll = pr.y - yb;
+                //                    //console.log('yn=' + pa.y + " yb=" + yb);
+                //                    var y = prb - pr.y;
+                //                    yb = pa.y;
+                //                    //dojo.style('vocabAnnotatorPane','left', p.x);
+                //                    //dojo.style("vocabAnnotatorPane", 'position', 'absolute');
+                //                    //var t = dojo.style('vocabAnnotatorPane','top');
+                //                    //console.log(top);
+                //                    var t = y + "px";
+                //                    dojo.style('vocabAnnotatorPane','top', t);
+                //                    console.log(pa.y + " " + pr.y + " " + y);
+                //                });
+                
+                
+                //            dojo.addOnLoad(function(){
+                ////               if (window.location.href.indexOf('#') !== -1){
+                ////                   tooltip_viewer.highlightByXpointer(window.location.href.split('#')[1]);
+                ////                   //alert('My XPointer is ' + window.location.href.split('#')[1]);
+                ////               } 
+                //                reader = new semlib.SemlibAnnotationReader({ debug:true });
+                //                var uris = [];
+                //               dojo.query(".pundit-content").forEach(function(node){
+                //                    uris.push(dojo.attr(node, "about"))});
+                //                
+                //                reader.getAnnotationMetadataFromUri(uris);
+                //                //reader.getAnnotationMetadataFromUri(["http://aretino-autografi-viterbo.ctl.sns.it/vt_handwritten_text_cards/169004809"]);
+                //            });
+        </script>-->
+    </head> 
+    <body> 
+
+        <div>
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 15%;">
+                        The selected xpointer is:
+                    </td>
+                    <td>
+                        <textarea id="selectedXPointer" cols="30" rows="2" style="width:100%;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="getFragment">
+                            Get XPointer from selection</button>
+                        <button id="addFragment">
+                            Add XPointer
+                        </button>
+
+                        <br /><br />
+
+                        <input type='text' placeholder='suggestion term' id='suggestionTerm' />
+
+                        <button id="addTagsButton">
+                            Add tags..
+                        </button>
+
+                        <button id="addVocabButton">
+                            Add from a vocabulary..
+                        </button>
+
+                        <button id="getNotebookAnnButton">
+                            Show current notebook triples...
+                        </button>
+
+
+                        <!--
+                        <button onclick="THCTag.getContentURIs();">
+                            Get URIs
+                        </button>
+                        <button onclick="THCTagCore.addClickImageHooks();">
+                            Add IMG hooks
+                        </button>
+                        <button onclick="searchPrompt('this and that', false);">
+                            Find...
+                        </button>
+                        -->
+
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <hr />
+        </div>
+
+
+
+        <!DOCTYPE div
+            PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+        <div xmlns:tei="http://www.tei-c.org/ns/1.0" class="pundit-content"
+             about="http://aretino-autografi-viterbo.ctl.sns.it/vt_handwritten_text_cards/169004809">  <h2>THIS
+                IS A NAMED CONTENT. URI:
+                http://aretino-autografi-viterbo.ctl.sns.it/vt_handwritten_text_cards/169004809 </h2> <p><span
+                    class="line">SIGNORE</span> </p><p><span class="line">Anchora che a me dica la penultima, che si
+                    degnò scrivermi la vostra</span> <span class="line" id='prova'>reale eccellenza: «Non restare, occorrendo a te,
+                    o a i tuoi il mezo del</span> <span class="line">poter nostro, di prevalertene, imperoché amandoti
+                    di core, come</span> <span class="line">noi ti amiamo, non mai mancaremo di compiacerti», sino a
+                    questa</span> <span class="line">Carta è tornata rossa da la vergogna, che mi rinfaccia la</span>
+                <span class="line">presuntione con che vengo per impetrar misericordia per lo amico</span> <span
+                    class="line">a la clementissima di Voi misericordia. Anzi ciò faccio in pro di me</span> <span
+                    class="line">stesso, che tale è colui per il quale suplico il gran DUCA di Fiorenza</span>
+
+
+                <!--                <script>
+                                    document.getElementById('prova').onclick = function () { console.log('e stigazzi'); }
+                                </script>-->
+
+
+                <span class="line">che, mutata in equità la giustitia, consideri in che qualità di stato</span> <span
+                    class="line">si troverebbero gli erranti huomini, se la pietà di Dio fusse minore.</span> <span
+                    class="line">Intanto mi reputo più gloria l'esser giudicato temerario in tentare</span> <span
+                    class="line">la salute altrui ridonda[n]te in me proprio apresso di Voi, ottimo Principe,</span>
+                <span class="line">che non mi terrei infamia d'acquistar nome di modesto non la tentando.</span>
+                <span class="line">Ma è ben vero che per riparare a la indegnation del vostro animo, quando</span>
+                <span class="line">pure vi paresse gastigarmi di sì villana sicurtade, ci interpongo la</span> <span
+                    class="line">presentia del padre vostro mirabile. Eccovelo in la presente medaglia</span> <span
+                    class="line">et vero, et vivo. Peroché havendolo il Danese allievo del Sansovino,</span> <span
+                    class="line">oltre il torlo per mio ordine da la impronta del suo natural Viso,</span> <span
+                    class="line">ritratto da quello che vivo et vero stassi nel petto del conte San</span> <span
+                    class="line">Secondo et nel mio, è da stimare, che sia desso. Onde vi scongiuro</span> <span
+                    class="line">per il valore, che anco risplende in sì altiera imagine, per la fama</span> <span
+                    class="line">che suona nel mondo il suo tremendo nome, et per la gloria per</span> <span
+                    class="line">cui le virtù sue l'hanno fatto immortale, a por mente non al</span> <span
+                    class="line">ciò che si possa haver commesso d'errore un mercante, peroché gli</span> <span
+                    class="line">andari de i negotii loro hanno in sé una certa sorte di natura, che</span> <span
+                    class="line">anco i fedeli et i diritti si potrebber punire per fallaci, et per rei, ma</span> <span
+                    class="line">a quella sùbita, fervida, e humile ubidienza, ch'egli, che non</span> <span
+                    class="line">ha costì da perdere altro che la disgratia vostra, ha dato con la</span> <span
+                    class="line">istessa persona al minimo cenno d'un vostro comandamento, et pur</span> <span
+                    class="line">sapeva che gli emoli, gli invidiosi, e i litiganti simigliano a la setta</span> <span
+                    class="line">de i nuvoli che bene spesso, nel più gran giorno, et sì facilmente</span> </p> 
+            <img src="http://telecommandos.files.wordpress.com/2010/01/pippo-baudo-sanremo2008.jpg" />  
+            <h2>END NAMED CONTENT</h2>
+        </div>
+
+
+
+
+        <h2>THIS IS NOT A NAMED CONTENT</h2>
+
+        <img src="http://telecommandos.files.wordpress.com/2010/01/pippo-baudo-sanremo2008.jpg" />
+
+        <p><span
+                class="line">presentia del padre vostro mirabile. Eccovelo in la presente medaglia</span> <span
+                class="line">et vero, et vivo. Peroché havendolo il Danese allievo del Sansovino,</span> <span
+                class="line">oltre il torlo per mio ordine da la impronta del suo natural Viso,</span> <span
+                class="line">ritratto da quello che vivo et vero stassi nel petto del conte San</span> <span
+                class="line">Secondo et nel mio, è da stimare, che sia desso. Onde vi scongiuro</span> <span
+                class="line">per il valore, che anco risplende in sì altiera imagine, per la fama</span> <span
+                class="line">che suona nel mondo il suo tremendo nome, et per la gloria per</span> <span
+                class="line">cui le virtù sue l'hanno fatto immortale, a por mente non al</span> <span
+                class="line">ciò che si possa haver commesso d'errore un mercante, peroché gli</span> <span
+                class="line">andari de i negotii loro hanno in sé una certa sorte di natura, che</span> <span
+                class="line">anco i fedeli et i diritti si potrebber punire per fallaci, et per rei, ma</span> <span
+                class="line">a quella sùbita, fervida, e humile ubidienza, ch'egli, che non</span> <span
+                class="line">ha costì da perdere altro che la disgratia vostra, ha dato con la</span> <span
+                class="line">istessa persona al minimo cenno d'un vostro comandamento, et pur</span> <span
+                class="line">sapeva che gli emoli, gli invidiosi, e i litiganti simigliano a la setta</span> <span
+                class="line">de i nuvoli che bene spesso, nel più gran giorno, et sì facilmente</span> </p>   
+
+
+        <div xmlns:tei="http://www.tei-c.org/ns/1.0" class="pundit-content"
+             about="http://example.com/123456">  <h2>THIS
+		                IS A NAMED CONTENT. URI:
+		                http://example.com/123456.  SIMONE: NON ANNOTARE DA QUI IN POI </h2> <p><span
+                    class="line">SIGNORE</span> </p><p><span class="line">Anchora che a me dica la penultima, che si
+		                    degnò scrivermi la vostra</span> <span class="line" id='prova'>reale eccellenza: «Non restare, occorrendo a te,
+		                    o a i tuoi il mezo del</span> <span class="line">poter nostro, di prevalertene, imperoché amandoti
+		                    di core, come</span> <span class="line">noi ti amiamo, non mai mancaremo di compiacerti», sino a
+		                    questa</span> <span class="line">Carta è tornata rossa da la vergogna, che mi rinfaccia la</span>
+                <span class="line">presuntione con che vengo per impetrar misericordia per lo amico</span> <span
+                    class="line">a la clementissima di Voi misericordia. Anzi ciò faccio in pro di me</span> <span
+                    class="line">stesso, che tale è colui per il quale suplico il gran DUCA di Fiorenza</span>
+
+
+                <!--                <script>
+		                    document.getElementById('prova').onclick = function () { console.log('e stigazzi'); }
+		                </script>-->
+
+
+                <span class="line">che, mutata in equità la giustitia, consideri in che qualità di stato</span> <span
+                    class="line">si troverebbero gli erranti huomini, se la pietà di Dio fusse minore.</span> <span
+                    class="line">Intanto mi reputo più gloria l'esser giudicato temerario in tentare</span> <span
+                    class="line">la salute altrui ridonda[n]te in me proprio apresso di Voi, ottimo Principe,</span>
+                <span class="line">che non mi terrei infamia d'acquistar nome di modesto non la tentando.</span>
+                <span class="line">Ma è ben vero che per riparare a la indegnation del vostro animo, quando</span>
+                <span class="line">pure vi paresse gastigarmi di sì villana sicurtade, ci interpongo la</span> <span
+                    class="line">presentia del padre vostro mirabile. Eccovelo in la presente medaglia</span> <span
+                    class="line">et vero, et vivo. Peroché havendolo il Danese allievo del Sansovino,</span> <span
+                    class="line">oltre il torlo per mio ordine da la impronta del suo natural Viso,</span> <span
+                    class="line">ritratto da quello che vivo et vero stassi nel petto del conte San</span> <span
+                    class="line">Secondo et nel mio, è da stimare, che sia desso. Onde vi scongiuro</span> <span
+                    class="line">per il valore, che anco risplende in sì altiera imagine, per la fama</span> <span
+                    class="line">che suona nel mondo il suo tremendo nome, et per la gloria per</span> <span
+                    class="line">cui le virtù sue l'hanno fatto immortale, a por mente non al</span> <span
+                    class="line">ciò che si possa haver commesso d'errore un mercante, peroché gli</span> <span
+                    class="line">andari de i negotii loro hanno in sé una certa sorte di natura, che</span> <span
+                    class="line">anco i fedeli et i diritti si potrebber punire per fallaci, et per rei, ma</span> <span
+                    class="line">a quella sùbita, fervida, e humile ubidienza, ch'egli, che non</span> <span
+                    class="line">ha costì da perdere altro che la disgratia vostra, ha dato con la</span> <span
+                    class="line">istessa persona al minimo cenno d'un vostro comandamento, et pur</span> <span
+                    class="line">sapeva che gli emoli, gli invidiosi, e i litiganti simigliano a la setta</span> <span
+                    class="line">de i nuvoli che bene spesso, nel più gran giorno, et sì facilmente</span> </p>   
+            <h2>END NAMED CONTENT</h2>
+        </div>
+
+
+        <div xmlns:tei="http://www.tei-c.org/ns/1.0" class="pundit-content"
+             about="http://metasound.dibet.univpm.it/semlibproject/client/test.html"> 
+            <h2>THIS
+                IS A NAMED CONTENT. URI:
+                http://metasound.dibet.univpm.it/semlibproject/client/test.html"; SIMONE: NON ANNOTARE DA QUI IN POI  </h2> <p><span
+                    class="line">SIGNORE</span> </p><p><span class="line">Anchora che a me dica la penultima, che si
+                    degnò scrivermi la vostra</span> <span class="line" id='prova'>reale eccellenza: «Non restare, occorrendo a te,
+                    o a i tuoi il mezo del</span> <span class="line">poter nostro, di prevalertene, imperoché amandoti
+                    di core, come</span> <span class="line">noi ti amiamo, non mai mancaremo di compiacerti», sino a
+                    questa</span> <span class="line">Carta è tornata rossa da la vergogna, che mi rinfaccia la</span>
+                <span class="line">presuntione con che vengo per impetrar misericordia per lo amico</span> <span
+                    class="line">a la clementissima di Voi misericordia. Anzi ciò faccio in pro di me</span> <span
+                    class="line">stesso, che tale è colui per il quale suplico il gran DUCA di Fiorenza</span>
+                <img src="http://biografieonline.it/img/bio/p/Pippo_Baudo.jpg"/>
+
+
+                <!--                <script>
+                                    document.getElementById('prova').onclick = function () { console.log('e stigazzi'); }
+                                </script>-->
+
+
+                <span class="line">che, mutata in equità la giustitia, consideri in che qualità di stato</span> <span
+                    class="line">si troverebbero gli erranti huomini, se la pietà di Dio fusse minore.</span> <span
+                    class="line">Intanto mi reputo più gloria l'esser giudicato temerario in tentare</span> <span
+                    class="line">la salute altrui ridonda[n]te in me proprio apresso di Voi, ottimo Principe,</span>
+                <span class="line">che non mi terrei infamia d'acquistar nome di modesto non la tentando.</span>
+                <span class="line">Ma è ben vero che per riparare a la indegnation del vostro animo, quando</span>
+                <span class="line">pure vi paresse gastigarmi di sì villana sicurtade, ci interpongo la</span> <span
+                    class="line">presentia del padre vostro mirabile. Eccovelo in la presente medaglia</span> <span
+                    class="line">et vero, et vivo. Peroché havendolo il Danese allievo del Sansovino,</span> <span
+                    class="line">oltre il torlo per mio ordine da la impronta del suo natural Viso,</span> <span
+                    class="line">ritratto da quello che vivo et vero stassi nel petto del conte San</span> <span
+                    class="line">Secondo et nel mio, è da stimare, che sia desso. Onde vi scongiuro</span> <span
+                    class="line">per il valore, che anco risplende in sì altiera imagine, per la fama</span> <span
+                    class="line">che suona nel mondo il suo tremendo nome, et per la gloria per</span> <span
+                    class="line">cui le virtù sue l'hanno fatto immortale, a por mente non al</span> <span
+                    class="line">ciò che si possa haver commesso d'errore un mercante, peroché gli</span> <span
+                    class="line">andari de i negotii loro hanno in sé una certa sorte di natura, che</span> <span
+                    class="line">anco i fedeli et i diritti si potrebber punire per fallaci, et per rei, ma</span> <span
+                    class="line">a quella sùbita, fervida, e humile ubidienza, ch'egli, che non</span> <span
+                    class="line">ha costì da perdere altro che la disgratia vostra, ha dato con la</span> <span
+                    class="line">istessa persona al minimo cenno d'un vostro comandamento, et pur</span> <span
+                    class="line">sapeva che gli emoli, gli invidiosi, e i litiganti simigliano a la setta</span> <span
+                    class="line">de i nuvoli che bene spesso, nel più gran giorno, et sì facilmente</span> </p>   
+            <h2>END NAMED CONTENT</h2>
+        </div>
+    </body> 
+</html>

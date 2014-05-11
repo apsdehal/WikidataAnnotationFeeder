@@ -1,0 +1,2173 @@
+{
+    "project": {
+        "name": "Pundit",
+        "description": "Augment web pages with semantically structured annotations.",
+        "version": "PUNDIT Project 0.12-Pumpkin",
+        "url": "http://thepund.it/docs",
+        "logo": "http://thepund.it/assets/img/pundit_500.png"
+    },
+    "files": {
+        "src/annotators/AnnotatorsBase.js": {
+            "name": "src/annotators/AnnotatorsBase.js",
+            "modules": {},
+            "classes": {
+                "pundit.annotators.AnnotatorsBase": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/annotators/AnnotatorsConductor.js": {
+            "name": "src/annotators/AnnotatorsConductor.js",
+            "modules": {},
+            "classes": {
+                "pundit.annotators.AnnotatorsConductor": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/annotators/FakeAnnotator.js": {
+            "name": "src/annotators/FakeAnnotator.js",
+            "modules": {},
+            "classes": {
+                "pundit.annotators.FakeAnnotator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/annotators/TextFragmentAnnotator.js": {
+            "name": "src/annotators/TextFragmentAnnotator.js",
+            "modules": {},
+            "classes": {
+                "pundit.annotators.TextFragmentAnnotator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/selectors/BibServerSelector.js": {
+            "name": "src/selectors/BibServerSelector.js",
+            "modules": {},
+            "classes": {
+                "pundit.selectors.BibServerSelector": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/selectors/DBPediaSelector.js": {
+            "name": "src/selectors/DBPediaSelector.js",
+            "modules": {},
+            "classes": {
+                "pundit.selectors.DBPediaSelector": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/selectors/EuropeanaSelector.js": {
+            "name": "src/selectors/EuropeanaSelector.js",
+            "modules": {},
+            "classes": {
+                "pundit.selectors.EuropeanaSelector": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/selectors/FreebaseSelector.js": {
+            "name": "src/selectors/FreebaseSelector.js",
+            "modules": {},
+            "classes": {
+                "pundit.selectors.FreebaseSelector": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/selectors/KorboBasketSelector.js": {
+            "name": "src/selectors/KorboBasketSelector.js",
+            "modules": {},
+            "classes": {
+                "pundit.KorboBasketSelector": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/selectors/SelectorBase.js": {
+            "name": "src/selectors/SelectorBase.js",
+            "modules": {},
+            "classes": {
+                "pundit.selectors.SelectorBase": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/selectors/VocabSelector.js": {
+            "name": "src/selectors/VocabSelector.js",
+            "modules": {},
+            "classes": {
+                "pundit.selectors.VocabSelector": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/selectors/WordnetSelector.js": {
+            "name": "src/selectors/WordnetSelector.js",
+            "modules": {},
+            "classes": {
+                "pundit.selectors.WordnetSelector": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/AuthenticatedRequests.js": {
+            "name": "src/AuthenticatedRequests.js",
+            "modules": {},
+            "classes": {
+                "pundit.authenticatedRequests": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/BaseComponent.js": {
+            "name": "src/BaseComponent.js",
+            "modules": {},
+            "classes": {
+                "pundit.baseComponent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/BasePanel.js": {
+            "name": "src/BasePanel.js",
+            "modules": {},
+            "classes": {
+                "pundit.BasePanel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Civet.js": {
+            "name": "src/Civet.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/CommentTag.js": {
+            "name": "src/CommentTag.js",
+            "modules": {},
+            "classes": {
+                "pundit.CommentTag": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/CommentTagPanel.js": {
+            "name": "src/CommentTagPanel.js",
+            "modules": {},
+            "classes": {
+                "pundit.CommentTagPanel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Configuration.js": {
+            "name": "src/Configuration.js",
+            "modules": {},
+            "classes": {
+                "pundit.Configuration": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/ContextualMenu.js": {
+            "name": "src/ContextualMenu.js",
+            "modules": {},
+            "classes": {
+                "pundit.contextualMenu": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/DataTxt.js": {
+            "name": "src/DataTxt.js",
+            "modules": {},
+            "classes": {
+                "pundit.DataTxt": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/DbpediaSpotlight.js": {
+            "name": "src/DbpediaSpotlight.js",
+            "modules": {},
+            "classes": {
+                "pundit.DbpediaSpotlight": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/FastTextHandler.js": {
+            "name": "src/FastTextHandler.js",
+            "modules": {},
+            "classes": {
+                "pundit.FastTextHandler": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/ImageAnnotationPanel.js": {
+            "name": "src/ImageAnnotationPanel.js",
+            "modules": {},
+            "classes": {
+                "pundit.ImageAnnotationPanel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Init.js": {
+            "name": "src/Init.js",
+            "modules": {
+                "pundit": 1
+            },
+            "classes": {
+                "pundit.Init": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/ItemContainerManager.js": {
+            "name": "src/ItemContainerManager.js",
+            "modules": {},
+            "classes": {
+                "pundit.ItemContainerManager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Items.js": {
+            "name": "src/Items.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/MyPundit.js": {
+            "name": "src/MyPundit.js",
+            "modules": {},
+            "classes": {
+                "pundit.myPundit": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/NotebookManager.js": {
+            "name": "src/NotebookManager.js",
+            "modules": {},
+            "classes": {
+                "pundit.NotebookManager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/PageHandler.js": {
+            "name": "src/PageHandler.js",
+            "modules": {},
+            "classes": {
+                "pundit.PageHandler": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Previewer.js": {
+            "name": "src/Previewer.js",
+            "modules": {},
+            "classes": {
+                "pundit.Previewer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/RecognizerPanel.js": {
+            "name": "src/RecognizerPanel.js",
+            "modules": {},
+            "classes": {
+                "pundit.RecognizerPanel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/ResourcesPanel.js": {
+            "name": "src/ResourcesPanel.js",
+            "modules": {},
+            "classes": {
+                "pundit.ResourcesPanel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/TooltipAnnotationViewer.js": {
+            "name": "src/TooltipAnnotationViewer.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/TripleComposer.js": {
+            "name": "src/TripleComposer.js",
+            "modules": {},
+            "classes": {
+                "pundit.TripleComposer": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/XpointersHelper.js": {
+            "name": "src/XpointersHelper.js",
+            "modules": {},
+            "classes": {
+                "pundit.XpointersHelper": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "pundit": {
+            "name": "pundit",
+            "submodules": {},
+            "classes": {
+                "pundit.annotators.AnnotatorsBase": 1,
+                "pundit.annotators.AnnotatorsConductor": 1,
+                "pundit.annotators.FakeAnnotator": 1,
+                "pundit.annotators.TextFragmentAnnotator": 1,
+                "pundit.selectors.BibServerSelector": 1,
+                "pundit.selectors.DBPediaSelector": 1,
+                "pundit.selectors.EuropeanaSelector": 1,
+                "pundit.selectors.FreebaseSelector": 1,
+                "pundit.KorboBasketSelector": 1,
+                "pundit.selectors.SelectorBase": 1,
+                "pundit.selectors.VocabSelector": 1,
+                "pundit.selectors.WordnetSelector": 1,
+                "pundit.authenticatedRequests": 1,
+                "pundit.baseComponent": 1,
+                "pundit.BasePanel": 1,
+                "pundit.DataTxt": 1,
+                "pundit.CommentTag": 1,
+                "pundit.CommentTagPanel": 1,
+                "pundit.Configuration": 1,
+                "pundit.contextualMenu": 1,
+                "pundit.DbpediaSpotlight": 1,
+                "pundit.FastTextHandler": 1,
+                "pundit.ImageAnnotationPanel": 1,
+                "pundit.Init": 1,
+                "pundit.ItemContainerManager": 1,
+                "pundit.myPundit": 1,
+                "pundit.NotebookManager": 1,
+                "pundit.PageHandler": 1,
+                "pundit.Previewer": 1,
+                "pundit.RecognizerPanel": 1,
+                "pundit.ResourcesPanel": 1,
+                "pundit.TripleComposer": 1,
+                "pundit.XpointersHelper": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "src/XpointersHelper.js",
+            "line": 1,
+            "description": "The Pundit system!\nAims at providing all of the needed components to create stand-off markup\non any web page.",
+            "itemtype": "main"
+        }
+    },
+    "classes": {
+        "pundit.annotators.AnnotatorsBase": {
+            "name": "pundit.annotators.AnnotatorsBase",
+            "shortname": "pundit.annotators.AnnotatorsBase",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/annotators/AnnotatorsBase.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "TODO TODO TODO TODO"
+        },
+        "pundit.annotators.AnnotatorsConductor": {
+            "name": "pundit.annotators.AnnotatorsConductor",
+            "shortname": "pundit.annotators.AnnotatorsConductor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/annotators/AnnotatorsConductor.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Drives the orchestra of pundit annotators\nTODO TODO TODO TODO"
+        },
+        "pundit.annotators.FakeAnnotator": {
+            "name": "pundit.annotators.FakeAnnotator",
+            "shortname": "pundit.annotators.FakeAnnotator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/annotators/FakeAnnotator.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Drives the orchestra of pundit annotators\nTODO TODO TODO TODO"
+        },
+        "pundit.annotators.TextFragmentAnnotator": {
+            "name": "pundit.annotators.TextFragmentAnnotator",
+            "shortname": "pundit.annotators.TextFragmentAnnotator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/annotators/TextFragmentAnnotator.js",
+            "line": 1,
+            "extends": "pundit.annotators.AnnotatorsBase",
+            "description": "TODO TODO TODO TODO"
+        },
+        "pundit.selectors.BibServerSelector": {
+            "name": "pundit.selectors.BibServerSelector",
+            "shortname": "pundit.selectors.BibServerSelector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/selectors/BibServerSelector.js",
+            "line": 1,
+            "extends": "pundit.selectors.SelectorBase",
+            "description": "TODO TODO TODO TODO"
+        },
+        "pundit.selectors.DBPediaSelector": {
+            "name": "pundit.selectors.DBPediaSelector",
+            "shortname": "pundit.selectors.DBPediaSelector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/selectors/DBPediaSelector.js",
+            "line": 1,
+            "extends": "pundit.selectors.SelectorBase",
+            "description": "TODO TODO TODO TODO"
+        },
+        "pundit.selectors.EuropeanaSelector": {
+            "name": "pundit.selectors.EuropeanaSelector",
+            "shortname": "pundit.selectors.EuropeanaSelector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/selectors/EuropeanaSelector.js",
+            "line": 1,
+            "extends": "pundit.selectors.SelectorBase",
+            "description": "TODO TODO TODO TODO"
+        },
+        "pundit.selectors.FreebaseSelector": {
+            "name": "pundit.selectors.FreebaseSelector",
+            "shortname": "pundit.selectors.FreebaseSelector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/selectors/FreebaseSelector.js",
+            "line": 1,
+            "extends": "pundit.selectors.SelectorBase",
+            "description": "TODO TODO TODO TODO"
+        },
+        "pundit.KorboBasketSelector": {
+            "name": "pundit.KorboBasketSelector",
+            "shortname": "pundit.KorboBasketSelector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/selectors/KorboBasketSelector.js",
+            "line": 1,
+            "extends": "pundit.Selector",
+            "description": "Selects items from a Korbo basket"
+        },
+        "pundit.selectors.SelectorBase": {
+            "name": "pundit.selectors.SelectorBase",
+            "shortname": "pundit.selectors.SelectorBase",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/selectors/SelectorBase.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Base class for Pundit Selectors. \nTODO TODO TODO TODO"
+        },
+        "pundit.selectors.VocabSelector": {
+            "name": "pundit.selectors.VocabSelector",
+            "shortname": "pundit.selectors.VocabSelector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/selectors/VocabSelector.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Is responsible for the loading and managing of vocabularies that \nare used in the annotations. Vocabularies are special JSON files loaded at run time \nusing JSONP to avoid same origin policy. Togheter with the vocabularies \nalso related relation are loaded. Vocabularies are configurable in \nNamespaceHelper file setting the vocabs object."
+        },
+        "pundit.selectors.WordnetSelector": {
+            "name": "pundit.selectors.WordnetSelector",
+            "shortname": "pundit.selectors.WordnetSelector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/selectors/WordnetSelector.js",
+            "line": 1,
+            "extends": "pundit.selectors.SelectorBase",
+            "description": "TODO TODO TODO TODO"
+        },
+        "pundit.authenticatedRequests": {
+            "name": "pundit.authenticatedRequests",
+            "shortname": "pundit.authenticatedRequests",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "file": "src/AuthenticatedRequests.js",
+            "line": 1,
+            "description": "Provides facilities to interact with the pundit server, through\nauthenticated API Calls. The authentication is granted by an OpenID workflow,\ninitialized here and carried on by the server. When logged in, this component\nnotifies the user and executes any previously blocked request, which needed\nauthentication to work.",
+            "is_constructor": 1,
+            "extends": "pundit.baseComponent",
+            "example": [
+                "\n    var x = new pundit.AuthenticatedRequests({\n            loginAutomaticHideMS: 100\n        });"
+            ],
+            "params": [
+                {
+                    "name": "options",
+                    "description": "See object properties",
+                    "type": "Object"
+                }
+            ]
+        },
+        "pundit.baseComponent": {
+            "name": "pundit.baseComponent",
+            "shortname": "pundit.baseComponent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/BaseComponent.js",
+            "line": 1,
+            "description": "Provides common facilities used by other pundit\ncomponents, such as callback creation, initialization, logging, etc.\n\nEvery component extending this class will be able to use these methods,\nand the options passed to the constructor.\n\nIf the component has an .opts field, it will be used as defaults for the\ncomponent, overwritable when calling new",
+            "is_constructor": 1,
+            "example": [
+                "\n    var x = new pundit.BaseComponent({\n            debug: true,\n            libName: 'myComponent'\n        });"
+            ],
+            "params": [
+                {
+                    "name": "options",
+                    "description": "See object properties",
+                    "type": "Object"
+                }
+            ]
+        },
+        "pundit.BasePanel": {
+            "name": "pundit.BasePanel",
+            "shortname": "pundit.BasePanel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/BasePanel.js",
+            "line": 1,
+            "description": "Provides the base GUI a of floating panel. Different parameters \ncan be specified to enable draggability and preview. Basic methods can be inherited \nto extend it features",
+            "extends": "pundit.baseComponent",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "See object properties",
+                    "type": "Object"
+                }
+            ]
+        },
+        "pundit.DataTxt": {
+            "name": "pundit.DataTxt",
+            "shortname": "pundit.DataTxt",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/DataTxt.js",
+            "line": 1,
+            "description": "Provides facilities to query the DataTxt service \nAnnotation services and the DBpedia SPARQL endpoint."
+        },
+        "pundit.CommentTag": {
+            "name": "pundit.CommentTag",
+            "shortname": "pundit.CommentTag",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/CommentTag.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Provides a GUI (floating Panel) and set of facilities \nfor the creation of comments and tags. Tags can be retrieved both using \nDBpedia Spotlight (annotating the text comment). Tags can be removed and navigated\nCreated comments and tags are then saved to pundit annotation server"
+        },
+        "pundit.CommentTagPanel": {
+            "name": "pundit.CommentTagPanel",
+            "shortname": "pundit.CommentTagPanel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/CommentTagPanel.js",
+            "line": 1,
+            "description": "Provides a GUI (floating Panel) for adding textual comment and tags.\nTags can be searched in different lookup services like Freebase, Dbpedia and Wordnet.\nThey can also be automatically extacted from added text using DBpedia Spotlight service\nCreated comments and tags are then saved to pundit annotation server.\nComment Tag Panel extend Recognizer Panel to reuse its capability to search for tags",
+            "extends": "pundit.RecognizerPanel",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "See object properties",
+                    "type": "Object"
+                }
+            ]
+        },
+        "pundit.Configuration": {
+            "name": "pundit.Configuration",
+            "shortname": "pundit.Configuration",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/Configuration.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "This component deals with the various layers of Pundit \nconfiguration.<br>\nThese layers are: <br>\n1. component defaults <br>\n2. global Configuration defaults <br>\n3. user supplied configuration file <br>\n4. parameters passed to the component constructor <br>\nWhen initialized, the Configuration module will merge the levels 2 and \n3, creating the .config field in the global pundit live object (_PUNDIT).<br>\nWhen a component is initialized its final .opts field will be a merge\nof all of those levels: 4 being the higher priority.<br>"
+        },
+        "pundit.contextualMenu": {
+            "name": "pundit.contextualMenu",
+            "shortname": "pundit.contextualMenu",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/ContextualMenu.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Provides methods and callbacks to open a contextual\nmenu with customizable options and actions. <br>\nThe actions are organized by \"types\", various components can activate\nthe contextual menu for a certain type, and all of the actions\nsubscribed with that type will be shown.<br>\nEach action can have its own function which decides wether to show it\nor not, and its own onClick callback to be executed.<br>\nWhen the contextual menu is shown, an unique identifier or a complex\ndata structure must be passed in, allowing each action to run their \nshowIf() function, and eventually the onclick()."
+        },
+        "pundit.DbpediaSpotlight": {
+            "name": "pundit.DbpediaSpotlight",
+            "shortname": "pundit.DbpediaSpotlight",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/DbpediaSpotlight.js",
+            "line": 1,
+            "description": "Provides facilities to query the DBpedia Spotlight \nAnnotation services and the DBpedia SPARQL endpoint."
+        },
+        "pundit.FastTextHandler": {
+            "name": "pundit.FastTextHandler",
+            "shortname": "pundit.FastTextHandler",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/FastTextHandler.js",
+            "line": 1,
+            "extends": "pundit.BasePanel",
+            "description": "? TODO"
+        },
+        "pundit.ImageAnnotationPanel": {
+            "name": "pundit.ImageAnnotationPanel",
+            "shortname": "pundit.ImageAnnotationPanel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/ImageAnnotationPanel.js",
+            "line": 1,
+            "extends": "pundit.BasePanel",
+            "description": "Provides a GUI (floating Panel) for showing items grouped according \nfrom their provenance ('My Item', 'Page Items', Vocabularies)"
+        },
+        "pundit.Init": {
+            "name": "pundit.Init",
+            "shortname": "pundit.Init",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/Init.js",
+            "line": 132,
+            "extends": "pundit.baseComponent",
+            "description": "Init class: initializes all of the pundit components. The init object\nis saved in the global pundit live namespace under the name of 'init', for future\nuse. Since the global live namespace name defaults to \"punditLive\", the init\nobject is accessible by default with punditLive.init"
+        },
+        "pundit.ItemContainerManager": {
+            "name": "pundit.ItemContainerManager",
+            "shortname": "pundit.ItemContainerManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/ItemContainerManager.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Is responsible of the instantiation of different item containers\n(PageItems, MyItems) and provide facilities for their management. In particular \nit allows to execute operation on all the item containers (ex. item refresh, search, ...)"
+        },
+        "pundit.myPundit": {
+            "name": "pundit.myPundit",
+            "shortname": "pundit.myPundit",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/MyPundit.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Handles the authentication workflow and stores informations\nabout the logged in user, like username, notebooks and other useful stuff.<br>\nChecks if the user is logged in at startup, and request him to log in \nif needed."
+        },
+        "pundit.NotebookManager": {
+            "name": "pundit.NotebookManager",
+            "shortname": "pundit.NotebookManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/NotebookManager.js",
+            "line": 1,
+            "extends": "pundit.BasePanel",
+            "description": "Provides a GUI (floating Panel) for showing items grouped according \nfrom their provenance ('My Item', 'Page Items', Vocabularies)"
+        },
+        "pundit.PageHandler": {
+            "name": "pundit.PageHandler",
+            "shortname": "pundit.PageHandler",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/PageHandler.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Provides a GUI (floating Panel) and set of facilities \nfor the creation of comments and tags. Tags can be retrieved both using \nDBpedia Spotlight (annotating the text comment). Tags can be removed and navigated\nCreated comments and tags are then saved to pundit annotation server"
+        },
+        "pundit.Previewer": {
+            "name": "pundit.Previewer",
+            "shortname": "pundit.Previewer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/Previewer.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Offers facilities to create a nice and common HTML preview\nof a given pundit item, extracting its properties from its bucket.<br>\nShows, hides and sets loading on demand."
+        },
+        "pundit.RecognizerPanel": {
+            "name": "pundit.RecognizerPanel",
+            "shortname": "pundit.RecognizerPanel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/RecognizerPanel.js",
+            "line": 2,
+            "extends": "pundit.ResourcesPanel",
+            "description": "Provides a GUI (floating Panel) for recognizing a selected text fragment\nsearching in different sources ('My Item', 'Page Items', Vocabularies) and from lookup services\nFreebase, Dbpedia and Wordnet.\nIt extend the Resource Panel search capability with the possibity to selected\nsearched tags and use to compose a triple <br>\n:fragment rdfs:seeAlso tag1, tag2, ..."
+        },
+        "pundit.ResourcesPanel": {
+            "name": "pundit.ResourcesPanel",
+            "shortname": "pundit.ResourcesPanel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/ResourcesPanel.js",
+            "line": 1,
+            "extends": "pundit.BasePanel",
+            "description": "Provides a GUI (floating Panel) for showing items grouped according \nfrom their provenance ('My Item', 'Page Items', Vocabularies)"
+        },
+        "pundit.TripleComposer": {
+            "name": "pundit.TripleComposer",
+            "shortname": "pundit.TripleComposer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/TripleComposer.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Offers a cute drag 'n drop GUI to create triples. Interacts\nwith other components to show possible drop targets for a given dragged\npundit item and, the other way around, highlights pundit items \nwhich are accepted by a clicked drop target. It will use item rdf types and\npredicates ranges/domains of already present items in the subject, predicate\nand object targets, to be as accurate as possible with the suggestions."
+        },
+        "pundit.XpointersHelper": {
+            "name": "pundit.XpointersHelper",
+            "shortname": "pundit.XpointersHelper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "pundit",
+            "namespace": "",
+            "file": "src/XpointersHelper.js",
+            "line": 1,
+            "extends": "pundit.baseComponent",
+            "description": "Provides a set of utilities to work with xpointers\nand xpaths. Massively used to consolidate and extract content\nfrom the DOM."
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/selectors/SelectorBase.js",
+            "line": 168,
+            "itemtype": "method",
+            "name": "setItemsLayout",
+            "description": "Switches the layout of the presented items and rearrange\nthem accordingly.",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "Name of the layout. See constructor options.layouts",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.selectors.SelectorBase"
+        },
+        {
+            "file": "src/AuthenticatedRequests.js",
+            "line": 21,
+            "description": "Timer used to poll the server to trigger the login done event",
+            "itemtype": "property",
+            "name": "loginTimerMS",
+            "type": "Integer (milliseconds)",
+            "default": "500",
+            "class": "pundit.authenticatedRequests",
+            "module": "pundit"
+        },
+        {
+            "file": "src/AuthenticatedRequests.js",
+            "line": 28,
+            "description": "Hide the login window after these many milliseconds",
+            "itemtype": "property",
+            "name": "loginAutomaticHideMS",
+            "type": "Integer (milliseconds)",
+            "default": "2000",
+            "class": "pundit.authenticatedRequests",
+            "module": "pundit"
+        },
+        {
+            "file": "src/AuthenticatedRequests.js",
+            "line": 45,
+            "description": "Called when the user succesfully completes the OpenID \nauthentication workflow.",
+            "itemtype": "event",
+            "name": "onLogin",
+            "params": [
+                {
+                    "name": "f(data)",
+                    "description": "function to be called.<br>\n    data is the json object coming from the server on succesfull login.",
+                    "type": "Function"
+                }
+            ],
+            "class": "pundit.authenticatedRequests",
+            "module": "pundit"
+        },
+        {
+            "file": "src/AuthenticatedRequests.js",
+            "line": 53,
+            "description": "Called when the user succesfully logs out.",
+            "itemtype": "event",
+            "name": "onLogout",
+            "params": [
+                {
+                    "name": "f(data)",
+                    "description": "function to be called.<br>\n    data is the json object coming from the server on succesfull logout.",
+                    "type": "Function"
+                }
+            ],
+            "class": "pundit.authenticatedRequests",
+            "module": "pundit"
+        },
+        {
+            "file": "src/AuthenticatedRequests.js",
+            "line": 97,
+            "itemtype": "method",
+            "name": "xGet",
+            "description": "Performs an HTTP get through an authenticated Ajax call.",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "the same object one would pass to a \nnormal dojo xhrGet().",
+                    "type": "Object"
+                }
+            ],
+            "class": "pundit.authenticatedRequests",
+            "module": "pundit"
+        },
+        {
+            "file": "src/AuthenticatedRequests.js",
+            "line": 107,
+            "itemtype": "method",
+            "name": "xPost",
+            "description": "Performs an HTTP post through an authenticated Ajax call.",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "the same object one would pass to a \nnormal dojo xhrPost().",
+                    "type": "Object"
+                }
+            ],
+            "class": "pundit.authenticatedRequests",
+            "module": "pundit"
+        },
+        {
+            "file": "src/AuthenticatedRequests.js",
+            "line": 117,
+            "itemtype": "method",
+            "name": "xPut",
+            "description": "Performs an HTTP put through an authenticated Ajax call.",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "the same object one would pass to a \nnormal dojo xhrPut().",
+                    "type": "Object"
+                }
+            ],
+            "class": "pundit.authenticatedRequests",
+            "module": "pundit"
+        },
+        {
+            "file": "src/AuthenticatedRequests.js",
+            "line": 127,
+            "itemtype": "method",
+            "name": "xDelete",
+            "description": "Performs an HTTP delete through an authenticated Ajax call.",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "the same object one would pass to a \nnormal dojo xhrDelete().",
+                    "type": "Object"
+                }
+            ],
+            "class": "pundit.authenticatedRequests",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BaseComponent.js",
+            "line": 24,
+            "description": "Enables debug messages for the component",
+            "itemtype": "property",
+            "name": "debug",
+            "type": "Boolean",
+            "default": "false",
+            "class": "pundit.baseComponent",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BaseComponent.js",
+            "line": 32,
+            "description": "Name of the component, shown in debug messages",
+            "itemtype": "property",
+            "name": "libName",
+            "type": "String",
+            "default": "this.declaredClass",
+            "class": "pundit.baseComponent",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BaseComponent.js",
+            "line": 71,
+            "itemtype": "method",
+            "name": "createCallback",
+            "description": "Creates one or more callbacks for the component. For each 'name' passed\nas parameter two methods will be created:<br>\nonName(f) (first letter is automatically capitalized): used by other components to\nsubscribe a function to be called when the event hits. Optional parameters. <br>\nfireOnName(data) (first letter is automatically capitalized): fires the event \ncalling all of the subscribed callbacks passing data as parameter. This \nfunction must be called by the component when needed.",
+            "params": [
+                {
+                    "name": "names",
+                    "description": "Names of the callbacks to be created.",
+                    "type": "String or array of strings"
+                }
+            ],
+            "class": "pundit.baseComponent",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BaseComponent.js",
+            "line": 122,
+            "itemtype": "method",
+            "name": "log",
+            "description": "Logs a debug message in the browser console or (if not\npresent) in a debug div appended to the document.",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "message to be logged.",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.baseComponent",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 24,
+            "description": "The name of the panel used to create a unique id",
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 31,
+            "description": "The title of the panel",
+            "itemtype": "property",
+            "name": "title",
+            "type": "String",
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 38,
+            "description": "if set to true it enable the panel to be dragged",
+            "itemtype": "property",
+            "name": "drag",
+            "type": "String",
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 45,
+            "description": "if set to true enable the preview visualization (\notherwise the normal preview (in Pundit Window) is used\nassigned explicitly dojo's 'declaredClass' field will be used.",
+            "itemtype": "property",
+            "name": "preview",
+            "type": "String",
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 179,
+            "itemtype": "method",
+            "name": "hide",
+            "description": "Hide the panel.",
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 195,
+            "itemtype": "method",
+            "name": "show",
+            "description": "Show the panel.",
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 217,
+            "itemtype": "method",
+            "name": "isVisible",
+            "description": "Check if the panel is visible",
+            "return": {
+                "description": "True if it is visible, false otherwise",
+                "type": "Boolean"
+            },
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 226,
+            "itemtype": "method",
+            "name": "getPosition",
+            "description": "Get the current position of the panel",
+            "return": {
+                "description": "An object containing the position of the panel (x,y,w,h)",
+                "type": "Object"
+            },
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 235,
+            "itemtype": "method",
+            "name": "showPreview",
+            "description": "shows the preview of the item. Depending on the parameter \n(preview) passed to the component the preview is shown inside the panel \n(preview = true) or in the Pundit Window. (preview = false)",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "The uri of the item to preview",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 246,
+            "itemtype": "method",
+            "name": "hidePreview",
+            "description": "Hide the preview panel.",
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 254,
+            "itemtype": "method",
+            "name": "addHTMLContent",
+            "description": "Add html content to the panel content container.",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "The HTML to be added to create the content of the panel",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/BasePanel.js",
+            "line": 263,
+            "itemtype": "method",
+            "name": "emptyContent",
+            "description": "Remove all the HTML content of the panel",
+            "class": "pundit.BasePanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTag.js",
+            "line": 604,
+            "itemtype": "method",
+            "name": "itemIndex",
+            "description": "Return the index of the Tag item in the tagItem array container\ngiven its uri or -1 if no tag item has such index.",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Integer"
+            },
+            "class": "pundit.CommentTag",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTag.js",
+            "line": 701,
+            "itemtype": "method",
+            "name": "removeItemFromUri",
+            "description": "Remove a tag item from the tagItems array and from the tag \ncontainer given its uri",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "pundit.CommentTag",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTag.js",
+            "line": 717,
+            "itemtype": "method",
+            "name": "removeLinkFromUri",
+            "description": "Remove an hyperlink from the marked up text given its uri",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "pundit.CommentTag",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTag.js",
+            "line": 772,
+            "itemtype": "method",
+            "name": "addHyperlinksToText",
+            "description": "Searches for http urls in the text and turns them into HTML hyperlinks.",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "pundit.CommentTag",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTag.js",
+            "line": 783,
+            "itemtype": "method",
+            "name": "parseInputText",
+            "description": "Parses the input types by user and performs text transformations, e.g. to escape unpermitted tags.",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "pundit.CommentTag",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTagPanel.js",
+            "line": 199,
+            "itemtype": "method",
+            "name": "extractTags",
+            "description": "Extract tags from input,  them to the tag container and\nmarkup the text in the input corresponding to each tag.",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "pundit.CommentTagPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTagPanel.js",
+            "line": 337,
+            "itemtype": "method",
+            "name": "parseInputText",
+            "description": "Parses the input types by user and performs text transformations, e.g. to escape unpermitted tags.",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "pundit.CommentTagPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTagPanel.js",
+            "line": 380,
+            "itemtype": "method",
+            "name": "itemIndex",
+            "description": "Return the index of the Tag item in the tagItem array container\ngiven its uri or -1 if no tag item has such index.",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Integer"
+            },
+            "class": "pundit.CommentTagPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTagPanel.js",
+            "line": 432,
+            "itemtype": "method",
+            "name": "removeItemFromUri",
+            "description": "Remove a tag item from the tagItems array and from the tag \ncontainer given its uri",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "pundit.CommentTagPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/CommentTagPanel.js",
+            "line": 528,
+            "itemtype": "method",
+            "name": "getTagsSortedByOffset",
+            "description": "Order tags extracted from text according to their offset \n(decreasing order). It creates an array of arrays [offset, tagObject]\nordered according to the offset (so it is possible to iterate on it.",
+            "params": [
+                {
+                    "name": "tags",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "pundit.CommentTagPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 21,
+            "itemtype": "property",
+            "name": "punditConfig.annotationServerBaseURL",
+            "type": "string",
+            "description": "Absolute base URL of the Pundit server side APIs, ending\nwith /",
+            "default": "http://metasound.dibet.univpm.it/annotationserver/",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 30,
+            "itemtype": "property",
+            "name": "punditConfig.debugAllModules",
+            "type": "boolean",
+            "description": "Activates/deactivates debug mode for every component",
+            "default": "false",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 38,
+            "itemtype": "property",
+            "name": "punditConfig.showSettings",
+            "type": "boolean",
+            "description": "Activates/deactivates the settings panel",
+            "default": "false",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 52,
+            "itemtype": "property",
+            "name": "punditConfig.enableSemanticExpansion",
+            "type": "boolean",
+            "description": "Enables/disables the link to LodLive for exploring Linked Data around items",
+            "default": "false",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 60,
+            "itemtype": "property",
+            "name": "punditConfig.enablePageBookmark",
+            "type": "boolean",
+            "default": "false",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 67,
+            "itemtype": "property",
+            "name": "punditConfig.enableEntitiesExtraction",
+            "type": "boolean",
+            "description": "Enables/disables the automatic entitities extraction from text in the page",
+            "default": "false",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 77,
+            "itemtype": "property",
+            "name": "punditConfig.vocabularies",
+            "type": "array or URLs",
+            "description": "Specifies vocaularies that will be available to Pundit users. \nVocabularies have a unique name and a description. They can be of different\ntypes: taxonomy (defines a hierarchy of terms), relations (defines a list \nof relations with domain and ranges). Each vocabulary definition is a JSONP\nfile available on the Web and is loaded by resolving an absolute URL.",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 88,
+            "itemtype": "property",
+            "name": "punditConfig.useBasicRelations",
+            "type": "boolean",
+            "description": "Loads Pundit's basic relations",
+            "default": "true",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 189,
+            "itemtype": "property",
+            "name": "punditConfig.modules",
+            "type": "object",
+            "description": "Configuration for various Pundit optional modules",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 196,
+            "itemtype": "property",
+            "name": "punditConfig.modules.annotators",
+            "type": "object",
+            "description": "Configuration for Pundit annotators: components who\ndeal (read, write, visualize etc) with various type of items used\ninto annotations, for example text fragments, image fragments etc.",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 210,
+            "itemtype": "property",
+            "name": "punditConfig.modules.selectors",
+            "type": "object",
+            "description": "Configuration for Pundit selectors: components who\nretrieve items from remote sources like Freebase, Wordnet, Europeana\netc. Each children should be named after a Selector found in src/selectors\nomitting the ending part \"Selector\". Each object must contain the\nproperties name (string), label (string) and active (boolean). Moreover\nit can contain selector-specific configuration options, like europeanaKey\nor limit or keyInputTimerLength. See each selector docs for more info.",
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Configuration.js",
+            "line": 300,
+            "itemtype": "method",
+            "name": "isModuleActive",
+            "description": "Returns true if the given module name is active",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "a module name",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "pundit.Configuration",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ContextualMenu.js",
+            "line": 89,
+            "description": "Adds an action for the given types.<br>\nExample of the action object: <br>\n<pre>{\n....type: ['myUniqueType'],\n....name: 'removeMyItem',\n....label: 'Remove this DOM item',\n....showIf: function(id) { \n........return dojo.query('#'+id).length !== 0;\n....},\n.....onclick: function(id) {\n........dojo.destroy(id);\n....}\n}</pre>\nThis action will destroy a DOM node with the given id. The menu option\nwill be shown if an element with the given id exists.",
+            "itemtype": "method",
+            "name": "addAction",
+            "params": [
+                {
+                    "name": "action",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "type",
+                            "description": ": List of types to subscribe this action to. <br>\nThe special type \"__all\" means that this action must be shown disregarding the\ntype passed to the show() function.",
+                            "type": "Array of strings"
+                        },
+                        {
+                            "name": "name",
+                            "description": "(string): Unique name of this action, used for HTML classes, so no\nspaces or strange characters are allowed. To be safe just use camelcase\nletters.<br>"
+                        },
+                        {
+                            "name": "label",
+                            "description": ": Label to be displayed for this menu action.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "showIf(data)",
+                            "description": ": function which decides wether or not show this\naction in the menu. The data parameter passed in is the same parameter\npassed when showing the menu. Usually an URI or an identifier useful\nto the subscribing component to make its job.",
+                            "type": "Function"
+                        },
+                        {
+                            "name": "onclick(data)",
+                            "description": ": Function to be called when the users clicks\non this action. The data parameter passed to the callback is an unique\nidentifier of the item we are showing the menu for, or an equivalent\ncomplex structure. Usually just an identifier or an URI. <br>\nIf the onclick() function returns true, the contextual menu will be hidden.",
+                            "type": "Function"
+                        }
+                    ]
+                }
+            ],
+            "class": "pundit.contextualMenu",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ContextualMenu.js",
+            "line": 155,
+            "description": "Shows the contextual menu for the given type and identifier, at\nthe given x,y coordinates. <br>\nEach component can open a contextual menu for a given type, passing\nin an identifier which will be used by showIf() and onclick() functions\nto do their job.",
+            "itemtype": "method",
+            "name": "show",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "x coordinate where to show the contextual menu",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "y coordinate where to show the contextual menu",
+                    "type": "Number"
+                },
+                {
+                    "name": "url",
+                    "description": "unique identifier to identify the clicked resource",
+                    "type": "String"
+                },
+                {
+                    "name": "type",
+                    "description": "type of actions to show",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.contextualMenu",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Init.js",
+            "line": 181,
+            "itemtype": "event",
+            "name": "onInitDone",
+            "params": [
+                {
+                    "name": "f()",
+                    "description": "function to be called, no parameters.",
+                    "type": "Function"
+                }
+            ],
+            "description": "Called when all of the needed modules has been \ncorrectly initialized. Should be used to initialize cross-component\nbehaviors, like subscribing to each other's callbacks.",
+            "class": "pundit.Init",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ItemContainerManager.js",
+            "line": 54,
+            "itemtype": "method",
+            "name": "refreshAll",
+            "description": "Refresh the items in all the items containers",
+            "class": "pundit.ItemContainerManager",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ItemContainerManager.js",
+            "line": 65,
+            "itemtype": "method",
+            "name": "refreshAll",
+            "description": "Refresh the number of items in all the items containers",
+            "class": "pundit.ItemContainerManager",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ItemContainerManager.js",
+            "line": 76,
+            "itemtype": "method",
+            "name": "getItemByUri",
+            "description": "Return an item contained in the items container given its uri",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The item identified by that uri. \nIf multiple items have the same uri, the first items founded looping in the conteiner is returned.",
+                "type": "Object - Item"
+            },
+            "class": "pundit.ItemContainerManager",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ItemContainerManager.js",
+            "line": 94,
+            "itemtype": "method",
+            "name": "getItemsFromParentItem",
+            "description": "Return an item contained in the items container given the uri of its parent item (isPartOf relation)",
+            "params": [
+                {
+                    "name": "parentUri",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The item.",
+                "type": "Object - Item"
+            },
+            "class": "pundit.ItemContainerManager",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ItemContainerManager.js",
+            "line": 109,
+            "itemtype": "method",
+            "name": "getItemsByType",
+            "description": "Return an array of items contained in the items container that have such type",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The item identified by that uri. \nItem are not duplicated.",
+                "type": "Array of Item object"
+            },
+            "class": "pundit.ItemContainerManager",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ItemContainerManager.js",
+            "line": 132,
+            "itemtype": "method",
+            "name": "hideAllItems",
+            "description": "Hide all the items in every items container",
+            "class": "pundit.ItemContainerManager",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ItemContainerManager.js",
+            "line": 143,
+            "itemtype": "method",
+            "name": "showAllItems",
+            "description": "Show all the items in every items container. Pay attention you also need to select a filter tab (ex. fragment)\n   that you want to show ohterwise nothing is visualized...",
+            "class": "pundit.ItemContainerManager",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Items.js",
+            "line": 253,
+            "itemtype": "method",
+            "name": "uriInItems",
+            "description": "Check if an item is present in the itemsDnD container",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "The Uri of the item to be searched",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "True if exists, false otherwise",
+                "type": "Boolean"
+            },
+            "class": "pundit.myPundit",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Items.js",
+            "line": 562,
+            "itemtype": "method",
+            "name": "addItem",
+            "description": "Add an item to the itemsDnD if it's not already in it.",
+            "params": [
+                {
+                    "name": "item",
+                    "description": "A json object containing the item information.",
+                    "type": "Object"
+                }
+            ],
+            "class": "pundit.myPundit",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Items.js",
+            "line": 586,
+            "itemtype": "method",
+            "name": "removeItemFromUri",
+            "description": "Remove an item from the itemsDnD if it's in it given its Uri.",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "The Uri of the item to be removed",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.myPundit",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Items.js",
+            "line": 610,
+            "itemtype": "method",
+            "name": "removeAllItems",
+            "description": "Removes all items from the itemsDnD.",
+            "class": "pundit.myPundit",
+            "module": "pundit"
+        },
+        {
+            "file": "src/MyPundit.js",
+            "line": 62,
+            "description": "Gets the current annotations visibility mode in an asynchronous fashion",
+            "itemtype": "method",
+            "name": "getAnnotationVisibility",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "the function to be called with the visibility mode as a parameter",
+                    "type": "Function"
+                }
+            ],
+            "class": "pundit.myPundit",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Previewer.js",
+            "line": 34,
+            "itemtype": "method",
+            "name": "setLoading",
+            "description": "Sets or unsets the loading state for the preview area.",
+            "params": [
+                {
+                    "name": "v",
+                    "description": "If true the loading state will be activated, if\nfalse will be deactivated.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "pundit.Previewer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Previewer.js",
+            "line": 48,
+            "itemtype": "method",
+            "name": "buildPreviewForItem",
+            "description": "Extracts informations from the passed item and creates a\ncached version of the preview for future uses.",
+            "params": [
+                {
+                    "name": "item",
+                    "description": "a semlib item, with at least its bucket and\na value.",
+                    "type": "Object - pundit item",
+                    "props": [
+                        {
+                            "name": "rdfData",
+                            "description": "The associated triplesBucket \nto extract the informations from.",
+                            "type": "Object - triplesBucket"
+                        },
+                        {
+                            "name": "value",
+                            "description": "Unique URI of this item's resource.",
+                            "type": "String - URI"
+                        }
+                    ]
+                }
+            ],
+            "class": "pundit.Previewer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Previewer.js",
+            "line": 123,
+            "itemtype": "method",
+            "name": "exists",
+            "description": "Check if a preview for the given URI is present.",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "Uri of the resource",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "True if exists, false otherwise",
+                "type": "Boolean"
+            },
+            "class": "pundit.Previewer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Previewer.js",
+            "line": 133,
+            "itemtype": "method",
+            "name": "show",
+            "description": "Shows the preview for a given resource in the preview area.",
+            "params": [
+                {
+                    "name": "uri",
+                    "description": "Uri of the resource",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.Previewer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/Previewer.js",
+            "line": 221,
+            "itemtype": "method",
+            "name": "hide",
+            "description": "Hides the preview area.",
+            "class": "pundit.Previewer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ResourcesPanel.js",
+            "line": 453,
+            "itemtype": "method",
+            "name": "load",
+            "description": "Load the items to be displayed in the panel",
+            "params": [
+                {
+                    "name": "itemsObject",
+                    "description": "\n(An object representing the items to show gruoped by type. An example object:\n      {\n           myitems: {\n               label:'My Items',\n               items: [Array of items object]\n           }, \n           pageitems: {\n               label: 'Page Items',\n               items: [Array of items object]\n           }, \n           vacab1: {\n               label: 'Vocab 1',\n               items: [Array of items object]\n           }\n       })",
+                    "type": "Object"
+                },
+                {
+                    "name": "term",
+                    "description": "the searched term to be shown in the search input",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.ResourcesPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ResourcesPanel.js",
+            "line": 492,
+            "itemtype": "method",
+            "name": "show",
+            "description": "Show the panel.",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "(optionThe x coordinate of the panel",
+                    "type": "Integer"
+                },
+                {
+                    "name": "y",
+                    "description": "The x coordinate of the panel",
+                    "type": "Integer"
+                },
+                {
+                    "name": "params",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "title",
+                            "description": "The title of the panel",
+                            "type": "String"
+                        },
+                        {
+                            "name": "arrow",
+                            "description": "Allow to display an arrow on top of the panel. \nThree position are possible: \"left\", \"right\" and \"center\"",
+                            "type": "String"
+                        },
+                        {
+                            "name": "literalMode",
+                            "description": "Activate the visualization of the literal panel. \nTwo value are possible: \"literalEnabled\" enable the literal panel showing \nthe \"Literal\" button to pass from item visualization to the literal panel;\n\"literalOnly\" show only the literal panel.",
+                            "type": "String"
+                        }
+                    ]
+                }
+            ],
+            "class": "pundit.ResourcesPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ResourcesPanel.js",
+            "line": 550,
+            "itemtype": "method",
+            "name": "hide",
+            "description": "Hide the panel (empting the literal panel)",
+            "class": "pundit.ResourcesPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/ResourcesPanel.js",
+            "line": 574,
+            "itemtype": "method",
+            "name": "filterItems",
+            "description": "Filter between the loaded items according to the word",
+            "params": [
+                {
+                    "name": "startingWord",
+                    "description": "The word used to filter the items",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.ResourcesPanel",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TooltipAnnotationViewer.js",
+            "line": 340,
+            "description": "",
+            "itemtype": "method",
+            "name": "annotationHasTargets",
+            "params": [
+                {
+                    "name": "ann_id",
+                    "description": "the id of the annotation to be checked",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "true if the annotation has targets, false otherwise"
+            },
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TooltipAnnotationViewer.js",
+            "line": 357,
+            "description": "Creates and shows the view panel of an annotation.",
+            "itemtype": "method",
+            "name": "showAnnotationPanel",
+            "params": [
+                {
+                    "name": "ann_id",
+                    "description": "the id of the annotation to be visualized",
+                    "type": "String"
+                },
+                {
+                    "name": "clickedXP",
+                    "description": "the xpointer correspoding to the page fragment that user selected.",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TooltipAnnotationViewer.js",
+            "line": 524,
+            "itemtype": "method",
+            "name": "addHyperlinksToText",
+            "description": "Searches for http urls in the text and turns them into HTML hyperlinks.",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TripleComposer.js",
+            "line": 105,
+            "itemtype": "event",
+            "name": "onSave",
+            "params": [
+                {
+                    "name": "f()",
+                    "description": "function to be called, no parameters.",
+                    "type": "Function"
+                }
+            ],
+            "description": "Called when pundit succesfully saves a batch of\nuser built triples to the server.",
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TripleComposer.js",
+            "line": 315,
+            "itemtype": "method",
+            "name": "getItemFromId",
+            "description": "Looks for the given ID among the items currently \npresent in the dnd targets.",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "HTML ID of an item present in the pundit targets.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The item for that ID, undefined otherwise.",
+                "type": "Object - Dojo DND item"
+            },
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TripleComposer.js",
+            "line": 336,
+            "itemtype": "method",
+            "name": "addDnDTriple",
+            "description": "Adds a triple row to the pundit area, thus adding three new\nsubject, predicate and object targets.",
+            "params": [
+                {
+                    "name": "append",
+                    "description": "wether to append (true) or prepend (false) the new\nrow to the already existing ones.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TripleComposer.js",
+            "line": 455,
+            "itemtype": "method",
+            "name": "removeTripleRow",
+            "description": "Removes an entire row from its ID",
+            "params": [
+                {
+                    "name": "row",
+                    "description": "Identifier of the row, taken from the HTML container or\nin the pundit data structures.",
+                    "type": "String"
+                }
+            ],
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TripleComposer.js",
+            "line": 472,
+            "itemtype": "method",
+            "name": "clearDnDTriples",
+            "description": "Removes all of the pundit target rows, and adds a new empty one.",
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TripleComposer.js",
+            "line": 1018,
+            "description": "Deselects any selected item in every target of every\nrow currently present in TripleComposer",
+            "itemtype": "method",
+            "name": "resetSelections",
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TripleComposer.js",
+            "line": 1034,
+            "description": "Saves to the pundit server the current composed triples.",
+            "itemtype": "method",
+            "name": "saveTriples",
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/TripleComposer.js",
+            "line": 1135,
+            "description": "Saves to the pundit server the current composed triples.",
+            "itemtype": "method",
+            "name": "saveTriples",
+            "class": "pundit.TripleComposer",
+            "module": "pundit"
+        },
+        {
+            "file": "src/XpointersHelper.js",
+            "line": 19,
+            "itemtype": "property",
+            "name": "contentClasses",
+            "type": "array of strings",
+            "description": "Class attached to this and that.",
+            "default": "['pundit-content']",
+            "class": "pundit.XpointersHelper",
+            "module": "pundit"
+        }
+    ],
+    "warnings": []
+}

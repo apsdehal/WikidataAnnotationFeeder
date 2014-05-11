@@ -1,0 +1,827 @@
+_PUNDIT.vocab.initJsonpVocab({
+    "identifier": "value",
+    "name": "daphnet_modern_taxonomy",
+    "label": "label",
+    "tab_name": "Daphnet Modern",
+    "description": "A taxonomy of concepts mapped from the Daphnet Modern ontology",
+    "type": "taxonomy",
+    "items": [
+        {
+            "value": "http://www.w3.org/2004/02/skos/core#Concept",
+            "label": "Concepts",
+            "description": "A Concept is a topic, often an abstract, non physical entity that a Source can refer to..",
+            "nodetype": [
+                "http://purl.org/pundit/vocab/category"
+            ],
+            "children": [
+                
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Materia"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Corpus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Modus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Realitas"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/CausaParticularis"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Forma"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/AnimaHumana"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Libertas"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Conceptus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Facultas_Sentiendi"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Motus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Actus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Facultas"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Deus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Facultas_Ratiocinandi"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/CausaSeconda"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Cogitatio"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Perfectio"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Probabilitas"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Repraesentatio"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Affectus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/ActioHumana"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Actio"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Ens"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Facultas_Imaginandi"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Necessitas"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Potentia"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Facultas_Cognoscendi"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Fideis"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Experientia"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Existentia"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Idea"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Mundus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/AnimaMundi"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/AnimaBrutorum"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Infinitum"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Lex"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Creatio"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Harmonia"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Mens"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Monas"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Perceptio"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Virtus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/CausaPrima"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Methodus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Intellectus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Cognitio"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Substantia"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Facultas_Recordandi"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Intuitus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Ratio"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Vis"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Causa"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Ordo"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Sensus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Voluntas"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Natura"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Bonum"},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Spatium"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Malum"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Tempus"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/ActioDivina"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Anima"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Amor"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Elementum"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Principium"
+				},
+
+				{
+				                    "_reference": "http://purl.org/daphnet/vocab/Veritas"
+				}
+            ]
+        },
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Materia",
+		    "label": "Materia",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Corpus",
+		    "label": "Corpus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Modus",
+		    "label": "Modus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Realitas",
+		    "label": "Realitas",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/CausaParticularis",
+		    "label": "Causa Particularis",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Forma",
+		    "label": "Forma",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/AnimaHumana",
+		    "label": "Anima Humana",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Libertas",
+		    "label": "Libertas",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Conceptus",
+		    "label": "Conceptus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Facultas_Sentiendi",
+		    "label": "Facultas_Sentiendi",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Motus",
+		    "label": "Motus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+
+
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Actus",
+		    "label": "Actus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Facultas",
+		    "label": "Facultas",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Deus",
+		    "label": "Deus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Facultas_Ratiocinandi",
+		    "label": "Facultas_Ratiocinandi",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/CausaSeconda",
+		    "label": "Causa Seconda",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Cogitatio",
+		    "label": "Cogitatio",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Perfectio",
+		    "label": "Perfectio",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Probabilitas",
+		    "label": "Probabilitas",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Repraesentatio",
+		    "label": "Repraesentatio",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Affectus",
+		    "label": "Affectus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/ActioHumana",
+		    "label": "Actio Humana",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Actio",
+		    "label": "Actio",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Ens",
+		    "label": "Ens",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Facultas_Imaginandi",
+		    "label": "Facultas_Imaginandi",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Necessitas",
+		    "label": "Necessitas",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Potentia",
+		    "label": "Potentia",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Facultas_Cognoscendi",
+		    "label": "Facultas_Cognoscendi",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Fideis",
+		    "label": "Fideis",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Experientia",
+		    "label": "Experientia",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Existentia",
+		    "label": "Existentia",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Idea",
+		    "label": "Idea",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Mundus",
+		    "label": "Mundus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/AnimaMundi",
+		    "label": "Anima Mundi",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/AnimaBrutorum",
+		    "label": "Anima Brutorum",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Infinitum",
+		    "label": "Infinitum",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Lex",
+		    "label": "Lex",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Creatio",
+		    "label": "Creatio",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Harmonia",
+		    "label": "Harmonia",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Mens",
+		    "label": "Mens",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Monas",
+		    "label": "Monas",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Perceptio",
+		    "label": "Perceptio",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Virtus",
+		    "label": "Virtus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/CausaPrima",
+		    "label": "Causa Prima",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Methodus",
+		    "label": "Methodus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Intellectus",
+		    "label": "Intellectus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Cognitio",
+		    "label": "Cognitio",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Substantia",
+		    "label": "Substantia",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Facultas_Recordandi",
+		    "label": "Facultas_Recordandi",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Intuitus",
+		    "label": "Intuitus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Ratio",
+		    "label": "Ratio",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Vis",
+		    "label": "Vis",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Causa",
+		    "label": "Causa",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Ordo",
+		    "label": "Ordo",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Sensus",
+		    "label": "Sensus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Voluntas",
+		    "label": "Voluntas",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Natura",
+		    "label": "Natura",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Bonum",
+		    "label": "Bonum",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Spatium",
+		    "label": "Spatium",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Malum",
+		    "label": "Malum",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Tempus",
+		    "label": "Tempus",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/ActioDivina",
+		    "label": "Actio Divina",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Anima",
+		    "label": "Anima",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Amor",
+		    "label": "Amor",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Elementum",
+		    "label": "Elementum",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Principium",
+		    "label": "Principium",
+		    "description": "No description available",
+		    "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		},
+
+		{
+		    "value": "http://purl.org/daphnet/vocab/Veritas",
+		    "label": "Veritas",
+			"description": "No description available",
+			"type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+		}
+    ]
+});

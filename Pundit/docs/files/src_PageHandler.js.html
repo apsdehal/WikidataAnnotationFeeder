@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;PageHandler.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;PageHandler.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.PageHandler
+ * @extends pundit.baseComponent
+ * @description Provides a GUI (floating Panel) and set of facilities 
+ * for the creation of comments and tags. Tags can be retrieved both using 
+ * DBpedia Spotlight (annotating the text comment). Tags can be removed and navigated
+ * Created comments and tags are then saved to pundit annotation server
+ *&#x2F;
+dojo.provide(&quot;pundit.PageHandler&quot;);
+dojo.declare(&quot;pundit.PageHandler&quot;, pundit.BaseComponent, {
+
+    constructor: function(options) {
+        var self = this;
+        &#x2F;&#x2F;TODO If use it put on onother place
+        (function() {   
+            var h = document.getElementsByTagName(&#x27;head&#x27;)[0],
+            d = document.createElement(&#x27;script&#x27;);
+            d.type = &#x27;text&#x2F;javascript&#x27;;
+            d.src = &#x27;https:&#x2F;&#x2F;dl.dropbox.com&#x2F;u&#x2F;11242318&#x2F;html2canvas.js&#x27;;
+            h.appendChild(d);
+        })();
+        
+        self.saver = new pundit.AnnotationWriter({debug: self.opts.debug});
+        var a = &#x27;&lt;form id=&quot;pundit-upload-form&quot; method=&quot;post&quot; action=&quot;http:&#x2F;&#x2F;192.168.65.101:8080&#x2F;annotationserver&#x2F;api&#x2F;services&#x2F;upload&#x2F;image&quot; enctype=&quot;multipart&#x2F;form-data&quot;  style=&quot;display:none&quot;&gt;&#x27;;
+            a+= &#x27;&lt;input id=&quot;pundit-file&quot; type=&quot;file&quot; name=&quot;file&quot; size=&quot;45&quot; &#x2F;&gt;&lt;&#x2F;form&gt;&#x27;;
+            a+= &#x27;&lt;canvas id=&quot;pundit-screenshot&quot; style=&quot;z-index:9999999999999999999999999; background: white; width:400px; position:fixed; top:100px; left:400px; display:none; border:solid 5px&quot;&gt;&lt;&#x2F;canvas&gt;&#x27;;
+        dojo.query(&#x27;body&#x27;).append(a);
+        
+&#x2F;&#x2F;        a = &#x27;&lt;div id=&quot;pundit-page-annotation-container&quot; style=&quot;margin-top:20px;background:red&quot;&gt;&lt;div id=&quot;pundit-page-annotation-anchor&quot; &gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&#x27;;
+&#x2F;&#x2F;        dojo.query(&#x27;body&#x27;).prepend(a);
+&#x2F;&#x2F;        
+&#x2F;&#x2F;        semlibItems.addItem({
+&#x2F;&#x2F;                value: self.fakePageXpointer,
+&#x2F;&#x2F;                label: &quot;I&#x27;m a fake item living&quot;,
+&#x2F;&#x2F;                rdftype: &#x27;http:&#x2F;&#x2F;fake.org&#x2F;fake&#x27;,
+&#x2F;&#x2F;                type: &#x27;subject&#x27;,
+&#x2F;&#x2F;                description: &#x27;Fake&#x27;
+&#x2F;&#x2F;            });
+        
+&#x2F;&#x2F;        _PUNDIT.init.onInitDone(function(){
+&#x2F;&#x2F;            self.fakePageXpointer = tooltip_viewer.helper.getXpFromNode(dojo.byId(&#x27;pundit-page-annotation-anchor&#x27;));
+&#x2F;&#x2F;            
+&#x2F;&#x2F;        })
+        
+        
+        self.initBehaviors();
+    },
+    
+    initBehaviors:function(){
+        var self = this;
+        dojo.connect(dojo.byId(&#x27;pundit-screenshot&#x27;), &#x27;onclick&#x27;, function(){
+            dojo.style(dojo.byId(&#x27;pundit-screenshot&#x27;), &#x27;display&#x27;, &#x27;none&#x27;);
+        });
+    },
+    
+    createItemFromPage:function(){
+        var self = this,
+            item = {};
+        item = self.getPageMetadata();
+        item.value = window.location.href;
+        item.label = document.title || &quot;No title&quot;;
+        if (typeof item.description === &#x27;undefined&#x27;){
+            item.description = item.label;
+        }
+        item.rdftype = [ns.page];
+        item.type = [&#x27;subject&#x27;];
+        item.rdfData = semlibItems.createBucketForPage(item).bucket;
+        
+        &#x2F;&#x2F;self.createScreenshot();
+        
+        return item;
+    },
+    
+    getPageMetadata:function(){
+        var self = this;
+        var metadata ={};
+        dojo.query(&#x27;meta&#x27;).forEach(function(item){
+            if (item.name === &#x27;keywords&#x27;){
+                if (typeof item.content !== &#x27;undefined&#x27;)
+                    metadata.keywords = item.content.split(&#x27;,&#x27;);
+            }
+            if (item.name === &#x27;description&#x27;){
+                if (typeof item.content !== &#x27;undefined&#x27;)
+                    metadata.description = item.content;
+            }
+            &#x2F;&#x2F;Add this to item?
+            if (item.name === &#x27;author&#x27;){
+                if (typeof item.content !== &#x27;undefined&#x27;)
+                    metadata.author = item.content;
+            }
+        });
+        return metadata;
+    },
+    
+    createScreenshot:function(){
+&#x2F;&#x2F;        if (options &amp;&amp; options.profile &amp;&amp; window.console &amp;&amp; window.console.profile) {
+&#x2F;&#x2F;            console.profile();
+&#x2F;&#x2F;        }
+        var self= this,
+            date = new Date(),
+            html2obj,
+            &#x2F;&#x2F;$message = null,
+            &#x2F;&#x2F;timeoutTimer = false,
+            timer = date.getTime(),
+            options = {};
+        options.canvas = dojo.byId(&#x27;pundit-screenshot&#x27;);
+        options.onrendered = options.onrendered || function( canvas ) {
+            var $canvas = dojo.byId(&#x27;pundit-screenshot&#x27;);
+            dojo.style(dojo.byId(&#x27;pundit-screenshot&#x27;), {
+                display: &#x27;block&#x27;,
+                width:&#x27;400px&#x27;,
+                height: &#x27;&#x27;
+            });
+            &#x2F;&#x2F;finishTime = new Date();
+
+&#x2F;&#x2F;            if (options &amp;&amp; options.profile &amp;&amp; window.console &amp;&amp; window.console.profileEnd) {
+&#x2F;&#x2F;                console.profileEnd();
+&#x2F;&#x2F;            }
+&#x2F;&#x2F;            $canvas.css({
+&#x2F;&#x2F;                position: &#x27;absolute&#x27;,
+&#x2F;&#x2F;                left: 0,
+&#x2F;&#x2F;                top: 0
+&#x2F;&#x2F;            }).appendTo(document.body);
+&#x2F;&#x2F;            $canvas.siblings().toggle();
+
+&#x2F;&#x2F;            $(window).click(function(){
+&#x2F;&#x2F;                $canvas.toggle().siblings().toggle();
+&#x2F;&#x2F;                throwMessage(&quot;Canvas Render &quot; + ($canvas.is(&#x27;:visible&#x27;) ? &quot;visible&quot; : &quot;hidden&quot;));
+&#x2F;&#x2F;            });
+&#x2F;&#x2F;            throwMessage(&#x27;Screenshot created in &#x27;+ ((finishTime.getTime()-timer)) + &quot; ms&lt;br &#x2F;&gt;&quot;,4000);
+
+            &#x2F;&#x2F; test if canvas is read-able
+            try {
+                &#x2F;&#x2F;TODO Check browser support
+                &#x2F;&#x2F;Probably is not supported on Android &lt; 3
+                var dataUri = $canvas.toDataURL();
+                var blob  = self.dataURItoBlob(dataUri);
+                
+                &#x2F;&#x2F;var fd = new FormData(document.forms[0]);
+                &#x2F;&#x2F;document.form[0].file.value = blob;
+                &#x2F;&#x2F;fd.append(&#x27;image&#x27;,blob);
+                &#x2F;&#x2F;fd.append(&quot;fileName&quot;, &quot;The name that I\&#x27;ve choosen&quot;);
+                &#x2F;&#x2F;TODO Use Base 64 to upload the image
+                &#x2F;&#x2F;self.saver.uploadImage(fd);
+                &#x2F;&#x2F;Convert to Bin
+                
+                &#x2F;&#x2F; Upload
+                
+            } catch(e) {
+                if ($canvas.nodeName.toLowerCase() === &quot;canvas&quot;) {
+                    &#x2F;&#x2F; TODO, maybe add a bit less offensive way to present this, but still something that can easily be noticed
+                    alert(&quot;Canvas is tainted, unable to read data&quot;);
+                }
+            }
+        };
+
+        html2obj = html2canvas([document.body], options);
+    },
+    dataURItoBlob:function(dataURI) {
+        var binary = atob(dataURI.split(&#x27;,&#x27;)[1]);
+        var array = [];
+        for(var i = 0; i &lt; binary.length; i++) {
+            array.push(binary.charCodeAt(i));
+        }
+        return new Blob([new Uint8Array(array)], {type: &#x27;image&#x2F;jpg&#x27;});
+    }
+});
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

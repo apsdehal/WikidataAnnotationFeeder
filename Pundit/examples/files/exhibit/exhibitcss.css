@@ -1,0 +1,24 @@
+/* 
+    Document   : exhibitcss
+    Created on : Jul 29, 2011, 10:12:20 AM
+    Author     : marco
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body { 
+    font-size: 11px;
+}
+customFacet{
+    background-color: gainsboro;
+}
+customView{
+    background-color: red;
+}
+
+

@@ -1,0 +1,528 @@
+_PUNDIT.vocab.initJsonpVocab({
+    "identifier": "value",
+    "name": "daphnet_ancient_taxonomy",
+    "label": "label",
+    "tab_name": "Daphnet Ancient",
+    "description": "A taxonomy of concepts mapped from the Daphnet ancient ontology",
+    "type": "taxonomy",
+    "items": [
+        {
+            "value": "http://www.w3.org/2004/02/skos/core#Concept",
+            "label": "Concept",
+            "description": "A Concept is a topic, often an abstract, non physical entity that a Source can refer to..",
+            "nodetype": [
+                "http://purl.org/pundit/vocab/category"
+            ],
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Titles"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/PhilosphicalSchool"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Quotation"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/GeographicalEntity"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/PhilosophicalThemes"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Quotation",
+            "label": "Quotation",
+            "description": "Portion of a text included and explicity mentioned in other texts.",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Titles",
+            "label": "Titles",
+            "description": "Any sort of works as quoted or mentioned in the text.",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Daemon"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/EthicsOfVirtue"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/JoinInquiry"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/DialogueMethod"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Divination"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/YoungsEducation"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/SapereDiNonSapere"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/EthicsOfVirtue",
+            "label": "EthicsOfVirtue",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Virtue"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Virtue",
+            "label": "Virtue",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Missing comment",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Courage"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/ContemptForWealth"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Temperance"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Justice"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Justice",
+            "label": "Justice",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/Virtue"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Temperance",
+            "label": "Temperance",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/Virtue"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Courage",
+            "label": "Courage",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/Virtue"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/ContemptForWealth",
+            "label": "Contempt For Wealth",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/Virtue"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/SapereDiNonSapere",
+            "label": "Sapere di non sapere",
+            "description": "Missing comment",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/DelphicOracle"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/KnowYourself"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/DelphicOracle",
+            "label": "Delphic Oracle",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/SapereDiNonSapere"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/KnowYourself",
+            "label": "Know Yourself",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/SapereDiNonSapere"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/YoungsEducation",
+            "label": "YoungsEducation",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Missing comment",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Body"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Soul"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Death"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Body",
+            "label": "Body",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/YoungsEducation"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Death",
+            "label": "Death",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/YoungsEducation"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Soul",
+            "label": "Soul",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/YoungsEducation"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Divination",
+            "label": "Divination",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Missing comment",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/HumanInadequacy"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/DivineManifestation"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/DivineManifestation",
+            "label": "Divine Manifestation",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/Divination"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/HumanInadequacy",
+            "label": "Human Inadequacy",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/Divination"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/DialogueMethod",
+            "label": "DialogueMethod",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Missing comment",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/ComparisonsAndSimilesAndMyth"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/DialoguesAndDiscourses"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/RejectionOfWriting"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Irony"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/DoubtAndQuestion"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/ObjectionAndConfutation"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Elenchos"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Aporia"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Aporia",
+            "label": "Aporia",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/DialogueMethod"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Elenchos",
+            "label": "Elenchos",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/DialogueMethod"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Irony",
+            "label": "Irony",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/DialogueMethod"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/ObjectionAndConfutation",
+            "label": "Objection and Confutation",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/DialogueMethod"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/RejectionOfWriting",
+            "label": "Rejection of Writing",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/DialogueMethod"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/DialoguesAndDiscourses",
+            "label": "Dialogues and Discourses",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/DialogueMethod"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/DoubtAndQuestion",
+            "label": "Doubt and Question",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/DialogueMethod"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/ComparisonsAndSimilesAndMyth",
+            "label": "Comparisons, Similes and Myth",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/DialogueMethod"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/JoinInquiry",
+            "label": "JoinInquiry",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Missing comment",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/QuestAsMedicine"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/EverywhereInquiry"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/MindAcuteness"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/ContinuousInquiry"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/MindAcuteness",
+            "label": "Mind Acuteness",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/JoinInquiry"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/EverywhereInquiry",
+            "label": "Everywhere Inquiry",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/JoinInquiry"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/QuestAsMedicine",
+            "label": "Quest as Medicine",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/JoinInquiry"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/ContinuousInquiry",
+            "label": "Continuous Inquiry",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "rdftype": [
+                "http://purl.org/daphnet/vocab/JoinInquiry"
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Daemon",
+            "label": "Daemon",
+            "description": "Missing comment",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "children": [
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Nature"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Exhortation"
+                },
+                {
+                    "_reference": "http://purl.org/daphnet/vocab/Effects"
+                }
+            ]
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Exhortation",
+            "label": "Exhortation",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept", 
+            "description": "Missing comment"
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Nature",
+            "label": "Nature",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Missing comment"
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Effects",
+            "label": "Effects",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Missing comment"
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/GeographicalEntity",
+            "label": "GeographicalEntity",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "All sorts of appellatives designating geographical determined places."
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/PhilosphicalSchool",
+            "label": "PhilosphicalSchool",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Collective nouns designating the followers of a philosopher or of a philosophical teaching."
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/PhilosophicalThemes",
+            "label": "Philosophical Topic",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "Concepts or thesis or theories employed or claimed or developed in a text, in so far they are considered philosophically relevant."
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Event",
+            "label": "Event",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "An Event is something that happens at a certain point in time. Examples can be the French Revolution, the election of a US president and so on. Note that in some cases an Event can be considered also a Concept in certain contexts (e.g. the French Revolution). In these cases such an instance can belong to the two classes at the same time."
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/FictionalEntity",
+            "label": "Fictional Entity",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "A Fictional Entity is something that exists within a story, a literary work or a artwork in general. It can be a character of a movie (e.g. Batman), a place (e.g. Gotham City), a phisical object (e.g. the Bat-Mobile), etc. In these cases an instance of this class can be at the same time an instance of other classes."
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Place",
+            "label": "Place",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "A Place is something that has a precise and fixed geographical position. For example a city or a building."
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/Person",
+            "label": "Person",
+            "description": "A Person is a human being.",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept"
+        },
+        {
+            "value": "http://purl.org/daphnet/vocab/PhysicalObject",
+            "label": "Object",
+            "type": "subject",
+		    "rdftype": "http://www.w3.org/2004/02/skos/core#Concept",
+            "description": "A Physical Object is a material, concrete thing. For example a guitar or a painting."
+        }
+    ]
+});

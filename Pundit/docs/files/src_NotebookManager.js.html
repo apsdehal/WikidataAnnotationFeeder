@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;NotebookManager.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;NotebookManager.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.NotebookManager
+ * @extends pundit.BasePanel
+ * @description Provides a GUI (floating Panel) for showing items grouped according 
+ * from their provenance (&#x27;My Item&#x27;, &#x27;Page Items&#x27;, Vocabularies)
+ *&#x2F;
+dojo.provide(&quot;pundit.NotebookManager&quot;);
+dojo.declare(&quot;pundit.NotebookManager&quot;, pundit.BasePanel, {
+    constructor:function(params){
+        var self = this;
+        self.ownedNotebooksIds = [];
+        self.activeNotebooksIds = [];
+        self.notebooks = {};
+        self.othersNotebooks = {};
+        self.requests = {};
+        self.initHTML();
+        self.initContextMenu();
+        self.initBehaviors();
+        self.reader = new pundit.AnnotationReader();
+        self.reader.onError(function(){
+            console.log(&quot;An error occurred reading notebook information. ;(&quot;);
+            self.setPanelLoading(false,&#x27;owned&#x27;);
+            self.setPanelLoading(false,&#x27;others&#x27; );
+        });
+        self.writer = new pundit.AnnotationWriter();
+        self.writer.onError(function(){
+            console.log(&quot;An error occurred writing notebook information. ;(&quot;);
+            self.setPanelLoading(false,&#x27;owned&#x27;);
+            self.setPanelLoading(false,&#x27;others&#x27;);
+        });
+        
+        &#x2F;&#x2F;FIXXX TODO tooltip_viewer shouldn&#x27;t do this...
+        tooltip_viewer.onNotebookActivationChanged(function(){
+            if (self.isVisible())
+                self.updateOtherNotebook();
+        });
+        self.notebookSharePanel= new pundit.BasePanel({
+            drag:true,
+            title:&#x27;Share Notebook&#x27;,
+            name:&#x27;notebook-sharePanel&#x27;
+        })
+    },
+    initHTML:function(){
+        var self= this;
+        self.log(&#x27;Init HTML Notebook Panel&#x27;);
+        &#x2F;&#x2F;Add content to the base container
+        var c =  &#x27;&lt;div class=&quot;pundit-panel&quot;&gt;&lt;span&gt;Your annotations are written in the current notebook.&lt;&#x2F;br&gt;Your current notebook is: &amp;nbsp;&lt;&#x2F;span&gt;&lt;span id=&quot;pundit-current-notebook-name&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&#x27;
+            c += &#x27;&lt;div class=&quot;pundit-rp-notebook-creation pundit-panel&quot; style=&quot;width:390px;&quot;&gt;&#x27;;
+            c += &#x27;   &lt;span class=&quot;pundit-pane-title&quot;&gt;Create a new Notebook&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&#x27;;
+            c += &#x27;   &lt;span&gt;Notebook Name:&lt;&#x2F;span&gt;&lt;input type=&quot;text&quot; id=&quot;pundit-notebook-name-input&quot; style=&quot;width:200px;margin-left:10px;&quot;&gt;&lt;&#x2F;input&gt;&lt;input id=&quot;pundit-create-notebook-button&quot; type=&quot;button&quot; value=&quot;Create&quot; disabled=&quot;true&quot; style=&quot;margin-left:10px;&quot;&gt;&lt;&#x2F;input&gt;&lt;&#x2F;br&gt;&#x27;;
+            c += &#x27;&lt;&#x2F;div&gt;&#x27;;
+            c +=  &#x27;&lt;div class=&quot;pundit-rp-notebooks pundit-panel pundit-panel-loading&quot; style=&quot;margin-top:5px;&quot;&gt;&#x27;;
+            c += &#x27;   &lt;span class=&quot;pundit-pane-title&quot;&gt;Your notebooks&lt;&#x2F;span&gt;&#x27;;
+            c += &#x27;    &lt;ul id=&quot;pundit-notebook-list&quot; class=&quot;pundit-items pundit-view-list pundit-stop-wheel-propagation&quot; style=&quot;max-height:240px;overflow-y:auto&quot;&gt;&lt;&#x2F;ul&gt;&#x27;;
+            c += &#x27;&lt;&#x2F;div&gt;&#x27;;
+            c +=  &#x27;&lt;div id=&quot;pundit-others-notebooks-div&quot; class=&quot;pundit-display-none pundit-rp-others-notebooks pundit-panel pundit-panel-loading&quot; style=&quot;margin-top:5px;&quot;&gt;&#x27;;
+            c += &#x27;   &lt;span class=&quot;pundit-pane-title&quot; &gt;Notebooks you are watching&lt;&#x2F;span&gt;&#x27;;
+            c += &#x27;    &lt;ul id=&quot;pundit-other-notebook-list&quot; class=&quot;pundit-items pundit-view-list pundit-stop-wheel-propagation&quot; style=&quot;max-height:240px;overflow-y:auto&quot;&gt;&lt;&#x2F;ul&gt;&#x27;;
+            c += &#x27;&lt;&#x2F;div&gt;&#x27;;
+        self.addHTMLContent(c);
+    },
+    initContextMenu:function(){
+        var self = this;
+        
+
+		if (_PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].notebookActivation === true) {
+			cMenu.addAction({
+	            type: [&#x27;notebookItem&#x27;],
+	            name: &#x27;punditNotebookDisactivate&#x27;,
+	            label: &#x27;Deactivate Notebook&#x27;,
+	            showIf: function(id) { 
+	                if (self.notebooks[id].activated &amp;&amp; !self.notebooks[id].current)
+	                    return true;
+	                else
+	                    return false;
+	            },
+	            onclick: function(id) {
+	                self.setPanelLoading(true, &#x27;owned&#x27;);
+	                self.activateNotebook(id, &#x27;0&#x27;, function(id,state){
+                        semlibWindow.closeAllPanels();
+	                    self.updateNotebookActivation(id, state);
+                        _PUNDIT[&#x27;myPundit&#x27;].getAnnotationVisibility(function(mode) {
+                            if (mode === &#x27;active&#x27;)
+                                tooltip_viewer.refreshAnnotations();    
+                        });
+                        
+	                });
+	                return true;
+	            }
+	        });
+	
+			cMenu.addAction({
+	            type: [&#x27;notebookItem&#x27;],
+	            name: &#x27;punditNotebookActivate&#x27;,
+	            label: &#x27;Activate Notebook&#x27;,
+	            showIf: function(id) { 
+	                if (!self.notebooks[id].activated)
+	                    return true;
+	                else
+	                    return false;
+	            },
+	            onclick: function(id) {
+	                self.setPanelLoading(true, &#x27;owned&#x27;);
+	                self.activateNotebook(id, &#x27;1&#x27;, function(id,state){
+                        semlibWindow.closeAllPanels();
+	                    self.updateNotebookActivation(id, state);
+                        _PUNDIT[&#x27;myPundit&#x27;].getAnnotationVisibility(function(mode){
+                            if (mode === &#x27;active&#x27;)
+                                tooltip_viewer.refreshAnnotations();    
+                        });
+                        
+	                });
+	                return true;
+	            }
+	        });
+			
+	        cMenu.addAction({
+	            type: [&#x27;otherNotebookItem&#x27;],
+	            name: &#x27;punditOtherNotebookDisactivate&#x27;,
+	            label: &#x27;Deactivate Notebook&#x27;,
+	            showIf: function(id) { 
+	                if (self.othersNotebooks[id].activated)
+	                    return true;
+	                else
+	                    return false;
+	            },
+	            onclick: function(id) {
+	                self.setPanelLoading(true,&#x27;others&#x27;);
+	                self.activateNotebook(id, &#x27;0&#x27;, function(id,state){
+	                    semlibWindow.closeAllPanels();
+	                    self.updateNotebookActivation(id, state, &#x27;others&#x27;);
+                        _PUNDIT[&#x27;myPundit&#x27;].getAnnotationVisibility(function(mode){
+    	                    if (mode === &#x27;active&#x27;)
+    	                        &#x2F;&#x2F;Do I have to call show active notebook only???
+    	                        tooltip_viewer.refreshAnnotations();    
+                        });
+	                    
+	                });
+	                return true;
+	            }
+	        });
+	        cMenu.addAction({
+	            type: [&#x27;otherNotebookItem&#x27;],
+	            name: &#x27;punditOtherNotebookActivate&#x27;,
+	            label: &#x27;Activate Notebook&#x27;,
+	            showIf: function(id) { 
+	                if (!self.othersNotebooks[id].activated)
+	                    return true;
+	                else
+	                    return false;
+	            },
+	            onclick: function(id) {
+	                self.setPanelLoading(true,&#x27;others&#x27;);
+	                self.activateNotebook(id, &#x27;1&#x27;, function(id,state){
+	                    semlibWindow.closeAllPanels();
+	                    self.updateNotebookActivation(id, state, &#x27;others&#x27;);
+                        _PUNDIT[&#x27;myPundit&#x27;].getAnnotationVisibility(function(mode){
+    	                    if (mode === &#x27;active&#x27;)
+    	                        &#x2F;&#x2F;Do I have to call show active notebook only???
+    	                        tooltip_viewer.refreshAnnotations();    
+                        });
+	                    
+	                });
+	                return true;
+	            }
+	        });
+		}    
+
+        cMenu.addAction({
+            type: [&#x27;notebookItem&#x27;],
+            name: &#x27;punditNotebookSetPublic&#x27;,
+            label: &#x27;Set Public&#x27;,
+            showIf: function(id) {
+                if (self.notebooks[id].visibility !== &#x27;public&#x27;){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            },
+            onclick: function(id) {
+                self.setPanelLoading(true, &#x27;owned&#x27;);
+                self.writer.setNotebookVisibility(id, &#x27;public&#x27;, function(id,state){
+                        self.updateNotebookVisibility(id,state)
+                    });
+                return true;
+           }
+        });
+        cMenu.addAction({
+            type: [&#x27;notebookItem&#x27;],
+            name: &#x27;punditNotebookSetPrivate&#x27;,
+            label: &#x27;Set Private&#x27;,
+            showIf: function(id) { 
+                if (self.notebooks[id].visibility !== &#x27;private&#x27;){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            },
+            onclick: function(id) {
+                self.setPanelLoading(true, &#x27;owned&#x27;);
+                self.writer.setNotebookVisibility(id, &#x27;private&#x27;, function(id,state){
+                        self.updateNotebookVisibility(id,state)
+                    });
+                return true;
+            }
+        });
+        cMenu.addAction({
+            type: [&#x27;notebookItem&#x27;],
+            name: &#x27;punditNotebookCurrent&#x27;,
+            label: &#x27;Set as Current Notebook&#x27;,
+            showIf: function(id) { 
+                if (!self.notebooks[id].current)
+                    return true;
+                else
+                    return false;
+            },
+            onclick: function(id) {
+                self.setPanelLoading(true, &#x27;owned&#x27;);
+                self.writer.setNotebookCurrent(id, self.updateCurrentNotebook(id));
+                return true;
+            }
+        });
+		
+        &#x2F;&#x2F;Notebook sharing
+		if (_PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].notebookSharing === true) {
+			cMenu.addAction({
+				type: [&#x27;notebookItem&#x27;],
+				name: &#x27;punditShareNotebook&#x27;,
+				label: &#x27;Share Notebook&#x27;,
+				showIf: function(id) { 
+					if (self.notebooks[id].activated &amp;&amp; self.notebooks[id].visibility === &#x27;public&#x27;)
+						return true;
+					else
+						return false;
+				},
+          	  onclick: function(id) {
+               	 self.notebookSharePanel.emptyContent();
+                	var html =  &#x27;&lt;div class=&quot;pundit-panel&quot;&gt;&lt;span class=&quot;pundit-pane-title&quot;&gt;This url is all you need to share your notebook:&lt;&#x2F;span&gt;&lt;br&gt;&#x27;;
+                	html += &#x27;&lt;textarea style=&quot;width:390px;height:40px;margin-bottom:5px;margin-top:5px&quot;&gt;http:&#x2F;&#x2F;metasound.dibet.univpm.it&#x2F;release_bot&#x2F;build-development&#x2F;pages&#x2F;activate.html?id=&#x27; + id + &#x27;&lt;&#x2F;textarea&gt;&lt;br&gt;&lt;&#x2F;div&gt;&#x27;;
+           		 self.notebookSharePanel.addHTMLContent(html);
+              	  var wdim = dojo.window.getBox();
+                	self.notebookSharePanel.show((wdim.w - 400)&#x2F;2, (wdim.h - 200)&#x2F;2);
+               	 	return true;
+            	}
+        	});
+		}
+
+    },
+    initBehaviors:function(){
+        var self = this,
+        beh = {};
+        dojo.connect(dojo.byId(&#x27;pundit-create-notebook-button&#x27;), &#x27;onclick&#x27;, function(e){
+            self.setPanelLoading(true,&#x27;owned&#x27;);
+            self.writer.createNotebook(dojo.byId(&#x27;pundit-notebook-name-input&#x27;).value, function(id){
+                self.getNotebookInfo(id,&#x27;owned&#x27;);
+            });  
+        }); 
+        dojo.connect(dojo.byId(&#x27;pundit-notebook-name-input&#x27;), &#x27;onkeyup&#x27;, function(e){
+            if (e.target.value !== &#x27;&#x27;){
+                self.updateCreateBtn(true);
+            }else{
+                self.updateCreateBtn(false);
+            }
+        });
+        beh[&#x27;#&#x27; + self._id + &#x27; div.pundit-rp-notebooks li span.pundit-icon-context-button&#x27;] = {
+            &#x27;onclick&#x27;: function(e){
+                var parent = dojo.query(e.target).parent()[0],
+                    id = dojo.attr(parent, &#x27;about&#x27;);
+                cMenu.show(e.pageX - window.pageXOffset, e.pageY - window.pageYOffset, id, &#x27;notebookItem&#x27;);
+            }
+        };
+        
+        if (_PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].notebookActivation === true) {
+            beh[&#x27;#&#x27; + self._id + &#x27; div.pundit-rp-others-notebooks li span.pundit-icon-context-button&#x27;] = {
+                &#x27;onclick&#x27;: function(e){
+                    var parent = dojo.query(e.target).parent()[0],
+                    id = dojo.attr(parent, &#x27;about&#x27;);
+                    cMenu.show(e.pageX - window.pageXOffset, e.pageY - window.pageYOffset, id, &#x27;otherNotebookItem&#x27;);
+                }
+            }; 
+        }
+        
+        dojo.behavior.add(beh);
+    },
+
+    show:function(){
+        this.inherited(arguments);
+        var self = this;
+
+        
+        dojo.byId(&#x27;pundit-current-notebook-name&#x27;).innerHTML = &quot;&quot;;
+        
+        &#x2F;&#x2F;Get active notebooks and owned
+        
+        self.activesCompleted = false;
+        self.ownedCompleted = false;
+        
+        &#x2F;&#x2F;Get all the notebook that are active
+        self.reader.getActiveNotebooks(function(ids){
+            self.activeNotebooksIds = ids;
+            self.activeCompleted = true;
+            self.onNotebookIdsReceived();
+        });
+        
+        &#x2F;&#x2F;Get all the notebook that are owned by the user
+        self.reader.getOwnedNotebooks(function(ids){
+            self.ownedNotebooksIds = ids;
+            self.ownedCompleted = true;
+            self.onNotebookIdsReceived();
+        });
+        
+        &#x2F;&#x2F;Make both panel loading
+        self.setPanelLoading(&#x27;owned&#x27;, true);
+        self.setPanelLoading(&#x27;others&#x27;, true);
+    },
+    
+    onNotebookInfoLoaded:function(){
+        var self = this;
+        self.requests = {};
+        self.setPanelLoading(false, &#x27;others&#x27;);
+        &#x2F;&#x2F;dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; pundit-rp-notebooks&#x27;)[0], &#x27;pundit-panel-loading&#x27;);
+        self.reader.getCurrentNotebookId(function(id){
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-current&#x27;);
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-notebooks&#x27;)[0], &#x27;pundit-panel-loading&#x27;);
+            self.notebooks[id].current = true;
+            dojo.byId(&#x27;pundit-current-notebook-name&#x27;).innerHTML = self.notebooks[id].label;
+        });
+        dojo.behavior.apply();
+    },
+    activateNotebook:function(id, flag, cb){
+        var self = this;
+        &#x2F;&#x2F;FIXXXXX
+        &#x2F;&#x2F;call the tooltipviewer for this????
+        &#x2F;&#x2F;tooltip_viewer.writer.setNotebookActive(id, flag, cb);
+        &#x2F;&#x2F;TODO MARCO should be ok
+        self.writer.setNotebookActive(id, flag, cb);
+    },
+    &#x2F;&#x2F;Change the activation state of the a notebook and update the gui accordingly
+    updateNotebookActivation:function(id, state, type){
+        var self = this,
+            activated;
+        if (state === &#x27;1&#x27;){
+            activated = true;
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-disactivated&#x27;);
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-activated&#x27;);
+        }else{
+            activated = false;
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-activated&#x27;);
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-disactivated&#x27;);
+        }
+        if (typeof(type) !== &#x27;undefined&#x27;){
+            if (type === &#x27;others&#x27;){
+                self.othersNotebooks[id].activated = activated;
+                self.setPanelLoading(false, &#x27;others&#x27;);    
+            }
+        }else{
+            self.notebooks[id].activated = activated;
+            self.setPanelLoading(false, &#x27;owned&#x27;);
+        }
+            
+    },
+    &#x2F;&#x2F;Update the current notebook
+    updateCurrentNotebook:function(id){
+        var self = this;
+        for (var i in self.notebooks){
+            self.notebooks[i].current = false;
+        }
+        self.notebooks[id].current = true;
+        
+        dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-notebooks li&#x27;).forEach(function(item){dojo.removeClass(item, &#x27;pundit-current&#x27;)})
+        dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-current&#x27;);
+        dojo.byId(&#x27;pundit-current-notebook-name&#x27;).innerHTML = self.notebooks[id].label;
+        self.setPanelLoading(false,&#x27;owned&#x27;);
+        
+    },
+    &#x2F;&#x2F;Update notebook visibility
+    updateNotebookVisibility:function(id, state){
+        var self = this;
+        if (state === &#x27;public&#x27;){
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-private&#x27;);
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-public&#x27;);
+            self.notebooks[id].visibility = &#x27;public&#x27;; 
+        }
+        if (state === &#x27;private&#x27;){
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-private&#x27;);
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ id +&#x27;]&#x27;)[0], &#x27;pundit-public&#x27;);
+            self.notebooks[id].visibility = &#x27;private&#x27;;
+        }
+        self.setPanelLoading(false,&#x27;owned&#x27;);
+    },
+    setPanelLoading:function(s, type){
+        var self = this;
+        if (s === true){
+            if (type === &#x27;owned&#x27;)
+                dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-notebooks&#x27;)[0], &#x27;pundit-panel-loading&#x27;);
+            else
+                dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-others-notebooks&#x27;)[0], &#x27;pundit-panel-loading&#x27;);
+        }else{
+            if (type === &#x27;owned&#x27;)
+                dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-notebooks&#x27;)[0], &#x27;pundit-panel-loading&#x27;);
+            else
+                dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-others-notebooks&#x27;)[0], &#x27;pundit-panel-loading&#x27;);
+        }
+    },
+    hide:function(){
+        this.inherited(arguments);
+        var self = this;
+        
+        self.notebooks = {};
+        self.othersnotebooks = {};
+        self.ownedNotebooksIds = [];
+        self.activeNotebooksIds = [];
+        
+        dojo.empty(dojo.query(&#x27;#&#x27; + self._id + &#x27; .pundit-rp-notebooks ul&#x27;)[0]);
+    },
+    
+    updateCreateBtn:function(active){
+        if (active){
+            dojo.attr(dojo.byId(&quot;pundit-create-notebook-button&quot;), &#x27;disabled&#x27;, false);
+        }else{
+            dojo.attr(dojo.byId(&quot;pundit-create-notebook-button&quot;), &#x27;disabled&#x27;, true);
+        }
+    },
+    &#x2F;&#x2F;Fired when both public and owned notebook have been retrieved 
+    &#x2F;&#x2F;(it is necessary to separate public notebook that are owned by the user by 
+    &#x2F;&#x2F;the public notebooks of the others
+    onNotebookIdsReceived:function(){
+        var self = this;
+        if (self.ownedCompleted &amp;&amp; self.activeCompleted){
+                self.setOtherNotebooks();
+                self.getNotebooksInfo();
+            }
+    },
+    &#x2F;&#x2F;Remove from active notebook the user notebooks
+    setOtherNotebooks:function(){
+        var self = this;
+        &#x2F;&#x2F;for (var i in self.ownedNotebooksIds){
+        for (var i = self.ownedNotebooksIds.length; i--;){
+            var index = dojo.indexOf(self.activeNotebooksIds, self.ownedNotebooksIds[i])
+            if (index !== -1)
+                self.activeNotebooksIds.splice(index,1);
+        }
+    },
+    &#x2F;&#x2F;Retrieve the info for all the notebooks
+    getNotebooksInfo:function(){
+        var self = this;
+        
+        &#x2F;&#x2F;for (var i in self.activeNotebooksIds){
+        for (var i = self.activeNotebooksIds.length; i--;){
+            self.getNotebookInfo(self.activeNotebooksIds[i], &#x27;others&#x27;)
+        }
+        
+        for (var i = self.ownedNotebooksIds.length; i--;){
+            self.getNotebookInfo(self.ownedNotebooksIds[i], &#x27;owned&#x27;)
+        }
+    },
+    
+    &#x2F;&#x2F;Get notebook info
+    &#x2F;&#x2F;When finished the notebook item is added to the container
+    &#x2F;&#x2F;TODO extend to accept a function callback
+    getNotebookInfo:function(notebookId, type){
+        var self = this;
+        self.requests[notebookId] = false;
+        &#x2F;&#x2F;Get Notebook Info
+        
+        &#x2F;&#x2F;Create new notebook Items
+        self.reader.getNotebookMetadata(notebookId, (function(_type){
+            return function(id, metadata){
+
+                var notebook = {
+                    visibility: metadata[&#x27;http:&#x2F;&#x2F;swickynotes.org&#x2F;notebook&#x2F;resource&#x2F;&#x27; + id][ns.notebooks.visibility][0].value,
+                    created:    metadata[&#x27;http:&#x2F;&#x2F;swickynotes.org&#x2F;notebook&#x2F;resource&#x2F;&#x27; + id][ns.notebooks.created][0].value,
+                    creator:    metadata[&#x27;http:&#x2F;&#x2F;swickynotes.org&#x2F;notebook&#x2F;resource&#x2F;&#x27; + id][ns.notebooks.creator][0].value,
+                    creatorName:    metadata[&#x27;http:&#x2F;&#x2F;swickynotes.org&#x2F;notebook&#x2F;resource&#x2F;&#x27; + id][ns.notebooks.creatorName][0].value,
+                    id:         metadata[&#x27;http:&#x2F;&#x2F;swickynotes.org&#x2F;notebook&#x2F;resource&#x2F;&#x27; + id][ns.notebooks.id][0].value,
+                    includes:   metadata[&#x27;http:&#x2F;&#x2F;swickynotes.org&#x2F;notebook&#x2F;resource&#x2F;&#x27; + id][ns.notebooks.includes],
+                    type:       metadata[&#x27;http:&#x2F;&#x2F;swickynotes.org&#x2F;notebook&#x2F;resource&#x2F;&#x27; + id][ns.notebooks.type][0].value,
+                    label:      metadata[&#x27;http:&#x2F;&#x2F;swickynotes.org&#x2F;notebook&#x2F;resource&#x2F;&#x27; + id][ns.notebooks.label][0].value
+                };
+
+            
+                self.reader.checkNotebook(notebook.id, function(id,checked){
+                    var completed = true;
+                    if (checked === &#x27;0&#x27;){
+                        notebook.activated = false;
+                    }   
+                    else{
+                        notebook.activated = true;
+                    }
+                    
+                    if (_type === &#x27;owned&#x27;)
+                        self.notebooks[id] = notebook;
+                    else
+                        self.othersNotebooks[id] = notebook;
+                    
+                    self.requests[id] = true;
+                
+                    &#x2F;&#x2F;Add notebookItem
+                    self.addNotebookItem(notebook, _type);
+                
+                    
+                    for (var j in self.requests){
+                    &#x2F;&#x2F;for (var j =  self.requests.length; j--;){
+                        if (!self.requests[j]){
+                            completed = false;
+                            break;
+                        }
+                    }
+                    if (completed){
+                        self.onNotebookInfoLoaded();
+                    }
+                })
+            }
+        })(type));
+    },
+    &#x2F;&#x2F;Add the notebook to the container
+    addNotebookItem:function(notebook, type){
+        var self = this,
+        
+            c = &#x27;&lt;li about=&quot;&#x27;+ notebook.id +&#x27;&quot; class=&quot;dojoDndItem pundit-shown&quot;&gt;&#x27;;
+            c+= &#x27;   &lt;span class=&quot;pundit-icon-context-button&quot;&gt;&lt;&#x2F;span&gt;&#x27;;
+            c+= &#x27;   &lt;span&gt;&#x27; + notebook.label + &#x27; (id:&#x27; + notebook.id + &#x27;)&lt;&#x2F;span&gt;&#x27;;
+            c+= &#x27;   &lt;span class=&quot;pundit-item-visibility&quot;&gt;&lt;&#x2F;span&gt;&#x27;;
+			if (_PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].notebookActivation === true) {
+                c+= &#x27;   &lt;span class=&quot;pundit-item-activation pundit-disactivated&quot;&gt;&lt;&#x2F;span&gt;&#x27;;
+			}
+            c+= &#x27;   &lt;span class=&quot;pundit-item-editability&quot;&gt;&lt;&#x2F;span&gt;&#x27;;
+            c+= &#x27;   &lt;span class=&quot;pundit-trim pundit-notebook-creator&quot;&gt;&#x27; + notebook.creatorName + &#x27;&lt;&#x2F;span&gt;&#x27;;
+            &#x2F;&#x2F; c+= &#x27;   &lt;span class=&quot;pundit-trim pundit-created&quot;&gt;&#x27; + notebook.created + &#x27;&lt;&#x2F;span&gt;&#x27;;
+            c+= &#x27;&lt;&#x2F;li&gt;&#x27;;
+        if (type === &#x27;owned&#x27;){
+            &#x2F;&#x2F;self.notebooks[notebook.id] = notebook;
+            dojo.query(&#x27;#pundit-notebook-list&#x27;).append(c);
+        }else{
+            &#x2F;&#x2F;self.othersNotebooks[notebook.id] = notebook;
+			dojo.removeClass(&#x27;pundit-others-notebooks-div&#x27;, &#x27;pundit-display-none&#x27;);
+            dojo.query(&#x27;#pundit-other-notebook-list&#x27;).append(c);
+        }
+
+        if (notebook.visibility === &#x27;public&#x27;){
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ notebook.id +&#x27;]&#x27;)[0], &#x27;pundit-private&#x27;);
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ notebook.id +&#x27;]&#x27;)[0], &#x27;pundit-public&#x27;);
+        }
+        if (notebook.visibility === &#x27;private&#x27;){
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ notebook.id +&#x27;]&#x27;)[0], &#x27;pundit-private&#x27;);
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ notebook.id +&#x27;]&#x27;)[0], &#x27;pundit-public&#x27;);
+        }
+        
+        if (notebook.activated){
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ notebook.id +&#x27;]&#x27;)[0], &#x27;pundit-activated&#x27;);
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ notebook.id +&#x27;]&#x27;)[0], &#x27;pundit-disactivated&#x27;); 
+        }else{
+            dojo.addClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ notebook.id +&#x27;]&#x27;)[0], &#x27;pundit-disactivated&#x27;);
+            dojo.removeClass(dojo.query(&#x27;#&#x27; + self._id + &#x27; li[about = &#x27;+ notebook.id +&#x27;]&#x27;)[0], &#x27;pundit-activated&#x27;); 
+        }
+    },
+    &#x2F;&#x2F;Update other notebooks
+    updateOtherNotebook:function(){
+        var self = this;
+        self.setPanelLoading(true, &#x27;others&#x27;);
+        dojo.empty(&#x27;pundit-other-notebook-list&#x27;);
+        self.othersnotebooks = {};
+        self.activeNotebooksIds = [];
+        self.reader.getActiveNotebooks(function(ids){
+            self.activeNotebooksIds = ids;
+            self.setOtherNotebooks();
+            &#x2F;&#x2F;for (var i in self.activeNotebooksIds){
+            for (var i = self.activeNotebooksIds.length; i--;){
+                self.getNotebookInfo(self.activeNotebooksIds[i], &#x27;others&#x27;)
+            }
+        });
+    }
+});
+            
+            
+
+
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

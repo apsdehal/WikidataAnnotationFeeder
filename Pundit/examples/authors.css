@@ -1,0 +1,408 @@
+/* @override 
+	http://localhost/semlib/examples/authors.css */
+
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: url(images/img01.jpg) repeat-x left top;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	text-transform: lowercase;
+	font-weight: normal;
+	color: #3E3E3E;
+}
+
+h1 {
+	letter-spacing: -1px;
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+p, ul, ol {
+	margin: 0 0 2em 0;
+	text-align: justify;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+a:link {
+	color: #BE482C;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: #BE482C;
+}
+
+a:visited {
+	color: #BE482C;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin-right: 15px;
+}
+
+img.right {
+	float: right;
+	margin-left: 15px;
+}
+
+/* Form */
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+input, textarea, select {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+/* Header */
+
+#header {
+	width: 860px;
+	height: 54px;
+	margin: 0 auto;
+	background: url(images/img02.jpg) no-repeat left top;
+}
+
+/* Menu */
+
+#menu {
+	float: left;
+	width: 860px;
+	height: 54px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0 0 20px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-right: 3px;
+	padding: 12px 20px;
+	letter-spacing: -.5px;
+	text-decoration: none;
+	text-transform: lowercase;
+	font: 18px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #E56F47;
+}
+
+#menu a:hover { 
+	text-decoration: none; 
+	background: #DE8761;
+	color: #FFFFFF;
+}
+
+#menu .current_page_item a {
+	background: #DE8761;
+	color: #FFFFFF;
+}
+
+/** LOGO */
+
+#logo {
+	width: 860px;
+	height: 120px;
+	margin: 0 auto;
+	background: url(images/img15.jpg) no-repeat left top;
+}
+
+#logo h1, #logo h2 {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 20px;
+	line-height: normal;
+}
+
+#logo h1 { padding-top: 25px; }
+
+#logo h1 a {
+	text-decoration: none;
+	color: #6D5A46;
+}
+
+#logo h1 a:hover { text-decoration: underline; }
+
+#logo h2 {
+	padding: 45px 0 0 15px;
+	font: italic 13px Georgia, "Times New Roman", Times, serif;
+	color: #B6ACA2;
+}
+
+#logo p a {
+	text-decoration: none;
+	color: #B6ACA2;
+}
+
+#logo p a:hover { text-decoration: underline; }
+
+
+
+/* Page */
+
+#page {
+	width: 850px;
+	margin: 0 auto;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 600px;
+}
+
+/* Post */
+
+.post {
+	padding: 15px 15px;
+	background: url(images/img05.gif) no-repeat left top;
+}
+
+.post .title {
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #D1D1D1;
+}
+
+.post .entry {
+}
+
+.post .meta {
+	padding: 15px 0 60px 0;
+	background: url(images/img03.gif) repeat-x;
+}
+
+.post .meta p {
+	margin: 0;
+	line-height: normal;
+	color: #999999;
+}
+
+.post .meta .byline {
+	float: left;
+}
+
+.post .meta .links {
+	float: right;
+}
+
+.post .meta .more {
+	padding: 0 20px 0 18px;
+	background: url(images/img06.gif) no-repeat left center;
+}
+
+.post .meta .comments {
+	padding-left: 22px;
+	background: url(images/img07.gif) no-repeat left center;
+}
+
+.post .meta b {
+	display: none;
+}
+
+/* Sidebar */
+
+#sidebar {
+	float: left;
+	width: 215px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	margin-bottom: 40px;
+	padding: 0 10px;
+	background: url(images/img13.gif) no-repeat left top;
+	font-size: 12px;
+}
+
+#sidebar li li {
+	margin: 0;
+	padding-left: 10px;
+	background: url(images/img12.gif) no-repeat left 50%;
+}
+
+#sidebar h2 {
+	padding-top: 10px;
+	margin-bottom: 12px;
+	background: url(images/img14.gif) no-repeat right 70%;
+	border-bottom: 1px dotted #D1D1D1;
+	font-size: 18px;
+}
+
+/* Search */
+
+#search {
+}
+
+#search h2 {
+	margin-bottom: 20px;
+}
+
+#s {
+	width: 115px;
+	margin-right: 5px;
+	padding: 3px;
+	border: 1px solid #F0F0F0;
+}
+
+#x {
+	padding: 3px;
+	background: #ECECEC url(images/img08.jpg) repeat-x left bottom;
+	border: none;
+	text-transform: lowercase;
+	font-size: 11px;
+	color: #4F4F4F;
+}
+
+/* Boxes */
+
+.box1 {
+	padding: 20px;
+	background: url(images/img05.gif) no-repeat;
+}
+
+.box2 {
+	color: #BABABA;
+}
+
+.box2 h2 {
+	margin-bottom: 15px;
+	background: url(images/img10.gif) repeat-x left bottom;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.box2 ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.box2 a:link, .box2 a:hover, .box2 a:active, .box2 a:visited  {
+	color: #EDEDED;
+}
+
+/* Footer */
+#footer-wrap {
+	width: 860px;
+	height: 64px;
+	margin: 0 auto;
+	background: url(images/img09.jpg) no-repeat left top;
+}
+
+#footer {
+	margin: 0 auto;
+	height: 64px;
+	min-height: 64px;
+	padding: 0;
+	background: #D16E45 url(images/img08.jpg) repeat-x;
+}
+
+html>body #footer {
+	height: auto;
+}
+
+#footer p {
+}
+
+#legal {
+	clear: both;
+	padding-top: 20px;
+	text-align: center;
+	color: #FFD2C6;
+}
+
+#legal a {
+	color: #FFD2C6;
+}
+
+.gallerycontainer{
+/* 
+    DEBUG: looks like position: relative screws up dojo.coords() method,
+    giving .t (top) coordinate from parent and not from the body/document.
+*/
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
+}
+
+.thumbnail img{
+border: 1px solid white;
+margin: 0 5px 5px 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+}
+
+.thumbnail:hover img{
+border: 1px solid blue;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+left: -1000px;
+border: 1px dashed gray;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+.test {
+  height: 120px;
+}

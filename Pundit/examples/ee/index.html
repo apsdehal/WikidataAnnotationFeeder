@@ -1,0 +1,55 @@
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js><!--<![endif]--><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>Korbo Entity Editor</title><meta name=description content="Korbo Entity Editor"><meta name=viewport content="width=device-width"><!-- TODO: Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=css/6065841f.main.css><body data-ng-app=KorboEE><div data-ng-view=""></div><script src=scripts/6741407a.libs.js></script><script src=scripts/086fba5b.korbo-ee.js></script><script>var myConf = {
+        endpoint: "http://korbo2.local:80/v1",
+        basketID: 1,
+        globalObjectName : 'KK',
+        useOnlyCallback: false,
+        useTafonyCompatibility: true,
+        onLoad: function(){
+            console.log("onLoad calling");
+        },
+        providers: {
+            korbo: true,
+            freebase: true,
+            dbpedia: false
+        },
+        type: [
+            /*{
+                label: 'Person',
+                state: false,
+                URI:'http://person.uri'
+            },
+            {
+                label: 'Philosopher',
+                state: false,
+                URI:'http://philosopher.uri'
+            },*/
+            {
+                label: 'Place',
+                state: false,
+                URI:'http://place.uri'
+            },
+            {
+                label: 'Scientist',
+                state: false,
+                URI:'http://scientist.uri'
+            },
+            {
+                label: 'Writer',
+                state: false,
+                URI:'http://writer.uri'
+            },
+            
+        
+        ],
+        buttonLabel: "Search"
+    };
+    
+    /*
+    var myConf2 = {
+        
+        providers: {
+            freebase: true
+        },
+        buttonLabel: "Find"
+    };
+    */</script><korbo-entity-editor conf-name=myConf></korbo-entity-editor><korbo-entity-editor conf-name=myConf1></korbo-entity-editor><korbo-entity-editor conf-name=myConfInesistente></korbo-entity-editor><korbo-entity-editor></korbo-entity-editor>

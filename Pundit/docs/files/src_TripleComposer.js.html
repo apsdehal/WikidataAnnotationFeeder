@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;TripleComposer.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;TripleComposer.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.TripleComposer
+ * @extends pundit.baseComponent
+ * @description Offers a cute drag &#x27;n drop GUI to create triples. Interacts
+ * with other components to show possible drop targets for a given dragged
+ * pundit item and, the other way around, highlights pundit items 
+ * which are accepted by a clicked drop target. It will use item rdf types and
+ * predicates ranges&#x2F;domains of already present items in the subject, predicate
+ * and object targets, to be as accurate as possible with the suggestions.
+ *&#x2F;
+dojo.provide(&quot;pundit.TripleComposer&quot;);
+dojo.declare(&quot;pundit.TripleComposer&quot;, pundit.BaseComponent, {
+
+    &#x2F;&#x2F; Will contain DnD objects for subject, predicate, object
+    tripleDnD: {},
+
+    &#x2F;&#x2F; TODO: move this comment to some @property and some into the class declaration
+    &#x2F;*
+    * @constructor
+    * @description Initializes the component
+    * @param options {object}
+    * @param options.debug {boolean} wether or not to activate debug mode for this component
+    *&#x2F;
+    constructor: function(options) {
+
+        var self = this,
+        pu = &#x27;&lt;div id=&quot;pundit-tc-container&quot; class=&quot;pundit-tab pundit-selected&quot;&gt;&#x27;;
+        pu += &#x27;    &lt;div class=&quot;pundit-tab-header&quot;&gt;&#x27;;
+        pu += &#x27;      &lt;span class=&quot;pundit-gui-button&quot; id=&quot;pundit-tc-save-button&quot;&gt;&lt;span class=&quot;pundit-bicon pundit-save-icon&quot;&gt;&lt;&#x2F;span&gt;&lt;span&gt;Save&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x27;;
+        pu += &#x27;      &lt;span class=&quot;pundit-gui-button&quot; id=&quot;pundit-tc-add-triple-button&quot;&gt;&lt;span class=&quot;pundit-bicon pundit-add-triple-icon&quot;&gt;&lt;&#x2F;span&gt;Add a new triple&lt;&#x2F;span&gt;&#x27;;
+        pu += &#x27;    &lt;&#x2F;div&gt;&#x27;;
+        pu += &#x27;    &lt;div id=&quot;pundit-tc-labels-container&quot; class=&quot;pundit-stop-wheel-propagation&quot;&gt;&#x27;;
+        pu += &#x27;        &lt;div style=&quot;position:absolute;margin-left:6px&quot;&gt;Subject&lt;&#x2F;div&gt;&#x27;;
+        pu += &#x27;        &lt;div style=&quot;position:absolute;margin-left:142px&quot;&gt;Predicate&lt;&#x2F;div&gt;&#x27;;
+        pu += &#x27;        &lt;div style=&quot;position:absolute;margin-left:280px&quot;&gt;Object&lt;&#x2F;div&gt;&#x27;;
+        pu += &#x27;    &lt;&#x2F;div&gt;&#x27;;        
+        pu += &#x27;    &lt;div id=&quot;pundit-tc-triples-container&quot; class=&quot;pundit-tab-content pundit-stop-wheel-propagation&quot;&gt;&#x27;;
+        pu += &#x27;    &lt;&#x2F;div&gt;&#x27;;
+        pu += &#x27;  &lt;&#x2F;div&gt;&#x27;;
+        dojo.query(&#x27;#pundit-gui-right&#x27;).append(pu);
+
+        self.saver = new pundit.AnnotationWriter();
+        self.subjSuggestionPanel = new pundit.ResourcesPanel({
+            name: &#x27;subj-suggestions&#x27;,
+			searchType: &#x27;filter&#x27;
+        });
+        self.subjSuggestionPanel.onItemAdded(function(item){
+            self.addItem(item);
+            self.subjSuggestionPanel.hide();
+        });
+		
+
+        &#x2F;&#x2F; TODO: check if selectors are active
+        self.objSuggestionPanel = new pundit.ResourcesPanel({
+            name: &#x27;obj-suggestions&#x27;,
+            searchType: &#x27;filter&#x27;,
+            namedEntitiesSources: _PUNDIT.config.activeEntitySources
+        });
+        
+        self.objSuggestionPanel.onItemAdded(function(item){
+            self.addItem(item);
+            self.objSuggestionPanel.hide();
+        });
+        
+        self.propSuggestionPanel = new pundit.ResourcesPanel({
+            name: &#x27;pred-suggestions&#x27;,
+			searchType: &#x27;filter&#x27;
+        });
+        self.propSuggestionPanel.onItemAdded(function(item){
+            self.addItem(item);
+            self.propSuggestionPanel.hide();
+        });
+        
+        semlibWindow.onWindowResize(function(semlibWindowHeight){
+            self.checkNeedToHideResourcePanel(semlibWindowHeight);
+        });
+        semlibWindow.onWindowClose(function(){
+            self.subjSuggestionPanel.hide();
+			self.propSuggestionPanel.hide();
+			self.objSuggestionPanel.hide();
+        })
+&#x2F;&#x2F;        self.saver.onSaveItems(function(annotationID) {
+&#x2F;&#x2F;            self.log(&#x27;onSaveItems: Saver answered with &#x27;+ annotationID);
+&#x2F;&#x2F;            self.saved = true;
+&#x2F;&#x2F;        
+&#x2F;&#x2F;            &#x2F;&#x2F; On close, remove the highlight, and avoid an opening highlight
+&#x2F;&#x2F;            &#x2F;&#x2F; on next consolidate
+&#x2F;&#x2F;            tooltip_viewer.removeHighlightByXpointer(self.xpTarget);
+&#x2F;&#x2F;        
+&#x2F;&#x2F;            &#x2F;&#x2F; remove the temp xpointer if it&#x27;s not
+&#x2F;&#x2F;            &#x2F;&#x2F; a pundit item already (like coming from the server?).
+&#x2F;&#x2F;            if (tooltip_viewer.isTempXpointer(self.xpTarget) &amp;&amp; !semlibMyItems.uriInItems(self.xpTarget)) {
+&#x2F;&#x2F;                tooltip_viewer.removeTempXpointer(self.xpTarget);
+&#x2F;&#x2F;                tooltip_viewer.refreshAnnotations();
+&#x2F;&#x2F;            }
+&#x2F;&#x2F;        });
+&#x2F;&#x2F;        self.saver.onSave(function(m){
+&#x2F;&#x2F;            self.log(&#x27;onSave: Saver answered with &#x27;+m);
+&#x2F;&#x2F;            self.saveItems(m);
+&#x2F;&#x2F;        });
+        
+        self.initDnD();
+        self.initBehaviors();
+        
+        &#x2F;**
+        * @event onSave
+        * @param f() {function} function to be called, no parameters.
+        * @description Called when pundit succesfully saves a batch of
+        * user built triples to the server.
+        *&#x2F;
+        self.createCallback([&#x27;save&#x27;]);
+        self.log(&quot;Pundit up and running!&quot;);
+        
+    }, &#x2F;&#x2F; constructor()
+
+    initBehaviors: function() {
+        var self = this;
+
+        &#x2F;&#x2F; Saver OnError and OnSave
+        self.saver.onError(function(m){
+            self.log(&#x27;ERROR!!! Saver answered with &#x27; + m);
+            dojo.query(&#x27;#pundit-tc-container&#x27;).removeClass(&#x27;pundit-panel-loading&#x27;);
+        });
+&#x2F;&#x2F;        self.saver.onSave(function(m){
+&#x2F;&#x2F;            self.log(&#x27;Saver answered with &#x27;+m);
+&#x2F;&#x2F;            self.fireOnSave();
+&#x2F;&#x2F;            self.clearDnDTriples();
+&#x2F;&#x2F;            dojo.query(&#x27;#pundit-tc-container&#x27;).removeClass(&#x27;pundit-panel-loading&#x27;);
+&#x2F;&#x2F;        });
+               
+        self.saver.onSave(function(m){
+            self.log(&#x27;Saver answered with &#x27;+m);
+            self.saveItems(m);
+        });
+        
+        self.saver.onSaveItems(function(annotationID) {
+            self.clearDnDTriples();
+            dojo.query(&#x27;#pundit-tc-container&#x27;).removeClass(&#x27;pundit-panel-loading&#x27;);
+            self.fireOnSave();
+        });
+        
+        &#x2F;&#x2F; Saves the current annotation
+        dojo.connect(dojo.byId(&#x27;pundit-tc-save-button&#x27;), &#x27;onclick&#x27;, function() {
+            dojo.query(&#x27;#pundit-tc-container&#x27;).addClass(&#x27;pundit-panel-loading&#x27;);
+            self.saveTriples();
+        });
+
+        &#x2F;&#x2F; Adds a new triple row
+        dojo.connect(dojo.byId(&#x27;pundit-tc-add-triple-button&#x27;), &#x27;onclick&#x27;, function() {
+            self.subjSuggestionPanel.hide();
+			self.objSuggestionPanel.hide();
+			self.propSuggestionPanel.hide();
+            self.addDnDTriple();
+        });
+                
+        dojo.subscribe(&quot;&#x2F;dnd&#x2F;start&quot;, null, function(s, nodes) {
+            &#x2F;&#x2F;DEBUG Why?
+            &#x2F;&#x2F;semlibWindow.show_pundittabtc();
+            self.highlightDnDTargetsReceivingNodes(s, nodes);
+            &#x2F;&#x2F;remove nodes if more than one has been selected
+            
+            &#x2F;&#x2F;TODO who should manage this???
+&#x2F;&#x2F;            if (nodes.length &gt; 1){
+&#x2F;&#x2F;                nodes.splice(0, nodes.length-1);
+&#x2F;&#x2F;                nodes = [nodes[nodes.length-1]]
+&#x2F;&#x2F;                var label = s.getItem(nodes[0].id).data.label;
+&#x2F;&#x2F;                dojo.query(&#x27;table.dojoDndAvatar .dojoDndAvatarItem&#x27;).forEach(dojo.destroy);
+&#x2F;&#x2F;                var tr = &#x27;&lt;tr class=&quot;dojoDndAvatarItem&quot; style=&quot;opacity: 0.9&quot;&gt;&lt;td&gt;&lt;div class=&quot;dojoDndItem&quot;&gt;&#x27;+label+&#x27;&lt;&#x2F;div&gt;&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&#x27;;
+&#x2F;&#x2F;                dojo.query(&#x27;table.dojoDndAvatar tbody&#x27;).append(tr);
+&#x2F;&#x2F;            }
+
+        });
+        
+        &#x2F;&#x2F; Drop or not drop.. clear the highlights
+        dojo.subscribe(&quot;&#x2F;dnd&#x2F;cancel&quot;, null, function() {
+            dojo.query(&#x27;.pundit-tc-dnd-container ul&#x27;).removeClass(&#x27;dnd_selected&#x27;);
+        });
+        dojo.subscribe(&quot;&#x2F;dnd&#x2F;drop&quot;, function(source, nodes, copy, target){
+            dojo.query(&#x27;.pundit-tc-dnd-container ul&#x27;).removeClass(&#x27;dnd_selected&#x27;);
+            self.resetSelections();
+            &#x2F;&#x2F; DEBUG: delayed the application of behaviours a bit, to make
+            &#x2F;&#x2F; sure it&#x27;s always applied correctly
+            if (target.node.id.substring(0, 10) === &#x27;pundit-tc-&#x27;){
+                var item,
+                treeItem,
+                uri;
+                if (typeof(source.semlibTree) !== &#x27;undefined&#x27;) {
+                    for (var i = nodes.length - 1; i &gt;= 0; i--) {
+                        treeItem = source.getItem(nodes[i].id);
+                        item = {
+                            description: treeItem.data.item.description[0],
+                            label: treeItem.data.item.label[0],
+                            &#x2F;&#x2F;image: treeItem.data.item.image[0],
+                            rdftype: treeItem.data.item.rdftype,
+                            type: treeItem.data.item.type,
+                            value: treeItem.data.item.value[0]
+                        };
+                        if (typeof(treeItem.data.item.image) !== &#x27;undefined&#x27;)
+                            item.image = treeItem.data.item.image[0];
+                        uri = item.value;
+                        item.rdfData = semlibMyItems.createBucketForVocabItem(item).bucket;
+                        &#x2F;&#x2F;TODO WHY this is not parametric?    
+                        if (!semlibMyItems.uriInItems(uri)){
+                            semlibMyItems.addItem(item, true);
+                        }
+                        setTimeout(&quot;dojo.behavior.apply();&quot;, 50);
+                        return;
+                    }
+                };
+                &#x2F;&#x2F;DEBUG check that suorce is in semlibwindow to prevent that tags
+                &#x2F;&#x2F; in the comment tag panel are added
+                &#x2F;&#x2F;if ((source === semlibItems.itemsDnD) || (source === recon.itemsDnD)){
+                for (var i = nodes.length - 1; i &gt;= 0; i--) {
+                    var id = dojo.attr(nodes[i], &#x27;id&#x27;);
+                    item = source.map[id];
+                    &#x2F;&#x2F;In the case of a vocab item that is dragged from a triple composer box to another
+                    &#x2F;&#x2F;the source doen&#x27; correspond with the real item source which is the tree 
+                    &#x2F;&#x2F;resulting in an error when looking for the item in the map.
+                    if (typeof item !== &#x27;undefined&#x27;){
+                        uri = item.data.value;
+                        &#x2F;&#x2F;TODO WHY this is not parametric? 
+                        if (!semlibMyItems.uriInItems(uri))
+                            semlibMyItems.addItem(item.data, true);
+                    }
+                    
+                };
+                
+            }
+            setTimeout(&quot;dojo.behavior.apply();&quot;, 50);
+            
+        });
+        
+        dojo.behavior.add({
+
+            &#x2F;&#x2F; Context button shows the contextual menu for this type
+            &#x27;#pundit-tc-triples-container li.dojoDndItem span.pundit-icon-context-button&#x27;: {
+                &#x27;onclick&#x27;: function (e) {
+                    cMenu.show(e.pageX - window.pageXOffset, e.pageY - window.pageYOffset, dojo.query(e.target).parent()[0].id, &#x27;pundititem&#x27;);
+                    dojo.stopEvent(e);
+                }
+            },
+
+            &#x2F;&#x2F; Mouseover on an item activates the preview
+            &#x27;#pundit-tc-triples-container li.dojoDndItem&#x27;: {
+                &#x27;onmouseover&#x27;: function (e) {                    
+                    var id = (dojo.hasClass(e.target, &#x27;pundit-icon-context-button&#x27;)) ? dojo.query(e.target).parent()[0].id : e.target.id,
+                        item;
+                    
+                    item = self.getItemFromId(id);
+                    if (typeof(item) !== &#x27;undefined&#x27;)                    
+                        &#x2F;&#x2F;previewer.selectAndPreviewItemWithId(id, item.data.value);
+                        previewer.show(item.data.value);
+                        
+                    &#x2F;&#x2F;dojo.stopEvent(e);
+                },
+                &#x27;onclick&#x27;: function(e) {
+                    &#x2F;&#x2F;Why are you stopping the event????
+                    dojo.stopEvent(e);
+                }
+            }
+
+        });
+        
+        &#x2F;&#x2F; Pundit Item: remove if it&#x27;s a pundit item but it&#x27;s not consolidated
+        cMenu.addAction({
+            type: [&#x27;pundititem&#x27;],
+            name: &#x27;removePunditItem&#x27;,
+            label: &#x27;Remove this item&#x27;,
+            showIf: function(id) { 
+                return true;
+            },
+            onclick: function(id) {
+                &#x2F;&#x2F; TODO: dont use an ID but the URI, so other
+                &#x2F;&#x2F; components can use this call to show their context menu
+                &#x2F;&#x2F; items (eg: favorites, zoom, web page... )
+                &#x2F;&#x2F; PROBLEM: what if more containers have the same URI? How we know
+                &#x2F;&#x2F; what item to delete? :(
+                dojo.destroy(id);
+                for (var i in self.tripleDnD) { &#x2F;&#x2F;ok object
+                    [&#x27;s&#x27;, &#x27;p&#x27;, &#x27;o&#x27;].forEach(function(resourceType) {
+                        var cItem = self.tripleDnD[i][resourceType].getItem(id);
+                        if (typeof(cItem) !== &#x27;undefined&#x27;) {                            
+                            &#x2F;&#x2F;previewer.deselectCurrentSelectedItem();                            
+                            self.tripleDnD[i][resourceType].delItem(id);
+                            self.tripleDnD[i][resourceType].sync();
+                            
+                            &#x2F;&#x2F;TODO
+                            &#x2F;&#x2F; Re-add the item into the resourcesPanel...
+                            &#x2F;&#x2F; if it is open
+                            &#x2F;&#x2F;semlibResourcesPanel.addItemInExistingPanel(cItem, resourceType);                            
+                        }
+                    });                     
+                }
+                return true;
+            }
+        });
+        
+    }, &#x2F;&#x2F; initBehaviours()
+
+    initDnD: function() {
+        var self = this;
+        
+        self.addDnDTriple();
+        
+        &#x2F;&#x2F; Reset every selection on succesful drop
+        &#x2F;&#x2F;dojo.subscribe(&#x27;&#x2F;dnd&#x2F;drop&#x27;, function() {
+        &#x2F;&#x2F;    self.resetSelections();
+        &#x2F;&#x2F;    &#x2F;&#x2F; DEBUG: delayed the application of behaviours a bit, to make
+        &#x2F;&#x2F;    &#x2F;&#x2F; sure it&#x27;s always applied correctly
+        &#x2F;&#x2F;    setTimeout(&quot;dojo.behavior.apply();&quot;, 50);
+        &#x2F;&#x2F;});
+        
+    }, &#x2F;&#x2F; initDnD()
+
+    &#x2F;**
+    * @method getItemFromId
+    * @description Looks for the given ID among the items currently 
+    * present in the dnd targets.
+    * @param id {string} HTML ID of an item present in the pundit targets.
+    * @return {object - Dojo DND item} The item for that ID, undefined otherwise.
+    *&#x2F;
+    getItemFromId: function(id) {
+        var self = this,
+            bits = [&#x27;s&#x27;, &#x27;p&#x27;, &#x27;o&#x27;],
+            ret;
+                    
+        for (var i in self.tripleDnD) 
+            &#x2F;&#x2F;for (var j in bits) 
+            for (var j = bits.length; j--;) 
+                if (ret = self.tripleDnD[i][bits[j]].getItem(id))
+                    return ret;
+
+        return undefined;
+    },
+    
+    &#x2F;**
+    * @method addDnDTriple
+    * @description Adds a triple row to the pundit area, thus adding three new
+    * subject, predicate and object targets.
+    * @param append {boolean} wether to append (true) or prepend (false) the new
+    * row to the already existing ones.
+    *&#x2F;
+    addDnDTriple: function(append) {
+        var self = this,
+            c = &#x27;&#x27;,
+            u = &#x27;&#x27;;
+            
+        for (var i=5;i--;) u += &#x27;abcdefghijklmnopqrstuvwxyz0123456789&#x27;.charAt(0|Math.random()*36);
+        
+        c += &#x27;&lt;div class=&quot;pundit-tc-dnd-container expanded&quot; id=&quot;pundit-tc-dnd-container&#x27;+u+&#x27;&quot;&gt;&#x27;;
+        c += &#x27;  &lt;ul class=&quot;pundit-tc-dnd sub pundit-items pundit-small-items&quot; id=&quot;pundit-tc-s-&#x27;+u+&#x27;&quot;&gt;&lt;&#x2F;ul&gt;&#x27;;
+        c += &#x27;  &lt;ul class=&quot;pundit-tc-dnd pre pundit-items pundit-small-items&quot; id=&quot;pundit-tc-p-&#x27;+u+&#x27;&quot;&gt;&lt;&#x2F;ul&gt;&#x27;;
+        c += &#x27;  &lt;ul class=&quot;pundit-tc-dnd obj pundit-items pundit-small-items&quot; id=&quot;pundit-tc-o-&#x27;+u+&#x27;&quot;&gt;&lt;&#x2F;ul&gt;&#x27;;
+        c += &#x27;  &lt;div class=&quot;pundit-tc-dndButtons&quot;&gt;&#x27;;
+        c += &#x27;    &lt;span id=&quot;punditRemoveTriple&#x27;+u+&#x27;&quot;&gt;&lt;span class=&quot;pundit-remove-icon pundit-icon&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&#x27;;
+        c += &#x27;  &lt;&#x2F;div&gt;&#x27;;
+        c += &#x27;&lt;&#x2F;div&gt;&#x27;;
+
+        dojo.query(&#x27;#pundit-tc-triples-container .pundit-tc-dnd-container&#x27;).removeClass(&#x27;expanded&#x27;).addClass(&#x27;collapsed&#x27;);
+        if (!append){
+            dojo.query(&#x27;#pundit-tc-triples-container&#x27;).prepend(c);
+        } else {
+            dojo.query(&#x27;#pundit-tc-triples-container&#x27;).append(c);
+        }        
+
+        &#x2F;&#x2F; Initialize the DnD targets for this triple
+        self.tripleDnD[u] = {};
+        self.tripleDnD[u][&#x27;s&#x27;] = new dojo.dnd.Source(&quot;pundit-tc-s-&quot;+u, {
+            creator: semlibItems.itemNodeCreator,
+            checkAcceptance: function(s, n) {
+                return self.checkAcceptance(s, n, this);
+            },
+            onDndDrop: function(s, n, c, t) {
+                if (this == t) {
+                    if (this.getAllNodes().length &gt; 0) {
+                        this.clearItems();
+                        dojo.empty(dojo.byId(&#x27;pundit-tc-s-&#x27;+u));
+                    }
+                    
+                    this.onDrop(s, n, c);
+                    self.subjSuggestionPanel.hide();
+					self.propSuggestionPanel.hide();
+					self.objSuggestionPanel.hide();
+                }
+               
+                this.onDndCancel();                
+            },
+            accept: [&quot;subject&quot;]
+        });
+        self.tripleDnD[u][&#x27;p&#x27;] = new dojo.dnd.Source(&quot;pundit-tc-p-&quot;+u, {
+            creator: semlibItems.itemNodeCreator,
+            checkAcceptance: function(s, n) {
+                return self.checkAcceptance(s, n, this);
+            },
+            onDndDrop: function(s, n, c, t) {            
+                if (this == t) {
+                    if (this.getAllNodes().length &gt; 0) {
+                        this.clearItems();
+                        dojo.empty(dojo.byId(&#x27;pundit-tc-p-&#x27;+u));
+                    }
+                    
+                    this.onDrop(s, n, c);
+                    self.propSuggestionPanel.hide();
+                }
+               
+                this.onDndCancel();
+            },
+            accept: [&quot;predicate&quot;]
+        });
+        self.tripleDnD[u][&#x27;o&#x27;] = new dojo.dnd.Source(&quot;pundit-tc-o-&quot;+u, {
+            creator: semlibItems.itemNodeCreator,
+            checkAcceptance: function(s, n) {
+                return self.checkAcceptance(s, n, this);
+            },
+            onDndDrop: function(s, n, c, t) {
+                if (this == t) {
+                    if (this.getAllNodes().length &gt; 0) {
+                        this.clearItems();
+                        dojo.empty(dojo.byId(&#x27;pundit-tc-o-&#x27;+u));
+                    }
+                    
+                    this.onDrop(s, n, c);
+                    self.subjSuggestionPanel.hide();
+					self.propSuggestionPanel.hide();
+					self.objSuggestionPanel.hide();
+                }
+                
+                this.onDndCancel();
+            },
+            accept: [&quot;subject&quot;,&quot;object&quot;]
+        });
+
+        &#x2F;&#x2F; Remove triple button: destroy the dnd targets, destroy the 
+        &#x2F;&#x2F; pundit row container and finally the tripleDnD element
+        dojo.connect(dojo.byId(&#x27;punditRemoveTriple&#x27;+u), &#x27;onclick&#x27;, function(e) {
+            self.subjSuggestionPanel.hide();
+			self.objSuggestionPanel.hide();
+			self.propSuggestionPanel.hide();
+            self.removeTripleRow(u);
+        });
+                
+        &#x2F;&#x2F; DnD targets clicks highlights only suitable pundit items for the given box
+        dojo.connect(dojo.byId(&quot;pundit-tc-s-&quot;+u), &#x27;onclick&#x27;, function(e) {
+            self.dndTargetsClickHandler(e, this, &#x27;s&#x27;);
+        });
+        dojo.connect(dojo.byId(&quot;pundit-tc-p-&quot;+u), &#x27;onclick&#x27;, function(e) {            
+            self.dndTargetsClickHandler(e, this, &#x27;p&#x27;);
+        });
+        dojo.connect(dojo.byId(&quot;pundit-tc-o-&quot;+u), &#x27;onclick&#x27;, function(e) {
+            self.dndTargetsClickHandler(e, this, &#x27;o&#x27;);
+        });
+        return u;
+    }, &#x2F;&#x2F; addDnDTriple()
+
+    &#x2F;**
+    * @method removeTripleRow
+    * @description Removes an entire row from its ID
+    * @param row {string} Identifier of the row, taken from the HTML container or
+    * in the pundit data structures.
+    *&#x2F;
+    removeTripleRow: function(row) {
+        var self = this;
+        
+        self.log(&quot;Removing triple row &quot;+row);
+        self.tripleDnD[row][&#x27;s&#x27;].destroy();
+        self.tripleDnD[row][&#x27;p&#x27;].destroy();
+        self.tripleDnD[row][&#x27;o&#x27;].destroy();
+        dojo.destroy(&#x27;pundit-tc-dnd-container&#x27;+row);
+        delete self.tripleDnD[row];
+    },
+    
+    &#x2F;**
+    * @method clearDnDTriples
+    * @description Removes all of the pundit target rows, and adds a new empty one.
+    *&#x2F;
+    clearDnDTriples: function(){
+        var self = this;
+
+        for (var row in self.tripleDnD)
+            self.removeTripleRow(row);
+            
+        self.addDnDTriple();
+    },
+
+    dndTargetsClickHandler: function(e, target, type) {
+        var self = this,
+            u = dojo.attr(target, &#x27;id&#x27;).substr(-5),
+            position = dojo.position(target),
+            y = position.y + position.h,
+            x, title, arrow;
+        
+        self.currentDnd = self.tripleDnD[u][type];
+        
+        if (type === &#x27;p&#x27;) {            
+            x = (position.x + (position.w &#x2F; 2)) - 200;
+            title = &#x27;Relations&#x27;;
+            arrow = &#x27;center&#x27;;
+        } else if (type === &#x27;s&#x27;) {
+            x = position.x;
+            title = &#x27;Subjects&#x27;;                        
+            arrow = &#x27;left&#x27;;
+        } else if (type === &#x27;o&#x27;) {
+            x = (position.x + position.w) - 400;          
+            title = &#x27;Objects&#x27;;
+            arrow = &#x27;right&#x27;;
+        }
+        
+        if (type === &#x27;p&#x27;){
+            var ranges = [],
+                domains = [];
+            if (typeof self.tripleDnD[u][&#x27;s&#x27;].map !== &#x27;undefined&#x27;)
+                for (var i in self.tripleDnD[u][&#x27;s&#x27;].map){
+                    domains = self.tripleDnD[u][&#x27;s&#x27;].map[i].data.rdftype;
+                }
+            if (typeof self.tripleDnD[u][&#x27;o&#x27;].map !== &#x27;undefined&#x27;)
+                for (var i in self.tripleDnD[u][&#x27;o&#x27;].map){
+                    ranges = self.tripleDnD[u][&#x27;o&#x27;].map[i].data.rdftype;
+                }
+            &#x2F;&#x2F;semlibResourcesPanel.showProperties(target, type, ranges, domains); 
+            var props = semlibItems.getProperties(ranges, domains);
+            var propsObject = {
+                    properties :{
+                        label: &#x27;Relations&#x27;,
+                        items: props
+                    }
+                }
+            self.propSuggestionPanel.load(propsObject);
+            self.propSuggestionPanel.show(x, y, {
+                            title: title,
+                            arrow: arrow
+                        });
+			self.subjSuggestionPanel.hide();
+			self.objSuggestionPanel.hide();
+						
+        } else if (type=== &#x27;s&#x27;){
+            
+			var acceptedTypes = self.getAcceptedTypes(u, target);
+            var myitems = semlibMyItems.getItemsFromTerm(&#x27;&#x27;, acceptedTypes);
+            var pageitems = semlibItems.getItemsFromTerm(&#x27;&#x27;, acceptedTypes);
+            
+            var itemsObject = {
+                    myitems : {
+                        label: &#x27;My Items&#x27;,
+                        items: myitems
+                    },
+                    pageitems : {
+                        label: &#x27;Page Items&#x27;,
+                        items: pageitems
+                    }
+                }
+            
+            for (var v in _PUNDIT[&#x27;vocab&#x27;].vocabs){
+                var vItems = _PUNDIT[&#x27;vocab&#x27;].getItemsForTermInVocab(&#x27;&#x27;, v, acceptedTypes);
+                itemsObject[v] = {
+                    label : v,
+                    items : vItems
+                }
+            }
+            
+            self.subjSuggestionPanel.load(itemsObject);
+            if (type === &#x27;o&#x27;){
+                if (acceptedTypes.length === 0){
+                    self.subjSuggestionPanel.show(x,y, {
+                            title: title,
+                            arrow: arrow,
+                            literalMode: &#x27;literalEnabled&#x27;
+                        });
+                } else if (acceptedTypes[0] === ns.rdfs_literal){
+                    self.subjSuggestionPanel.show(x, y, {
+                            title: title,
+                            arrow: arrow,
+                            literalMode: &#x27;literalOnly&#x27;
+                        });
+                } else{
+                    self.subjSuggestionPanel.show(x, y, {
+                            title: title,
+                            arrow: arrow
+                        });
+                }
+            } else{
+                self.subjSuggestionPanel.show(x,y, {
+                            title: title,
+                            arrow: arrow
+                        });
+            }
+			
+			self.propSuggestionPanel.hide();
+			self.objSuggestionPanel.hide();
+			
+        } else if (type === &#x27;o&#x27;) {
+        	
+			var acceptedTypes = self.getAcceptedTypes(u, target);
+            var myitems = semlibMyItems.getItemsFromTerm(&#x27;&#x27;, acceptedTypes);
+            var pageitems = semlibItems.getItemsFromTerm(&#x27;&#x27;, acceptedTypes);
+            
+            var itemsObject = {
+                    myitems : {
+                        label: &#x27;My Items&#x27;,
+                        items: myitems
+                    },
+                    pageitems : {
+                        label: &#x27;Page Items&#x27;,
+                        items: pageitems
+                    }
+                }
+            
+            for (var v in _PUNDIT[&#x27;vocab&#x27;].vocabs){
+                var vItems = _PUNDIT[&#x27;vocab&#x27;].getItemsForTermInVocab(&#x27;&#x27;, v, acceptedTypes);
+                itemsObject[v] = {
+                    label : v,
+                    items : vItems
+                }
+            }
+            
+            self.objSuggestionPanel.load(itemsObject);
+            if (type === &#x27;o&#x27;){
+                if (acceptedTypes.length === 0){
+                    self.objSuggestionPanel.show(x,y, {
+                            title: title,
+                            arrow: arrow,
+                            literalMode: &#x27;literalEnabled&#x27;
+                        });
+                } else if (acceptedTypes[0] === ns.rdfs_literal){
+                    self.objSuggestionPanel.show(x, y, {
+                            title: title,
+                            arrow: arrow,
+                            literalMode: &#x27;literalOnly&#x27;
+                        });
+                } else{
+                    self.objSuggestionPanel.show(x, y, {
+                            title: title,
+                            arrow: arrow
+                        });
+                }
+            } else{
+                self.objSuggestionPanel.show(x,y, {
+                            title: title,
+                            arrow: arrow
+                        });
+            }
+			
+			self.propSuggestionPanel.hide();
+			self.subjSuggestionPanel.hide();
+			
+        }
+        
+        dojo.query(&#x27;.pundit-tc-dnd-container ul&#x27;).removeClass(&#x27;dnd_selected&#x27;);
+        dojo.query(e.target).addClass(&#x27;dnd_selected&#x27;);
+        
+    }, &#x2F;&#x2F; dndTargetsClickHandler
+
+    highlightDnDTargetsReceivingNodes: function(source, nodes) {
+        var self = this,
+            bits = [&#x27;s&#x27;, &#x27;p&#x27;, &#x27;o&#x27;];
+
+        dojo.query(&#x27;.pundit-tc-dnd-container ul&#x27;).removeClass(&#x27;dnd_selected&#x27;);
+
+        &#x2F;&#x2F; Foreach possible target: row * (sub, pred, ob), highlight
+        &#x2F;&#x2F; if it can receive these items 
+        for (var row in self.tripleDnD) {
+            &#x2F;&#x2F;for (var j in bits) 
+            for (var j = bits; j--;) 
+                if (self.checkAcceptance(source, nodes, self.tripleDnD[row][bits[j]]))
+                    dojo.addClass(&#x27;pundit-tc-&#x27;+bits[j] + &#x27;-&#x27;+row, &#x27;dnd_selected&#x27;);
+        }        
+    },
+
+    addItem:function(item){
+        var self = this;
+        var nodes = self.currentDnd.getAllNodes();
+        if (nodes.length &gt; 0) {
+            self.currentDnd.clearItems();
+            nodes.forEach(function(item){dojo.destroy(item)})                     
+        }
+        self.currentDnd.insertNodes(false, [item]);
+    },
+
+    &#x2F;&#x2F;nodesUri serve a qualcosa?
+    checkAcceptance: function(source, nodes, target, nodesUri) {
+
+        &#x2F;&#x2F; forbid self drop
+        if (target === source) {
+            return false;
+        }
+        
+        &#x2F;&#x2F; Dragging a tree item uses a separate function
+        if (typeof(source.semlibTree) !== &#x27;undefined&#x27;) {
+            &#x2F;&#x2F; Check item type vs target accept
+            for (i = nodes.length-1; i &gt;= 0; i--) {
+                var id = nodes[i].id,
+                    item = source.getItem(id),
+                    flag = false;
+                                
+                if (typeof(item.data.item.type) !== &#x27;undefined&#x27;){
+                    var type = item.data.item.type;
+                    for (j = type.length-1; j&gt;=0 ; j--) {
+                        if (type[j] in target.accept) { &#x2F;&#x2F;ok object
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag === false) return false;
+                } else 
+                    return false;
+            }
+
+            var u = target.parent.id.substr(-5),
+                self = this,
+                items = [],
+                values = [];
+
+            &#x2F;&#x2F; Forbid two+ copies of the same item in a target
+            &#x2F;&#x2F;SIMONE DEBUG: This can be removed since now just only one item for container can be added
+            target.forInItems(function(item) {
+                values.push(item.data.value);
+            });
+            for (var i = nodes.length - 1; i &gt;= 0; i--) {
+                items[i] = source.getItem(nodes[i].id);
+                if (values.length &gt; 0 &amp;&amp; dojo.indexOf(values, items[i].data.item.value) !== -1) 
+                    &#x2F;&#x2F;DEBUG this shuold be break if managing multiple items in drag and drop
+                    return false;
+            }
+                
+            return self.rowAcceptItems(u, items, target);
+        } &#x2F;&#x2F; typeof(source.semlibTree) !== &#x27;undefined&#x27;
+        
+        
+        
+        &#x2F;&#x2F; Check item&#x27;s types vs target&#x27;s accept
+        for (var i=nodes.length-1; i&gt;=0; i--) {
+            var type = source.getItem(nodes[i].id).type,
+                uri = source.getItem(nodes[i].id).data.value,
+                flag = false;
+                            
+            for (var j=type.length-1; j&gt;=0; j--) {
+                if (type[j] in target.accept) {
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag === false) return false;
+        }
+
+        var u = target.parent.id.substr(-5),
+            self = this,
+            items = [],
+            values = [];
+
+        &#x2F;&#x2F; Forbid two+ copies of the same item in a target
+        target.forInItems(function(item) {
+            values.push(item.data.value);
+        });
+        for (var i = nodes.length - 1; i &gt;= 0; i--) {
+            items[i] = source.getItem(nodes[i].id);
+            if (values.length &gt; 0 &amp;&amp; dojo.indexOf(values, items[i].data.value) !== -1) 
+                return false;
+        }
+                
+        return self.rowAcceptItems(u, items, target);
+
+    }, &#x2F;&#x2F; checkAcceptance()
+
+    rowAcceptItems: function(row, item, target) {
+
+        var self = this,
+        &#x2F;&#x2F;targetType = target.parent.id.substr(6,1);
+        targetType = target.parent.id.substr(10,1);
+
+        &#x2F;&#x2F;TODO Currently use a cloned version of the array to cope with 
+        &#x2F;&#x2F;the different structure of the tree items changing it on the fly
+        &#x2F;&#x2F;Clone the array
+        var items = item.slice(0);
+
+        &#x2F;&#x2F;If the item is a tree cope with the different data model
+        if (typeof(items[0].data.type) === &#x27;undefined&#x27;){
+            &#x2F;&#x2F;for (var j in items){
+            for (var j = items.length; j--;){
+                items[j].data = items[j].data.item;
+            }
+        }
+        
+        
+        if (targetType === &#x27;s&#x27;) {
+
+            &#x2F;&#x2F; Get all the common domains of the predicates in the given row
+            var domains, allDomains = [];
+            self.tripleDnD[row][&#x27;p&#x27;].forInItems(function(item) {
+                &#x2F;&#x2F; If this predicate domain is empty, dont add an empty array
+                if (item.data.domain.length &gt; 0)
+                    allDomains.push(item.data.domain);
+            });
+            domains = self._intersection(allDomains);
+
+            &#x2F;&#x2F; No domains &gt; no predicates &gt; all is good
+            if (domains.length === 0) {
+                &#x2F;&#x2F; Domains intersection empty??! Something is wrong
+                if (allDomains.length !== 0) {
+                    self.log(&quot;Error in the predicate? No possible domains found!&quot;);
+                    return false;
+                }
+                &#x2F;&#x2F; No domains:
+                &#x2F;&#x2F; - no predicates &gt; all is good
+                &#x2F;&#x2F; - predicates with domain empty &gt; all is good
+                return true;
+            } else {
+
+                var rdftypes = [];
+                for (var i = items.length-1; i &gt;= 0; i--) 
+                    rdftypes.push(items[i].data.rdftype);
+                rdftypes = self._intersection(rdftypes);
+                
+                if (self._intersection([rdftypes, domains]).length === 0)
+                    return false;
+                else
+                    return true;
+
+            }
+            
+        } else if (targetType === &#x27;o&#x27;) {
+
+            &#x2F;&#x2F; Get all the common ranges of the predicates in the given row
+            var ranges, allRanges = [];
+            self.tripleDnD[row][&#x27;p&#x27;].forInItems(function(item) {
+                &#x2F;&#x2F; If this predicate range is empty, dont add an empty array
+                if (item.data.range.length &gt; 0)
+                    allRanges.push(item.data.range);
+            });
+            ranges = self._intersection(allRanges);
+
+            if (ranges.length === 0) {
+                &#x2F;&#x2F; Ranges intersection empty??! Something is wrong
+                if (allRanges.length !== 0) {
+                    self.log(&quot;Error in the predicate? No possible ranges found!&quot;);
+                    return false;
+                }
+                &#x2F;&#x2F; No ranges:
+                &#x2F;&#x2F; - no predicates &gt; all is good
+                &#x2F;&#x2F; - predicates with range empty &gt; all is good
+                return true;
+            } else {
+
+                var rdftypes = [];
+                for (var i = items.length-1; i &gt;= 0; i--) 
+                    rdftypes.push(items[i].data.rdftype);
+                rdftypes = self._intersection(rdftypes);
+                
+                if (self._intersection([rdftypes, ranges]).length === 0)
+                    return false;
+                else
+                    return true;
+            }
+            
+        } else if (targetType === &#x27;p&#x27;) {
+
+            var suTypes = [], suL, suNum = 0,
+                obTypes = [], obL, obNum = 0,
+                obLiteral = false;
+
+            self.tripleDnD[row][&#x27;s&#x27;].forInItems(function(item) {
+                suNum++;
+                &#x2F;&#x2F; If this item rdftype is empty, dont add an empty array: LITERAL!
+                if (item.data.rdftype.length &gt; 0)
+                    suTypes.push(item.data.rdftype);
+            });
+            self.tripleDnD[row][&#x27;o&#x27;].forInItems(function(item) {
+                obNum++;
+                &#x2F;&#x2F; If this item rdftype is empty, dont add an empty array: LITERAL!
+                &#x2F;&#x2F;DEBUG You are not hanldying the case in which you don&#x27;t have an object!
+                if (item.data.rdftype.length === 0)
+                    obLiteral = true;
+                if (item.data.rdftype.length &gt; 0)
+                    obTypes.push(item.data.rdftype);
+            });
+            
+            obL = obTypes.length;
+            suL = suTypes.length;
+            suTypes = self._intersection(suTypes);
+            obTypes = self._intersection(obTypes);
+
+            if (obL + suL &gt; 0) {
+
+                if (suTypes.length === 0 &amp;&amp; suL &gt; 0) {
+                    self.log(&quot;Subjects types intersection is empty!! Error in the subject panel.&quot;)
+                    return;
+                }
+                if (obTypes.length === 0 &amp;&amp; obL &gt; 0) {
+                    self.log(&quot;Objects type intersection is empty!! Error in the object panel.&quot;)
+                    return;
+                }
+                
+                var domains = [], ranges = [];
+                for (var i = items.length-1; i &gt;= 0; i--) {
+                    if (items[i].data.domain.length &gt; 0)
+                        domains.push(items[i].data.domain);
+                    if (items[i].data.range.length &gt; 0)
+                        ranges.push(items[i].data.range);
+                }
+                
+                domains = self._intersection(domains);
+                ranges = self._intersection(ranges);
+                
+                &#x2F;&#x2F; If there&#x27;s subject types to check and they dont intersect items&#x27;
+                &#x2F;&#x2F; domains.. we cant accept them
+                if (suL &gt; 0 &amp;&amp; domains.length &gt; 0 &amp;&amp; self._intersection([domains, suTypes]).length === 0)
+                    return false;
+
+                &#x2F;&#x2F; If there&#x27;s object types to check and they dont intersect items&#x27;
+                &#x2F;&#x2F; ranges.. we cant accept them
+                if (obL &gt; 0 &amp;&amp; ranges.length &gt; 0 &amp;&amp; self._intersection([ranges, obTypes]).length === 0)
+                    return false;
+                
+                &#x2F;&#x2F;DEBUG Some problem with this!
+                &#x2F;&#x2F;obL can be 0 also when no object is added
+                &#x2F;&#x2F; No object types (it&#x27;s a literal!!), but the predicate has ranges: refuse it
+                &#x2F;&#x2F;if (obL === 0 &amp;&amp; ranges.length &gt; 0)
+                &#x2F;&#x2F;    return false;
+                if (obLiteral === true &amp;&amp; ranges.length &gt; 0)
+                    return false;
+
+                &#x2F;&#x2F; We reached this point if one of the predicates range&#x2F;domain 
+                &#x2F;&#x2F; were empty.. (ranges.length &gt; 0)
+                self.log(&quot;Items passed matches domains &#x27;&quot;+domains.join(&#x27;, &#x27;)+&quot;&#x27; and ranges &#x27;&quot;+ranges.join(&#x27;, &#x27;)+&quot;&#x27;&quot;);
+                return true;
+            } else {
+                
+                &#x2F;&#x2F; Subject and object with no types at all: could be a literal!
+                &#x2F;&#x2F; .. or they could be empty.
+                var ranges = [];
+                for (var i = items.length-1; i &gt;= 0; i--) 
+                    if (items[i].data.range.length &gt; 0)
+                        ranges.push(items[i].data.range);
+                ranges = self._intersection(ranges);
+
+                if (obNum + suNum === 0) {
+                    self.log(&#x27;Items passing test: no items in subject nor object containers!&#x27;);
+                    return true;
+                }
+
+                &#x2F;&#x2F; object and subject types are both empty .. might be a literal? Yay.. 
+                if (ranges.length === 0 &amp;&amp; obTypes.length === 0) {
+                    self.log(&#x27;Items passing test: empty ranges .. Found a literal?&#x27;)
+                    return true;
+                }
+                
+            }
+            
+        } &#x2F;&#x2F; targetType = P
+
+        return false;
+    }, &#x2F;&#x2F; rowAcceptItems
+
+    &#x2F;&#x2F;TODO It would be so nice to have an Helper to provide functions like this to reuse in other components!!!
+    &#x2F;&#x2F; Given an array of arrays a=[A=[..],B=[..],C=[..],..]
+    &#x2F;&#x2F; will return an array with the items found in all of the
+    &#x2F;&#x2F; children array A, B, C.. 
+    _intersection: function(a) {
+        if (a.length === 0)
+            return [];
+
+        &#x2F;&#x2F; There&#x27;s only 1 array
+        if (a.length === 1)
+            return a[0];
+
+        var ret = [], val, foo;
+        &#x2F;&#x2F; For each element of the first array, check if there&#x27;s
+        &#x2F;&#x2F; the same value in all of the other arrays ..
+        for (var i = a[0].length - 1; i &gt;= 0; i--) {
+            val = a[0][i]; 
+            foo = true;
+            
+            for (var j = a.length - 1; j &gt; 0; j--) 
+                if (dojo.indexOf(a[j], val) === -1)
+                    foo = false;
+            
+            if (foo) ret.push(val);
+        };
+        return ret;
+        
+    }, &#x2F;&#x2F; _intersection
+
+    &#x2F;&#x2F;Return the accepted type by a certain dndtriple container
+    &#x2F;&#x2F;Return the array
+    &#x2F;&#x2F;Empty array if no restriction
+    getAcceptedTypes: function(row, target){
+        var self = this,
+            acceptedTypes = [],
+            domains, allDomains = [],
+            targetType = target.id.substr(10,1);
+            
+        if (targetType === &#x27;s&#x27;){
+            &#x2F;&#x2F;Currently no need to loop since just one item for container is accepted
+            &#x2F;*
+			self.tripleDnD[row][&#x27;p&#x27;].forInItems(function(item) {
+                &#x2F;&#x2F; If this predicate domain is empty, dont add an empty array
+                if (item.data.domain.length &gt; 0)
+                    allDomains.push(item.data.domain);
+            });
+            return self._intersection(allDomains);
+			*&#x2F;
+			return [ns.fragments.text, ns.fragments.image, ns.image, ns.page];
+        }
+        if (targetType === &#x27;p&#x27;){
+            
+        }
+        if (targetType === &#x27;o&#x27;){
+            &#x2F;&#x2F; Get all the common ranges of the predicates in the given row
+            var ranges, allRanges = [];
+            self.tripleDnD[row][&#x27;p&#x27;].forInItems(function(item) {
+                &#x2F;&#x2F; If this predicate range is empty, dont add an empty array
+                if (item.data.range.length &gt; 0)
+                    allRanges.push(item.data.range);
+            });
+            return self._intersection(allRanges);
+        }
+        
+    },
+
+    &#x2F;**
+     * Deselects any selected item in every target of every
+     * row currently present in TripleComposer
+     * @method resetSelections
+     *&#x2F;
+    resetSelections: function() {
+        var self = this;
+
+        for (var i in self.tripleDnD) {
+            self.tripleDnD[i][&#x27;s&#x27;].selectNone();
+            self.tripleDnD[i][&#x27;p&#x27;].selectNone();
+            self.tripleDnD[i][&#x27;o&#x27;].selectNone();
+        }
+    }, &#x2F;&#x2F; resetSelections()
+
+
+    &#x2F;**
+     * Saves to the pundit server the current composed triples.
+     * @method saveTriples
+     *&#x2F;
+    saveTriples: function() {
+        var self = this,
+            targets = [],
+            annotationPageContext = window.location.href,
+            b = new pundit.TriplesBucket();
+        
+        &#x2F;&#x2F; DEBUG remove xpointer from page location
+        &#x2F;&#x2F; Otherwise this creates a Ghost fragment
+        if (annotationPageContext.indexOf(&#x27;#xpointer(&#x27;) !== -1)
+            annotationPageContext = annotationPageContext.split(&#x27;#&#x27;)[0]
+        
+		&#x2F;&#x2F; The annotation page context should not be included among targets	
+		&#x2F;&#x2F;targets.push(annotationPageContext);
+        
+        for (var row in self.tripleDnD) {
+            var s = [], p = [], o = [];
+        
+            self.tripleDnD[row][&#x27;s&#x27;].forInItems(function(item) {s.push(item);});
+            self.tripleDnD[row][&#x27;p&#x27;].forInItems(function(item) {p.push(item);});
+            self.tripleDnD[row][&#x27;o&#x27;].forInItems(function(item) {o.push(item);});
+
+            &#x2F;&#x2F; Skip the row if there&#x27;s no sub&#x2F;pred or obj
+            if ((typeof(s) === &#x27;undefined&#x27;) || (typeof(p) === &#x27;undefined&#x27;) || (typeof(o) === &#x27;undefined&#x27;)) break;
+
+            &#x2F;&#x2F; Add the triples to the bucket
+            &#x2F;&#x2F;for (var i in s) {
+            for (var i = s.length; i--;) {
+                &#x2F;&#x2F;for (var j in p) {
+                for (var j = p.length; j--;) {
+                    &#x2F;&#x2F;for (var k in o) {
+                    for (var k = o.length; k--;) {
+
+                        var ob_type,
+                            sd = s[i].data, sv = sd.value,
+                            pd = p[j].data, pv = pd.value,
+                            od = o[k].data, ov = od.value;
+                        
+                        &#x2F;&#x2F; If type array contains only &#x27;object&#x27; AND
+                        &#x2F;&#x2F; there&#x27;s no rdftype or the only type is rdfs_literal .. then 
+                        &#x2F;&#x2F; it is a literal. 
+                        if (o[k].data.type[0] === &#x27;object&#x27; &amp;&amp; (o[k].data.rdftype.length === 0 || o[k].data.rdftype[0] === ns.rdfs_literal)) 
+                            ob_type = &#x27;literal&#x27;;
+                        else
+                            ob_type = &#x27;uri&#x27;;
+                        
+                        &#x2F;&#x2F; Add the triple
+                        b.addTriple(sv, pv, ov, ob_type);
+                        
+                        &#x2F;&#x2F; If subject or object are xpointers, add them to annotation targets
+                        if (sv.indexOf(&#x27;#xpointer(&#x27;) !== -1 &amp;&amp; dojo.indexOf(targets, sv) === -1)
+                            targets.push(sv);
+                        if (ov.indexOf(&#x27;#xpointer(&#x27;) !== -1 &amp;&amp; dojo.indexOf(targets, ov) === -1)
+                            targets.push(ov);
+                        
+                        &#x2F;&#x2F;TODO: remove this. It is a trick to visualiza image fragments annotations 
+                        &#x2F;&#x2F;by setting the xpointer of the complete image as target of the annotation
+                        var parentImageXpointer = semlibImageFragmentHandler.getParentImageXpointer(sv);
+                        if (typeof(parentImageXpointer) !== &#x27;undefined&#x27;) {
+                                targets.push(parentImageXpointer);
+                        }
+                        var parentImageXpointerObject = semlibImageFragmentHandler.getParentImageXpointer(ov);
+                        if (typeof(parentImageXpointerObject) !== &#x27;undefined&#x27;) {
+                                targets.push(parentImageXpointerObject);
+                        }
+                        
+                        &#x2F;&#x2F;Handle image fragment
+                        if (dojo.indexOf(sd.rdftype, ns.fragments.image) !== -1){
+                            targets.push(sv);
+                        }
+                        if (dojo.indexOf(od.rdftype, ns.fragments.image) !== -1){
+                            targets.push(ov);
+                        }
+                        
+                        &#x2F;&#x2F;Handle page annotations
+                        if (dojo.indexOf(sd.rdftype, ns.page) !== -1){
+                            targets.push(sv);
+                        }
+                        if (dojo.indexOf(od.rdftype, ns.page) !== -1){
+                            targets.push(ov);
+                        }                   
+                    } &#x2F;&#x2F; for k
+                } &#x2F;&#x2F; for j
+            } &#x2F;&#x2F; for i
+            
+            self.log(&#x27;Added TripleComposer row &#x27;+row+&#x27; to save bucket&#x27;);
+        }   
+
+        self.log(&#x27;Saving current: &#x27;+dojo.toJson(b.getTalisJson()));
+        
+        if (!b.isEmpty()) 
+            self.saver.writeAnnotationContent(b, targets, annotationPageContext);
+        else 
+            dojo.query(&#x27;#pundit-tc-container&#x27;).removeClass(&#x27;pundit-panel-loading&#x27;);
+
+
+    }, &#x2F;&#x2F; saveTriples()
+    
+    &#x2F;**
+     * Saves to the pundit server the current composed triples.
+     * @method saveTriples
+     *&#x2F;
+     saveItems: function(annotationID) {
+        var self = this,
+        b = new pundit.TriplesBucket(),
+        dndItems = [];
+                
+        for (var row in self.tripleDnD) {
+            var s = [], p = [], o = [];
+        
+            self.tripleDnD[row][&#x27;s&#x27;].forInItems(function(item) {s.push(item);});
+            self.tripleDnD[row][&#x27;p&#x27;].forInItems(function(item) {p.push(item);});
+            self.tripleDnD[row][&#x27;o&#x27;].forInItems(function(item) {o.push(item);});
+            
+            &#x2F;&#x2F; Skip the row if there&#x27;s no sub&#x2F;pred or obj
+            if (s.length === 0 || p.length === 0 || o.length === 0) {
+                self.log(&#x27;No items to save in row &#x27;+row+&#x27;: skipping it.&#x27;);
+                break;  
+            } 
+
+            dndItems = dndItems.concat(s).concat(p).concat(o);
+            
+        } &#x2F;&#x2F; for row in tripleDnD
+
+        &#x2F;&#x2F; Get the bucket out of the DnD item
+        for (var i=dndItems.length; i--;)
+            b.concatBucket(dndItems[i].data.rdfData);
+
+        if (!b.isEmpty()) {
+            self.log(&#x27;Posting &#x27;+dndItems.length+&#x27; items with &#x27;+b.bucket.length+&#x27; triples..&#x27;);
+            self.saver.writeAnnotationItems(annotationID, dojo.toJson(b.getTalisJson()));
+        } else {
+            self.log(&#x27;saveItems with an empty bucket??!&#x27;);
+        }
+
+    }, &#x2F;&#x2F; saveItems()
+    
+    &#x2F;&#x2F; TODO: marco perche&#x27; e&#x27; qui sta roba? Non viene mai chiamata ..... 
+    &#x2F;&#x2F; documentiamola se serve, eliminiamola se non serve.
+    &#x2F;*
+    &#x2F;&#x2F; REMOVE? START &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;
+    &#x2F;&#x2F; This part of code used localstorage to mantain created but not saved triples
+    &#x2F;&#x2F; Is it a feature that we want to implement? If not remove all
+    saveToLocalStorage:function(){
+        var tStore = [],
+            iStore = [];
+        for (i in pundit.tripleDnD){
+            var triple = {s:[],p:[],o:[]};
+            pundit.tripleDnD[i][&#x27;s&#x27;].forInItems(function(elem){
+                    triple[&#x27;s&#x27;].push(elem.data);
+            });
+            pundit.tripleDnD[i][&#x27;p&#x27;].forInItems(function(elem){
+                    triple[&#x27;p&#x27;].push(elem.data);
+            });
+            pundit.tripleDnD[i][&#x27;o&#x27;].forInItems(function(elem){
+                    triple[&#x27;o&#x27;].push(elem.data);
+            });
+            &#x2F;&#x2F;DEBUG Store just complete statements
+            if ((triple[&#x27;s&#x27;].length &gt; 0) &amp;&amp; (triple[&#x27;p&#x27;].length &gt; 0) &amp;&amp; (triple[&#x27;o&#x27;].length &gt; 0))
+                tStore.push(triple);
+        }
+&#x2F;&#x2F;            pundit.itemsDnD.forInItems(function(item){
+&#x2F;&#x2F;            iStore.push(item.data);
+&#x2F;&#x2F;        })
+        
+        if (tStore.length &gt; 0){
+            store.save(&#x27;triples&#x27;, tStore);
+        }
+&#x2F;&#x2F;        if (iStore.length &gt; 0){
+&#x2F;&#x2F;            store.save(&#x27;items&#x27;, iStore);
+&#x2F;&#x2F;        }
+        &#x2F;&#x2F;localStorage[&#x27;triples&#x27;] = dojo.toJson(tStore);
+        &#x2F;&#x2F;localStorage[&#x27;items&#x27;] = dojo.toJson(iStore);
+    },
+    loadFromLocalStorage:function(){
+        var keys = [],
+            now = new Date();
+        &#x2F;&#x2F;var items = dojo.fromJson(localStorage[&#x27;items&#x27;]),
+        &#x2F;&#x2F;    triples = dojo.fromJson(localStorage[&#x27;triples&#x27;]);
+        if (store.exists(&#x27;items&#x27;)){
+            var items = store.read(&#x27;items&#x27;).value,
+                itemsDate = store.read(&#x27;items&#x27;).created;
+            if (itemsDate &lt; now.setDate(now.getDate - 7)){
+                var ans = confirm(&#x27;Stored Items are older than one week. Do you want to resume it?&#x27;);
+                if (ans){
+                    pundit.addStoredItems(items);
+                }
+            }else pundit.addStoredItems(items); 
+        }
+        if (store.exists(&#x27;triples&#x27;)){
+            var triples = store.read(&#x27;triples&#x27;).value,
+                triplesDate = store.read(&#x27;triples&#x27;).created;
+            if (triplesDate &lt; now.setDate(now.getDate - 7)){
+                var ans = confirm(&#x27;Stored Items are older than one week. Do you want to resume it?&#x27;);
+                if (ans){
+                    pundit.addStoredTriples(triples);
+                }
+            }else pundit.addStoredTriples(triples); 
+        }
+    },
+    addStoredItems:function(items){
+        for (i in items){
+            if (!pundit.itemExists(items[i]))
+                pundit.addItem(items[i]);
+        }
+    },
+    addStoredTriples:function(triples){
+        if (typeof(triples) !== &#x27;undefined&#x27;){
+            var l = triples.length,
+            keys =[];
+            for (var i in pundit.tripleDnD){
+                keys.push(i);
+            }
+            for (var j in triples){
+                if (!pundit.tripleExists(triples[j])){
+                    var tripleId = pundit.addDnDTriple(true);
+                    pundit.tripleDnD[tripleId][&#x27;s&#x27;].insertNodes(false, triples[j][&#x27;s&#x27;]);
+                    pundit.tripleDnD[tripleId][&#x27;p&#x27;].insertNodes(false, triples[j][&#x27;p&#x27;]);
+                    pundit.tripleDnD[tripleId][&#x27;o&#x27;].insertNodes(false, triples[j][&#x27;o&#x27;]);
+                    dojo.behavior.apply();
+                }
+                
+            }
+        }
+    },
+    &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;REMOVE END? &#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;
+    *&#x2F;
+    itemExists:function(myitem){
+        var exist = false;
+        self.itemsDnD.forInItems(function(item){
+            if (item.data.value == myitem.value){ 
+                exist=true;
+                return;
+            }
+        });
+        return exist;
+    },
+    tripleExists:function(mytriple){
+        var exist = false,
+            keys = [];
+        for (var i in self.tripleDnD){
+            keys.push(i);
+        }
+        &#x2F;&#x2F;for (var j in keys){
+        for (var j = keys.length; j--;){
+            if (typeof(self.tripleDnD) !== &#x27;undefined&#x27; &amp;&amp; (keys.length &gt; 0)){
+                if ( (typeof(self.tripleDnD[keys[j]][&#x27;s&#x27;]) !== &quot;undefined&quot;) &amp;&amp; (typeof(self.tripleDnD[keys[j]][&#x27;p&#x27;]) !== &quot;undefined&quot;) &amp;&amp; (typeof(self.tripleDnD[keys[j]][&#x27;o&#x27;]) !== &quot;undefined&quot;) ){
+                    if ( (self.itemInDnDContainer(self.tripleDnD[keys[j]][&#x27;s&#x27;], mytriple[&#x27;s&#x27;])) &amp;&amp; (self.itemInDnDContainer(self.tripleDnD[keys[j]][&#x27;p&#x27;], mytriple[&#x27;p&#x27;])) &amp;&amp; (self.itemInDnDContainer(self.tripleDnD[keys[j]][&#x27;o&#x27;], mytriple[&#x27;o&#x27;]))  ){
+                            exist = true;
+                            return exist;
+                    }
+                }
+            }
+        }
+        return exist;
+    },
+    &#x2F;&#x2F;Some Helper to deal with the DnD objects
+    itemInDnDContainer:function(container, item){
+        var exist = false,
+            myItem = item;
+        container.forInItems(function(cItem){
+            &#x2F;&#x2F;DEBUG For the item in the store I don&#x27;t have the data field 
+            &#x2F;&#x2F;to reduce amount of stored information. SHould be added in any 
+            &#x2F;&#x2F;case to be used also in other scenarios?
+            &#x2F;&#x2F;DEBUG I consider only one item in every triple
+            for (var i in myItem){
+                if (cItem.data.value == myItem[i].value){
+                    exist = true;
+                }
+           }
+        });
+        
+        return exist;
+    },
+    addItemToSubject: function(itemData){
+        var self = this,
+            selDnd = dojo.query(&#x27;.pundit-tc-dnd-container :first&#x27;)[0],
+            completeId = dojo.attr(selDnd, &#x27;id&#x27;),
+            item = {data: itemData},
+            id = completeId.substring(12);
+        if (self.tripleDnD[id].s.getAllNodes().length === 0){
+            if (self.rowAcceptItems(id, [item], self.tripleDnD[id].s)){
+                self.tripleDnD[id].s.insertNodes(false, [itemData]);
+                dojo.behavior.apply();
+            }
+        }
+    },
+
+    addItemToObject: function(itemData){
+        var self = this,
+            selDnd = dojo.query(&#x27;.pundit-tc-dnd-container :first&#x27;)[0],
+            completeId = dojo.attr(selDnd, &#x27;id&#x27;),
+            item = {data: itemData},
+            id = completeId.substring(12);
+        if (self.tripleDnD[id].o.getAllNodes().length === 0){
+            if (self.rowAcceptItems(id, [item], self.tripleDnD[id].o)){
+                self.tripleDnD[id].o.insertNodes(false, [itemData]);
+                dojo.behavior.apply();
+            }
+        }
+    },
+    
+    
+    
+    checkNeedToHideResourcePanel: function(semlibWindowHeight) {
+        var self = this;
+        
+        if (self.subjSuggestionPanel.isVisible()){
+            if (self.subjSuggestionPanel.getPosition().y &gt; semlibWindowHeight + 15) {
+                self.subjSuggestionPanel.hide();
+            }   
+        }
+		
+        if (self.propSuggestionPanel.isVisible()){
+            if (self.propSuggestionPanel.getPosition().y &gt; semlibWindowHeight + 15) {
+                self.propSuggestionPanel.hide();
+            }   
+        }      
+        if (self.objSuggestionPanel.isVisible()){
+            if (self.objSuggestionPanel.getPosition().y &gt; semlibWindowHeight + 15) {
+                self.objSuggestionPanel.hide();
+            }   
+        }      
+    }&#x2F;&#x2F; checkNeedToHideResourcePanel
+    
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

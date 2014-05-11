@@ -1,0 +1,33 @@
+###############################################################################
+## Build the docs
+
+To be able to build the docs you will need a nodejs installation and the 
+yuidoc component: 
+# npm -g install yuidocjs
+
+Before building the docs, you can do a dry run on the comments and see if 
+there's errors with "./build_docs.sh lint". 
+
+To rebuild the docs just "./build_docs.sh"
+
+
+############################################################################### 
+## Build the bookmarklet
+
+See ./bookmarklet_build/HOWTO.txt 
+
+
+###############################################################################
+## Tag a new version
+
+TODO 
+
+
+
+############################################################################### 
+## Lint the code
+
+TODO 
+jslint --css --color css/*css
+jslint --color src/*js
+find . -name "*.js" -print0 | xargs -0 jslint

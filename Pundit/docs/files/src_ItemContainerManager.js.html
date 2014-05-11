@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;ItemContainerManager.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;ItemContainerManager.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.ItemContainerManager
+ * @extends pundit.baseComponent
+ * @description Is responsible of the instantiation of different item containers
+ * (PageItems, MyItems) and provide facilities for their management. In particular 
+ * it allows to execute operation on all the item containers (ex. item refresh, search, ...)
+ *&#x2F;
+dojo.provide(&quot;pundit.ItemContainerManager&quot;);
+dojo.declare(&quot;pundit.ItemContainerManager&quot;, pundit.BaseComponent, {
+    
+    &#x2F;&#x2F; TODO: move this comment to some @property and some into the class declaration
+    &#x2F;*
+    * @constructor
+    * @description Initializes the component
+    * @param options {object}
+    * @param options.debug {boolean} wether or not to activate debug mode for this component
+    *&#x2F;
+    constructor: function(options) {
+        var self = this;
+        self.itemContainers = {};
+    
+        self.initItemContainers();
+        self.log(&#x27;Items Manager up and running&#x27;);
+    }, &#x2F;&#x2F; constructor()
+    
+    initItemContainers:function(){
+        var self = this;
+        &#x2F;&#x2F;Do we need a function to create instances with also the callbacks?
+        dojo.require(&quot;pundit.MyItems&quot;);
+        &#x2F;&#x2F; TODO -&gt; myItems
+        semlibMyItems = new pundit.MyItems();
+        self.itemContainers[&#x27;MyItems&#x27;] = semlibMyItems;
+        self.itemContainers[&#x27;MyItems&#x27;].onItemAdded(function(){
+            self.refreshAll();
+        });
+        self.itemContainers[&#x27;MyItems&#x27;].onItemRemoved(function(){
+            self.refreshAll();
+        });
+        
+
+
+        dojo.require(&quot;pundit.PageItems&quot;);
+        &#x2F;&#x2F; TODO -&gt; pageItems
+        semlibItems = new pundit.PageItems();
+        self.itemContainers[&#x27;PageItems&#x27;] = semlibItems;
+        self.itemContainers[&#x27;PageItems&#x27;].onItemAdded(function(){
+            self.refreshAll();
+        });
+        self.itemContainers[&#x27;PageItems&#x27;].onItemRemoved(function(){
+            self.refreshAll();
+        });
+    },
+    
+    &#x2F;**
+    * @method refreshAll
+    * @description Refresh the items in all the items containers
+    *&#x2F;
+    refreshAll: function(){
+        var self = this;
+        for (var i in self.itemContainers){
+            self.itemContainers[i].refreshItems();
+        }
+    },
+    
+    &#x2F;**
+    * @method refreshAll
+    * @description Refresh the number of items in all the items containers
+    *&#x2F;
+    refreshItemsNumber: function(){
+        var self = this;
+        for (var i in self.itemContainers){
+            self.itemContainers[i].refreshItemsNumber();
+        }
+    }, 
+    
+    &#x2F;**
+    * @method getItemByUri
+    * @description Return an item contained in the items container given its uri
+    * @param uri {string}
+    * @return {object - Item} The item identified by that uri. 
+    * If multiple items have the same uri, the first items founded looping in the conteiner is returned.
+    *&#x2F;
+    &#x2F;&#x2F; TODO: why this is called BY uri and the other FROM uri ???!
+    getItemByUri: function(uri){ 
+        var self = this;
+        for (var i in self.itemContainers) {
+            var item = self.itemContainers[i].getItemFromUri(uri);
+            if (typeof item !== &#x27;undefined&#x27;)
+                return item
+        }
+        return undefined;
+    },
+    
+    &#x2F;**
+    * @method getItemsFromParentItem
+    * @description Return an item contained in the items container given the uri of its parent item (isPartOf relation)
+    * @param parentUri {string}
+    * @return {object - Item} The item. 
+    *&#x2F;
+    getItemsFromParentItem: function(parentUri) {
+        var self = this, ret = [];
+        for (var i in self.itemContainers) {
+            var p = self.itemContainers[i].getItemsFromParentItem(parentUri)
+            ret = ret.concat(p);
+        }
+        return ret;
+    },
+    
+    &#x2F;**
+    * @method getItemsByType
+    * @description Return an array of items contained in the items container that have such type
+    * @param type {string}
+    * @return {array of Item object} The item identified by that uri. 
+    * Item are not duplicated.
+    *&#x2F;
+    getItemsByType:function(type){
+        var self = this,
+            items = [],
+            item;
+        for (var i in self.itemContainers){
+            for (var id in self.itemContainers[i].itemsDnD.map){
+                if (dojo.indexOf(self.itemContainers[i].itemsDnD.map[id].data.rdftype, type) !== -1){
+                    item = self.itemContainers[i].itemsDnD.map[id].data;
+                    if (!dojo.indexOf(items, item))
+                        items.push(item);
+                }
+            }
+        }
+        return items
+    }, 
+    
+    &#x2F;**
+    * @method hideAllItems
+    * @description Hide all the items in every items container
+    *&#x2F;
+    hideAllItems:function(){
+        var self = this;
+        for (var i in self.itemContainers){
+            self.itemContainers[i].hideAllItems();
+        }
+    }, 
+    
+    &#x2F;**
+    * @method showAllItems
+    * @description Show all the items in every items container. Pay attention you also need to select a filter tab (ex. fragment)
+    that you want to show ohterwise nothing is visualized...
+    *&#x2F;
+    showAllItems:function(){
+        var self = this;
+        for (var i in self.itemContainers){
+            self.itemContainers[i].showAllItems();
+        }
+    },
+    
+    
+    getItemsWhereFieldTest: function() {
+         var self = this,
+             ret = [];
+         for (var i in self.itemContainers) 
+             ret = ret.concat(self.itemContainers[i].getItemsWhereFieldTest.apply(self.itemContainers[i], arguments));
+         return ret;
+    },    
+    
+    &#x2F;&#x2F;Return true if the item is a
+    isTerm:function(item){
+        if (dojo.indexOf(item.rdftype, ns.fragments.text) !== -1 || dojo.indexOf(item.rdftype, ns.fragments.image) !== -1 || dojo.indexOf(item.rdftype, ns.image) !== -1)
+            return false;
+        else 
+            return true;
+    }
+    
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

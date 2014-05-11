@@ -1,0 +1,168 @@
+0.15.2-MaintainedEgg
+* Showing broken annotations
+* Option to sort vocabolaries
+* Changed some defaults in some selector (korbo)
+* Rebuilt the bookmarklet
+
+0.15.1-HatchedEgg
+* Tackled a nasty bug on xpointers creation
+* Supporting freebase again, using the new APIs
+
+0.15-HatchedEgg
+* Added licensing informations, pundit is now officially open source!
+* New EDM selector, using Europeana v2 API
+* minor usability tweaks: refresh annotations, annotate this image
+
+0.14-Spring_countdown
+* introducing Pundit help system with introductions and contact forms
+* first prototypal implementation of direct named content annotation
+* minor ui fixes
+* minor (major?) usability improvements
+
+0.13.3-Pumpkin
+* Added support for image regions annotation
+* Big improvement of the Bookmarklet version: now compatible with more web sites
+* Entity extraction with Data-TxT improved
+* Annotation download and server communication optimized 
+* Minor bug fixes 
+
+0.13.2-Pumpkin
+* Added support for image regions annotation
+* Big improvement of the Bookmarklet version: now compatible with more web sites
+* Entity extraction with Data-TxT improved
+* Annotation download and server communication optimized 
+* Minor bug fixes 
+
+0.13.1-Pumpkin
+* Added support for image regions annotation
+* Big improvement of the Bookmarklet version: now compatible with more web sites
+* Entity extraction with Data-TxT improved
+* Annotation download and server communication optimized 
+* Minor bug fixes 
+
+0.13-Pumpkin
+* Added support for image regions annotation
+* Big improvement of the Bookmarklet version: now compatible with more web sites
+* Entity extraction with Data-TxT improved
+* Annotation download and server communication optimized 
+* Minor bug fixes 
+
+0.12-Pumpkin
+* Added support for image regions annotation
+* Big improvement of the Bookmarklet version: now compatible with more web sites
+* Entity extraction with Data-TxT improved
+* Annotation download and server communication optimized 
+* Minor bug fixes 
+
+0.11-Pumpkin
+* Added support for image regions annotation
+* Big improvement of the Bookmarklet version: now compatible with more web sites
+* Entity extraction with Data-TxT improved
+* Annotation download and server communication optimized 
+* Minor bug fixes 
+
+0.10.1-Lintukoto
+* Bookmarklet build system revisited
+* Default bookmarklet build will take into account version and absolute URLs
+* Pundit is now (properly) configurable
+* Bookmarklet is configurable through InitBookmarklet.js
+* Bug fix on bookmarklet config
+
+0.10-Lintukoto
+* Bookmarklet build system revisited
+* Default bookmarklet build will take into account version and absolute URLs
+* Pundit is now (properly) configurable
+* Bookmarklet is configurable through InitBookmarklet.js
+
+0.9.41-Lintukoto
+* UI CSS and Bug fixes
+* Text2Text quick annotation (NEW!)
+* Default configuration set
+
+0.9.3-Lintukoto
+* Experimental automatic entity extraction based annotation
+* Support for DataTXT as entity extraction service
+* Improved search on triplecomposer suggestion panels
+* Bug fixes
+
+0.9.2-Lintukoto
+* Bug fixes
+* Minor code refactoring
+
+0.9.12-Lintukoto
+
+* Brand new notebook manager
+* Enhanced item search 
+* Enhanced suggestions panels in the triple composer
+* Enhanced comment/tag panel 
+* Entity recognizer GUI
+* Several bug fixes
+* Improved configurability
+
+0.8.14-arlecchino
+
+* Enhanced configurability
+* bug fixes
+
+0.8.13-arlecchino
+
+* minor bug fixes
+
+0.8.11-arlecchino
+
+* Enhanced (a bit) saving
+* Enhanced vocabularies
+
+0.8.10-arlecchino
+
+* Enhanced (a bit) selectors usability
+* Added more colors
+* Minor fixes on css - also on bookmarklet
+* colors are now less invasive
+* major refactor around selectors
+* added dbpedia selector
+* more integration with loadingbox
+* tons of bug fixes
+* minor bug fix allowing correct initialization for non-logged in users
+* major css refactor (still something to debug?)
+* renamed content class to "pundit-content"
+
+
+0.8-worse-icon-ever
+* Major all around naming refactoring
+* Vocabs are now jsonp
+* Introduced LoadingBox, up left part of the window
+* Introduced Configuration, letting the user configure Pundit
+* Added some of the worse icon ever made
+
+
+0.61-demo_page
+* Added a simple demo.html page for DH paper
+
+0.6-float_around
+* Comment/Tag simplified interface added for annotations
+* Bookmarklet improved
+* Several bugs fixed
+
+0.5-what_hump
+
+* Login workflow fully working: using one of the supported providers
+* Big restyling: items + pundit above, annotations on the right bar
+* Implemented items preview for each type of item
+* Literal creation improved
+* Semlib Items internal format using buckets
+* Annotation positioning based on highlighted fragment position
+* Zoom window up and running: right position, dimensions and with close button
+* Vocabulary improvements: on the fly loadable sets, draggable to pundit
+* All around restyling
+* Contextual menu working for: items, fragments, pundit items
+* Recent + favorite items integrated with semlib items
+* Recreated bookmarklet with all of these improvements
+
+
+0.4-independence_day
+
+* Every new release has its own annotations
+* Rebuilt the bookmarklet accordingly
+* Added pages to resolve and view single THCContents
+* Pundit moved in the upper bar (still some work to do)

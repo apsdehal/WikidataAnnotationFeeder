@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;XpointersHelper.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;XpointersHelper.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.XpointersHelper
+ * @extends pundit.baseComponent
+ * @description Provides a set of utilities to work with xpointers
+ * and xpaths. Massively used to consolidate and extract content
+ * from the DOM.
+ *&#x2F;
+dojo.provide(&quot;pundit.XpointersHelper&quot;);
+dojo.declare(&quot;pundit.XpointersHelper&quot;, pundit.BaseComponent, {
+
+    opts: {
+
+        &#x2F;&#x2F; Node name and class used to wrap our annotated content
+    	wrapNodeName: &#x27;span&#x27;,
+    	wrapNodeClass: &#x27;cons&#x27;,
+
+        &#x2F;&#x2F; Class used on a container to indicate it&#x27;s a named content: xpointers
+        &#x2F;&#x2F; will start from that node
+    	&#x2F;**
+         * @property contentClasses
+         * @type array of strings
+         * @description Class attached to this and that.
+         * @default [&#x27;pundit-content&#x27;]
+         *&#x2F;
+        contentClasses: [&#x27;pundit-content&#x27;],
+
+        &#x2F;&#x2F; Nodes with these classes will be ignored when building xpointers
+        &#x2F;&#x2F; and consolidating annotations
+        ignoreClasses: [&#x27;cons&#x27;, &#x27;pundit-icon-annotation&#x27;]
+
+    },
+
+    constructor: function(options) {
+        var self = this;
+        self.log(&#x27;xpointersHelper up and running&#x27;);
+    }, &#x2F;&#x2F; constructor()
+
+    getContentURIs : function() {
+    	var self = this,
+    	    contentUris = [];
+
+		&#x2F;&#x2F; Add current page url in the content URIs
+		contentUris.push(document.location.href);
+
+        &#x2F;&#x2F; Foreach content class, look for those items and extract the about field
+    	for (var i = self.opts.contentClasses.length - 1; i &gt;= 0; i--)
+		    dojo.query(&#x27;.&#x27; + self.opts.contentClasses[i]).forEach(function(node){
+				contentUris.push(dojo.attr(node, &quot;about&quot;));
+			});
+        self.log(&quot;# getContentURIs: &quot;+contentUris.length+&quot; new uris found&quot;);
+    	
+    	return contentUris;
+
+    }, &#x2F;&#x2F; getContentURIs()
+
+    &#x2F;&#x2F; Wraps all of the calculated xpaths with some htmltag and the computed
+    &#x2F;&#x2F; classes
+    updateDOM : function (sortedXpaths, htmlClasses) {
+        var self = this;
+
+        &#x2F;&#x2F; Highlight all of the xpaths
+        for (i=sortedXpaths.length-1; i&gt;0; i--) {
+            var start = sortedXpaths[i-1],
+                end = sortedXpaths[i];
+                
+            if (htmlClasses[i].length) {
+	            self.log(&quot;## Updating DOM, xpath &quot;+i+&quot;: &quot;+htmlClasses[i].join(&quot; &quot;));
+                self.wrapXPaths(start, end, self.opts.wrapNodeName, htmlClasses[i].join(&quot; &quot;)+&quot; &quot;+self.opts.wrapNodeClass);
+			}
+        }
+        self.log(&quot;Dom succesfully updated!&quot;)
+    }, &#x2F;&#x2F; updateDOM()
+
+    &#x2F;&#x2F; Wrap the range from startXp to endXp (two xpaths custom objects) with
+    &#x2F;&#x2F; the given tag _tag and html class _class. Will build a range for those
+    &#x2F;&#x2F; 2 xpaths, and starting from the range&#x27;s commonAncestorContainer, will
+    &#x2F;&#x2F; wrap all of the contained elements
+    wrapXPaths : function(startXp, endXp, _tag, _class) {
+        var self = this,
+            htmlTag = _tag || &quot;span&quot;,
+            htmlClass = _class || &quot;highlight&quot;,
+	        range = document.createRange(),
+            startNode = self.getNodeFromXpath(startXp.xpath),
+            endNode = self.getNodeFromXpath(endXp.xpath);
+		
+		&#x2F;&#x2F; If start and end xpaths dont have a node number [N], we
+		&#x2F;&#x2F; are wrapping the Mth=offset child of the given node
+		if (!startXp.xpath.match(&#x2F;\[[0-9]+\]$&#x2F;) &amp;&amp; !endXp.xpath.match(&#x2F;\[[0-9]+\]$&#x2F;)) {
+			range.selectNode(startNode.childNodes[startXp.offset]);
+		} else {
+
+			&#x2F;&#x2F; TODO: not sure... do we need to select a different node
+			&#x2F;&#x2F; if the xpath is missing a [N]??
+			&#x2F;&#x2F; if (!startXp.xpath.match(&#x2F;\[[0-9]+\]$&#x2F;))
+			&#x2F;&#x2F;	range.setStart();
+
+	        &#x2F;&#x2F; If it&#x27;s not a textnode, set the start (or end) before (or after) it
+	        if (!self.isElementNode(startNode))
+	            range.setStart(startNode, startXp.offset);
+	        else
+	            range.setStart(startNode, startXp.offset);
+
+	        if (!self.isElementNode(endNode))
+	            range.setEnd(endNode, endXp.offset);
+	        else
+	            range.setEndAfter(endNode);
+		}
+				
+        &#x2F;&#x2F; Wrap the nearest element which contains the entire range
+        self.wrapElement(range.commonAncestorContainer, range, htmlTag, htmlClass);
+
+    }, &#x2F;&#x2F; wrapXPath
+    
+    &#x2F;&#x2F; Wraps childNodes of element, only those which stay inside
+    &#x2F;&#x2F; the given range
+    wrapElement : function (element, range, htmlTag, htmlClass) {
+        var self = this;
+
+        &#x2F;&#x2F; If there&#x27;s childNodes, wrap them all
+        if (element.childNodes &amp;&amp; element.childNodes.length &gt; 0) 
+          for (var i=(element.childNodes.length-1); i&gt;=0 &amp;&amp; element.childNodes[i]; i--) 
+            self.wrapElement(element.childNodes[i], range, htmlTag, htmlClass);
+
+        &#x2F;&#x2F; Else it&#x27;s a leaf: if it&#x27;s a valid text node, wrap it!
+        else if (self.isTextNodeInsideRange(element, range)) 
+    		self.wrapNode(element, range, htmlTag, htmlClass);
+		&#x2F;&#x2F; MORE Else: it&#x27;s an image node.. wrap it up
+		else if (self.isImageNodeInsideRange(element, range)) 
+		    self.wrapNode(element, range, htmlTag, htmlClass);
+        
+    }, &#x2F;&#x2F; wrapElement()
+
+    &#x2F;&#x2F; Triple node check: will pass if it&#x27;s a text node, if it&#x27;s not
+    &#x2F;&#x2F; empty and if it is inside the given range
+    isTextNodeInsideRange : function(node, range) {
+        var self = this,
+            content;
+
+        &#x2F;&#x2F; Check: it must be a text node
+        if (node.nodeType !== Node.TEXT_NODE) 
+            return false;
+
+        &#x2F;&#x2F; Check: the content must not be empty
+        content = node.textContent.replace(&#x2F; &#x2F;g, &quot;&quot;).replace(&#x2F;\n&#x2F;, &quot;&quot;);
+        if (!node.data || content === &quot;&quot; || content === &quot; &quot;) 
+            return false;
+
+        &#x2F;&#x2F; Finally check if it&#x27;s in the range
+        return self.isNodeInsideRange(node, range)
+    },
+
+    isImageNodeInsideRange : function (node, range) {
+        var self = this;
+
+        &#x2F;&#x2F; Check: it must be an element node
+        if (node.nodeType !== Node.ELEMENT_NODE) 
+            return false;
+            
+	    &#x2F;&#x2F; Check: it must be an img
+        if (node.tagName.toLowerCase() !== &#x27;img&#x27;)
+            return false;
+        
+        return self.isNodeInsideRange(node, range)
+    },
+
+    &#x2F;&#x2F; Will check if the given node interesecates the given range somehow
+    isNodeInsideRange: function(node, range) {
+        var nodeRange = document.createRange();
+        try {nodeRange.selectNode(node);} 
+        catch (e) {nodeRange.selectNodeContents(node);}
+        if (range.compareBoundaryPoints(Range.END_TO_START || 3, nodeRange) != -1 || range.compareBoundaryPoints(Range.START_TO_END || 1, nodeRange) != 1)
+            return false;
+        return true
+    },
+    
+    &#x2F;&#x2F; Will wrap a node (or part of it) with the given htmlTag. Just part of it when it&#x27;s
+    &#x2F;&#x2F; on the edge of the given range and the range starts (or ends) somewhere inside it
+    wrapNode : function (element, range, htmlTag, htmlClass) {
+        var self = this,
+            r2 = document.createRange();
+
+        &#x2F;&#x2F; Select correct sub-range: if the element is the start or end container of the range
+        &#x2F;&#x2F; set the boundaries accordingly: if it&#x27;s startContainer use it&#x27;s start offset and set
+        &#x2F;&#x2F; the end offset to element length. If it&#x27;s endContainer set the start offset to 0
+        &#x2F;&#x2F; and the endOffset from the range. 
+        if (element === range.startContainer || element === range.endContainer) {
+            r2.setStart(element, (element === range.startContainer) ? range.startOffset : 0);
+            r2.setEnd(element, (element === range.endContainer) ? range.endOffset : element.length);
+
+        &#x2F;&#x2F; Otherwise just select the entire node, and wrap it up
+        } else 
+            r2.selectNode(element);
+
+        &#x2F;&#x2F; Finally surround the range contents with an ad-hoc crafted html element
+    	r2.surroundContents(self.createWrapNode(htmlTag, htmlClass));	
+        
+    }, &#x2F;&#x2F; wrapNode()
+
+    &#x2F;&#x2F; Creates an HTML element to be used to wrap (usually a span?) adding the given
+    &#x2F;&#x2F; classes to it
+    createWrapNode : function(htmlTag, htmlClass) {
+        var element = document.createElement(htmlTag);
+        dojo.query(element).addClass(htmlClass);
+        return element;
+    },
+
+    getClassesForNewXpointers : function (xpointers, sortedXpaths, xpaths, xpointersClasses) {
+        var self = this,
+            real_xps = [],
+			htmlClasses = [];
+			
+        &#x2F;&#x2F; Iterate through the sortedXpaths from 1st to Nth and accumulate
+        &#x2F;&#x2F; the active classes, looking at what xpointers are starting and
+        &#x2F;&#x2F; ending in the current xpath position
+        for (var i=0; i&lt;sortedXpaths.length-1; i++) {
+            
+            var start = sortedXpaths[i],
+                end = sortedXpaths[i+1],
+                addxps = self.getStartingXPs(xpointers, xpaths, start.xpath, start.offset),
+                remxps = self.getEndingXPs(xpointers, xpaths, start.xpath, start.offset);
+                
+            real_xps = self.addToArray(real_xps, addxps);
+            real_xps = self.removeFromArray(real_xps, remxps);
+
+            var classes = [];
+            for (var j = real_xps.length - 1; j &gt;= 0; j--) {
+                var xp = real_xps[j];
+                for (var k = xpointersClasses[xp].length - 1; k &gt;= 0; k--){
+                    classes.push(xpointersClasses[xp][k]);
+                };
+            };
+            
+            htmlClasses[i+1] = classes;
+
+        } &#x2F;&#x2F; for i
+		self.log(&quot;Got classes for new xpointers&quot;);
+
+		return htmlClasses;
+    }, &#x2F;&#x2F; getClassesForNewXpointers()
+
+    &#x2F;&#x2F; Given an xpath&#x2F;offset couple, returns all of the xpointers
+    &#x2F;&#x2F; which starts there
+    getStartingXPs : function(xpointers, xpaths, xpath, offset) {
+        var self = this,
+            ret = [];
+            
+        for (var i = xpointers.length - 1; i &gt;= 0; i--) {
+            var xp = xpointers[i];
+            if (xpaths[xp].startxpath === xpath &amp;&amp; xpaths[xp].startoffset === offset)
+                ret.push(xp);
+        }
+        return ret;
+    },
+
+    &#x2F;&#x2F; Given an xpath&#x2F;offset couple, returns all of the xpointers
+    &#x2F;&#x2F; which ends there
+    getEndingXPs : function(xpointers, xpaths, xpath, offset) {
+        var self = this,
+            ret = [];
+            
+        for (var i = xpointers.length - 1; i &gt;= 0; i--) {
+            var xp = xpointers[i];
+            if (xpaths[xp].endxpath === xpath &amp;&amp; xpaths[xp].endoffset === offset) 
+                ret.push(xp);
+        }
+        return ret;
+    },
+
+    &#x2F;&#x2F; Will return an array of sorted xpaths, using a custom structure
+    &#x2F;&#x2F;xpaths object
+    splitAndSortXPaths : function (xpaths) {
+        var self = this,
+            x = [],
+            &#x2F;&#x2F; We just need a starting point to sort the xpaths, taking the first node and use
+            &#x2F;&#x2F; an end_by_end comparison will do the job
+            startNode = self.getNodeFromXpath(&#x27;&#x2F;&#x2F;body&#x27;);
+
+
+        &#x2F;&#x2F; For every xpointer we create 2 entries in the array: one for starting xpath
+        &#x2F;&#x2F; and one for the ending one
+        for (var xpointer in xpaths) {
+
+            self.log(&quot;## Splitting and sorting &quot;+ xpointer);
+
+            &#x2F;&#x2F; Push an element for the starting xpath+offset
+            var range = document.createRange(),
+                node = self.getNodeFromXpath(xpaths[xpointer].startxpath);
+            range.setStart(startNode, 0);
+            range.setEnd(node, xpaths[xpointer].startoffset);
+
+            x.push({
+                xpointer: xpointer,
+                xpath: xpaths[xpointer].startxpath,
+                offset: xpaths[xpointer].startoffset,
+                range: range
+            });
+
+            &#x2F;&#x2F; Another time for the ending xpath+offset
+            range = document.createRange();
+            node = self.getNodeFromXpath(xpaths[xpointer].endxpath);
+            range.setStart(startNode, 0);
+            range.setEnd(node, xpaths[xpointer].endoffset);
+
+            x.push({
+                xpointer: xpointer,
+                xpath: xpaths[xpointer].endxpath,
+                offset: xpaths[xpointer].endoffset,
+                range: range
+            });
+
+        } &#x2F;&#x2F; for xpointer in self.xpaths
+
+        &#x2F;&#x2F; Sort this array, using a custom function which compares the
+        &#x2F;&#x2F; range fields
+        x.sort(self._sortFunction);
+
+        &#x2F;&#x2F; Erase doubled entries
+        x = self.unique(x);
+        
+        return x;
+        
+    }, &#x2F;&#x2F; splitAndSortXPaths()
+
+    &#x2F;&#x2F; Extracts the xpaths from the xpointers, and sets the array
+    getXPathsFromXPointers: function (xpArray) {
+        var self = this,
+            xpointers = [],
+            xpaths = {};
+
+        for (var i = xpArray.length - 1; i &gt;= 0; i--) 
+            xpointers = self.addToArray(xpointers, [xpArray[i]]);
+
+        for (var i = xpArray.length - 1; i &gt;= 0; i--) {
+            var xp = xpArray[i],
+                obj = self.xPointerToXPath(xp);
+
+            if (obj.valid) {
+                xpaths[xp] = obj;
+            } else {
+                self.log(&quot;REMOVING &quot;+xp+&quot; from xpointers, it&#x27;s not valid :(&quot;);
+                xpointers = self.removeFromArray(xpointers, [xp]);
+            }
+        } &#x2F;&#x2F; for i
+
+        self.log(&quot;# Consolidating &quot;+xpointers.length+&quot; valid xpointers out of &quot;+xpArray.length+&quot; passed in.&quot;);
+
+        return {xpaths: xpaths, xpointers: xpointers};
+    }, &#x2F;&#x2F; getXPathsFromXPointers()
+
+	&#x2F;&#x2F; Will return an object with startxpath, startoffset, endxpath, endoffset
+    &#x2F;&#x2F; splitting the given xpointer
+    xPointerToXPath: function(xpointer) {
+        var self = this,
+            splittedString,
+            ret = {},
+            foo,
+            startNode, endNode;
+
+        &#x2F;&#x2F; Split the xpointer two times, to extract a string 
+        &#x2F;&#x2F; like &#x2F;&#x2F;xpath1[n1],&#x27;&#x27;,o1,&#x2F;&#x2F;xpath2[n2],&#x27;&#x27;,o2
+        &#x2F;&#x2F; where o1 and o2 are the offsets
+        splittedString = xpointer.split(&quot;#xpointer(start-point(string-range(&quot;)[1].split(&quot;))&#x2F;range-to(string-range(&quot;);
+        
+        &#x2F;&#x2F; Then extract xpath and offset of the starting point
+        foo = splittedString[0].split(&quot;,&#x27;&#x27;,&quot;);
+        ret.startxpath = foo[0];
+        ret.startoffset = foo[1];
+
+        &#x2F;&#x2F; .. and of the ending point of the xpointer
+        foo = splittedString[1].substr(0, splittedString[1].length - 3).split(&quot;,&#x27;&#x27;,&quot;);
+        ret.endxpath = foo[0];
+        ret.endoffset = foo[1];
+
+        &#x2F;&#x2F; Is the xpointer valid in this DOM? 
+        startNode = self.getNodeFromXpath(ret.startxpath);
+        endNode = self.getNodeFromXpath(ret.endxpath);
+        ret.valid = self.isValidRange(startNode, ret.startoffset, endNode, ret.endoffset)
+		&#x2F;&#x2F; !(startNode === null || endNode === null);
+
+        return ret;
+    }, &#x2F;&#x2F; xPointerToXPath
+    
+	isValidRange: function(startNode, startOffset, endNode, endOffset) {
+
+		try {
+			var r = document.createRange();
+			r.setStart(startNode, startOffset);
+			r.setEnd(endNode, endOffset);
+			return true;
+		} catch (e) {
+			return false;
+		}
+	},
+
+    &#x2F;&#x2F; Returns the DOM Node pointed by the xpath. Quite confident we can always get the 
+    &#x2F;&#x2F; first result of this iteration, the second should give null since we dont use general
+    &#x2F;&#x2F; purpose xpaths 
+    getNodeFromXpath : function (xpath) {
+        var self = this,
+            iterator;
+        iterator = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+
+        return iterator.singleNodeValue;
+    },
+
+    &#x2F;&#x2F; Concatenates two given arrays
+    addToArray : function (arr, add) {
+        return arr.concat(add);
+    },
+
+    &#x2F;&#x2F; Removes the rem[] elements from arr[]
+    removeFromArray : function (arr, rem) {
+        var ret = [];
+        for (var i = arr.length - 1; i &gt;= 0; i--) 
+            if (rem.indexOf(arr[i]) === -1)
+                ret.push(arr[i]);
+        return ret;
+    },
+
+    &#x2F;&#x2F; Gets a sorted xpath objects array and returns another array where the elements 
+    &#x2F;&#x2F; are unique: just iterates through the original array and skip the element if it&#x27;s
+    &#x2F;&#x2F; equal to the last newArr element.
+    unique : function (arr) {
+        var newArr = [],
+            len = arr.length;
+        
+        newArr[0] = arr[0];
+        for (var i=1, j=0; i&lt;len; i++) 
+            if (arr[i].xpath != newArr[j].xpath || arr[i].offset != newArr[j].offset) 
+                newArr[++j] = arr[i];
+        
+        return newArr;
+    },
+
+    &#x2F;&#x2F; Will be used as sort function for array&#x27;s sort. Compares the end
+    &#x2F;&#x2F; points of the ranges in the passed object
+    _sortFunction : function (a, b) {
+        return a.range.compareBoundaryPoints(Range.END_TO_END, b.range);
+    },
+
+	&#x2F;&#x2F; Takes a range and extracts a readable description of its content. 
+	&#x2F;&#x2F; Text is preserved, while imgs are replaced by an &quot;Image&quot; string
+	&#x2F;&#x2F; TODO: there is a bug here! try with small range...
+	extractContentFromRange: function (range) {
+
+		if (range === null) return &quot;&quot;;
+
+		var self = this,
+			content = &#x27;&#x27;,
+			clone = range.cloneContents(),
+			children = clone.childNodes,
+			len = children.length;
+
+		for (var i=0; i&lt;len; i++) content += self.extractContentFromNode(children[i]);
+                
+		return content;
+	}, &#x2F;&#x2F; extractContentFromRange()
+
+	extractContentFromNode: function (node) {
+		var self = this,
+			content = &#x27;&#x27;,
+			type = node.nodeType;
+			
+		if (self.isElementNode(node)) {
+			if (node.nodeName.toUpperCase() === &quot;IMG&quot;) {
+                var src;
+				if (src = dojo.attr(node, &#x27;src&#x27;)) {
+					var idx = src.lastIndexOf(&quot;&#x2F;&quot;);
+					if (idx !== -1) 
+						src = src.substr(idx + 1, src.length - idx);
+				} else 
+					src = &quot;unknown location&quot;;
+				
+				content += &quot;[img: &quot; + src + &quot;]&quot;;
+
+			} else {
+				var children = node.childNodes,
+					len = children.length;
+				for (var i=0; i&lt;len; i++) 
+					content += self.extractContentFromNode(children[i]);
+
+			}
+			
+		} else if (!self.isCommentNode(node)) 
+			if (typeof(node.textContent) !== &#x27;undefined&#x27;)
+				content += node.textContent;
+
+		return content;
+	}, &#x2F;&#x2F; extractContentFromNode()
+
+	isUIButton: function(node) {
+		var self = this;
+		
+		if (!self.isElementNode(node))
+			return false;
+			
+		if (node.nodeName.toUpperCase() !== &#x27;A&#x27;)
+			return false;
+		
+		if (dojo.hasClass(node, &#x27;pundit-icon-annotation&#x27;))
+			return true;
+			
+		return false;
+	},
+
+    &#x2F;&#x2F; Returns true if the given node is a tag which should be ignored, like
+    &#x2F;&#x2F; a THCtag (span? something)
+    isIgnoreNode: function(node) {
+        var self = this;
+        
+        if (!self.isElementNode(node)) 
+            return false;
+
+        var i, c = self.opts.ignoreClasses;
+        &#x2F;&#x2F;for (i in c)
+        for (i = c.length; i--;)
+            if (dojo.hasClass(node, c[i])) 
+                return true;
+
+        return false;
+    }, &#x2F;&#x2F; isIgnoreNode()
+    isTextNode:    function(node) {return node.nodeType === Node.TEXT_NODE;},
+    isElementNode: function(node) {return node.nodeType === Node.ELEMENT_NODE;},
+    isCommentNode: function(node) {return node.nodeType === Node.COMMENT_NODE;},
+	isWrapNode: function(node) {
+		var self = this;
+		
+		&#x2F;&#x2F; Not an element node.. return false
+		if (!self.isElementNode(node))
+			return false;
+
+		&#x2F;&#x2F; If the node name is wrong.. return false
+		if (node.nodeName.toUpperCase() !== self.opts.wrapNodeName.toUpperCase())
+			return false;
+		
+		&#x2F;&#x2F; It is an element, with the right name, if it has
+		&#x2F;&#x2F; the wrap class, it is a wrap node!
+		if (dojo.hasClass(node, self.opts.wrapNodeClass))
+			return true;
+		
+		return false;
+	}, &#x2F;&#x2F; isWrapNode()
+	isWrappedElementNode: function(node) {
+		var self = this;
+		
+		if (!self.isWrapNode(node))
+			return false;
+			
+		if (!self.isElementNode(node.firstChild))
+			return false;
+
+		return true;
+	},
+	isWrappedTextNode: function(node) {
+		var self = this;
+		
+		if (!self.isWrapNode(node))
+			return false;
+			
+		if (!self.isTextNode(node.firstChild))
+			return false;
+
+		return true;
+	},
+    isContentNode: function (node) {
+        var self = this;
+        
+		if (!self.isElementNode(node)) 
+			return false;
+
+        var i, c = self.opts.contentClasses;
+        &#x2F;&#x2F;for (i in c)
+        for (i = c.length; i--;)
+            if (dojo.hasClass(node, c[i])) 
+                return true;
+
+        return false;
+	}, &#x2F;&#x2F; isContentNode
+
+	&#x2F;&#x2F; Will merge all the text nodes under the given node, going down the DOM 
+	&#x2F;&#x2F; recursively
+    mergeTextNodes: function(node) {
+        var self = this;
+		
+        if (!node) return;
+		
+        &#x2F;&#x2F;if (node.childNodes &amp;&amp; node.childNodes.length &gt; 0) {
+        if ((typeof(node.childNodes) !== &quot;undefined&quot;) &amp;&amp; (node.childNodes.length &gt; 0)) {
+            var i= node.childNodes.length-1;
+                        
+            &#x2F;&#x2F;TODO Fix this bug. Used try catch.
+            try{
+                var child, sibling;
+                while (child = node.childNodes[i--]) {
+                    if (self.isTextNode(child) &amp;&amp; (sibling = node.childNodes[i]) &amp;&amp; self.isTextNode(sibling)) {
+                        sibling.nodeValue = sibling.nodeValue + child.nodeValue;
+                        node.removeChild(child);
+                    } else if (self.isElementNode(child))
+                        self.mergeTextNodes(child);
+
+                }
+            } catch(err){
+                            
+            }
+        }
+        
+    },
+    
+    getXpFromNode:function(node){
+     var range = document.createRange();
+        range.selectNode(node);
+        return fragmentHandler.range2xpointer(fragmentHandler.dirtyRange2cleanRange(range)); 
+    }
+
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

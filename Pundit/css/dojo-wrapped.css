@@ -1,0 +1,121 @@
+/* 
+    Pundit: a novel semantic web annotation tool
+    Copyright (c) 2013 Net7 SRL, <http://www.netseven.it/>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    See LICENSE.TXT or visit http://thepund.it for the full text of the license.
+*/
+.pundit-base div, .pundit-base span, .pundit-base dl, .pundit-base dt, .pundit-base dd, .pundit-base li, .pundit-base h1, .pundit-base h2, .pundit-base h3, .pundit-base h4, .pundit-base h5, .pundit-base h6, .pundit-base pre, .pundit-base form, .pundit-base fieldset, .pundit-base input, .pundit-base textarea, .pundit-base p, .pundit-base blockquote, .pundit-base th, .pundit-base td {	
+	margin: 0;
+	padding: 0;
+    text-align: left;
+}
+.pundit-base div{
+    color : #333;
+}
+.pundit-base fieldset, .pundit-base img {
+	border: 0 none;
+}
+.pundit-base address, .pundit-base caption, .pundit-base cite, .pundit-base code, .pundit-base dfn, .pundit-base th, .pundit-base var {
+	font-style: normal; 
+	font-weight: normal;
+}
+.pundit-base caption, .pundit-base th {
+	text-align: left;
+}
+.pundit-base q:before, .pundit-base q:after {
+	content:"";
+}
+.pundit-base abbr, .pundit-base acronym {
+	border:0;
+}
+.pundit-base { 
+	/* font: 12px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif; 
+	*font-size: 75%; */
+}
+.pundit-base h1 {
+	font-size: 1.5em; 
+	font-weight: normal;
+	line-height: 1em; 
+	margin-top: 1em;
+	margin-bottom:0;
+}
+.pundit-base h2 { 
+	font-size: 1.1667em; 
+	font-weight: bold; 
+	line-height: 1.286em; 
+	margin-top: 1.929em; 
+	margin-bottom:0.643em;
+}
+.pundit-base h3, .pundit-base h4, .pundit-base h5, .pundit-base h6 {
+	font-size: 1em; 
+	font-weight: bold; 
+	line-height: 1.5em; 
+	margin-top: 1.5em; 
+	margin-bottom: 0;
+}
+.pundit-base p { 
+	font-size: 1em; 
+	margin-top: 1.5em; 
+	margin-bottom: 1.5em; 
+	line-height: 1.5em;
+}
+.pundit-base blockquote { 
+	font-size: 0.916em; 
+	margin-top: 3.272em; 
+	margin-bottom: 3.272em; 
+	line-height: 1.636em; 
+	padding: 1.636em; 
+	border-top: 1px solid #ccc; 
+	border-bottom: 1px solid #ccc;
+}
+.pundit-base ol li, .pundit-base ul li { 
+	font-size: 12px; 
+	line-height: 1.5em; 
+	margin: 0;
+}
+.pundit-base pre, .pundit-base code { 
+	font-size:115%;
+	*font-size:100%;
+	font-family: Courier, "Courier New"; 
+	background-color: #efefef; 
+	border: 1px solid #ccc;
+}
+.pundit-base pre { 
+	border-width: 1px 0; 
+	padding: 1.5em;
+}
+.pundit-base table {  font-size:100%; }
+.dojoTabular { 
+	border-collapse: collapse; 
+	border-spacing: 0; 
+	border: 1px solid #ccc; 
+	margin: 0 1.5em;
+}
+.dojoTabular th { 
+	text-align: center; 
+	font-weight: bold;
+}
+.dojoTabular thead,
+.dojoTabular tfoot { 
+	background-color: #efefef; 
+	border: 1px solid #ccc; 
+	border-width: 1px 0; 
+}
+.dojoTabular th,
+.dojoTabular td { 
+	padding: 0.25em 0.5em;
+}
+

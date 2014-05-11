@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;TooltipAnnotationViewer.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;TooltipAnnotationViewer.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+dojo.provide(&quot;pundit.TooltipAnnotationViewer&quot;);
+dojo.declare(&quot;pundit.TooltipAnnotationViewer&quot;, pundit.BaseComponent, {
+
+
+    opts: {
+        hideMouseLeaveMS: 500
+    },
+
+    constructor: function(options) {
+        var self = this;
+
+        self.createCallback([
+            &#x27;AnnotationIconMouseEnter&#x27;, 
+            &#x27;AnnotationIconMouseLeave&#x27;, 
+            &#x27;AnnotationIconMouseClick&#x27;,
+            &#x27;Consolidate&#x27;,
+            &#x27;NotebookActivationChanged&#x27;
+        ]);
+        
+        self.initBehaviors();
+        self.hideTimer = [];
+        self.highlightCount = [];
+        
+        self.helper = new pundit.XpointersHelper();
+        self.reader = new pundit.AnnotationReader();
+		self.writer = new pundit.AnnotationWriter();
+        self.jobId = null;
+        
+        self.initReader();
+		self.initWriter();
+
+        self.contentURIs = self.helper.getContentURIs();
+        self.initContextualMenu();
+        
+        &#x2F;&#x2F;refresh all
+        self.refreshPageItems = false;
+        
+        tripleComposer.onSave(function() {
+            self.refreshAnnotations();
+        });
+
+        &#x2F;&#x2F; True if we are not ready to show annotations: we must
+        &#x2F;&#x2F; wait for them to be loaded and consolidated
+        self.isRefreshingAnnotations = true;
+
+        _PUNDIT.init.onInitDone(function() {
+            self.refreshAnnotations();
+        });
+
+		self.notebooks = {};
+
+        self.log(&quot;TooltipAnnotationViewer Up and running&quot;);
+
+    }, &#x2F;&#x2F; constructor()
+    
+	initWriter: function() {
+		var self = this;
+		
+		self.writer.onSetNotebookActive(function(id, flag) { 
+			semlibWindow.closeAllPanels();
+			self.refreshAnnotations();
+            self.fireOnNotebookActivationChanged();
+        });
+	},
+
+    initReader: function() {
+        var self = this;
+        
+        &#x2F;&#x2F; First step: get metadata for thcuris on this page
+        self.reader.onAnnotationMetadata(function(g) { 
+            &#x2F;&#x2F; Already in progress?
+            if (!self.jobId) {
+                &#x2F;&#x2F;When deleting one annotation I need to resfresh all page items
+                if (self.refreshPageItems){
+                    &#x2F;&#x2F;TODO use function for this
+                    semlibItems.itemsDnD.forInItems(function(item){
+                    if (item.data.rdftype[0] != ns.rdf_property)
+                            semlibItems.removeItemFromUri(item.data.value);
+                    });
+                    self.refreshPageItems = false;
+                }
+                
+                self.jobId = _PUNDIT.loadingBox.addJob(&#x27;Downloading annotation content&#x27;);
+                self.addAnnotations(g);
+				for (var notebook_id in self.notebooks) { &#x2F;&#x2F;ok object
+					self.reader.checkNotebook(notebook_id);	
+				}
+				
+                self.consolidate();
+                dojo.behavior.apply();
+            } else {
+                console.log(&#x27;DEBUG: two refresh() Too fast?!?&#x27;);
+            }
+            
+        });
+        
+        &#x2F;&#x2F; Second step: addAnnotations is calling AnnotationContent
+        &#x2F;&#x2F; on every valid annotation
+        self.reader.onAnnotationContent(function(g, id) {
+			self.log(&#x27;Annotation content for &#x27;+id+&#x27; received&#x27;);
+            self.addAnnotationContent(id, g);
+            self.reader.getAnnotationItemsFromId(id);
+        });
+        
+        self.reader.onAnnotationItems(function(g, id) {
+			self.log(&#x27;Annotation items for &#x27;+id+&#x27; received&#x27;);
+            self.addAnnotationItems(id, g);
+            if (--self.annToDownload === 0) {
+                self.consolidate();
+                _PUNDIT.loadingBox.setJobOk(self.jobId);
+                self.isRefreshingAnnotations = false;
+                self.jobId = null;
+            }
+        });
+        
+        self.reader.onNotebookChecked(function(id, flag) {
+			self.log(&#x27;Notebook &#x27; + id + &#x27; cheked: active = &#x27; + flag);
+			self.notebooks[id] = flag;
+        });
+
+        self.reader.onError(function(e) {
+            &#x2F;&#x2F; TODO: add a callback for each call, and handle the errors
+            console.log(&#x27;TODO: Reader got an error, deal with it!&#x27;, e);
+            return false;
+        });
+        
+    }, &#x2F;&#x2F; initReader()
+    
+    showAllAnnotationsOnItem: function(xp) {
+        var self = this;
+        
+        for (var i = self.xpointersAnnotationsId[xp].length - 1; i &gt;= 0; i--) {
+            self.log(&#x27;RDF Icon click: Opening panel for annotation &#x27;+self.xpointersAnnotationsId[xp][i]);
+            self.showAnnotationPanel(self.xpointersAnnotationsId[xp][i], xp);
+        }
+        
+        var y = dojo.position(dojo.query(&#x27;span.&#x27;+self.xpointersClasses[xp])[0], true).y,
+            bodyTop = dojo.query(&#x27;body&#x27;)[0].scrollTop;
+            
+        if ((y - bodyTop &lt; dojo.position(&#x27;pundit-gui&#x27;, true).h) || (y - bodyTop  &gt; window.innerHeight))
+            dojox.fx.smoothScroll({
+                node : dojo.query(&#x27;span.&#x27;+self.xpointersClasses[xp])[0],
+                offset: {y: dojo.position(&#x27;pundit-gui&#x27;, true).h + 100},
+                win: window,
+                duration: 800
+            }).play();
+        
+        return true;	
+	},
+
+	areAllAnnotationsOnItemOpened: function(xp) {
+		var self = this;
+		if (typeof(self.xpointersAnnotationsId[xp]) === &#x27;undefined&#x27;)
+            return false;
+        return semlibWindow.getOpenedPanelsByXpointer(xp).length &gt; 0;
+	},
+
+    initContextualMenu: function() {
+        var self = this;
+
+		cMenu.addAction({
+            type: [&#x27;annotatedtextfragment&#x27;],
+            name: &#x27;openAll&#x27;,
+            label: &#x27;Show all annotations on this item&#x27;,
+            showIf: function(item) { 
+                return true;
+                &#x2F;*
+                var toCheck = item.value;
+                &#x2F;&#x2F; TODO: hack to support image fragment anntoations: TO REMOVE
+                if (item.rdftype.indexOf(ns.fragments.image) !== -1) {
+                    toCheck = semlibImageFragmentHandler.getParentImageXpointer(item.value);
+                } 
+				if (typeof(self.xpointersAnnotationsId[toCheck]) !== &#x27;undefined&#x27;){
+                    var ann = self.xpointersAnnotationsId[toCheck].length,
+                    open = semlibWindow.getOpenedPanelsByXpointer(toCheck).length;
+                    return open &lt; ann;
+                }else{
+                    return false;
+                }
+                *&#x2F;
+                
+				&#x2F;*	
+		        var ann = self.xpointersAnnotationsId[xp].length,
+		            open = semlibWindow.getOpenedPanelsByXpointer(xp).length;
+		        return open &lt; ann;
+				*&#x2F;
+            },
+            onclick: function(item) {
+                var toShow = item.value;
+                &#x2F;&#x2F; TODO: hack to support image fragment anntoations: TO REMOVE
+                if (item.rdftype.indexOf(ns.fragments.image) !== -1) {
+                    toShow = item.parentItemXP;
+                } 
+				&#x2F;&#x2F;TODO: fix this it shuold not be necessary to hide panels but they are not positioned correctly at the moment.
+				semlibWindow.closePanelByXpointer(toShow);
+                self.showAllAnnotationsOnItem(toShow);
+				return true;
+            }
+        });
+
+        cMenu.addAction({
+            type: [&#x27;annotatedtextfragment&#x27;],
+            name: &#x27;closeAll&#x27;,
+            label: &#x27;Close all annotations on this item&#x27;,
+            showIf: function(item) { 
+                return self.areAllAnnotationsOnItemOpened(item.value);
+            },
+            onclick: function(item) {
+                semlibWindow.closePanelByXpointer(item.value);
+                return true;
+            }
+        });
+        
+        &#x2F;&#x2F; Zoom on the xpointer if it&#x27;s consolidated
+        cMenu.addAction({
+            type: [&#x27;__all&#x27;],
+            name: &#x27;zoomItem&#x27;,
+            label: &#x27;Zoom on this item&#x27;,
+            showIf: function(item) { 
+                &#x2F;&#x2F; TODO Use a higher level class for handling fragment!
+                &#x2F;&#x2F;return ((typeof self.xpointersAnnotationsId[xp] !== &#x27;undefined&#x27;) || self.isAnnXpointer(xp) || self.isTempXpointer(xp));
+				return self.xpointersClasses[item.value];
+            },
+            onclick: function(item) {
+                self.zoomOnXpointer(item.value);
+                return true;
+            }
+        });
+        
+        cMenu.addAction({
+            type: [&#x27;bookmarkedtextfragment&#x27;],
+            name: &#x27;removeSelection&#x27;,
+            label: &#x27;Remove from My Items&#x27;,
+            showIf: function(item){
+                if (typeof semlibMyItems.getItemFromUri(item.value) !== &#x27;undefined&#x27;)
+                    return true;
+                else
+                    return false;
+            },
+            onclick: function(item) {
+                &#x2F;&#x2F;semlibMyItem.removeMyItem();
+                
+                &#x2F;&#x2F;DEBUG Remove item from my items and from page items
+                semlibMyItems.removeItemFromUri(item.value);
+                self.removeTempXpointer(item.value);
+                
+                &#x2F;&#x2F;tooltip_viewer.refreshAnnotations();
+
+                tooltip_viewer.consolidate();
+                return true;
+            }
+        });
+
+        cMenu.addAction({
+            type: [&#x27;textfragment&#x27;,&#x27;annotatedtextfragment&#x27;],
+            name: &#x27;AddAnnotatedItemToMyItems&#x27;,
+            label: &#x27;Add to My Items&#x27;,
+            showIf: function(item) { 
+                return !semlibMyItems.uriInItems(item.value);
+            },
+            onclick: function(item) {
+		        tooltip_viewer.highlightByXpointer(item.value);
+                var item = semlibItems.getItemFromUri(item.value);
+                if (typeof item !== &#x27;undefined&#x27;){
+                    &#x2F;&#x2F;tripleComposer.addItemToSubject(item);
+                    semlibMyItems.addItem(item, true);
+                    &#x2F;&#x2F;semlibWindow.show_pundittabmyitems();
+                    semlibMyItems.show_pundittabfiltermyitemsfragment();
+                }
+		        return true;
+            }
+        });
+        
+        cMenu.addAction({
+            type: [&#x27;annotatedtextfragment&#x27;, ],
+            name: &#x27;RemoveAnnotatedItemFromMyItems&#x27;,
+            label: &#x27;Remove from My Items&#x27;,
+            showIf: function(item) { 
+                return semlibMyItems.uriInItems(item.value);
+            },
+            onclick: function(item) {
+	            semlibMyItems.removeItemFromUri(item.value);
+	            tooltip_viewer.removeTempXpointer(item.value);
+                &#x2F;&#x2F; tooltip_viewer.refreshAnnotations();
+                &#x2F;&#x2F; DEBUG: not sure we can avoid the refreshAnnotations() process
+                tooltip_viewer.consolidate();
+	            return true;
+	        }
+        });
+        
+        &#x2F;&#x2F; Subscribe the callbacks for the annotatedtextfragment type: 
+        &#x2F;&#x2F; show: highlight the passed xpointer
+        cMenu.onTypeShow_annotatedtextfragment(function(xp) {
+            self.highlightByXpointer(xp);
+        });
+        cMenu.onTypeHide_annotatedtextfragment(function(xp) {
+            self.removeHighlightByXpointer(xp);
+        });
+
+        &#x2F;&#x2F; Subscribe the callbacks for the bookmarkedtextfragment type: 
+        &#x2F;&#x2F; show: highlight the passed xpointer
+        cMenu.onTypeShow_bookmarkedtextfragment(function(xp) {
+            self.highlightByXpointer(xp);
+        });
+        cMenu.onTypeHide_bookmarkedtextfragment(function(xp) {
+            self.removeHighlightByXpointer(xp);
+        });
+        
+    }, &#x2F;&#x2F; initContextualMenu()
+
+    getAnnotationFromAnnId: function(ann_id) {
+        for (var xp in this.annotations) &#x2F;&#x2F;ok object
+            if (this.annotations[xp].id === ann_id) 
+                return this.annotations[xp];
+    },
+
+    showAllAnnotations: function() {
+        var self = this;
+        
+        if (self.annIds === null || self.annIds === undefined) {
+            self.log(&quot;ERROR: Annotaion panel not ready, not showing all annotations.&quot;);
+            return;
+        } 
+
+        for (var i=self.annIds.length; i--;) {
+            var annId = self.annIds[i];
+                self.showAnnotationPanel(annId); 
+        }
+        
+    },
+    
+    removeTargetFromAnnotation: function(uri, ann_id) {
+        var self = this,
+            index;
+        
+        if ((index = self.annotations[ann_id].targets.indexOf(uri)) !== -1) 
+            self.annotations[ann_id].targets.splice(index, 1);        
+    },
+
+	&#x2F;**
+        Determines if an annotation has targets appointed
+        @method annotationHasTargets
+        @description 
+        @param ann_id {string} the id of the annotation to be checked
+        @return true if the annotation has targets, false otherwise
+    *&#x2F;
+	annotationHasTargets: function(ann_id) {
+		var self = this;
+		return !(self.annotations[ann_id].targets == 0);
+	},
+
+	isNotebookActive: function(notebook_id) {
+		var self = this;
+		return self.notebooks[notebook_id] == 1;		
+	},
+	
+	&#x2F;**
+        Creates and shows the view panel of an annotation.
+        @method showAnnotationPanel
+        @param ann_id {string} the id of the annotation to be visualized
+        @param clickedXP {string} the xpointer correspoding to the page fragment that user selected.
+    *&#x2F;
+    showAnnotationPanel: function(ann_id, clickedXP) {
+        var self = this,
+            panel_id = &#x27;dialog_&#x27;+ann_id+&#x27;_content&#x27;;
+		
+        &#x2F;&#x2F; Is the panel already there?
+        if (dojo.query(&#x27;#&#x27;+panel_id).length &gt; 0) {
+
+            &#x2F;&#x2F; TODO: flash the panel window?
+            &#x2F;&#x2F;DEBUG ??? Why set the Xpointer if is already there????
+            &#x2F;&#x2F;semlibWindow.setPositioningXpointer(panel_id, clickedXP);
+ 			&#x2F;&#x2F;semlibWindow.positionPanels();
+            self.log(&quot;Panel for annotation id &quot;+ann_id+&quot; is already open!&quot;);
+            return;
+        }
+		
+        var ann = self.annotations[ann_id],
+            panel_content = &#x27;&#x27;,
+            panel_buttons = &#x27;&#x27;,
+            c = ann.content,
+            m = ann.metadata,
+			items = ann.items,
+			notebook_url = m[ns.pundit_isIncludedIn][0].value,
+			notebook_id = notebook_url.split(&quot;&#x2F;&quot;)[notebook_url.split(&quot;&#x2F;&quot;).length-1],
+            panelXpointers = [],
+            author_name,
+            author_uri = m[ns.pundit_authorURI][0].value,
+            annotation_date = m[ns.pundit_annotationDate][0].value;
+		
+		&#x2F;*
+		if (items == null) {
+			throw &quot;Pundit-DataNotReady&quot;;
+		}
+		*&#x2F;
+		
+        self.log(&quot;Showing annotation panel for &quot;+ann_id);
+
+        &#x2F;&#x2F; TODO: ACL on the annotation? On the notebook?
+        &#x2F;&#x2F; TODO: add again the EDIT button
+        &#x2F;&#x2F; panel_buttons += &quot;&lt;span class=&#x27;swButton edit&#x27; about=&#x27;&quot;+ann_id+&quot;&#x27;&gt;Edit&lt;&#x2F;span&gt;&quot;;
+        if (author_uri === myPundit.user.uri) {
+            panel_buttons += &quot;&lt;span class=&#x27;pundit-gui-button delete&#x27; about=&#x27;&quot;+ann_id+&quot;&#x27;&gt;Delete&lt;&#x2F;span&gt;&quot;;
+		}	
+		
+		if (_PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].active === true &amp;&amp; _PUNDIT.config.modules[&#x27;pundit.NotebookManager&#x27;].activateFromAnnotations === true) {
+		
+			if (self.isNotebookActive(notebook_id)) {
+				panel_buttons += &quot;&lt;span class=&#x27;pundit-gui-button deactivate&#x27; about=&#x27;&quot;+notebook_id+&quot;&#x27;&gt;Deactivate&lt;&#x2F;span&gt;&quot;;
+			} else {
+				panel_buttons += &quot;&lt;span class=&#x27;pundit-gui-button activate&#x27; about=&#x27;&quot;+notebook_id+&quot;&#x27;&gt;Activate&lt;&#x2F;span&gt;&quot;;
+			}
+			
+		}
+			
+
+		if (typeof(m[ns.pundit_authorName]) !== &#x27;undefined&#x27; &amp;&amp; m[ns.pundit_authorName][0].value !== &#x27;&#x27;) 
+			author_name = m[ns.pundit_authorName][0].value;
+		else 
+			author_name = &quot;User: &quot; + author_uri.substr(author_uri.lastIndexOf(&#x27;&#x2F;&#x27;)+1, author_uri.length);
+
+        &#x2F;&#x2F; Header with metadata
+        panel_content += &quot;&lt;div class=&#x27;pundit-metadata&#x27;&gt;&quot;;
+        &#x2F;&#x2F; DEBUG: if we remove a line here, the min-height of the whole annotation box gets in the
+        &#x2F;&#x2F; way and messes it up a bit .......
+        &#x2F;&#x2F; TODO: this is the right place to insert notebook or other infos
+        panel_content += &quot;&lt;span class=&#x27;author&#x27;&gt;&lt;em&gt;Created by&lt;&#x2F;em&gt; : &quot;+author_name+&quot;&lt;&#x2F;span&gt;&quot;;
+        panel_content += &quot;&lt;span class=&#x27;date&#x27;&gt;&lt;em&gt;On&lt;&#x2F;em&gt; : &quot;+ annotation_date.split(&#x27;T&#x27;)[0] +&quot;, &quot;+annotation_date.split(&#x27;T&#x27;)[1]+&quot;&lt;&#x2F;span&gt;&quot;
+		panel_content += &quot;&lt;span class=&#x27;author&#x27;&gt;&lt;em&gt;ID&lt;&#x2F;em&gt; : &quot;+ann_id+&quot;&lt;&#x2F;span&gt;&quot;;
+        panel_content += &quot;&lt;&#x2F;div&gt;&quot;;
+
+		
+        var relXps = [];
+        for (var i = m[ns.pundit_hasTarget].length; i--;) {
+            if (m[ns.pundit_hasTarget][i][&#x27;value&#x27;] !== window.location.href)
+                relXps.push(m[ns.pundit_hasTarget][i][&#x27;value&#x27;]);
+		}
+		
+		self.log(&#x27;Annotation with &#x27;+relXps.length+&#x27; targets&#x27;);
+		
+        &#x2F;&#x2F; For each collected xpointer: setup colors, classes, coords etc..
+        for (i = relXps.length; i--;) {
+            var uri = relXps[i];
+            
+            &#x2F;&#x2F; If the target of this annotation is not consolidated, erase it from targets
+            &#x2F;&#x2F; of the annotation and dont pass it to AW .. 
+            &#x2F;&#x2F; TODO Check if the target uri is the page and handle consequently 
+            if ((typeof(self.xpointersClasses[uri]) === &#x27;undefined&#x27;)) {
+                self.log(&quot;ERROR: trying to show annotation panel for &quot;+uri+&quot; but its not consolidated on this page&quot;);
+                self.removeTargetFromAnnotation(uri, ann_id);
+				if (!(self.annotationHasTargets(ann_id))) {
+					&#x2F;&#x2F;TODO: this case has to be addressed with some message to the user in future versions
+  					self.log(&quot;ERROR: none of the annotation target is present in the page (ann_id: &quot; + ann_id + &quot;)&quot;);	
+					return;
+				}
+                continue;
+            } else {
+                
+                var cl = self.xpointersClasses[uri].join(&#x27;&#x27;);
+
+                &#x2F;&#x2F; consolidated xpointers selected by this panel (used later on when closing)
+                panelXpointers.push(uri);
+							
+                &#x2F;&#x2F; Colors for the fragments: if this fragment hasnt been highlighted, pick
+                &#x2F;&#x2F; a new color from the stack and initialize usedColors at 1. If it&#x27;s already 
+                &#x2F;&#x2F; highlighted, use this same color and just add 1 to usedColors.
+                if (typeof(self.xpointersColors[uri]) === &#x27;undefined&#x27;) {
+                    self.xpointersColors[uri] = self.colors.pop() || self.fallbackColor;
+                    self.usedColors[self.xpointersColors[uri]] = 1;
+    				self.log(&#x27;Assigned color to target: &#x27;+self.xpointersColors[uri]);
+                } else 
+                    self.usedColors[self.xpointersColors[uri]] = self.usedColors[self.xpointersColors[uri]] + 1;
+
+                dojo.query(&#x27;span.&#x27;+cl).addClass(self.xpointersColors[uri]);
+            }
+        } &#x2F;&#x2F; for i in relXps
+	
+        &#x2F;&#x2F; Produce the statements html: at this stage the .content hash has a field for
+        &#x2F;&#x2F; each subject used in statements. 
+		panel_content += self.getStatementsHTML(c, items);
+	        
+        var closeFunction = (function(uris, id){
+            return function() {
+                &#x2F;&#x2F; Foreach fragment uri used in this annotation, remove
+                &#x2F;&#x2F; the color class from the related span bits
+                for (var i = uris.length; i--;) {
+                    var cl = self.xpointersClasses[uris[i]].join(&#x27;&#x27;),
+                    color = self.xpointersColors[uris[i]];
+						
+                    if (self.usedColors[color] === 1) {
+                        dojo.query(&#x27;span.&#x27;+cl).removeClass(color);
+                        delete self.xpointersColors[uris[i]];
+                        if (color !== self.fallbackColor)
+                            self.colors.push(color);
+                    } else 
+                        self.usedColors[color] = self.usedColors[color] - 1;
+						
+                }
+                dojo.destroy(id);
+                delete semlibWindow.panels[id];
+                &#x2F;&#x2F;semlibWindow.positionPanels();
+            }
+        })(panelXpointers, panel_id);
+
+        &#x2F;&#x2F; When everything is ready, we can append the content to the annotation
+        &#x2F;&#x2F; window, which will position it correclty
+        semlibWindow.awAdd({
+            id: panel_id,
+            content: panel_content,
+            buttons: panel_buttons,
+            xpointers: panelXpointers,
+            positioningXpointer: clickedXP || panelXpointers[0],
+            title: &quot;By &quot; + author_name + &quot; on &quot; + annotation_date.split(&quot;T&quot;)[0],
+            onClose: closeFunction
+        });
+				
+        dojo.behavior.apply();
+
+        if (!semlibWindow.isAnnotationWindowOpen())
+            semlibWindow.toggleAnnotationWindow();
+        
+    }, &#x2F;&#x2F; showAnnotationPanel()
+	
+	&#x2F;**
+	* @method addHyperlinksToText
+    * @description Searches for http urls in the text and turns them into HTML hyperlinks.
+    * @param text {string} 
+    * @return {string}
+	*&#x2F;
+	&#x2F;&#x2F; TODO: Move this function to an helper? It can be useful in different points    
+	addHyperlinksToText: function(text) {
+	    var exp = &#x2F;(\b(https?|ftp|file):\&#x2F;\&#x2F;[-A-Z0-9+&amp;@#\&#x2F;%?=~_|!:,.;]*[-A-Z0-9+&amp;@#\&#x2F;%=~_|])&#x2F;i;
+	    return text.replace(exp,&quot;&lt;a target=&#x27;_blank&#x27; href=&#x27;$1&#x27;&gt;$1&lt;&#x2F;a&gt;&quot;); 
+	},
+	
+    &#x2F;&#x2F; Returns the HTML rendering of the statements founds in the given
+    &#x2F;&#x2F; content json object
+    getStatementsHTML: function(c, items) {
+        var self = this,
+            statement = &#x27;&#x27;;
+		    
+		for (var subject in c) {
+            statement += &#x27;&lt;div class=&quot;pundit-statement&quot;&gt;&lt;div class=&quot;pundit-subject&quot;&gt;&#x27;;
+            statement += self.getTriplePartHTML(c, items, subject);
+
+	        self.log(&#x27;Getting statement from annotation: subject :&#x27;+ subject.substr(0, 41)+&#x27;..&#x27;);
+
+            &#x2F;&#x2F; Comments: no &quot;more details&quot; panel or anything
+            &#x2F;&#x2F; TODO: use a special class name and style them someway
+			var comments = self.getCommentsFromTriples(c, subject);
+			if (comments.length != 0) {
+				statement += &#x27;&lt;div class=&quot;pundit-predicate&quot;&gt;&#x27;;
+                statement += &#x27;&lt;span&gt;Comments:&lt;&#x2F;span&gt;&#x27;;
+				statement += &#x27;&lt;div class=&quot;pundit-object&quot;&gt;&#x27;;
+                &#x2F;&#x2F; Each comment on its own row, no more details
+                for (var j = comments.length; j--;) 
+					statement += &#x27;&lt;span&gt;&#x27;+ self.addHyperlinksToText(comments[j]) + &#x27;&lt;&#x2F;span&gt;&#x27;;
+				statement += &#x27;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&#x27;;	
+			}
+                
+            &#x2F;&#x2F; Tags: no &quot;more details&quot; on the predicate, show the tags
+            &#x2F;&#x2F; as normal triple objects
+			var tags = self.getTagsFromTriples(c, subject);
+			if (tags.length != 0) {
+				statement += &#x27;&lt;div class=&quot;pundit-predicate&quot;&gt;&#x27;;
+				statement += &#x27;&lt;span&gt;Tags:&lt;&#x2F;span&gt;&#x27;;
+                for (var j = tags.length; j--;) {
+    				statement += &#x27;&lt;div class=&quot;pundit-object&quot;&gt;&#x27;;
+					statement += self.getTriplePartHTML(c, items, tags[j]);
+    				statement += &#x27;&lt;&#x2F;div&gt;&#x27;;
+				}
+				statement += &#x27;&lt;&#x2F;div&gt;&#x27;;	
+			}
+            
+	        for (var property in c[subject]) {
+                
+                &#x2F;&#x2F; TODO: can we better handle these explicit names here?
+                if (property === ns.pundit_hasComment || property === ns.pundit_hasTag) 
+                    break;
+                
+                statement += &#x27;&lt;div class=&quot;pundit-predicate&quot;&gt;&#x27;;
+                statement += self.getTriplePartHTML(c, items, property);
+                
+
+				for (var k = c[subject][property].length - 1; k &gt;= 0; k--) {
+                    var object = c[subject][property][k];
+                    statement += &#x27;&lt;div class=&quot;pundit-object&quot;&gt;&#x27;;
+                	statement += self.getTriplePartHTML(c, items, object.value, object.type);
+					statement += &#x27;&lt;&#x2F;div&gt;&#x27;; &#x2F;&#x2F; .object 
+                } &#x2F;&#x2F; for triple&#x27;s objects in c[subject][property]	
+				statement += &#x27;&lt;&#x2F;div&gt;&#x27;; &#x2F;&#x2F; .predicate 
+                
+	        } &#x2F;&#x2F; for property in c[subject]
+			statement += &#x27;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&#x27;; &#x2F;&#x2F; .statement .subject
+            
+		} &#x2F;&#x2F; for subject in c
+            
+        self.log(&#x27;Produced statements HTML&#x27;);
+        return statement;
+		
+    }, &#x2F;&#x2F; getStatementsHTML()
+
+
+	&#x2F;* 
+	Gets all the objects that are sementic tags in triples with the given subject
+	*&#x2F;
+    getTagsFromTriples: function(triples, subject) {
+		
+        var	result = [];
+        var chunks = triples[subject];
+        for (var predicate in chunks) {
+            var objects = chunks[predicate];
+            for (var k = objects.length; k--;)
+                if (predicate === ns.pundit_hasTag &amp;&amp; objects[k].type === &#x27;uri&#x27;) {
+                    result.push(objects[k].value);
+                }
+        }
+		
+        return result;
+		
+    }, &#x2F;&#x2F; getTagsFromTriples()
+
+	&#x2F;* 
+	Gets all the objects that are literal comments in triples with the given subject
+	*&#x2F;
+    getCommentsFromTriples: function(triples, subject) {
+		
+        var	result = [];
+        var chunks = triples[subject];
+        for (var predicate in chunks) {
+            var objects = chunks[predicate];
+            for (var k = objects.length; k--;) {
+                if (predicate === ns.pundit_hasComment &amp;&amp; objects[k].type === &#x27;literal&#x27;) {
+                    result.push(objects[k].value);
+                }	
+            }
+        }
+        return result;
+		
+    }, &#x2F;&#x2F; getCommentsFromTriples()
+
+
+    &#x2F;&#x2F; This is the renderer for each part of the statement: subject, predicate, object
+    &#x2F;&#x2F; TODO: add all of the extra data parts .. found.. somewhere.
+    getTriplePartHTML: function(c, items, uri, type) {
+        var self = this,
+            tp = &#x27;&#x27;,
+            label = &#x27;&#x27;, classes = &#x27;&#x27;, 
+            content = &#x27;&#x27;, extra = &#x27;&#x27;, 
+			comment = &#x27;&#x27;, typeLabel = &#x27;&#x27;, currType = &#x27;&#x27;,
+            currentItem = &#x27;&#x27;;
+        	
+		self.log(&#x27;TriplePartHTML for &#x27;+ uri.substr(0, 30));
+
+        &#x2F;&#x2F; TODO: what to do here? return a default rendered something?
+        if (items === null || typeof(items) === &#x27;undefined&#x27; || (type !== &#x27;literal&#x27; &amp;&amp; typeof(items[uri]) === &#x27;undefined&#x27;)) {
+            self.log(&quot;No items for uri &quot;+uri.substr(0, 30)+&quot;... :|&quot;);
+            console.log(&#x27;TODO: something wrong rendering items? &#x27;, uri, type, items);
+            return &#x27;&lt;span&gt;(ERR) &#x27;+uri.substr(0, 30)+&#x27;&lt;&#x2F;span&gt;&#x27;;
+        }
+        
+        
+        currentItem = items[uri];
+        &#x2F;&#x2F; It&#x27;s a literal!
+        if (typeof(type) !== &#x27;undefined&#x27; &amp;&amp; type === &#x27;literal&#x27;) {
+            
+            &#x2F;&#x2F; cut the uri if it&#x27;s too long
+            if (uri.indexOf(&#x27;&lt;&#x27;) === -1 &amp;&amp; uri.length &gt; 20)
+                label = uri.substr(0, 20) + &quot;...&quot;;
+            else
+                label = uri;
+
+            content = &#x27;&lt;li&gt;&lt;em&gt;Datatype&lt;&#x2F;em&gt;: Literal&lt;&#x2F;li&gt;&#x27;;
+            extra = &#x27;&lt;li&gt;&lt;em&gt;Full content&lt;&#x2F;em&gt;: &#x27;+uri+&#x27;&lt;&#x2F;li&gt;&#x27;;
+
+        &#x2F;&#x2F; It&#x27;s an item!
+        } else {
+            
+            &#x2F;&#x2F; Label: if the label is not set, use the last part of the uri. 
+			if (typeof(currentItem[ns.rdfs_label]) !== &#x27;undefined&#x27;)
+				label = currentItem[ns.rdfs_label][0].value;	
+            else 
+    			&#x2F;&#x2F; FIX ME: do something better like check for last &#x2F; or something
+                label = uri.substr(uri.length-20, 20);	
+
+            &#x2F;&#x2F; Comment
+			if (currentItem[ns.rdfs_comment]) 
+				comment = &quot;&lt;li&gt;&lt;em&gt;Comment:&lt;&#x2F;em&gt; &quot;+currentItem[ns.rdfs_comment][0].value+&quot;&lt;&#x2F;li&gt;&quot;;
+            
+            &#x2F;&#x2F; Is there an image?  
+            if (currentItem[ns.items.image]){
+                if (currentItem[ns.items.type][0].value === ns.fragments.image){
+                    content += &quot;&lt;li&gt;&lt;em&gt;Image Fragment&lt;&#x2F;em&gt;&lt;div class=&#x27;pundit-image-fragment-preview&#x27; style=&#x27;position:relative&#x27; about=&#x27;&quot; + uri + &quot;&#x27;&gt;&lt;img class=&#x27;pundit-image-preview-large&#x27; src=&#x27;&quot;+currentItem[ns.items.image][0].value+&quot;&#x27; &#x2F;&gt;&lt;&#x2F;div&gt;&lt;&#x2F;li&gt;&quot;;
+                } else {
+                    content += &quot;&lt;li&gt;&lt;em&gt;Image&lt;&#x2F;em&gt;&lt;img src=&#x27;&quot;+currentItem[ns.items.image][0].value+&quot;&#x27; &#x2F; class=&#x27;pundit-image-preview-large&#x27;&gt;&lt;&#x2F;li&gt;&quot;;
+                }
+                
+            } 
+                
+            
+            &#x2F;&#x2F; Types
+            var typeList = [];
+            if (typeof(currentItem[ns.rdf_type]) !== &#x27;undefined&#x27;) {
+                content += &#x27;&lt;li&gt;&lt;em&gt;Types&lt;&#x2F;em&gt;: &#x27;;
+                for (var i = currentItem[ns.rdf_type].length - 1; i &gt;= 0; i--) {
+                    
+                    currType = currentItem[ns.rdf_type][i].value;
+                    typeList.push(currType);
+                    
+                    &#x2F;&#x2F; Get type label if it&#x27;s there
+                    if (typeof(items[currType]) !== &#x27;undefined&#x27; &amp;&amp; typeof(items[currType][ns.rdfs_label]) !== &#x27;undefined&#x27;)
+                        typeLabel = items[currType][ns.rdfs_label][0].value;
+                    else
+                        typeLabel = ns.getLabelFromUri(currType);
+                    
+                    content += &#x27;&lt;a class=&quot;go_to&quot; target=&quot;_blank&quot; href=&quot;&#x27; +currType+ &#x27;&quot;&gt;&#x27;+typeLabel+&#x27;&lt;&#x2F;a&gt;, &#x27;;
+                }
+                content = content.substr(0, content.length-2);
+                content += &#x27;&lt;&#x2F;li&gt;&#x27;;
+            }
+            
+            var xpointer;
+            &#x2F;&#x2F;TODO: hack for supporting image fragments. Color is the same as the color of the entire image.
+            if (typeList.indexOf(ns.fragments.image) !== -1) {
+                xpointer = currentItem[ns.items.parentItemXP][0].value
+            } else {
+                xpointer = uri;
+            }
+
+			var descriptionLabel = &#x27;&#x27;;
+			
+			&#x2F;&#x2F; It&#x27;s a text fragment or an image in the page
+			if (typeList.indexOf(ns.fragments.text) !== -1 || typeList.indexOf(ns.image) !== -1 || typeList.indexOf(ns.fragments.image) !== -1) {
+				descriptionLabel = &#x27;Full content&#x27;;
+				&#x2F;&#x2F; It&#x27;s in the page: show zoom
+	            if (self.xpointersClasses[xpointer]) {
+					extra += &#x27;&lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;zoom&quot; about=&quot;&#x27;+xpointer+&#x27;&quot;&gt;&lt;em&gt;Zoom on this item&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&#x27;;	
+
+				&#x2F;&#x2F; It&#x27;s not in the page: show link to original page, using its page context
+				} else {
+					var pageContext = currentItem[ns.items.pageContext][0].value,
+					    fragment = uri.split(&#x27;#&#x27;)[1];
+                    var originUrl;
+                    if (typeof(fragment) !== &#x27;undefined&#x27;) {
+                        originUrl = pageContext + &quot;#&quot; + fragment;
+                    } else {
+                        originUrl = pageContext;
+                    }   
+					extra += &#x27;&lt;li&gt;&lt;em&gt;&lt;a href=&quot;&#x27; + originUrl + &#x27;&quot;&gt;Show in origin page&lt;&#x2F;a&gt;&lt;&#x2F;em&gt;&lt;&#x2F;li&gt;&#x27;;
+				}
+
+			&#x2F;&#x2F; It&#x27;s another kind of item: show more info link	
+			} else {
+                descriptionLabel = &#x27;Description&#x27;;
+			    extra += &#x27;&lt;li&gt;&lt;a href=&quot;&#x27; + uri + &#x27;&quot; target=&quot;_blank&quot;&gt;More info&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&#x27;;
+			}
+			
+			if (_PUNDIT.config.enableSemanticExpansion) {
+				&#x2F;&#x2F;TODO: remove this very dirty hack!
+				var linkForLodLive = uri;
+				if (linkForLodLive.indexOf(&quot;europeana.eu&quot;) !== -1) {
+					var pieces = linkForLodLive.split(&quot;&#x2F;&quot;);
+					linkForLodLive = &quot;http:&#x2F;&#x2F;data.europeana.eu&#x2F;item&#x2F;&quot; + pieces[pieces.length-2] + &quot;&#x2F;&quot; + pieces[pieces.length-1];
+				}
+				extra += &quot;&lt;li&gt;&lt;a href=&#x27;&quot;+ ns.lodLiveURL + &quot;?&quot; + encodeURI(linkForLodLive) +&quot;&#x27; target=&#x27;_blank&#x27;&gt;(NEW!) Explore in LodLive&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;&quot;;	
+			}
+            
+            &#x2F;&#x2F; Description: if it&#x27;s an image, dont show the full content
+            if (currentItem[ns.items.description] &amp;&amp; typeList.indexOf(ns.image) === -1) 
+                content += &quot;&lt;li&gt;&lt;em&gt;&quot; + descriptionLabel + &quot;&lt;&#x2F;em&gt;: &quot; + currentItem[ns.items.description][0].value + &quot;&lt;&#x2F;li&gt;&quot;;
+			
+		} &#x2F;&#x2F; if type !== literal
+        
+		classes = self.xpointersColors[xpointer] || &#x27;&#x27;;
+
+        tp += &#x27;&lt;span class=&quot;pundit-moreinfo &#x27;+classes+&#x27;&quot;&gt;&#x27;+label+&#x27;&lt;&#x2F;span&gt;&#x27;;
+        tp += &#x27;&lt;span class=&quot;pundit-moreinfo-subpanel pundit-hidden&quot;&gt;&lt;ul&gt;&#x27;;
+        tp += comment + content + extra;
+        tp += &#x27;&lt;&#x2F;ul&gt;&lt;&#x2F;span&gt;&#x27;;
+		return tp;
+        
+    }, &#x2F;&#x2F; getTriplePartHTML()
+	
+	&#x2F;&#x2F; Adds the content of an annotation: subject - predicate - object
+    addAnnotationContent: function(ann_id, content) {
+        var self = this,
+            preds = [],
+            ret = {};
+        
+		self.annotations[ann_id].content = content;
+        self.log(&quot;Added content to annotation &quot;+ann_id);
+		
+    }, &#x2F;&#x2F; addAnnotationContent()
+    
+    &#x2F;&#x2F; Gets data about items used in annotation with given id. 
+    &#x2F;&#x2F; DEBUG: WTF? Must be called when we have the triples so we
+    &#x2F;&#x2F; cant spare&#x2F;delay any call.. :|
+    addAnnotationItems: function(ann_id, items) {
+        var self = this,
+            c = self.annotations[ann_id].content;
+
+        self.annotations[ann_id].items = items;
+		for (var subject in c) {
+	        self.log(&#x27;Adding SUBJECT item: &#x27;+ subject.substr(0, 41)+&#x27;..&#x27;);
+            self.extractItemFromAnnContent(subject, items);
+
+	        for (var predicate in c[subject]) {
+    	        self.log(&#x27;Adding PREDICATE item: (&#x27;+subject.substr(0,20)+&#x27;) :&#x27;+ predicate.substr(0, 41)+&#x27;..&#x27;);
+                
+                for (var k = c[subject][predicate].length - 1; k &gt;= 0; k--) {
+
+                    var object = c[subject][predicate][k];
+                    if (object.type === &#x27;literal&#x27;) {
+							&#x2F;&#x2F;FIXME: literal items are not to be created at all!!
+	                        &#x2F;&#x2F;self.extractLiteralItem(object.value);
+					} else 
+                        self.extractItemFromAnnContent(object.value, items);
+
+                } &#x2F;&#x2F; for k
+	        } &#x2F;&#x2F; for predicate
+		} &#x2F;&#x2F; for subject
+
+    }, &#x2F;&#x2F; addAnnotationItems()
+
+    extractLiteralItem: function(value) {
+        var self = this,
+            item = semlibLiterals.createLiteralItem(value);
+            
+        semlibItems.addItem(item);
+        self.log(&#x27;Created LITERAL item for &#x27;+value.substr(0, 30)+&#x27;..&#x27;);
+    },
+
+    extractItemFromAnnContent: function(uri, it) {
+        var self = this,
+            item = {value: uri};
+
+        self.log(&#x27;Extracting item from content: &#x27;+uri.substr(0,40));
+
+        if (typeof(it) === &#x27;undefined&#x27; || it === null) {
+            self.log(&#x27;No items to extract from.&#x27;)
+            return;
+        }
+        
+        if (typeof(it[uri]) === &#x27;undefined&#x27;) {
+            self.log(&quot;Cant extract item for this uri!!&quot;);
+            console.log(&#x27;TODO: Error? Literallone?&#x27;, it, uri);
+            return;
+        }
+
+        &#x2F;&#x2F; Add each field declared in ns.items
+        &#x2F;&#x2F; DEBUG TODO: they could be arrays? 
+        for (var field in ns.items) {
+            var fieldUri = ns.items[field];
+            if (typeof(it[uri][fieldUri]) !== &#x27;undefined&#x27;) {
+                if (field === &#x27;selector&#x27;) {
+                    var selector = it[uri][fieldUri][0].value;
+                    var selectorValue = it[selector][ns.rdf_value][0].value;
+                    if (typeof(item[&#x27;selectors&#x27;]) === &#x27;undefined&#x27;) {
+                        item[&#x27;selectors&#x27;] = [];
+                    }
+                    item[&#x27;selectors&#x27;].push(dojo.fromJson(selectorValue))
+                } else {
+                   item[field] = it[uri][fieldUri][0].value;
+                }
+            }
+                
+        }
+
+        &#x2F;&#x2F; Add every type
+        item[&#x27;rdftype&#x27;] = [];
+        for (var i=it[uri][ns.items.type].length; i--;) 
+            item[&#x27;rdftype&#x27;].push(it[uri][ns.items.type][i].value);
+        
+
+        &#x2F;&#x2F; It is a text fragment
+        &#x2F;&#x2F; TODO: check every type, not just the first
+        if (it[uri][ns.items.type][0].value ===  ns.fragments.text) {
+
+            &#x2F;&#x2F; Overwrite type, add other stuff
+            item[&#x27;type&#x27;] = [&#x27;subject&#x27;];
+
+            &#x2F;&#x2F; Create the needed bucket and init the preview for this item
+            item.rdfData = semlibItems.createBucketForTextFragment(item).bucket;
+            previewer.buildPreviewForItem(item);
+                        
+            semlibItems.addItem(item);
+            self.log(&#x27;Created and added a TEXT item &#x27;+item.value.substr(0, 30)+&#x27;..&#x27;);
+            return;
+        } &#x2F;&#x2F; if type == ns.fragments.text
+        
+        
+        &#x2F;&#x2F; TODO: x marco siam sicuri che e&#x27; sempre il primo tipo? 
+        &#x2F;&#x2F; It is an item coming from a vocabulary
+        if (it[uri][ns.items.type][0].value ===  ns.rdfs_resource) {
+            item[&#x27;type&#x27;] = [&#x27;subject&#x27;]; 
+
+            &#x2F;&#x2F; Create the needed bucket and init the preview for this item
+            item.rdfData = semlibItems.createBucketForVocabItem(item).bucket;
+            previewer.buildPreviewForItem(item);
+            semlibItems.addItem(item);
+            self.log(&#x27;Created and added VOCAB item &#x27;+item.value.substr(0, 30)+&#x27;..&#x27;);
+            return;
+        }
+        
+        &#x2F;&#x2F; default fallback: assuming it&#x27;s a proper item, use createBucketForItem
+        &#x2F;&#x2F; and  hope for the best
+        self.log(&#x27;Assuming proper item for &#x27;+item.value.substr(0, 30)+&#x27;..&#x27;);
+        
+        item[&#x27;type&#x27;] = [&#x27;subject&#x27;]; 
+        item.rdfData = semlibItems.createBucketForItem(item).bucket;
+        previewer.buildPreviewForItem(item);
+        semlibItems.addItem(item);
+        self.log(&#x27;Created and added DEFAULT item &#x27;+item.value.substr(0, 30)+&#x27;..&#x27;);    
+            
+    }, &#x2F;&#x2F; extractItemFromAnnContent()
+
+    refreshAnnotations: function() {
+        var self = this;
+        
+        self.log(&quot;Refresing annotations&quot;);
+        
+        self.isRefreshingAnnotations = true;
+
+        self.backup = {
+            usedColors: self.usedColors,
+            colors: self.colors,
+            xpointersColors: self.xpointersColors
+        };
+
+        self.wipe();
+        self.contentURIs = self.helper.getContentURIs();
+        self.reader.getAnnotationMetadataFromUri(self.contentURIs);
+    },
+
+    wipe: function() {
+        var self = this;
+		
+        &#x2F;&#x2F; self.wipeConsolidatedAnnotations();
+
+        &#x2F;&#x2F; List of xpointers of selected fragment that are not part of annotations.
+        &#x2F;&#x2F; Dont wipe it if there&#x27;s something in it
+        self.tempXpointers = self.tempXpointers || [];
+
+        &#x2F;&#x2F; List of xpointers that are in annotations
+        self.annXpointers = [];
+        
+        &#x2F;&#x2F; List of consolidated xpointers
+        self.xpointers = [];
+
+        &#x2F;&#x2F; TODO: merge all of these in a single object maybe even into the .xpointers field ..
+        self.xpointersClasses = {};
+        self.xpointersColors = {};
+        self.xpointersAnnotationsId = {};
+        self.xpointersContent = {};
+		
+        self.xpaths = [];
+        self.annotations = {};
+        self.contentURIs = [];
+		
+        &#x2F;&#x2F; TODO: create more classes in the css or find a clever solution to make them
+        &#x2F;&#x2F; dinamically starting from rgb color values
+        self.colors = [&#x27;col1&#x27;, &#x27;col2&#x27;, &#x27;col3&#x27;, &#x27;col4&#x27;, &#x27;col5&#x27;, &#x27;col6&#x27;, &#x27;col7&#x27;, &#x27;col9&#x27;, &#x27;col10&#x27;, &#x27;col11&#x27;, &#x27;col12&#x27;, &#x27;col13&#x27;, &#x27;col14&#x27;, &#x27;col15&#x27;, &#x27;col16&#x27;, &#x27;col17&#x27;, &#x27;col18&#x27;, &#x27;col19&#x27;, &#x27;col20&#x27;, &#x27;col21&#x27;, &#x27;col22&#x27;, &#x27;col23&#x27;, &#x27;col24&#x27;, &#x27;col25&#x27;];
+        self.usedColors = {};
+        self.fallbackColor = [&#x27;col1&#x27;];
+    },
+
+    consolidate: function() {
+        var self = this,
+            foo; 
+        
+	    &#x2F;&#x2F; RE-ADDED by Christian...does it sounds good?	
+	    self.wipeConsolidatedAnnotations();
+
+        for (var i = self.annXpointers.length; i--;)    
+            self.xpointers.push(self.annXpointers[i]);
+        
+        &#x2F;&#x2F;DEBUG could this create duplicates???
+        for (var k = self.tempXpointers.length; k--;)
+            self.xpointers.push(self.tempXpointers[k]);
+        
+        &#x2F;&#x2F; Set valid xpointers and split them into xpaths
+        foo = self.helper.getXPathsFromXPointers(self.xpointers);
+        self.xpointers = foo.xpointers;
+        self.xpaths = foo.xpaths;
+        
+        for (var i = self.xpointers.length; i--;) {
+            var uri = self.xpointers[i];
+            self.xpointersClasses[uri] = [&#x27;consxp&#x27;+i];
+        }
+
+        &#x2F;&#x2F; Sort the xpaths
+        self.sortedXpaths = self.helper.splitAndSortXPaths(self.xpaths);
+
+        &#x2F;&#x2F; Match the given classes to the newly created xpointers
+        self.htmlClasses = self.helper.getClassesForNewXpointers(self.xpointers, self.sortedXpaths, self.xpaths, self.xpointersClasses);
+
+        &#x2F;&#x2F; Finally update the DOM with the new xpointers and classes
+        self.helper.updateDOM(self.sortedXpaths, self.htmlClasses);
+
+        for (xp in self.xpointersClasses) {
+            var cl = self.xpointersClasses[xp].join(&#x27;&#x27;),
+                spans = dojo.query(&#x27;.&#x27;+cl),
+                n = spans.length-1,
+                id = &#x27;icon_&#x27;+cl,
+                content = &#x27;&#x27;;
+            
+            if (n&lt;0)
+                continue
+            
+            &#x2F;&#x2F; Grasp the content using dojo&#x27;s html() function on every
+            &#x2F;&#x2F; consolidated element with that class
+            spans.forEach(function(s) {
+                content += self.helper.extractContentFromNode(s);
+            });
+            self.xpointersContent[xp] = content;
+            self.log(&quot;Content extracted from xpointer: &quot;+ content);
+
+            self.log(&quot;Adding RDF icon for &quot;+id);
+            if (self.isAnnXpointer(xp))
+                dojo.place(&#x27;&lt;a class=&quot;pundit-icon-annotation&quot; id=&quot;&#x27;+id+&#x27;&quot;&gt;&lt;&#x2F;a&gt;&#x27;, spans[n], &#x27;after&#x27;);
+            else if (self.isTempXpointer(xp))
+                dojo.place(&#x27;&lt;a class=&quot;pundit-icon-annotation selected_fragment_icon&quot; id=&quot;&#x27;+id+&#x27;&quot;&gt;&lt;&#x2F;a&gt;&#x27;, spans[n], &#x27;after&#x27;);
+
+            &#x2F;&#x2F; Mouse enter on the RDF icon
+            dojo.connect(dojo.byId(id), &#x27;onmouseenter&#x27;, (function(_c, _x) { 
+                return function (e) {
+                    self.highlightByXpointer(_x);
+                    if (self.isAnnXpointer(_x))
+                        self.fireOnAnnotationIconMouseEnter(_x);
+                };
+            })(cl, xp));
+            
+            &#x2F;&#x2F; Mouse leave from the RDF icon
+            dojo.connect(dojo.byId(id), &#x27;onmouseleave&#x27;, (function(_c, _x) { 
+                return function () {
+                    self.removeHighlightByXpointer(_x)
+                    if (self.isAnnXpointer(_x))
+                        self.fireOnAnnotationIconMouseLeave(_x);
+                };
+            })(cl, xp));
+            
+            &#x2F;&#x2F; Mouse click on the RDF icon
+            dojo.connect(dojo.byId(id), &#x27;onclick&#x27;, (function(_c, _x) { 
+                return function (e) {
+					
+					&#x2F;&#x2F; If the annotation window is open, it might be the case where
+                    &#x2F;&#x2F; another fragment own an annotation in which this fragment is involved.
+					&#x2F;&#x2F; This line recalls the annotation near the clicked fragment
+					if (semlibWindow.isAnnotationWindowOpen()) {
+                        var panels = semlibWindow.getOpenedPanelsByXpointer(_x);
+                        for (var j=panels.length; j--;) 
+                            semlibWindow.setPositioningXpointer(panels[j].id, _x);
+                    }
+	
+					e.preventDefault();
+                    self.fireOnAnnotationIconMouseClick(_x);
+                    
+                    var item = _PUNDIT[&#x27;items&#x27;].getItemByUri(_x);
+                    
+                    
+                    &#x2F;&#x2F;TODO: hack to show annotations of image fragments: TO BE REMOVED!
+                    if (typeof(item) === &#x27;undefined&#x27;) {
+                        &#x2F;&#x2F; get the element corresponding to the XPointer
+                        var helper = new pundit.XpointersHelper();
+                        var xpath = helper.getXPathsFromXPointers([_x]).xpaths[_x].startxpath;
+                        var el = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                        &#x2F;&#x2F;look into the element for images
+                        var imgsInEl = dojo.query(el).children().children(&#x27;img&#x27;);
+                        for (var imgsi=0; imgsi&lt;imgsInEl.length; imgsi++) {
+                            var imgUrl = imgsInEl[imgsi].src;
+                            item = _PUNDIT[&#x27;items&#x27;].getItemsFromParentItem(imgUrl)[0];
+                        }
+                    }
+                    
+                    &#x2F;&#x2F; Handle different classes
+                    if (self.isAnnXpointer(_x))
+                        cMenu.show(e.pageX - window.pageXOffset, e.pageY - window.pageYOffset, item, &#x27;annotatedtextfragment&#x27;);
+                    else if (self.isTempXpointer(_x))
+                        cMenu.show(e.pageX - window.pageXOffset, e.pageY - window.pageYOffset, item, &#x27;bookmarkedtextfragment&#x27;);
+
+                    &#x2F;&#x2F; Prevent default delegation if the RDF icon is inside a
+                    &#x2F;&#x2F; link or something active
+                    dojo.stopEvent(e);
+                    return false;
+                };
+            })(cl, xp));
+			
+        } &#x2F;&#x2F; for i in xpointersClasses
+
+        self.log(&quot;DOM is consolidated.&quot;);
+		
+        &#x2F;&#x2F; restore the backup! yay
+        if (typeof(self.backup.xpointersColors) !== &#x27;undefined&#x27;) {
+            self.xpointersColors = self.backup.xpointersColors;
+            self.colors = self.backup.colors;
+            self.usedColors = self.backup.usedColors;
+        }
+		
+        for (var xp in self.xpointersColors) {
+            var cl = self.xpointersClasses[xp].join(&#x27;&#x27;);
+            dojo.query(&#x27;span.&#x27;+cl).addClass(self.xpointersColors[xp]);
+        }
+        
+        if (_PUNDIT.config.enableHighlightingMode &amp;&amp; myPundit.highlightingMode){
+            self.highlightAll();
+        }
+        
+        self.fireOnConsolidate();
+        self.log(&quot;Consolidate() is done.&quot;)
+
+    }, &#x2F;&#x2F; consolidate()
+
+    highlightByXpointer: function(xp) {
+        var self = this;
+        
+        if (xp in self.xpointersClasses) {
+            if (typeof(self.hideTimer[xp]) !== &#x27;undefined&#x27;)
+                clearTimeout(self.hideTimer[xp]);
+            else
+                self.hideTimer[xp] = null;
+
+            &#x2F;&#x2F; Keep a counter of how many times they asked for this xpointer
+            &#x2F;&#x2F; to be highlighted. If multiple components asked for it, multiple
+            &#x2F;&#x2F; components shall ask to remove it, later
+            if (typeof(self.highlightCount[xp]) === &#x27;undefined&#x27;)
+                self.highlightCount[xp] = 0;
+            self.highlightCount[xp]++;
+            
+            dojo.query(&#x27;span.&#x27;+self.xpointersClasses[xp].join(&#x27;&#x27;)).addClass(&#x27;active&#x27;);
+        }
+    }, &#x2F;&#x2F; highlightByXpointer()
+    
+    removeHighlightByXpointer: function(xp) {
+        var self = this;
+        
+        
+        if (xp in this.xpointersClasses) {
+
+            &#x2F;&#x2F; If the number of components highlighting the fragment is 0, we can
+            &#x2F;&#x2F; remove the highglight
+            self.highlightCount[xp]--;
+            if (self.highlightCount[xp] &gt; 0) return;
+            
+            clearTimeout(self.hideTimer[xp]);
+            self.hideTimer[xp] = setTimeout(function() { 
+                if (self.xpointersClasses[xp] &amp;&amp; !myPundit.highlightingMode)
+                    dojo.query(&#x27;span.&#x27;+self.xpointersClasses[xp].join(&#x27;&#x27;)).removeClass(&#x27;active&#x27;); 
+            }, self.opts.hideMouseLeaveMS);
+        }
+    }, &#x2F;&#x2F; removeHighlightByXpointer()
+    
+    highlightAll:function(){
+        dojo.query(&#x27;.cons&#x27;).forEach(function(item){
+            dojo.addClass(item, &#x27;active&#x27;);
+        });
+    },
+
+    hideZoom: function() {
+        dojo.destroy(&#x27;pundit-zoomed-fragment&#x27;);
+    },
+
+    zoomOnXpointer: function(xp) {
+	    
+        if (typeof(this.xpointersClasses[xp]) === &#x27;undefined&#x27;)
+            return;
+	    
+        var self = this,
+            cl = self.xpointersClasses[xp].join(&#x27; &#x27;),
+            top = Infinity, left = Infinity, 
+            bottom = -Infinity, right = -Infinity, y = Infinity,
+            border = 5, st;
+
+        self.log(&#x27;Zooming on class &#x27;+cl);
+		
+        dojo.query(&#x27;.cons.&#x27;+cl+&#x27;, .cons.&#x27;+cl+&#x27; img&#x27;).forEach(function(item) {
+            var c = dojo.position(item, true);
+            top = Math.min(top, c.y);
+            left = Math.min(left, c.x);
+            bottom = Math.max(bottom, c.y+c.h);
+            right = Math.max(right, c.x+c.w);
+            y = Math.min(y, c.y);
+        });
+
+        if (dojo.query(&#x27;#pundit-zoomed-fragment&#x27;).length &gt; 0)
+            dojo.destroy(&#x27;pundit-zoomed-fragment&#x27;);
+
+        dojo.query(&#x27;body&#x27;).append(&#x27;&lt;div id=&quot;pundit-zoomed-fragment&quot;&gt;&lt;span class=&quot;pundit-icon-close&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;div&gt;&#x27;);
+        dojo.behavior.apply();
+
+        st = {
+            position: &#x27;absolute&#x27;,
+            left: (left - border-1) +&#x27;px&#x27;,
+            top: (top - border-1) +&#x27;px&#x27;,
+            height: (bottom - top + 2*border)+&#x27;px&#x27;,
+            width: (right - left + 2*border)+&#x27;px&#x27;
+        };
+        dojo.style(&#x27;pundit-zoomed-fragment&#x27;, st);
+
+        &#x2F;&#x2F;setTimeout(function() { 
+            dojo.toggleClass(&#x27;pundit-zoomed-fragment&#x27;, &#x27;pundit-shown&#x27;);
+        &#x2F;&#x2F;}, 20);
+        
+        var bodyTop = dojo.query(&#x27;body&#x27;)[0].scrollTop;
+        if ((y - bodyTop &lt; dojo.position(&#x27;pundit-gui&#x27;, true).h) || (y - bodyTop + dojo.position(&#x27;pundit-zoomed-fragment&#x27;, true).h &gt; window.innerHeight)) 
+            dojox.fx.smoothScroll({
+                node : dojo.query(&#x27;#pundit-zoomed-fragment&#x27;)[0],
+                offset: {x: 0, y: dojo.position(&#x27;pundit-gui&#x27;, true).h + 100},
+                win: window,
+                duration: 800
+            }).play();
+        
+
+    }, &#x2F;&#x2F; zoomOnXpointer()
+
+	
+    wipeConsolidatedAnnotations: function () {
+        var self = this;
+        dojo.query(&#x27;.pundit-icon-annotation, .selected_fragment_icon&#x27;).forEach(function(node) {
+            dojo.destroy(node);
+        });
+		
+        self.unwrap(&#x27;cons&#x27;);
+        &#x2F;&#x2F; TODO: instead of body, we can look for a common ancestor
+        &#x2F;&#x2F; to do less merging
+        self.helper.mergeTextNodes(dojo.query(&#x27;body&#x27;)[0]);
+        self.log(&quot;Wiped all consolidated annotations&quot;);
+    }, &#x2F;&#x2F; wipeConsolidatedAnnotations()
+	
+    unwrap: function(c){
+        var nodes = dojo.query(&#x27;.&#x27;+c);
+        for (var i = nodes.length; i--;) {
+            var parent = dojo.query(nodes[i]).parent()[0];
+            while (nodes[i].firstChild) 
+                parent.insertBefore(nodes[i].firstChild, nodes[i]);
+            dojo.destroy(nodes[i]);
+        }
+    }, &#x2F;&#x2F; unwrap()
+	
+    initBehaviors : function() {
+        var self = this;
+        dojo.behavior.add({
+            &#x2F;&#x2F; Show more info on sub&#x2F;pred&#x2F;ob in the annotation panel
+            &#x27;div.pundit-statement span.pundit-moreinfo&#x27;: {
+                &#x27;onclick&#x27;: function(e) {
+                    dojo.toggleClass(dojo.query(e.currentTarget).next()[0], &#x27;pundit-hidden&#x27;);
+                    e.preventDefault();
+                    
+                    var node = dojo.query(e.target).next().children().children().children(&#x27;.pundit-image-fragment-preview&#x27;);
+                    if (node.length &gt; 0 &amp;&amp; dojo.query(node).children(&#x27;.kineticjs-content&#x27;).length === 0){
+                        var fragmentUri = dojo.attr(dojo.query(node)[0], &#x27;about&#x27;);
+                        &#x2F;&#x2F;var node = dojo.query(&#x27;div.pundit-image-fragment-preview[about=&#x27; + fragmentUri +&#x27;] img&#x27;)[0]
+                        var style = dojo.style(dojo.query(node).children(&#x27;img&#x27;)[0]),
+                        w = style.width.replace(&#x27;px&#x27;,&#x27;&#x27;),
+                        h = style.height.replace(&#x27;px&#x27;,&#x27;&#x27;),
+                        item = _PUNDIT[&#x27;items&#x27;].getItemByUri(fragmentUri);
+            
+                        var s = new Kinetic.Stage({
+                            container: dojo.query(e.target).next().children().children().children(&#x27;.pundit-image-fragment-preview&#x27;)[0],
+                            width: w,
+                            height: h
+                        });
+                        dojo.style(s.getDOM(),{
+                            left: style.marginLeft,
+                            top: style.marginTop,
+                            position: &#x27;absolute&#x27;
+                        });
+                        var l = new Kinetic.Layer();
+                        s.add(l);
+                        for (var i = item.selectors.length; i--;){
+                            var points = [];
+                            &#x2F;&#x2F;points = item.selectors[0].points;
+                            if (item.selectors[i].type === &#x27;polygon&#x27;){
+                                for (var j = item.selectors[i].points.length; j--;){
+                                    points.push({
+                                        x : item.selectors[i].points[j].x * parseInt(w),
+                                        y : item.selectors[i].points[j].y * parseInt(h)
+                                    });
+                                }
+                                
+                                var p = [];
+                                for (var k = points.length; k--;){
+                                    p = p.concat([points[k].x, points[k].y]);
+                                }
+                                p = p.concat([points[0].x, points[0].y]);
+                                var poly = new Kinetic.Polygon({
+                                    points: p,
+                                    fill: &#x27;#00D2FF&#x27;,
+                                    stroke: &#x27;black&#x27;,
+                                    strokeWidth: 2,
+                                    opacity: 0.3
+                                });
+                                l.add(poly);
+                                s.draw();
+                            }    
+                        }
+                        
+            
+                    }
+                    
+                    
+                    semlibWindow.positionPanels();
+                }
+            },
+            &#x27;div.pundit-statement a.zoom&#x27;: {
+                &#x27;click&#x27;: function(e) { 
+                    var xp = dojo.attr(e.currentTarget, &#x27;about&#x27;),
+                    panel = dojo.query(e.currentTarget).parents(&#x27;.pundit-aw-panel&#x27;)[0];
+                    self.zoomOnXpointer(xp);
+                    semlibWindow.setPositioningXpointer(dojo.attr(panel, &#x27;id&#x27;), xp);
+                    e.preventDefault(); 
+                },
+                &#x27;onmouseover&#x27;: function(e) {
+                    self.highlightByXpointer(dojo.attr(e.currentTarget, &#x27;about&#x27;));
+                },
+                &#x27;onmouseout&#x27;: function(e) {
+                    self.removeHighlightByXpointer(dojo.attr(e.currentTarget, &#x27;about&#x27;))
+                }
+            },
+            &#x27;div.pundit-aw-panel-buttons span.edit&#x27;: {
+                &#x27;click&#x27;: function(e) {
+                    alert(&#x27;non implemented yet.&#x27;);
+                }
+            },
+			&#x27;div.pundit-aw-panel-buttons span.activate&#x27;: {
+                &#x27;click&#x27;: function(e) {
+                    var notebook_id = dojo.attr(e.currentTarget, &#x27;about&#x27;);
+					self.writer.setNotebookActive(notebook_id, &quot;1&quot;);
+                }
+            },
+			&#x27;div.pundit-aw-panel-buttons span.deactivate&#x27;: {
+                &#x27;click&#x27;: function(e) {
+                    var notebook_id = dojo.attr(e.currentTarget, &#x27;about&#x27;);
+					self.writer.setNotebookActive(notebook_id, &quot;0&quot;);
+                }
+            },
+            &#x27;div.pundit-aw-panel-buttons span.delete&#x27;: {
+                &#x27;click&#x27;: function(e) {
+                    var ann_id = dojo.attr(e.currentTarget, &#x27;about&#x27;),
+                        deleteJobId = _PUNDIT.loadingBox.addJob(&#x27;Deleting annotation &#x27;);
+
+                    dojo.query(&#x27;#dialog_&#x27;+ann_id+&#x27;_content&#x27;).addClass(&#x27;pundit-panel-loading&#x27;);
+                    dojo.query(&#x27;#dialog_&#x27;+ann_id+&#x27;_content .pundit-gui-button.delete&#x27;).style(&#x27;display&#x27;, &#x27;none&#x27;);
+                    self.refreshPageItems = true;
+                    self.writer.deleteAnnotation(ann_id, function() {
+                        &#x2F;&#x2F; TODO: how to intercept errors? 
+                        &#x2F;&#x2F; TODO: on error, hide loading, show delete button again
+                        
+                        &#x2F;&#x2F; On succesful delete: close the panel, refresh
+                        &#x2F;&#x2F; annotations
+                        &#x2F;&#x2F; Don&#x27;t close it (it fire a repositioning panel. Destroy it
+                        semlibWindow.destroyPanelById(ann_id);
+                        
+                        self.refreshAnnotations();
+                        _PUNDIT.loadingBox.setJobOk(deleteJobId);
+                    });
+                }
+            },
+            &#x27;div#pundit-zoomed-fragment span.pundit-icon-close&#x27;: {
+                &#x27;click&#x27;: function(e) {
+                    self.hideZoom();
+                }
+            }
+        });
+    }, &#x2F;&#x2F; initBehaviours()
+
+    addAnnotations : function(graph) {
+        var self = this,
+			nAnn = 0, 
+            nXps = 0, 
+            annIds = [];
+
+        self.log(&#x27;Adding annotations from raw graph......&#x27;)
+        
+        &#x2F;&#x2F; Empty annXpointer and ids
+        self.annXpointers = [];
+        self.annIds = [];
+        
+		
+        for (var ann_uri in graph) {
+            
+            var a = graph[ann_uri],
+                ann_targets, ann_id, 
+                isAnn = false;
+
+            &#x2F;&#x2F; Check the type of each received object: if the type is not annotation
+            &#x2F;&#x2F; raise an error and discard it.
+            &#x2F;&#x2F; DEBUG: is this enough or do we need a better check?
+            for (var t = a[ns.rdf_type].length; t--;) 
+                if (a[ns.rdf_type][t].value === ns.annotation)
+                    isAnn = true;
+            
+            if (!isAnn) {
+                self.log(&#x27;ERROR: invalid annotation from &#x2F;search query! .. discarded.&#x27;);
+                continue;
+            }
+            
+            &#x2F;&#x2F;DEBUG Just in case no target in the annotation.
+            ann_targets = a[ns.pundit_hasTarget] || [];
+            ann_id = a[ns.pundit_annotationId][0].value;
+
+			var notebook_url = a[ns.pundit_isIncludedIn][0].value;
+			var notebook_id = notebook_url.split(&quot;&#x2F;&quot;)[notebook_url.split(&quot;&#x2F;&quot;).length - 1];
+			
+			self.notebooks[notebook_id] = null;
+			
+			self.log(&#x27;Adding annotation &#x27;+ann_id+&#x27; with &#x27;+ann_targets.length+&#x27; targets&#x27;);
+            
+            &#x2F;&#x2F; TODO DEBUG: in this cycle annotations without xpointers get lost :(
+            if (ann_targets.length === 0){
+                self.annIds.push(ann_id);
+                a[ns.pundit_hasTarget] = []; 
+                self.annotations[ann_id] = {
+                    targets: [],&#x2F;&#x2F;whose the target? the page?
+                    metadata: a, 
+                    id: ann_id
+                };
+            }else{
+                for (var i = ann_targets.length; i--;) {
+                    &#x2F;&#x2F; val is an xpointer
+                    var val = ann_targets[i].value;
+                
+                    if (val.match(&#x2F;#xpointer\(start-point\(string-range\(&#x2F;)) {
+                    
+                        if (dojo.indexOf(self.annIds, ann_id) === -1)
+                            self.annIds.push(ann_id);
+                    
+                        &#x2F;&#x2F; Save the xpointer and the annotation
+                        self.xpointers.push(val);
+                        self.annXpointers.push(val);
+
+                        if (ann_id in self.annotations)
+                            self.annotations[ann_id].targets.push(val);
+                        else self.annotations[ann_id] = {
+                            targets: [val],
+                            metadata: a, 
+                            id: ann_id
+                        };
+                    
+                        &#x2F;&#x2F; Finally the xpointer &gt; annotation_id relation
+                        if (typeof(self.xpointersAnnotationsId[val]) === &#x27;undefined&#x27;)
+                            self.xpointersAnnotationsId[val] = [ann_id];
+                        else
+                            self.xpointersAnnotationsId[val].push(ann_id);
+                    
+                    }else if(val === window.location.href){
+                        &#x2F;&#x2F;If the target of the annotation is the page than attach the annotation to 
+                        &#x2F;&#x2F;a virtual node on top of the page so that the annotation appear as first  
+                        if (dojo.indexOf(self.annIds, ann_id) === -1)
+                            self.annIds.push(ann_id);
+                        
+                        if (ann_id in self.annotations){
+                            
+                        }
+                        else self.annotations[ann_id] = {
+                            targets: [],
+                            metadata: a, 
+                            id: ann_id
+                        };
+                    }else{
+                        self.log(&#x27;Ops, annotation target is not an xpointer?&#x27;)
+                    &#x2F;&#x2F; DEBUG TODO: full-page annotations? Other kind of targets?
+                    }
+                } &#x2F;&#x2F; for i in ann_targets
+            }
+            
+        } &#x2F;&#x2F; for ann_uri in graph
+        
+        
+        self.annToDownload = self.annIds.length;
+        if (self.annToDownload === 0) {
+            _PUNDIT.loadingBox.setJobOk(self.jobId);
+            self.jobId = null;
+            self.log(&#x27;No annotations added: nothing to display on this page.&#x27;);
+            self.isRefreshingAnnotations = false;
+        } else {
+            self.log(&#x27;Added &#x27;+self.annToDownload+&#x27; annotations ready to be downloaded&#x27;);
+            for (var i = self.annIds.length; i--;) 
+                self.reader.getAnnotationContentFromId(self.annIds[i]);
+        }
+
+    }, &#x2F;&#x2F; addAnnotations
+    
+    &#x2F;&#x2F;Add a single annotation without needing to refresh all annotations
+    addAnnotation:function(annObject){
+        
+    },
+    
+    isAnnXpointer: function(xp) {
+        for (var i = this.annXpointers.length; i--;){
+            if (xp === this.annXpointers[i])
+                return true;
+        }
+        return false;
+    },
+    
+    isTempXpointer:function(xp) {
+        for (var i = this.tempXpointers.length; i--;){
+            if (xp === this.tempXpointers[i])
+                return true;
+        }
+        return false;
+    },
+    
+	resetTempXpointers: function() {
+		this.tempXpointers = [];
+	},
+
+    &#x2F;&#x2F; TODO: removeTempXpointer must remove the xpointer from self.xpointers as well .. !
+    removeTempXpointer: function(xp){
+        for (var i = this.tempXpointers.length; i--;){
+            if (xp === this.tempXpointers[i]){
+                if (typeof semlibMyItems.getItemFromUri(xp) === &#x27;undefined&#x27;)
+                    this.tempXpointers.splice(i,1);
+            }
+        }
+        for (var i = this.xpointers.length; i--;){
+            if (xp === this.xpointers[i]){
+                this.xpointers.splice(i,1);
+            }
+        }
+        &#x2F;&#x2F;Remove Class if the xp is not a page item
+        if (typeof semlibMyItems.getItemFromUri(xp) === &#x27;undefined&#x27;)
+            delete tooltip_viewer.xpointersClasses[xp];
+    }
+    
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

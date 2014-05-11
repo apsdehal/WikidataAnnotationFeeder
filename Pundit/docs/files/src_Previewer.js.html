@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;Previewer.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;Previewer.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.Previewer
+ * @extends pundit.baseComponent
+ * @description Offers facilities to create a nice and common HTML preview
+ * of a given pundit item, extracting its properties from its bucket.&lt;br&gt;
+ * Shows, hides and sets loading on demand.
+ *&#x2F;
+dojo.provide(&#x27;pundit.Previewer&#x27;);
+dojo.declare(&#x27;pundit.Previewer&#x27;, pundit.BaseComponent, {
+
+    &#x2F;*
+    TODO: how to make this configurable? We are extracting stuff from the
+    bucket.. 
+    opts: {
+        fields: [&#x27;url&#x27;, &#x27;label&#x27;, &#x27;altLabel&#x27;, &#x27;description&#x27;, &#x27;image&#x27;, &#x27;types&#x27;, &#x27;moreInfoHref&#x27;, &#x27;moreInfoName&#x27;, &#x27;html&#x27;]
+    },
+    *&#x2F;
+    
+    &#x2F;&#x2F; TODO: move this comment to some @property and some into the class declaration
+    &#x2F;*
+    * @constructor
+    * @description Initializes the component
+    * @param options {object}
+    * @param options.debug {boolean} wether or not to activate debug mode for this component
+    *&#x2F;
+    constructor: function(options) {
+        var self = this;
+        self.previewCache = {};
+        self.currentSelectedItem = null;
+        self.currentPreviewURI = null;
+        self.log(&#x27;Previewer up and running!&#x27;);
+    },
+    
+    &#x2F;**
+    * @method setLoading
+    * @description Sets or unsets the loading state for the preview area.
+    * @param v {boolean} If true the loading state will be activated, if
+    * false will be deactivated.
+    *&#x2F;
+    setLoading: function(v, containerSelector) {
+        if (typeof(containerSelector) === &#x27;undefined&#x27;)
+            containerSelector = &#x27;#pundit-gui-preview&#x27;;
+        var r = dojo.query(containerSelector),
+            c = &#x27;pundit-panel-loading&#x27;;
+        return (v) ? r.addClass(c) : r.removeClass(c);
+    },
+    
+    &#x2F;**
+    * @method buildPreviewForItem
+    * @description Extracts informations from the passed item and creates a
+    * cached version of the preview for future uses.
+    * @param item {object - pundit item} a semlib item, with at least its bucket and
+    * a value.
+    * @param item.rdfData {object - triplesBucket} The associated triplesBucket 
+    * to extract the informations from.
+    * @param item.value {string - URI} Unique URI of this item&#x27;s resource.
+    *&#x2F;
+    buildPreviewForItem: function(item) {
+        var self = this,
+            pr = &quot;&quot;,
+            b = new pundit.TriplesBucket({bucket: item.rdfData}),
+            label = b.getObject(item.value, ns.items.label)[0] || item.label,
+            prefLabel = b.getObject(item.value, ns.items.label)[0] || &#x27;&#x27;,
+            image = b.getObject(item.value, ns.items.image)[0] || &#x27;&#x27;,
+            selector = b.getObject(item.value, ns.items.selector)[0] || &#x27;&#x27;,
+            altLabel = b.getObject(item.value, ns.items.altLabel).join(&#x27;, &#x27;) || &#x27;&#x27;,
+            description = b.getObject(item.value, ns.items.description)[0] || &#x27;No description available&#x27;,
+            types = b.getObject(item.value, ns.items.type) || [];
+        
+        pr += &quot;&lt;div class=&#x27;pundit-preview-main-info&#x27;&gt;&quot;;
+        pr += &quot;&lt;h4&gt;Preview &lt;&#x2F;h4&gt;&quot;;
+        pr += &quot;&lt;h2&gt;&quot;+label+&quot;&lt;&#x2F;h2&gt;&quot;;
+        if ((types[0] === ns.fragments.image || types[0] === ns.image)){
+            pr += &quot;&lt;div id=&#x27;pundit-preview-image-container&#x27; style=&#x27;display:inline-block;position:relative&#x27;&gt;&lt;img src=&#x27;&quot;+image+&quot;&#x27; class=&#x27;pundit-image-preview-large&#x27;&gt;&lt;&#x2F;img&gt;&lt;&#x2F;div&gt;&quot;;
+        }
+            
+        pr += &quot;&lt;p&gt;&quot;;
+        if (image !== &#x27;&#x27;){
+            if (!(types[0] === ns.fragments.image || types[0] === ns.image)){
+                pr += &quot;&lt;img src=&#x27;&quot;+image+&quot;&#x27;&gt;&quot;;
+            }
+            
+        }
+            
+        pr += description+&quot;&lt;&#x2F;p&gt;&quot;;
+
+        &#x2F;&#x2F; Alt label: &quot;also known as&quot; from freebase
+        if (altLabel !== &#x27;&#x27; &amp;&amp; altLabel !== label) pr += &quot;&lt;h5&gt;&lt;em&gt;Also known as :&lt;&#x2F;em&gt; &quot;+altLabel+&quot;&lt;&#x2F;h5&gt;&quot;;
+        pr += &quot;&lt;&#x2F;div&gt;&quot;;
+        &#x2F;&#x2F; If the item has valid types, show them and the goto link
+        if (types.length &gt; 0) {
+            pr += &quot;&lt;ul&gt;&lt;li class=&#x27;header&#x27;&gt;Types :&lt;&#x2F;li&gt;&quot;;
+
+            &#x2F;&#x2F; TODO: what to do if there&#x27;s no type label? 
+            for (var j=types.length; j--;) 
+                if (b.getObject(types[j], ns.rdfs_label).length &gt; 0)
+                    pr += &quot;&lt;li&gt;&quot;+b.getObject(types[j], ns.rdfs_label)[0]+&quot;&lt;&#x2F;li&gt;&quot;;
+            pr += &quot;&lt;&#x2F;ul&gt;&quot;;
+
+            pr += &quot;&lt;a href=&#x27;&quot;+item.value+&quot;&#x27; target=&#x27;_blank&#x27;&gt;More info...&lt;&#x2F;a&gt;&quot;;
+			if (_PUNDIT.config.enableSemanticExpansion) {
+				pr += &quot;&lt;br &#x2F;&gt;&quot;;
+				&#x2F;&#x2F;TODO: remove this very dirty hack!
+				var linkForLodLive = item.value;
+				if (linkForLodLive.indexOf(&quot;europeana.eu&quot;) !== -1) {
+					var pieces = linkForLodLive.split(&quot;&#x2F;&quot;);
+					linkForLodLive = &quot;http:&#x2F;&#x2F;data.europeana.eu&#x2F;item&#x2F;&quot; + pieces[pieces.length-2] + &quot;&#x2F;&quot; + pieces[pieces.length-1];
+				}
+				pr += &quot;&lt;a href=&#x27;&quot;+ ns.lodLiveURL + &quot;?&quot; + encodeURI(linkForLodLive) + &quot;&#x27; target=&#x27;_blank&#x27;&gt;(NEW!) Explore in LodLive&lt;&#x2F;a&gt;&quot;;	
+			}
+			
+
+        } else if (b.bucket.length === 0) {
+            pr += &quot;&lt;ul&gt;&lt;li class=&#x27;header&#x27;&gt;Data type:&lt;&#x2F;li&gt;&quot;;
+            pr += &quot;&lt;li&gt;Literal&lt;&#x2F;li&gt;&lt;&#x2F;ul&gt;&quot;
+        }
+
+        self.log(&#x27;Created preview for &#x27;+label)
+        self.previewCache[item.value] = pr;
+        
+    }, &#x2F;&#x2F; buildPreviewForItem()
+
+    &#x2F;**
+    * @method exists
+    * @description Check if a preview for the given URI is present.
+    * @param uri {string} Uri of the resource
+    * @return {boolean} True if exists, false otherwise
+    *&#x2F;
+    exists: function(uri) {
+        return typeof(this.previewCache[uri]) !== &#x27;undefined&#x27;;
+    },
+
+    &#x2F;**
+    * @method show
+    * @description Shows the preview for a given resource in the preview area.
+    * @param uri {string} Uri of the resource
+    *&#x2F;
+    show: function(uri, containerSelector) {
+        var self = this;
+        
+        &#x2F;&#x2F; Already showing this preview
+        if (self.currentPreviewURI === uri)
+            return;
+
+        self.currentPreviewURI = uri;
+
+        if (!self.exists(uri)) {
+            self.log(&#x27;ERROR: called show() for unknown uri&#x27;+ uri);
+            self.hide();
+            return;
+        }
+        
+        if (typeof(containerSelector) === &#x27;undefined&#x27;)
+            containerSelector = &#x27;#pundit-gui-preview&#x27;;
+        
+        self.log(&#x27;Displaying preview for &#x27;+uri);
+
+        dojo.query(containerSelector).removeClass(&#x27;pundit-panel-loading&#x27;);
+        dojo.query(containerSelector).html(self.previewCache[uri]);
+        
+        &#x2F;&#x2F;Add image fragment on image
+        &#x2F;&#x2F;TODO Handle multiple selectors!
+        var points = [];
+        var item = _PUNDIT.items.getItemByUri(uri);
+        if (typeof item === &#x27;undefined&#x27;)
+            return;
+        if (item.rdftype[0] === ns.fragments.image){
+            var style = dojo.style(dojo.query(&#x27;#pundit-preview-image-container img&#x27;)[0]),
+            w = style.width.replace(&#x27;px&#x27;,&#x27;&#x27;),
+            h = style.height.replace(&#x27;px&#x27;,&#x27;&#x27;);
+            var s = new Kinetic.Stage({
+                container: &quot;pundit-preview-image-container&quot;,
+                width: w,
+                height: h
+            });
+            dojo.style(s.getDOM(),{
+                left: style.marginLeft,
+                top: style.marginTop,
+                position: &#x27;absolute&#x27;
+            });
+            var l = new Kinetic.Layer();
+            s.add(l);
+            
+            &#x2F;&#x2F;for (var i in item.selectors){
+            for (var i = item.selectors.length; i--;){
+                points = [];
+                if (item.selectors[i].type === &#x27;polygon&#x27;){
+                    &#x2F;&#x2F;for (var j in item.selectors[i].points){
+                    for (var j = item.selectors[i].points.length; j--;){
+                        points.push({
+                            x : item.selectors[i].points[j].x * parseInt(w),
+                            y : item.selectors[i].points[j].y * parseInt(h)
+                        });
+                    }
+                    
+                    var p = [];
+                    &#x2F;&#x2F;for (var k in points){
+                    for (var k = points.length; k--;){
+                        p = p.concat([points[k].x, points[k].y]);
+                    }
+                    p = p.concat([points[0].x, points[0].y]);
+                    &#x2F;&#x2F;points.concat([points[0].x, points[0].y]);
+                    var poly = new Kinetic.Polygon({
+                        points: p,
+                        fill: &#x27;#00D2FF&#x27;,
+                        stroke: &#x27;black&#x27;,
+                        strokeWidth: 2,
+                        opacity: 0.3
+                    });
+                    l.add(poly);
+                    s.draw();
+                }
+            
+            }
+            
+        }
+        
+        
+    }, &#x2F;&#x2F; show()
+    
+    &#x2F;**
+    * @method hide
+    * @description Hides the preview area.
+    *&#x2F;
+    hide: function(containerSelector) {
+                
+        if (typeof(containerSelector) === &#x27;undefined&#x27;)
+            containerSelector = &#x27;#pundit-gui-preview&#x27;;            
+
+        dojo.query(containerSelector).empty();
+    }
+
+});
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

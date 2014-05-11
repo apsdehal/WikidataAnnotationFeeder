@@ -1,0 +1,12 @@
+--- dojo/_base/xhr.js	2011-02-21 15:11:57.000000000 +0100
++++ ../dojo_sdk_1.6.1/dojo/_base/xhr.js	2011-11-30 10:42:01.000000000 +0100
+@@ -855,6 +855,9 @@
+ 		// IE 6 is a steaming pile. It won't let you call apply() on the native function (xhr.open).
+ 		// workaround for IE6's apply() "issues"
+ 		xhr.open(method, ioArgs.url, args.sync !== true, args.user || undefined, args.password || undefined);
++		if(("withCredentials" in xhr) && ("withCredentials" in args)) {
++            xhr.withCredentials = args.withCredentials;
++        }		
+ 		if(args.headers){
+ 			for(var hdr in args.headers){
+ 				if(hdr.toLowerCase() === "content-type" && !args.contentType){

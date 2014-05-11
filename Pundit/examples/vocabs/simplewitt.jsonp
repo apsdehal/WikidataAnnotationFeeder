@@ -1,0 +1,96 @@
+_PUNDIT.vocab.initJsonpVocab({
+
+    "identifier": "value",
+    "label": "label",
+    "name": "wittgenstein_simple_taxonomy",
+    "tab_name": "Wittgenstein simple taxonomy",
+    "description": "Simple taxonomy to annotate Wittgenstein.",
+    "type": "taxonomy",
+        "items": [
+            {
+            "value": "http://www.w3.org/2004/02/skos/core#Concept",
+            "label": "Concepts",
+            "description": "Concepts",
+            "nodetype": [
+                "http://purl.org/pundit/vocab/category"
+            ],
+            "children": [
+                {
+                    "_reference": "http://purl.org/net7/simplewitt#Meaning"
+                },
+                {
+                    "_reference": "http://purl.org/net7/simplewitt#Training"
+                },
+                {
+                    "_reference": "http://purl.org/net7/simplewitt#Teaching"
+                },
+                {
+                    "_reference": "http://en.wikipedia.org/wiki/Language-game"
+                }
+                
+            ]
+            },
+            {
+                "value": "http://purl.org/net7/simplewitt#Meaning",
+                "label": "Meaning",
+                "description": "Meaning",
+                "type":["subject"],
+                "rdftype": [
+                    "http://www.w3.org/2000/01/rdf-schema#Resource"
+                ]
+            },
+            {
+                "value": "http://purl.org/net7/simplewitt#Training",
+                "label": "Training",
+                "description": "Traning",
+                "type":["subject"],
+                "rdftype": [
+                    "http://www.w3.org/2000/01/rdf-schema#Resource"
+                ]
+            },
+            {
+                "value": "http://purl.org/net7/simplewitt#Teaching",
+                "label": "Teaching",
+                "description": "Teaching",
+                "type":["subject"],
+                "rdftype": [
+                    "http://www.w3.org/2000/01/rdf-schema#Resource"
+                ],
+                "children": [
+                    {
+                        "_reference": "http://purl.org/net7/simplewitt#OstensiveTeaching"
+                    },
+                    {
+                        "_reference": "http://purl.org/net7/simplewitt#DemonstrativeTeaching"
+                    }
+                ]
+            },
+            {
+                "value": "http://en.wikipedia.org/wiki/Language-game",
+                "label": "Language game",
+                "description": "Language game",
+                "type":["subject"],
+                "rdftype": [
+                    "http://www.w3.org/2000/01/rdf-schema#Resource"
+                ]
+            },
+            {
+                "value": "http://purl.org/net7/simplewitt#OstensiveTeaching",
+                "label": "Ostensive teaching",
+                "description": "Ostensive teaching",
+                "type":["subject"],
+                "rdftype": [
+                    "http://www.w3.org/2000/01/rdf-schema#Resource"
+                ]
+            },
+            {
+                "value": "http://purl.org/net7/simplewitt#DemonstrativeTeaching",
+                "label": "Demonstrative teaching",
+                "description": "Demonstrative teaching",
+                "type":["subject"],
+                "rdftype": [
+                    "http://www.w3.org/2000/01/rdf-schema#Resource"
+                ]
+            }
+        ]
+});

@@ -1,0 +1,215 @@
+_PUNDIT.vocab.initJsonpVocab({
+    "error_code": "200",
+    "error_message": "OK",
+    "result": {
+        "vocab_label": "Wittgenstein -Taxonomy",
+        "vocab_id": "69",
+        "vocab_type": "subjects",
+        "items": [
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/831",
+                "label": "Issue",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/832",
+                "label": "Place (location)",
+                "description": "The terms location and place in geography are used to identify a point or an area on the Earth's surface or elsewhere. The term 'location' generally implies a higher degree of certainty than \"place\" which often has an ambiguous boundary relying more on human\/social attributes of place identity and sense of place than on geometry.\nAn absolute location is designated using a specific pairing of latitude and longitude, a Cartesian coordinate grid (e.g., a Spherical coordinate system), an ellipsoid-based system (e.g., World Geodetic System), or similar methods.\nAn example would be the longitude and latitude of a place. For instance, the position of Lake Michigan, USA, can be expressed approximately in the WGS84 coordinate system as the location 10.65\u00b0N (latitude), 71.6\u00b0W (longitude). It is, however, important to remember that this is just one way to describe its position; a small number of the alternative ways can be seen here.\nAbsolute Location is a term which has no real meaning, since all locations must be expressed relative to something else. For example, longitude is the number of degrees east or west of the Prime Meridian, a line which has arbitrarily been chosen to pass through",
+                "nodetype": "container",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "image": "https:\/\/www.googleapis.com\/freebase\/v1\/image\/m\/078x4m",
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/833",
+                "label": "Person",
+                "description": "A person is a being, such as a human, that has certain capacities or attributes constituting personhood, which in turn is defined differently by different authors in different disciplines, and less formally by different cultures in different times and places.\nIn ancient Rome, the word \"persona\" (Latin) or \"prosopon\" (????????: Greek) originally referred to the masks worn by actors on stage. The various masks represented the various \"personae\" in the stage play. The concept of a \"person\" was further developed during the Trinitarian and Christological debates of the first through sixth centuries. Since then, a number of important changes to the word's meaning and use have taken place, and attempts have been made to redefine the word with varying degrees of adoption and influence.\nIn addition to the question of personhood, of what makes a being count as a person to begin with, there are further questions about personal identity: both about what makes any particular person that particular person instead of another, and about what makes a person at one time the same person as he or she was or will be at another time despite any intervening changes.\nThe common plural of \"person\",",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "image": "https:\/\/www.googleapis.com\/freebase\/v1\/image\/m\/01g317",
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/835",
+                "label": "Subject",
+                "description": "Something the sources are about",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": [
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/836"
+                    },
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/832"
+                    },
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/851"
+                    },
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/852"
+                    },
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/853"
+                    }
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/836",
+                "label": "Person",
+                "description": "A person",
+                "nodetype": "container",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": [
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/860"
+                    },
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/861"
+                    }
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/837",
+                "label": "Place (location)",
+                "description": "A place",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/851",
+                "label": "Issue",
+                "description": "",
+                "nodetype": "container",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": [
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/854"
+                    },
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/855"
+                    },
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/856"
+                    }
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/852",
+                "label": "Point",
+                "description": "A Point",
+                "nodetype": "container",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/853",
+                "label": "Field",
+                "description": "A field",
+                "nodetype": "container",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": [
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/857"
+                    },
+                    {
+                        "_reference": "http:\/\/purl.org\/net7\/korbo\/item\/858"
+                    }
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/854",
+                "label": "Perspective",
+                "description": "A perspective",
+                "nodetype": "container",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/855",
+                "label": "Intention",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/856",
+                "label": "Meaning",
+                "description": "A meaning",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/857",
+                "label": "Metaphysics",
+                "description": "Metaphysics ...",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/858",
+                "label": "Philosophy of Language",
+                "description": "Philosophy of Language ...",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/860",
+                "label": "Ludwig Wittgenstein",
+                "description": "Ludwig Josef Johann Wittgenstein (26 April 1889\u00a0\u2013 29 April 1951) was an Austrian-British philosopher who worked primarily in logic, the philosophy of mathematics, the philosophy of mind, and the philosophy of language. He was professor in philosophy at the University of Cambridge from 1939 until 1947. In his lifetime, he published just one book review, one article, a children's dictionary, and the 75-page Tractatus Logico-Philosophicus (1921). In 1999, his posthumously published Philosophical Investigations (1953) was ranked as the most important book of 20th-century philosophy, standing out as \"...the one crossover masterpiece in twentieth-century philosophy, appealing across diverse specializations and philosophical orientations\". Bertrand Russell described him as \"the most perfect example I have ever known of genius as traditionally conceived, passionate, profound, intense, and dominating\".\nBorn in Vienna into one of Europe's wealthiest families, he gave away his entire inheritance. Three of his brothers committed suicide, with Ludwig contemplating it too. He left academia several times: serving as an officer on the frontline during World War I, where he was decorated a number",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "image": "https:\/\/www.googleapis.com\/freebase\/v1\/image\/m\/04hcw",
+                "children": []
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/861",
+                "label": "Immanuel Kant",
+                "description": "Immanuel Kant, 22 April 1724 \u2013 12 February 1804) was a German philosopher from K\u00f6nigsberg (today Kaliningrad of Russia), who researched, lectured, and wrote on philosophy and anthropology during the Enlightenment at the end of the 18th century.\nKant\u2019s major work, the Critique of Pure Reason (Kritik der reinen Vernunft, 1781), aimed to unite reason with experience to move beyond what he took to be failures of traditional philosophy and metaphysics. He hoped to end an age of speculation where objects outside experience were used to support what he saw as futile theories, while opposing the skepticism of thinkers such as Berkeley and Hume.\nHe stated:\nKant proposed a \u2018Copernican Revolution\u2019 in reverse, saying that:\nKant published other important works on ethics, religion, law, aesthetics, astronomy, and history. These included the Critique of Practical Reason (Kritik der praktischen Vernunft, 1788) and the Metaphysics of Morals (Die Metaphysik der Sitten, 1797), which dealt with ethics. And the Critique of Judgment (Kritik der Urteilskraft, 1790), which looks at aesthetics and teleology. He aimed to resolve disputes between empirical and",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/2000\/01\/rdf-schema#Resource"
+                ],
+                "image": "https:\/\/www.googleapis.com\/freebase\/v1\/image\/m\/03sbs",
+                "children": []
+            }
+        ]
+    }
+})

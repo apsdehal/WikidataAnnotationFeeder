@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src&#x2F;selectors&#x2F;VocabSelector.js - Pundit</title>
+    <link rel="stylesheet" href="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;3.8.0pr2&#x2F;build&#x2F;cssgrids&#x2F;cssgrids-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="..&#x2F;assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="..&#x2F;assets/favicon.png">
+    <script src="http:&#x2F;&#x2F;yui.yahooapis.com&#x2F;combo?3.8.0pr2&#x2F;build&#x2F;yui&#x2F;yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="http:&#x2F;&#x2F;thepund.it&#x2F;assets&#x2F;img&#x2F;pundit_500.png" title="Pundit"></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: PUNDIT Project 0.12-Pumpkin</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsBase.html">pundit.annotators.AnnotatorsBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.AnnotatorsConductor.html">pundit.annotators.AnnotatorsConductor</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.FakeAnnotator.html">pundit.annotators.FakeAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.annotators.TextFragmentAnnotator.html">pundit.annotators.TextFragmentAnnotator</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.authenticatedRequests.html">pundit.authenticatedRequests</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.baseComponent.html">pundit.baseComponent</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.BasePanel.html">pundit.BasePanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTag.html">pundit.CommentTag</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.CommentTagPanel.html">pundit.CommentTagPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Configuration.html">pundit.Configuration</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.contextualMenu.html">pundit.contextualMenu</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DataTxt.html">pundit.DataTxt</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.DbpediaSpotlight.html">pundit.DbpediaSpotlight</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.FastTextHandler.html">pundit.FastTextHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ImageAnnotationPanel.html">pundit.ImageAnnotationPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Init.html">pundit.Init</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ItemContainerManager.html">pundit.ItemContainerManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.KorboBasketSelector.html">pundit.KorboBasketSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.myPundit.html">pundit.myPundit</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.NotebookManager.html">pundit.NotebookManager</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.PageHandler.html">pundit.PageHandler</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.Previewer.html">pundit.Previewer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.RecognizerPanel.html">pundit.RecognizerPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.ResourcesPanel.html">pundit.ResourcesPanel</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.BibServerSelector.html">pundit.selectors.BibServerSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.DBPediaSelector.html">pundit.selectors.DBPediaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.EuropeanaSelector.html">pundit.selectors.EuropeanaSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.FreebaseSelector.html">pundit.selectors.FreebaseSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.SelectorBase.html">pundit.selectors.SelectorBase</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.VocabSelector.html">pundit.selectors.VocabSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.selectors.WordnetSelector.html">pundit.selectors.WordnetSelector</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.TripleComposer.html">pundit.TripleComposer</a></li>
+            
+                <li><a href="..&#x2F;classes/pundit.XpointersHelper.html">pundit.XpointersHelper</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="..&#x2F;modules/pundit.html">pundit</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: src&#x2F;selectors&#x2F;VocabSelector.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+&#x2F;**
+ * @class pundit.selectors.VocabSelector
+ * @extends pundit.baseComponent
+ * @description Is responsible for the loading and managing of vocabularies that 
+ * are used in the annotations. Vocabularies are special JSON files loaded at run time 
+ * using JSONP to avoid same origin policy. Togheter with the vocabularies 
+ * also related relation are loaded. Vocabularies are configurable in 
+ * NamespaceHelper file setting the vocabs object.
+ *&#x2F;
+dojo.provide(&quot;pundit.selectors.VocabSelector&quot;);
+dojo.declare(&quot;pundit.selectors.VocabSelector&quot;, pundit.BaseComponent, {
+	
+    constructor: function(options) {
+        var self = this;
+        self.vocabs = {};
+        
+        var vs  = &#x27;&lt;div id=&quot;pundit-vocabs-container&quot; class=&quot;pundit-tab&quot;&gt;&#x27;;
+        vs += &#x27;&lt;div id=&quot;pundit-vocabs-header&quot; class=&quot;pundit-tab-header&quot;&gt;&#x27;;
+        vs += &#x27;&lt;ul class=&quot;pundit-item-filter-list&quot;&gt;&lt;&#x2F;ul&gt;&lt;&#x2F;div&gt;&#x27;
+        vs += &#x27;&lt;div id=&quot;vocabSelectorContent&quot; class=&quot;pundit-tab-content pundit-stop-wheel-propagation&quot;&gt;&lt;&#x2F;div&gt;&#x27;;
+        vs += &#x27;&lt;&#x2F;div&gt;&#x27;;
+
+        dojo.query(&#x27;#pundit-gui-center&#x27;).append(vs);
+        self.draggedItem = {};
+
+        self.createCallback([&#x27;Ok&#x27;, &#x27;vocabsLoaded&#x27;]);
+        self.vocabState = {};
+        self.reader = new pundit.AnnotationReader({debug: self.opts.debug});
+        self.reader.onJsonpVocabLoaded(function(vocabUri){
+            self.vocabState[vocabUri] = true;
+            for (var i in self.vocabState){
+                if (self.vocabState[i] === false)
+                    return false;
+            }
+            self.fireOnVocabsLoaded();
+        }) 
+        self.initContextualMenu();
+        self.initVocabs();
+        self.initBehaviors();
+        
+        _PUNDIT.init.onInitDone(function() {
+            self.selectFirstTab();
+        });
+        
+        self.log(&quot;VocabSelector up and running&quot;);
+    }, &#x2F;&#x2F; constructor()
+    
+    initJsonpVocab: function(v) {
+        var self = this, 
+            len = 0;
+        
+        &#x2F;&#x2F; Handle both old dojo-style LEGACY format
+        if (&#x27;items&#x27; in v &amp;&amp; &#x27;type&#x27; in v &amp;&amp; &#x27;identifier&#x27; in v &amp;&amp; &#x27;label&#x27; in v)
+            return self._initLegacyJsonpVocab(v);
+
+        if (typeof(v.result) === &#x27;undefined&#x27; || typeof(v.error_code) === &#x27;undefined&#x27; ||
+            typeof(v.result) === &#x27;undefined&#x27; || typeof(v.result.vocab_type) === &#x27;undefined&#x27;) {
+            self.log(&#x27;ERROR: malformed vocabulary in korbo format?&#x27;);
+            return;
+        }
+
+        if (parseInt(v.error_code, 10) !== 200) {
+            self.log(&#x27;ERROR: Vocab provider error. Code &#x27;+v.error_code+&#x27;: &#x27;+v.error_message);
+            return;
+        }
+
+        &#x2F;&#x2F; TODO: sanity checks on vocab
+        &#x2F;&#x2F; TODO: i18n: vocab_label, vocab_description 
+        
+
+        v.result = self._prepareTreeJsonp(v.result);
+
+        if (v.result.vocab_type === &quot;subjects&quot;) {
+            self.initInMemoryTree(v.result);
+            self.log(&quot;Initialized &quot;+v.result.tab_name+&quot; taxonomy from json: &quot;+v.result.items.length+&quot; items.&quot;);
+        } else if (v.result.vocab_type === &quot;predicates&quot;) {
+            self.processRelations(v.result);
+            self.log(&quot;Initialized &quot;+v.result.tab_name+&quot; relations from json: &quot;+v.result.items.length+&quot; items.&quot;);
+        } else {
+            self.log(&#x27;ERROR: vocab_type wrong? &#x27; + v.result.vocab_type);
+            return;
+        }
+
+        self.initBehaviorsForVocab(v.result.name);
+        dojo.behavior.apply();
+        
+    }, &#x2F;&#x2F; initJsonpVocab()
+    
+    _prepareTreeJsonp: function(tree) {
+        var self = this,
+            isPredicates = tree.vocab_type === &quot;predicates&quot;;
+
+        &#x2F;&#x2F; Add some fields for the dojo tree component
+        if (!isPredicates)
+            tree.label = &quot;label&quot;;
+            tree.identifier = &quot;value&quot;;
+            tree.name = tree.vocab_id;
+            tree.tab_name = tree.vocab_label;
+        
+        for (var i=tree.items.length; i--;) {
+
+            if (isPredicates) {
+                
+                tree.items[i][&#x27;type&#x27;] = [&#x27;predicate&#x27;];
+                
+                &#x2F;&#x2F; Must have domain, range and the proper rdftype
+                if (typeof(tree.items[i][&#x27;domain&#x27;]) === &#x27;undefined&#x27;) {
+                    self.log(&#x27;WARNING: Predicate with no domain?&#x27; + tree.items[i][&#x27;label&#x27;]);
+                    tree.items[i][&#x27;domain&#x27;] = [];
+                }
+                 
+                if (typeof(tree.items[i][&#x27;range&#x27;]) === &#x27;undefined&#x27;) {
+                    self.log(&#x27;WARNING: Predicate with no range?&#x27; + tree.items[i][&#x27;label&#x27;]);
+                    tree.items[i][&#x27;range&#x27;] = [];
+                }
+                
+                if (typeof(tree.items[i][&#x27;rdftype&#x27;]) === &#x27;undefined&#x27;) {
+                    self.log(&#x27;WARNING: Importing predicate with no RDF type: &#x27;+ tree.items[i][&#x27;label&#x27;]);
+                    tree.items[i][&#x27;rdftype&#x27;] = [_PUNDIT.ns.rdf_type];
+                }
+                
+                &#x2F;&#x2F; If container node, ignore the node
+                if (tree.items[i][&#x27;nodetype&#x27;] === &quot;container&quot;) {
+                    self.log(&#x27;WARNING: skipping container node inside predicates: &#x27;+ tree.items[i][&#x27;label&#x27;]);
+                    tree.items[i][&#x27;rdftype&#x27;] = [];
+                    tree.items[i][&#x27;type&#x27;] = [];
+                }
+                
+            } else {
+
+                tree.items[i][&#x27;type&#x27;] = [&#x27;subject&#x27;];
+
+                &#x2F;&#x2F; DEBUG: no rdftype field?? Some sort of bug?
+                if (typeof(tree.items[i][&#x27;rdftype&#x27;]) === &#x27;undefined&#x27;) {
+                    self.log(&#x27;WARNING: Importing item with no RDF type: &#x27;+ tree.items[i][&#x27;label&#x27;]);
+                    tree.items[i][&#x27;rdftype&#x27;] = [];
+                }
+
+                &#x2F;&#x2F; If .children is empty, delete it: this way the [+] icon will not appear at all
+                if (typeof(tree.items[i][&#x27;children&#x27;]) === &#x27;object&#x27; &amp;&amp; tree.items[i][&#x27;children&#x27;].length === 0) 
+                    delete tree.items[i][&#x27;children&#x27;];
+
+                &#x2F;&#x2F; Container nodes are not draggable: no dnd type
+                if (tree.items[i][&#x27;nodetype&#x27;] === &quot;container&quot;) {
+                    &#x2F;&#x2F; TODO: create a conf param and use it here and where tree is initialized
+                    tree.items[i][&#x27;nodetype&#x27;] = ns.pundit_VocabCategory;
+                    tree.items[i][&#x27;type&#x27;] = [];
+                }
+            
+            } &#x2F;&#x2F; is isPredicate
+
+        } &#x2F;&#x2F; for tree.items
+        
+        return tree;
+    }, &#x2F;&#x2F; _prepareTreeJsonp()
+    
+    _initLegacyJsonpVocab: function(v) {
+        var self = this;
+        
+        if (typeof(v.items) !== &#x27;undefined&#x27;)
+            len = v.items.length;
+        else {
+            self.log(&quot;ERROR: 0-length vocabulary received?&quot;);
+            return;
+        }
+        
+        if (typeof(v.type) === &#x27;undefined&#x27;) {
+            self.log(&quot;ERROR: Vocabulary with no type received.&quot;);
+            return;
+        }
+
+        &#x2F;&#x2F; TODO: code to erase a previous instance of the same vocab, in order
+        &#x2F;&#x2F; to be able to call multiple times initJsonpVocab if needed
+
+        if (v.type === &quot;taxonomy&quot;) {
+            self.initInMemoryTree(v);
+            self.log(&quot;LEGACY VOCAB Initialized &quot;+v.name+&quot; taxonomy from jsonp loaded file with &quot;+len+&quot; items.&quot;);
+        } else if (v.type === &quot;relations&quot;) {
+            self.processRelations(v);
+            self.log(&quot;LEGACY VOCAB Initialized &quot;+v.name+&quot; relations from jsonp loaded file with &quot;+len+&quot; items.&quot;);
+        }
+
+        self.initBehaviorsForVocab(v.name);
+        dojo.behavior.apply();
+        
+    },
+    
+    initVocabs: function(){
+        var self = this,
+            vocabs = _PUNDIT.config.vocabularies;
+        
+        &#x2F;&#x2F; TODO: code to destroy everything, so we can call initVocabs
+        &#x2F;&#x2F; again when the user wants it
+        
+        &#x2F;&#x2F;TODO fire an event when all vocabs have been initialized
+        &#x2F;&#x2F;If no vocabs are loaded fire the event directly now
+
+        &#x2F;&#x2F;for (var i in vocabs) {
+        for (var i = vocabs.length; i--;) {
+            self.vocabState[vocabs[i]] = false;
+            self.reader.getVocabularyFromJsonp(vocabs[i]);
+            self.log(&#x27;Initializing vocab &#x27;+vocabs[i]);
+        }
+        
+        if (_PUNDIT.config.useBasicRelations) {
+            self.log(&#x27;Loading basic vocabolary&#x27;);
+            self.initJsonpVocab(_PUNDIT.config.basicRelations);
+        }
+            
+    }, &#x2F;&#x2F; initVocabs()
+
+    initContextualMenu: function(target) {
+        var self = this;
+
+        cMenu.addAction({
+            type: [&#x27;vocabItem&#x27;],
+            name: &#x27;addVocabToMyItems&#x27;,
+            label: &#x27;Add to My Items&#x27;,
+            showIf: function(item) {
+                return !semlibMyItems.uriInItems(item.value);;
+            },
+            onclick: function(item) {
+                if (!semlibItems.uriInItems(item.value))
+                    semlibItems.addItem(item);
+                semlibMyItems.addItem(item, true);
+                return true;
+            }
+        });
+    
+        &#x2F;&#x2F; A favorite item can be de-favorited
+        cMenu.addAction({
+            &#x2F;&#x2F;type: [&#x27;__all&#x27;],
+            type: [&#x27;vocabItem&#x27;],
+            name: &#x27;removeVocabFromMyItems&#x27;,
+            label: &#x27;Remove from My Items&#x27;,
+            showIf: function(item) { 
+                return semlibMyItems.uriInItems(item.value);
+            },
+            onclick: function(item) {
+				&#x2F;&#x2F;DEBUG Remove item from my items and from page items
+                semlibMyItems.removeItemFromUri(item.value);
+                return true;
+            }
+        });
+    
+        cMenu.addAction({
+            type: [&#x27;vocabItem&#x27;],
+            name: &#x27;openVocabWebPage&#x27;,
+            label: &#x27;Open Web Page&#x27;,
+            showIf: function(xp) { 
+                return true;
+            },
+            onclick: function(item) {
+                window.open(item.value, &#x27;SemLibOpenedWebPage&#x27;);
+                return true;
+            }
+        });
+        
+        dojo.behavior.apply();
+    }, &#x2F;&#x2F; initContextualMenu()
+    
+    initInMemoryTree: function(voc) {
+        var self = this;
+            self.vocabs[voc.name] = {};
+
+        self.vocabs[voc.name].label = voc.tab_name;
+        &#x2F;&#x2F;Add tab
+        dojo.query(&#x27;#pundit-vocabs-container ul.pundit-item-filter-list&#x27;).append(&#x27;&lt;li id=&quot;&#x27;+voc.name+&#x27;VocabFilter&quot;&gt;&#x27;+voc.tab_name+&#x27;&lt;&#x2F;li&gt;&#x27;);
+        dojo.connect(dojo.byId(voc.name+&#x27;VocabFilter&#x27;),&#x27;onclick&#x27;,function(){
+            self.showVocabByName(voc.name);
+        });
+        
+        dojo.query(&#x27;#pundit-vocabs-container div.pundit-tab-content&#x27;).append(&quot;&lt;div id=&#x27;&quot;+voc.name+&quot;VocabPanel&#x27; class=&#x27;semlib-panel semlib-vocab&#x27;&gt;&lt;div id=&#x27;&quot;+voc.name+&quot;VocabTreePanel&#x27;&gt;&lt;&#x2F;div&gt;&lt;div&gt;&quot;);
+        
+        &#x2F;&#x2F;Instantiate the store associated to each vocabulary tree
+        self.vocabs[voc.name].store = new dojo.data.ItemFileReadStore({
+            data: voc
+        });
+        
+        &#x2F;&#x2F;Define the tree model as required to implement a tree widget
+        self.vocabs[voc.name].treeModel = new dijit.tree.ForestStoreModel({
+            &#x2F;&#x2F;store: self[voc.name + &#x27;Store&#x27;],
+            store: self.vocabs[voc.name].store,
+            query: {
+                &quot;nodetype&quot;: ns.pundit_VocabCategory
+            },
+            rootId: &quot;root&quot;,
+            rootLabel: &quot;Things&quot;,
+            pasteItem: function(){},
+            childrenAttrs: [&quot;children&quot;]
+        });
+        
+        &#x2F;&#x2F;Define the tree
+        self.vocabs[voc.name].tree = dijit.Tree({
+            &#x2F;&#x2F; Add the clicked entity to the item list
+            onClick: function(x,y){
+            },
+            &#x2F;&#x2F; Call the store to retrieve asynchronously the item, the
+            &#x2F;&#x2F; onComplete callback will display the tooltip
+            onMouseOver: function(e) {
+                var cItem;
+                if (dojo.hasClass(e.target,&quot;dijitTreeLabel&quot;)){
+                    &#x2F;&#x2F;DEBUG ALTERNATIVE
+                    &#x2F;&#x2F;TODO get item from store._arrayofallitems
+                    &#x2F;&#x2F;self.draggedItem = self.getItemFromLabel(self[voc.name + &#x27;Store&#x27;], dojo.query(e.target).html());
+                    &#x2F;&#x2F;Same result of this but without callback
+                    &#x2F;&#x2F;self.getItemFromStore(self[voc.name + &#x27;Store&#x27;], dojo.query(e.target).html());
+                    self.getItemFromStore(self.vocabs[voc.name].store, dojo.query(e.target).html());
+                    &#x2F;&#x2F;cItem = self.getItemFromLabel(self[voc.name + &#x27;Store&#x27;],dojo.query(e.target).html());
+                    cItem = self.getItemFromLabel(self.vocabs[voc.name].store, dojo.query(e.target).html());
+                    if (typeof(cItem) !== &#x27;undefined&#x27;)
+                        previewer.show(cItem.value[0]);
+                    return;
+                }
+            },
+            &#x2F;&#x2F;&#x2F;&#x2F;MULTIPLOP Force the tree to select and drag just one single node
+            onMouseDown: function(e) {
+                var cItem,
+                    label,
+                    target = e.target;
+                &#x2F;&#x2F;DEBUG One for all code. Optimize search?
+                while (!dojo.hasClass(dojo.query(target)[0], &#x27;dijitTreeRow&#x27;)){
+                    target = dojo.query(target).parent()[0];
+                }
+                var label = dojo.query(target).children(&#x27;span&#x27;).children(&#x27;span&#x27;).html();
+                if (typeof label !== &#x27;undefined&#x27;){
+                    cItem = self.getItemFromLabel(self.vocabs[voc.name].store, label);
+                    self.vocabs[voc.name].dndTree.selectNone();
+                    self.selectTreeNodeById(self.vocabs[voc.name].tree, cItem.value[0]);
+                }
+            },
+            &#x2F;&#x2F;model: self.treeModel,
+            model: self.vocabs[voc.name].treeModel,
+            getIconClass: function(&#x2F;*dojo.data.Item*&#x2F; item, &#x2F;*Boolean*&#x2F; opened){
+                return (!item || typeof(item.type) === &#x27;undefined&#x27;) ? (opened ? &quot;dijitFolderOpened&quot; : &quot;dijitFolderClosed&quot;) : &quot;pundit-vocabs-icon&quot;
+                &#x2F;&#x2F;return (!item || this.model.mayHaveChildren(item)) ? &quot;pundit-vocabs-icon&quot; : &quot;pundit-vocabs-icon&quot;
+            }
+        }, voc.name+&#x27;VocabTreePanel&#x27;);
+        
+        &#x2F;&#x2F;Make the tree draggable
+        self.vocabs[voc.name].dndTree = new dijit.tree.dndSource(&#x2F;* dijit.Tree *&#x2F; self.vocabs[voc.name].tree, &#x2F;* dijit.tree.__SourceArgs *&#x2F; {
+            copyOnly: true,
+            dragThreshold: 10,
+            semlibTree: true &#x2F;&#x2F;Use to check if the source is a semlib tree when dropping
+        });
+        
+        &#x2F;&#x2F;Prevent the tree from accepting dragged items
+        self.vocabs[voc.name].dndTree.checkAcceptance = function(){
+            return false;
+        };
+        dojo.behavior.apply();
+        
+        self.initTreeItemsPreview(self.vocabs[voc.name].store);
+    },
+    
+    initTreeItemsPreview:function(store){
+        var self = this,
+            items = store._arrayOfAllItems,
+            item ={};
+        &#x2F;&#x2F;for (var i in items){
+        for (var i = items.length;i--;){
+            &#x2F;&#x2F;DEBUG possible refactor
+           if ((typeof(items[i].type) !== &#x27;undefined&#x27;) &amp;&amp; (typeof(items[i].rdftype) !== &#x27;undefined&#x27;)){
+               item = {
+                   description: items[i].description[0],
+                   label: items[i].label[0],
+                   rdftype: items[i].rdftype,
+                   type: items[i].type,
+                   value: items[i].value[0]
+               }
+                if (typeof(items[i].image) !== &#x27;undefined&#x27;){
+                    item.image = items[i].image[0];
+                }
+                item.rdfData = semlibItems.createBucketForVocabItem(item).bucket;
+                previewer.buildPreviewForItem(item);
+            }
+&#x2F;&#x2F;            else if ((typeof(items[i].type) !== &#x27;undefined&#x27;) &amp;&amp; typeof(items[i].rdftype) === &#x27;undefined&#x27;){
+&#x2F;&#x2F;                item = {
+&#x2F;&#x2F;                    &#x2F;&#x2F;Tree item folder need type field 
+&#x2F;&#x2F;                    &#x2F;&#x2F;DEBUG should rename the field to avoid confusion
+&#x2F;&#x2F;                    &#x2F;&#x2F;type: items[i].type, 
+&#x2F;&#x2F;                    rdftype: items[i].type,
+&#x2F;&#x2F;                    label: items[i].label[0],
+&#x2F;&#x2F;                    description: items[i].description[0],
+&#x2F;&#x2F;                    value: items[i].value[0]
+&#x2F;&#x2F;                };
+&#x2F;&#x2F;                if (typeof(items[i].image) !== &#x27;undefined&#x27;){
+&#x2F;&#x2F;                    item.image = items[i].image[0];
+&#x2F;&#x2F;                }
+&#x2F;&#x2F;                item.rdfData = semlibItems.createBucketForVocabItem(item).bucket;
+&#x2F;&#x2F;                previewer.buildPreviewForItem(item);
+&#x2F;&#x2F;            }
+        }
+    },
+    
+    &#x2F;&#x2F;DEBUG: Is this function used somewhere?
+    displayMoreInfoForItem: function(item) {
+        var self = this,
+            comment = item.description[0],
+            aToggle = null,            
+            tip = &quot;&lt;h3&gt;&quot;+item.name+&quot; :&lt;&#x2F;h3&gt;&quot;;
+        
+        if (typeof(item.image) !== &quot;undefined&quot;)
+            tip += &quot;&lt;img &quot; + &quot;src=&#x27;&quot; + item.image + &quot;&#x27;&#x2F;&gt;&lt;&#x2F;br&gt;&quot;;
+        
+        &#x2F;&#x2F;show only 250 caratteri
+        if (comment.length &gt; 250){
+            var i= 250;
+            while (comment[i] != &#x27; &#x27;){
+                i = i - 1;
+            }
+            comment = comment.substring(0,i) + &#x27;...&#x27;;
+            aToggle = dojo.create(&quot;a&quot;);
+            dojo.addClass(aToggle, &#x27;collapsed&#x27;);
+            dojo.html.set(aToggle, &#x27;[More Info...]&#x27;);
+            dojo.attr(aToggle, &#x27;href&#x27;, &#x27;javascript:void(0)&#x27;);
+            dojo.connect(aToggle, &#x27;onclick&#x27;, function(evt){
+                self.toggleComment(evt.target, item.description[0], comment);
+            });
+            
+            tip += &quot;&lt;span id=&#x27;commentSpan&#x27;&gt;&quot;+comment+&quot;&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&lt;&#x2F;br&gt;&quot;;
+        } else{
+            tip += &quot;&lt;span id=&#x27;commentSpan&#x27;&gt;&quot;+comment+&quot;&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&lt;&#x2F;br&gt;&quot;;
+        }
+        tip += &quot;&lt;span&gt;Type: &lt;&#x2F;span&gt;&lt;span id=&#x27;akaInfo&#x27;&gt;&quot; + item.type + &quot;&lt;&#x2F;span&gt;&lt;&#x2F;br&gt;&lt;&#x2F;br&gt;&quot;;
+        
+        &#x2F;&#x2F;DEBUG: MARCO change the destination of info
+        if (&#x27;comment&#x27; in item) dojo.query(&#x27;#vocabMoreInfo&#x27;).html(tip);
+        
+        if ((typeof(aToggle) !== &#x27;undefined&#x27;) &amp;&amp; (aToggle !== null)) {
+            dojo.place(aToggle, dojo.byId(&#x27;commentSpan&#x27;),&#x27;after&#x27;);
+        }
+        
+    }, &#x2F;&#x2F; displayMoreInfoForItem
+    &#x2F;&#x2F;DEBUG: used in an unused function?
+    toggleComment:function(sender, text, comment){
+        if (dojo.hasClass(sender, &#x27;collapsed&#x27;)){
+            dojo.html.set(sender, &#x27;[Collapse]&#x27;);
+            dojo.html.set(dojo.byId(commentSpan), text);
+            dojo.removeClass(sender, &#x27;collapsed&#x27;);
+            dojo.addClass(sender, &#x27;expanded&#x27;);
+        } else{
+            dojo.html.set(sender, &#x27;[More Info...]&#x27;);
+            dojo.html.set(dojo.byId(commentSpan), comment);
+            dojo.removeClass(sender, &#x27;expanded&#x27;);
+            dojo.addClass(sender, &#x27;collapsed&#x27;);
+        }
+    },
+
+    initBehaviorsForVocab: function(name) {
+        var self = this;
+        
+        &#x2F;&#x2F; TODO: how to remove the behavior when removing the vocab?
+        
+        dojo.behavior._behaviors[&#x27;#&#x27; + name + &#x27;VocabPanel img.pundit-vocabs-icon&#x27;] = [{
+            &#x27;onclick&#x27;: [(function (_name) {
+                return function(e){
+                    var label = dojo.query(e.target).parent().children(&#x27;span&#x27;).html(),
+                        treeItem = self.getItemFromLabel(self.vocabs[name].store, label),
+                        item = self.createItemFromVocabItem(treeItem);
+&#x2F;&#x2F;                    var itemNode = dojo.query(e.target).parent().parent().parent(),
+&#x2F;&#x2F;                        id = itemNode[0].id,
+&#x2F;&#x2F;                        treeItem = self.vocabs[_name].dndTree.getItem(id);
+                    &#x2F;&#x2F;Convert tree item into item format
+&#x2F;&#x2F;                    var item = {
+&#x2F;&#x2F;                        description: treeItem.data.item.description[0],
+&#x2F;&#x2F;                        label: treeItem.data.item.label[0],
+&#x2F;&#x2F;                        image: treeItem.data.item.image[0],
+&#x2F;&#x2F;                        rdftype: treeItem.data.item.rdftype,
+&#x2F;&#x2F;                        type: treeItem.data.item.type,
+&#x2F;&#x2F;                        value: treeItem.data.item.value[0]
+&#x2F;&#x2F;                    }
+&#x2F;&#x2F;                    item.rdfData = semlibItems.createBucketForVocabItem(item).bucket;
+                    cMenu.show(e.pageX - window.pageXOffset, e.pageY - window.pageYOffset, item, &#x27;vocabItem&#x27;);
+                    
+                }
+            })(name)]
+        
+        }];
+        
+        
+    }, &#x2F;&#x2F; initBehaviorsForVocab()
+
+    initBehaviors: function() {
+        var self = this;
+        
+        dojo.subscribe(&quot;&#x2F;dnd&#x2F;start&quot;, function(source, nodes, copy, target) {
+            var isVocabTreeSource = false,
+                store;
+                
+            &#x2F;&#x2F;if (dojo.query(&#x27;table .dojoDndAvatar&#x27;))
+            
+            for (var i in self.vocabs) 
+                if (source === self.vocabs[i].dndTree){
+                    isVocabTreeSource = true;
+                    store = self.vocabs[i].store;
+                    break;
+                }
+            
+            if (isVocabTreeSource){
+                var n = dojo.query(&#x27;#&#x27; + nodes[0].id + &#x27; div span img&#x27;)[0];
+                
+                &#x2F;&#x2F;Update Avatar in case of dragging an item conteining subitems (this make the avatar display only the main node and not also the subnode
+                dojo.forEach(dojo.query(&#x27;table.dojoDndAvatar .dijitTreeContainer&#x27;), function(item){dojo.destroy(item)});
+                if (dojo.hasClass(n, &#x27;dijitFolderOpened&#x27;) || dojo.hasClass(n, &#x27;dijitFolderClosed&#x27;)){
+                    setTimeout(function(){
+                        dojo.publish(&quot;&#x2F;dnd&#x2F;cancel&quot;);
+                        dojo.dnd._manager.stopDrag();
+                    }, 0);
+                    return;
+                }
+                
+                for (var i = nodes.length - 1; i &gt;= 0; i--){
+                    self.getItemFromStore(store, source.getItem(nodes[i].id).data.label);
+                }
+            }
+        });
+        
+    }, &#x2F;&#x2F; initBehaviors()
+
+    getItemFromStore: function(store, s) {
+        var self = this;
+
+        &#x2F;&#x2F; Fetch the data.
+        store.fetch({
+            query: {
+                label: s
+            },
+            onComplete: function(i) { 
+                &#x2F;&#x2F; DEBUG: we look for an item with this name.. just get the
+                &#x2F;&#x2F; first item with this name in the store .. hoping that there&#x27;s
+                &#x2F;&#x2F; no items with the same name ..... better ideas? :|
+                if (i.length &gt; 0) {
+                    &#x2F;&#x2F;Tree item are slightly different from pundit items
+                    var item = self.createItemFromVocabItem(i[0]);
+                    self.draggedItem = item;
+                }
+            },
+            onError: function() { 
+            &#x2F;&#x2F; DEBUG: onError? Just dont display anything?
+            }
+        });
+    }, &#x2F;&#x2F; getItemFromStore()
+    
+    getItemFromLabel:function(store,label){
+        var self = this,
+            items = store._arrayOfAllItems,
+            item = {};
+        &#x2F;&#x2F;for (var i in items){
+        for (var i = items.length;i--;){
+            if (items[i].label[0] === label){
+                return items[i];    
+            }
+        }
+    },
+    
+    processRelations: function(g) {
+        var self = this,
+            items = g.items;
+        
+        self.log(&#x27;Imported relations: &#x27;+g.name+&#x27;: &#x27;+g.description);
+        
+        &#x2F;&#x2F;for (var i in items){
+        for (var i = items.length;i--;){
+            items[i].rdfData = semlibItems.createBucketForPredicate(items[i]).bucket;
+            previewer.buildPreviewForItem(items[i]);
+            if (!semlibItems.uriInItems(items[i].value))
+                semlibItems.addItem(items[i]);
+        }
+    },
+    
+    selectFirstTab: function() {
+        if (dojo.query(&#x27;#pundit-vocabs-container div.pundit-tab-content div.semlib-panel.semlib-selected&#x27;).length === 0) {
+            dojo.query(&#x27;#pundit-vocabs-container div.pundit-tab-content div.semlib-panel:first-child&#x27;).addClass(&#x27;semlib-selected&#x27;)
+            dojo.query(&#x27;#pundit-vocabs-header li:first-child&#x27;).addClass(&#x27;pundit-selected&#x27;)
+        }
+    },
+    
+    showVocabByName: function(name) {
+        var self = this;
+        dojo.query(&#x27;#pundit-vocabs-container div.pundit-tab-content div.semlib-panel&#x27;).forEach(function(item){
+            dojo.removeClass(item, &#x27;semlib-selected&#x27;);
+        });
+        dojo.addClass(name+&#x27;VocabPanel&#x27;, &#x27;semlib-selected&#x27;);
+        dojo.query(&#x27;#pundit-vocabs-header li&#x27;).forEach(function(item){dojo.removeClass(item,&#x27;pundit-selected&#x27;)});
+        dojo.addClass(name+&#x27;VocabFilter&#x27;, &#x27;pundit-selected&#x27;);
+    },
+    
+    getItemsForTerm:function(term, rdftypes){
+        var self = this,
+            items = [],
+            _items = [];
+        for (var i in self.vocabs){
+            _items = self.getItemsForTermInVocab(term, i, rdftypes);
+            &#x2F;&#x2F;for (var j in _items){
+            for (var j = _items.length; j--;){
+                if (!self.isItemInArrayByUri(items, _items[j]))
+                    items.push(_items[j])
+            }
+        }
+        return items;
+    },
+    
+    getItemsForTermInVocab:function(term, vocabName,rdftypes){
+        var self = this,
+            items = [],
+            vItems = self.vocabs[vocabName].store._arrayOfAllItems;
+        
+        for (var i = vItems.length -1; i &gt;= 0; i--){
+            if (typeof vItems[i].type === &#x27;undefined&#x27;)
+                continue;
+            if (vItems[i].label[0].toLowerCase().indexOf(term.toLowerCase()) !== -1){
+                if (!self.isItemInArrayByUri(items, vItems[i].value[0]))
+                    items.push(self.createItemFromVocabItem(vItems[i]));
+            }
+        }
+        if ((typeof rdftypes === &#x27;undefined&#x27;) || (rdftypes.length === 0))
+            return items
+        else {
+            &#x2F;&#x2F;TODO Should we move this to an helper and not to semlibItems
+            return semlibItems.filterItemsByRdftype(items, rdftypes);
+        }
+    },
+    
+    createItemFromVocabItem:function(i){
+        var item = {
+            description: i.description[0],
+            label: i.label[0], 
+            type: i.type,
+            rdftype: i.rdftype,
+            value: i.value[0]
+        }
+        if (typeof(i.image) !== &#x27;undefined&#x27;)
+            item.image = i.image[0];
+        item.rdfData = semlibItems.createBucketForVocabItem(item).bucket;
+        return item;
+    },
+    
+    &#x2F;&#x2F;TODO SIMONE: Move on an helper?
+    isItemInArrayByUri:function(array, uri){
+        for (var i = array.length -1; i&gt;= 0; i--){
+            if (array[i].value === uri)
+                return true;
+        }
+        return false;
+    },
+    
+    mergeItemsByUri:function(a1, a2){
+        var self = this;
+        for (var i = a2.length -1; i&gt;=0; i--){
+            if (!self.isItemInArrayByUri(a1, a2[i].value))
+                a1.push(a2[i]);
+        }
+        return a1;
+    },
+    &#x2F;&#x2F;Recursive function to construct the path of an item inside a tree
+    recursiveHunt:function(lookfor, model, buildme, item){
+        var self = this;
+        &#x2F;&#x2F;console.log(&quot;&gt;&gt; recursiveHunt, item &quot;, item, &quot; looking for &quot;, lookfor);
+        var id = model.getIdentity(item);
+        buildme.push(id);
+        if(id == lookfor){
+            &#x2F;&#x2F; Return the buildme array, indicating a match was found
+            &#x2F;&#x2F;console.log(&quot;++ FOUND item &quot;, item, &quot; buildme now = &quot;, buildme);
+            return buildme;
+        }
+        
+        &#x2F;&#x2F;DEBUG Added. Return undefined if item has no childern
+        
+        if (typeof item.children === &#x27;undefined&#x27;)
+            return undefined;
+        
+        &#x2F;&#x2F;for(var idx in item.children){
+        for(var idx = item.children.length; idx--;){
+            &#x2F;&#x2F; start a new branch of buildme, starting with what we have so far
+            var buildmebranch = buildme.slice(0);
+            &#x2F;&#x2F;console.log(&quot;Branching into &quot;, model.store.getValue(item.children[idx], &#x27;name&#x27;), &quot;, buildmebranch=&quot;, buildmebranch);
+            var r = self.recursiveHunt(lookfor, model, buildmebranch, item.children[idx]);
+            &#x2F;&#x2F; If a match was found in that recurse, return it.
+            &#x2F;&#x2F;  This unwinds the recursion on completion.
+            if(r){return r;}
+        }
+        &#x2F;&#x2F; Return undefined, indicating no match was found
+        return undefined;
+    },
+    &#x2F;&#x2F;Select a node of the tree given the tree and the identifier of the vocab 
+    &#x2F;&#x2F;item to select (in our case the property value)
+    selectTreeNodeById:function(tree, lookfor){
+        var self = this;
+        &#x2F;&#x2F;console.log(&quot;See model root=&quot;, tree.model.root);
+        var buildme = [];
+        var result = self.recursiveHunt(lookfor, tree.model, buildme, tree.model.root);
+        &#x2F;&#x2F;console.log(&quot;*** FINISHED: result &quot;, result, &quot; buildme &quot;, buildme);
+        &#x2F;&#x2F;console.dir(result);
+        if(result &amp;&amp; result.length &gt; 0){
+            tree.set(&#x27;path&#x27;, result);
+        }
+    }
+});
+
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="..&#x2F;assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="..&#x2F;assets/js/yui-prettify.js"></script>
+<script src="..&#x2F;assets/../api.js"></script>
+<script src="..&#x2F;assets/js/api-filter.js"></script>
+<script src="..&#x2F;assets/js/api-list.js"></script>
+<script src="..&#x2F;assets/js/api-search.js"></script>
+<script src="..&#x2F;assets/js/apidocs.js"></script>
+</body>
+</html>

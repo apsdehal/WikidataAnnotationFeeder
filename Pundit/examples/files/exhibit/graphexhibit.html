@@ -1,0 +1,647 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head id="head">
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--        <script src="testLazy.js" type="text/javascript"></script>-->
+        <script src="http://api.simile-widgets.org/exhibit/2.2.0/exhibit-api.js" type="text/javascript"></script>
+        <link rel="exhibit/data" href="http://metasound.dibet.univpm.it:8080/annotationserver/api/notebooks/current/graph" type="application/rdf+xml"/>
+        <link type="text/css" href="exhibitcss.css" rel="stylesheet"/>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <style>
+            div table {
+                border: none;
+            }
+            .headerLens{
+                font-size: 1.1em;
+                font-weight: bold;
+                background: #ddd;
+            }
+            div .lens ul{
+                margin-left: 2px;
+                padding-left: 2px;
+                margin-top: 2px;
+                padding-top: 2px;
+                overflow:auto;
+            }
+            div .lens ul li.label{
+                display: inline-block;
+                list-style-type: none;
+                margin:2px;
+                width: 80px;
+                color: #BE482C;
+            }
+            div .lens ul li{
+                display: inline-block;
+                list-style-type: none;
+                margin:2px;
+            }
+            
+            
+            body {
+	margin: 0;
+	padding: 0;
+	background: url(images/img01.jpg) repeat-x left top;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+h1, h2, h3 {
+	margin: 0;
+	text-transform: lowercase;
+	font-weight: normal;
+	color: #3E3E3E;
+}
+
+h1 {
+	letter-spacing: -1px;
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+p, ul, ol {
+	margin: 0 0 2em 0;
+	text-align: justify;
+	line-height: 26px;
+	font-size: 11px;
+}
+
+a:link {
+	color: #BE482C;
+}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: #BE482C;
+}
+
+a:visited {
+	color: #BE482C;
+}
+
+img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin-right: 15px;
+}
+
+img.right {
+	float: right;
+	margin-left: 15px;
+}
+
+/* Form */
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+input, textarea, select {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+}
+
+/* Header */
+
+#header {
+	width: 860px;
+	height: 54px;
+	margin: 0 auto;
+	background: url(images/img02.jpg) no-repeat left top;
+}
+
+/* Menu */
+
+#menu {
+	float: left;
+	width: 860px;
+	height: 54px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0px 0 0 20px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-right: 3px;
+	padding: 12px 20px;
+	letter-spacing: -.5px;
+	text-decoration: none;
+	text-transform: lowercase;
+	font: 16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #E56F47;
+}
+
+#menu a:hover { 
+	text-decoration: none; 
+	background: #DE8761;
+	color: #FFFFFF;
+}
+
+#menu .current_page_item a {
+	background: #DE8761;
+	color: #FFFFFF;
+}
+
+/** LOGO */
+
+#logo {
+	width: 860px;
+	height: 120px;
+	margin: 0 auto;
+	background: url(images/img15.jpg) no-repeat left top;
+}
+
+#logo h1, #logo h2 {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 20px;
+	line-height: normal;
+}
+
+#logo h1 { padding-top: 25px; }
+
+#logo h1 a {
+	text-decoration: none;
+	color: #6D5A46;
+}
+
+#logo h1 a:hover { text-decoration: underline; }
+
+#logo h2 {
+	padding: 45px 0 0 15px;
+	font: italic 13px Georgia, "Times New Roman", Times, serif;
+	color: #B6ACA2;
+}
+
+#logo p a {
+	text-decoration: none;
+	color: #B6ACA2;
+}
+
+#logo p a:hover { text-decoration: underline; }
+
+
+
+/* Page */
+
+#page {
+	width: 850px;
+	margin: 0 auto;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 600px;
+}
+
+/* Post */
+
+.post {
+	padding: 15px 15px;
+	background: url(images/img05.gif) no-repeat left top;
+}
+
+.post .title {
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #D1D1D1;
+}
+
+.post .entry {
+}
+
+.post .meta {
+	padding: 15px 0 60px 0;
+	background: url(images/img03.gif) repeat-x;
+}
+
+.post .meta p {
+	margin: 0;
+	line-height: normal;
+	color: #999999;
+}
+
+.post .meta .byline {
+	float: left;
+}
+
+.post .meta .links {
+	float: right;
+}
+
+.post .meta .more {
+	padding: 0 20px 0 18px;
+	background: url(images/img06.gif) no-repeat left center;
+}
+
+.post .meta .comments {
+	padding-left: 22px;
+	background: url(images/img07.gif) no-repeat left center;
+}
+
+.post .meta b {
+	display: none;
+}
+
+/* Sidebar */
+
+#sidebar {
+	float: left;
+	width: 215px;
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	margin-bottom: 40px;
+	padding: 0 15px;
+	background: url(images/img13.gif) no-repeat left top;
+}
+
+#sidebar li ul {
+}
+
+#sidebar li li {
+	margin: 0;
+	padding-left: 12px;
+	background: url(images/img12.gif) no-repeat left 50%;
+}
+
+#sidebar h2 {
+/*	padding-top: 20px;*/
+	margin-bottom: 10px;
+	background: url(images/img14.gif) no-repeat right 70%;
+	border-bottom: 1px dotted #D1D1D1;
+	font-size: 18px;
+}
+
+/* Search */
+
+#search {
+}
+
+#search h2 {
+	margin-bottom: 20px;
+}
+
+#s {
+	width: 115px;
+	margin-right: 5px;
+	padding: 3px;
+	border: 1px solid #F0F0F0;
+}
+
+#x {
+	padding: 3px;
+	background: #ECECEC url(images/img08.gif) repeat-x left bottom;
+	border: none;
+	text-transform: lowercase;
+	font-size: 11px;
+	color: #4F4F4F;
+}
+
+/* Boxes */
+
+.box1 {
+	padding: 20px;
+	background: url(images/img05.gif) no-repeat;
+}
+
+.box2 {
+	color: #BABABA;
+}
+
+.box2 h2 {
+	margin-bottom: 15px;
+	background: url(images/img10.gif) repeat-x left bottom;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.box2 ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.box2 a:link, .box2 a:hover, .box2 a:active, .box2 a:visited  {
+	color: #EDEDED;
+}
+
+/* Footer */
+#footer-wrap {
+	width: 860px;
+	height: 64px;
+	margin: 0 auto;
+	background: url(images/img09.jpg) no-repeat left top;
+}
+
+#footer {
+	margin: 0 auto;
+	height: 64px;
+	min-height: 64px;
+	padding: 0;
+	background: #D16E45 url(images/img08.jpg) repeat-x;
+}
+
+html>body #footer {
+	height: auto;
+}
+
+#footer p {
+}
+
+#legal {
+	clear: both;
+	padding-top: 20px;
+	text-align: center;
+	color: #FFD2C6;
+}
+
+#legal a {
+	color: #FFD2C6;
+}
+
+.gallerycontainer{
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
+}
+
+.thumbnail img{
+border: 1px solid white;
+margin: 0 5px 5px 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+}
+
+.thumbnail:hover img{
+border: 1px solid blue;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+left: -1000px;
+border: 1px dashed gray;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.test {
+  height: 120px;
+
+            
+            
+        </style>
+        <script type="text/javascript">
+            function prepareLens(elmt) {
+                var itemID = elmt.getAttribute("ex:itemID");
+                var link = "showResource(itemID)";
+                //$(elmt).find("a.link").click(alert("viv"));
+                //alert(itemID);
+                //      var tab1 = document.getElementById("tab1-" + itemID);
+                //      var tab2 = document.getElementById("tab2-" + itemID);
+                //      ...
+            };
+            function updateIFrame(){
+                $('#resourceIFrame').attr('src', windows.location.href + '#' + itemID);
+            };
+            function showInIFrame(uri){
+                $('#resourceIFrame').attr('src', uri);
+            }
+            function writeMessage(action, fragment_url) {
+
+              var xml = '';
+              if (typeof action == 'undefined') {
+                            return;
+              } else {
+                            xml += '<' + action + '>\\n<url>' + fragment_url + '</url>\\n</' + action + '>';
+                            window.status = xml;
+              }
+
+            };
+            function prova(){
+                alert('prova');
+            }
+        </script>
+    </head>
+    <body>
+
+        <div ex:role="collection" id="author-things" ex:itemTypes="author"></div>
+        <div ex:role="collection" id="text-fragment-things" ex:itemTypes="Page fragment"></div>
+        <div ex:role="collection" id="period-things" ex:itemTypes="period"></div>
+        
+        
+                <div id="logo">
+			<h1><a href="#">Annotations Exhibit</a></h1>
+			<h2> Faceted Visualization of Structured Annotations</h2>
+		</div>
+
+        <table width="100%" cellspace="5" cellpadding="5" >
+            <tr valign="top">
+                <td width="10%">
+                    <div ex:role="facet" class="customFacet" ex:facetLabel="Search" ex:facetClass="TextSearch" ex:collectionID="text-fragment-things"></div>
+
+                    <div ex:role="facet" class="customFacet" ex:expression=".depicts" ex:facetLabel="depicts" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".talks-about" ex:facetLabel="talks about" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".mentions-author" ex:facetLabel="mentions author" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".mentions-period" ex:facetLabel="mentions period" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".has-similar-content-of" ex:facetLabel="Has Similar Content of" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".references" ex:facetLabel="references" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".quotes" ex:facetLabel="quotes" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".comment" ex:facetLabel="comment" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".explanation" ex:facetLabel="explanation" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+                    <div ex:role="facet" class="customFacet" ex:expression=".hasTag" ex:facetLabel="tag" ex:collapsible="true" ex:collectionID="text-fragment-things"></div>
+
+                </td>
+                <td ex:role="viewPanel" width="20%">
+                    
+                    
+                    <div ex:role="view" ex:collectionID="text-fragment-things" ex:label="TEXT-FRAGMENT" ex:grouped="false">
+                        
+                        <div ex:role="lens" ex:itemTypes="Page fragment" class="lens">
+                            <!--Attenzione all'uso delle virgolette!!! L'xpointer può contenere al suo interno le virgolette ' quindi devo usare le " " fuori di esso.-->
+                            <div class="headerLens"><span ex:content=".label"></span><a ex:href-subcontent='javascript:showInIFrame("{{.uri}}");'>(Show)</a></div>
+                            <ul>
+                                <li class="label"><span>Label:</span></li>
+                                <li><span ex:content=".label" ></li>
+                            </ul>
+                             <ul ex:if-exists=".description">
+                                <li class="label"><span>Has Content:</span></li>
+                                <li><a ex:content=".description"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".has-tag">
+                                <li class="label"><span>Has Tag:</span></li>
+                                <li><a ex:content=".has-tag"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".has-comment">
+                                <li class="label"><span>Has Comment:</span></li>
+                                <li><a ex:content=".has-comment"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".mentions-period">
+                                <li class="label"><span>Mentions Period:</span></li>
+                                <li><a ex:content=".mentions-period"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".mentions-author">
+                                <li class="label"><span>Mentions Author:</span></li>
+                                <li><a ex:content=".mentions-author"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".has-similar-content-of">
+                                <li class="label"><span>Has Similar Content of:</span></li>
+                                <li><a ex:content=".has-similar-content-of"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".quotes">
+                                <li class="label"><span>Quotes:</span></li>
+                                <li><a ex:content=".quotes"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".explanation">
+                                <li class="label"><span>Explanation:</span></li>
+                                <li><a ex:content=".explanation"></a></li>
+                            </ul>
+                        </div>
+                       <div ex:role="lens" ex:itemTypes="author" class="lens">
+                            <!--Attenzione all'uso delle virgolette!!! L'xpointer può contenere al suo interno le virgolette ' quindi devo usare le " " fuori di esso.-->
+                            <div class="headerLens"><span ex:content=".label"></span><a ex:href-subcontent='javascript:showInIFrame("{{.uri}}");'>(Show)</a></div>
+                            <ul ex:if-exists=".label">
+                                <li class="label"><span>Label:</span></li>
+                                <li><span ex:content=".label" ></li>
+                            </ul>
+                            <ul ex:if-exists=".type">
+                                <li class="label"><span>Type</span></li>
+                                <li><a ex:content=".type"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".influenced">
+                                <li class="label"><span>Influences:</span></li>
+                                <li><a ex:content=".influenced"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".lives-in-period">
+                                <li class="label"><span>Lives in Period:</span></li>
+                                <li><a ex:content=".lives-in-period"></a></li>
+                            </ul>
+                        </div>
+                        <div ex:role="lens" ex:itemTypes="period" class="lens">
+                            <!--Attenzione all'uso delle virgolette!!! L'xpointer può contenere al suo interno le virgolette ' quindi devo usare le " " fuori di esso.-->
+                            <div class="headerLens"><span ex:content=".label"></span><a ex:href-subcontent='javascript:showInIFrame("{{.uri}}");'>(Show)</a></div>
+                            <ul ex:if-exists=".label">
+                                <li class="label"><span>Label:</span></li>
+                                <li><span ex:content=".label" ></li>
+                            </ul>
+                            <ul ex:if-exists=".type">
+                                <li class="label"><span>Type</span></li>
+                                <li><a ex:content=".type"></a></li>
+                            </ul>
+                        </div>
+                        <div ex:role="lens" ex:itemTypes="citytown" class="lens">
+                            <!--Attenzione all'uso delle virgolette!!! L'xpointer può contenere al suo interno le virgolette ' quindi devo usare le " " fuori di esso.-->
+                            <div class="headerLens"><span ex:content=".label"></span><a ex:href-subcontent='javascript:showInIFrame("{{.uri}}");'>(Show)</a></div>
+                            <ul ex:if-exists=".label">
+                                <li class="label"><span>Label:</span></li>
+                                <li><span ex:content=".label" ></li>
+                            </ul>
+                            <ul ex:if-exists=".type">
+                                <li class="label"><span>Type:</span></li>
+                                <li><a ex:content=".type"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".uri">
+                                <li class="label"><span>Uri:</span></li>
+                                <li><a ex:content=".uri"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div ex:role="view" ex:collectionID="author-things" ex:label="AUTHORS" ex:grouped="false">
+                            
+                        <div ex:role="lens" ex:itemTypes="author" class="lens">
+                            <!--Attenzione all'uso delle virgolette!!! L'xpointer può contenere al suo interno le virgolette ' quindi devo usare le " " fuori di esso.-->
+                            <div class="headerLens"><span ex:content=".label"></span><a ex:href-subcontent='javascript:showInIFrame("{{.uri}}");'>(Show)</a></div>
+                            <ul ex:if-exists=".label">
+                                <li class="label"><span>Label:</span></li>
+                                <li><span ex:content=".label" ></li>
+                            </ul>
+                            <ul ex:if-exists=".type">
+                                <li class="label"><span>Type</span></li>
+                                <li><a ex:content=".type"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".influenced">
+                                <li class="label"><span>Influences:</span></li>
+                                <li><a ex:content=".influenced"></a></li>
+                            </ul>
+                            <ul ex:if-exists=".lives-in-period">
+                                <li class="label"><span>Lives in Period:</span></li>
+                                <li><a ex:content=".lives-in-period"></a></li>
+                            </ul>
+                        </div>
+                        <div ex:role="lens" ex:itemTypes="period" class="lens">
+                            <!--Attenzione all'uso delle virgolette!!! L'xpointer può contenere al suo interno le virgolette ' quindi devo usare le " " fuori di esso.-->
+                            <div class="headerLens"><span ex:content=".label"></span><a ex:href-subcontent='javascript:showInIFrame("{{.uri}}");'>(Show)</a></div>
+                            <ul ex:if-exists=".label">
+                                <li class="label"><span>Label:</span></li>
+                                <li><span ex:content=".label" ></li>
+                            </ul>
+                            <ul ex:if-exists=".type">
+                                <li class="label"><span>Type</span></li>
+                                <li><a ex:content=".type"></a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    
+
+                </td>
+                <td width="65%">
+                    <iframe id="resourceIFrame" height="100%" width="100%" src="http://metasound.dibet.univpm.it/release_bot/build/examples/authors_index.html" ></iframe>
+                </td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

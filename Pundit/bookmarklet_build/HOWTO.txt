@@ -1,0 +1,43 @@
+# How to build your own Pundit bookmarklet 
+
+
+## Requirements
+
+* A bookmarklet, to be correctly loaded, requires an absolute URL to load 
+itself from. Be sure to have some publicly available space on the web.
+
+* You will need dojo's SDK package, version 1.6.x (tested with 1.6.1,
+available at http://download.dojotoolkit.org/release-1.6.1/), the file
+name is dojo-release-1.6.1-src.tar.gz . By default the script looks for 
+them in a directory called dojo_sdk_1.6.1, at the same level of Pundit's
+/src directory. This name is configurable, as explained in a moment.
+
+* You will need to patch these sources to enable the "withCredentials" 
+xhr header. Let's say you extracted the .tar.gz inside the pundit tree,
+to patch it enter the directory and use patch :
+ # cd dojo-release-1.6.1-src
+ # patch dojo/_base/xhr.js < ../bookmarklet_build/dojo_161.patch 
+
+* The bookmarklet will need a bootstrap file, we usually call it
+InitBookmarklet.js. It will also need an .html file which has the
+required javascript to drag the bookmarklet to your bookmark bar.
+Both these files will be automatically created by default in
+/src/InitBookmarklet.js and /examples/bookmarklet.html (from Pundit
+sources base directory).
+
+
+## Configure the bookmarklet
+
+* In order to build the bookmarklet, you will need to configure the script
+build_bookmarklet.sh, customizing the variables sdk (path to the afore
+mentioned SDK package), ver (the name you want to give to the bookmarklet)
+and bmpath (the absolute URL to load the bookmarklet from)
+ 
+* To configure the bookmarklet run-time, you must modify and customize the
+punditConfig variable you can find in InitBookmarklet.js-template. For a
+complete list of configuration options, see the Pundit documentation.
+
+
+## Build the bookmarklet
+
+Just launch ./build_bookmarklet.sh !

@@ -1,0 +1,282 @@
+<!--
+    Pundit: a novel semantic web annotation tool
+    Copyright (c) 2013 Net7 SRL, <http://www.netseven.it/>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+    See LICENSE.TXT or visit http://thepund.it for the full text of the license.
+--><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+    
+    <head>
+        <style type="text/css">
+            body, html { font-family:helvetica,arial,sans-serif; font-size:90%; }
+        </style>		
+		<link rel="stylesheet" type="text/css" href="../../css/pundit.css"/>
+        <script src="../../dojo/dojo/dojo.js.uncompressed.js" djConfig="parseOnLoad: true" charset="utf-8"></script>
+        <style>
+            #examples { margin: 5px; border: 1px dashed #444; }
+            #examples div { padding: 2px; margin: 2px; background: #bbb; }
+            #examples div span { padding: 2px; margin: 0px 5px; background: #ddd; }
+            #examples div:hover { background: #666; }
+
+            #queryContainer { width: 420px; padding: 10px;}
+            input, textarea { width: 400px; }
+            button { width: 250px;}
+            hr { margin: 20px;}
+            #response { position: absolute; top: 10px; left: 460px; background: #eee; margin: 10px; border: 1px solid #666; }
+            #response pre.response { 
+                padding: 10px 5px;
+                border-top: 1px dashed #666; border-bottom: 1px dashed #666; font-size: 1.2em; background: #ddd;
+                clear: both;
+                float: left;
+            }
+            pre.payload {
+                margin: 0px;
+            }
+            #response div.responseInfo span {
+                float: left;
+                margin-bottom: 3px;
+                padding: 3px 6px;
+                border-bottom: 1px dashed #666;
+            }
+
+            #response div.responseInfo span.key { 
+                margin-right: 3px;
+                width: 100px;
+                text-align: right;
+                clear: both;
+            }
+            #response div.responseInfo span.value { 
+                background: #ddd;
+            }
+            
+            #queryContainer { position: absolute; top: 10px; margin: 10px; border: 1px solid #666;}
+            #loadingImg { 
+                background: transparent url(loading.gif) top left no-repeat;
+                width: 128px;
+                height: 15px;
+                float: right;
+                margin-right: 20px;
+                visibility: hidden;
+            }
+            #queryContainer.loading {
+                background: #eee;
+            }
+            #queryContainer.loading #loadingImg {
+                visibility: visible;
+            }
+            
+        </style>
+    </head>
+    
+    <body class="tundra">
+
+        <div id='queryContainer'>
+            API URL <br />
+            <input type='text' id='baseurl' size=100 /> 
+
+            <hr />
+
+            Method: <br/> 
+            <input type='text' id='method' placeholder='method..' /> <br />
+            Query <br /> 
+            <input type='text' id='query' placeholder='query..' size=100 /> <br />
+            Payload <br />
+            <textarea id='payload' placeholder='query payload' rows=5></textarea> <br />
+
+			Accept: <br /><select name="accept" id="accept" disabled="false">
+			<option value="application/json">JSON</option>
+			<option value="application/rdf+xml">RDF</option>
+			<option value="application/rdf+n3">N3</option>
+			</select> <br /> 
+			 Use JSONP <input type="checkbox" id="jsonp" value="1"/>
+			<br /><br />
+
+            <form method="post" action="http://korbo.netseven.it/backend_dev.php/">
+                <textarea name="value">
+                {
+                    "identifier": "value",
+                    "label": "label",
+                    "vocab_id": "provaprova",
+                    "vocab_label": "Dante taxonomy",
+                    "vocab_description": "provaprova taxonomy of concepts related to provaprova",
+                    "vocab_type": "subjects",
+                    “vocab_version”: “1.0alpha”,
+                    "items": []
+                }
+                </textarea>
+                <button type="submit">direct post</button>
+            </form>
+            
+            <div id='loadingImg'></div>
+
+            <button id='go'>Go</button>
+            <hr/>
+
+            <div id='examples'></div>
+
+        </div>
+
+        <div id='response'></div>
+
+
+        <script type="text/javascript">
+            
+        function setLoading(v) {
+                
+                if (v) {
+                    dojo.query('#queryContainer').addClass('loading');
+                } else {
+                    dojo.query('#queryContainer').removeClass('loading');
+                }
+                
+            } // setLoading()
+            
+            dojo.require("dojo.NodeList-traverse");
+            dojo.require("dojo.html");
+            dojo.require("dojo.NodeList-manipulate");
+            dojo.require("dijit.layout.TabContainer");
+            dojo.require("dijit.layout.ContentPane");
+            
+            dojo.require('dojo.io.script');
+            
+            String.prototype.escapeHTML = function () {                                        
+                return(                                                                 
+                this.replace(/>/g,'&gt;').
+                    replace(/</g,'&lt;').
+                    replace(/"/g,'&quot;')
+            );
+            };
+            
+            var t = {
+                "http://it.wikipedia.org/wiki/Roma": {
+                    "http://www.w3.org/2000/01/rdf-schema#comment": [{
+                            "value": "Wikipedia's page dedicate to Rome, the capital city of Italy.",
+                            "type": "literal" }]
+                }
+            },
+            baseURL = 'http://korbo.netseven.it/backend_dev.php/',
+            queries = [
+            	{m: 'post',  q: 'taxonomy_editor_server', p: ''}	
+            ];
+            
+            dojo.addOnLoad(function() {
+				var s = "";                				
+
+                // Set the default base url
+                dojo.byId('baseurl').value = baseURL;
+                
+                // Set the example queries
+                for (i in queries) 
+                    s += "<div><span class='m'>"+queries[i].m+"</span><span class='q'>"+queries[i].q+"</span><span class='p'>"+queries[i].p+"</span></div>";
+                dojo.byId('examples').innerHTML = s;
+                
+                // And activate the associated click action
+                dojo.query('#examples div').forEach(function(n, i, a) {
+                    dojo.connect(n, 'onclick', function(e) {
+                        var foo = dojo.query(this);
+                        dojo.byId('method').value = foo.children('span.m').html();
+                        dojo.byId('query').value = foo.children('span.q').html();
+                        dojo.byId('payload').value = foo.children('span.p').html();
+                    });
+                });
+                
+                // Activate the results tabbed pane
+                var tc = new dijit.layout.TabContainer({
+                    style: "height: 90%; width: 60%;"
+                },
+                "response");
+                
+                tc.startup();
+                
+            }); // dojo.addOnLoad()
+            
+            dojo.connect(dojo.byId('go'), 'onclick', function() {
+                
+                var jsonp = dojo.byId('jsonp').checked;                
+
+                // if (dojo.hasClass('queryContainer', 'loading'))
+                //    return;
+                
+                var ajaxArgs = {
+                    url: dojo.byId('baseurl').value + dojo.byId('query').value,
+                    postData: dojo.byId('payload').value,
+                    load: function(r) { 
+                        setTimeout("setLoading(false)", 500);
+                        if (this.handleAs === "json" || jsonp)
+                            addResponse(dojo.byId('query').value, FormatJSON(r));
+                        else 
+                            addResponse(dojo.byId('query').value, r);
+                        
+                        // To avoid double clicks if the response comes back very fast
+                        
+                    },
+                    error: function(error) {
+                        addResponse(dojo.byId('query').value, error);
+                        setLoading(false);
+                    }
+                };
+                
+                /*
+                // If it's a JSONP call, specify a callback name, otherwise
+                // handle the request as text for N3 or RDF or as app/json
+                if (jsonp) {
+                    ajaxArgs.callbackParamName = "jsonp";
+                } else {
+                    if (dojo.byId("accept").value === "application/json") 
+                        ajaxArgs.handleAs = "json";
+                    else
+                        ajaxArgs.handleAs = "text"; 
+                }
+                */
+                
+                // Use the right xhr* method (Get/Post/Put/Delete) on the dojo object
+                var m = dojo.byId('method').value || 'get',
+                    methodName = 'x' + m.charAt(0).toUpperCase() + m.slice(1), 
+                    deferred;
+                
+                /*
+                // Set some header according to the method we are using
+                // TODO: use a switch() {} if delete and put needs something specific
+                if (m === 'get')
+                    ajaxArgs.headers = {"Accept": dojo.byId("accept").value};
+                else if (m === 'post' || m === 'put') {
+                    ajaxArgs.headers = {"Content-Type": "application/json"};
+                }
+                */
+                
+                // Call the function with the proper name
+                // using xhr for normal request (CORS)
+                // or dojo.io.script for jsonp using callback
+                if (m === 'get' && jsonp) 
+                    dojo.io.script.get(ajaxArgs);	
+                else if (m === "post") {
+                    deferred = dojo.xhrPost(ajaxArgs);
+                } else {
+                    deferred = dojo.xhr[methodName].call(dojo.xhr, ajaxArgs);
+                }
+                
+                setLoading(true);
+            });
+            
+            // Toggle the accept select when the JSONP checkbox is clicked 
+            dojo.connect(dojo.byId('jsonp'), 'onclick', function() {
+                toggleAccept();
+            });
+            -->
+        </script>
+    </body>
+
+</html>

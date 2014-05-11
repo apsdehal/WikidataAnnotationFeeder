@@ -1,0 +1,210 @@
+_PUNDIT.vocab.initJsonpVocab({
+    "error_code": "200",
+    "error_message": "OK",
+    "result": {
+        "vocab_label": "Wittgenstein - Relations",
+        "vocab_id": "68",
+        "vocab_type": "predicates",
+        "items": [
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/818",
+                "label": "discusses",
+                "description": "The citing entity discusses statements, ideas or conclusions presented in the cited entity.",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/819",
+                "label": "is proved by",
+                "description": "PROVA 2222",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "domain": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text",
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-image",
+                    "http:\/\/xmlns.com\/foaf\/0.1\/Image"
+                ],
+                "range": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text",
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-image",
+                    "http:\/\/xmlns.com\/foaf\/0.1\/Image"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/820",
+                "label": "has author",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "domain": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text",
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-image",
+                    "http:\/\/xmlns.com\/foaf\/0.1\/Image\n"
+                ],
+                "range": [
+                    "http:\/\/www.freebase.com\/schema\/people\/person",
+                    "http:\/\/xmlns.com\/foaf\/0.1\/Person"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/821",
+                "label": "is author of",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "domain": [
+                    "http:\/\/www.freebase.com\/schema\/people\/person",
+                    "http:\/\/xmlns.com\/foaf\/0.1\/Person"
+                ],
+                "range": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text",
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-image",
+                    "http:\/\/xmlns.com\/foaf\/0.1\/Image"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/822",
+                "label": "has date",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/823",
+                "label": "has other version",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/824",
+                "label": "has point",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/825",
+                "label": "is argument again",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "domain": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "range": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/826",
+                "label": "is argued against in",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "domain": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "range": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/827",
+                "label": "is argument for",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "domain": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "range": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/828",
+                "label": "is argued for in",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "domain": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "range": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "children": [
+                    
+                ]
+            },
+            {
+                "value": "http:\/\/purl.org\/net7\/korbo\/item\/829",
+                "label": "refers to",
+                "description": "",
+                "nodetype": "node",
+                "rdftype": [
+                    "http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#Property"
+                ],
+                "range": [
+                    "http:\/\/purl.org\/pundit\/ont\/ao#fragment-text"
+                ],
+                "children": [
+                    
+                ]
+            }
+        ]
+    }
+})
