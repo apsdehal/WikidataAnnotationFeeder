@@ -102,13 +102,14 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
                 }
             };
             
-        /*
+        
         self.namedEntitiesSources = options.namedEntitiesSources || {
 //            Freebase:{label: 'Freebase'},
 //            DBPedia:{label:'DBpedia'},
 //            Wordnet:{label:'Wordnet'}
+            Wikidata: {label:'Wikidata'},
         };
-        */
+        
         
         //DEBUG Find a better way to do this...
         //Do I need an object or is enought an array????

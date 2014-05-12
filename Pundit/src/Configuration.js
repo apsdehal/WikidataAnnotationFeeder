@@ -332,7 +332,10 @@ dojo.declare("pundit.Configuration", pundit.BaseComponent, {
                 // DEBUG: not ready for prime time, keep it active = false !
                 'BibServer': {
                     name: 'bibserver', label: 'BibServer', active: false
-                }
+                },
+                'Wikidata':{
+                    name: 'wikidata', label: 'Wikidata', active:true
+                },
                 
             },
 
