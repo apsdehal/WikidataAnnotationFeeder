@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Pundit Simple Test
+	</title>
+</head>
+<body>
+<div>
+<div class="about">
+Annotation Tool that extracts information from the books and feed them on Wikidata
+
+Public Url:
+(https://www.mediawiki.org/wiki/Mentorship_programs/Possible_projects#Annotation_tool_that_extracts_statements_from_books_and_feed_them_on_Wikidata)
+Tracked in Bugzilla (?)
+Bug 57812
+Announcement of Proposal:
+Announcement 1
+Announcement 2
+</div>
+<div class="contact">
+Name and Contact Information
+
+Name:
+Amanpreet Singh
+Email:
+amanpreet.iitr2013@gmail.com
+IRC Nick:
+apsdehal
+Web Page / Blog / Microblog:
+Spookout
+Location:
+Roorkee, Uttarakhand, India
+Typical Working Hours:
+10:00- 13:00, 15:30-19:00, 22:00-03:00 ( IST ) 4:30- 7:30, 9:30-1:30, 16:30- 21:30 ( UTC )
+</div>
+<div class"synopsis">
+<div class="introduction">
+Synopsis
+
+Project is strongly based on belief to improve the user interactivity with Wikidata and create a whole new world of data sharing and saving by creating a tool that on highlighting a statement would provide a GUI to fix its structure then feed it to Wikidata. Wikidata is a free information base that is same for humans and machines. It centralizes access to and structurally manage data so that every piece of data is easily available and accessible. By the means of the extension people can save their important notes and quotes directly on Wikidata hence making it more accessible.
+Possible Mentors
+Cristian Consonni
+Andrea Zanni
+The Pundit team
+</div>
+<div class="usecases">
+Use cases
+You are at home, reading a book on Wikisource. As in the case of taking notes on paper, you can annotate and directly feed and share important quotes and data automatically with their source to the knowledge base of Wikidata. Furthermore, the users after you will be able to see your notes and thus saving the time. This can be done just by activating the plugin.
+You are at a presentation or seminar at work. An important fact or data point is shared during the presentation, e.g. your national statistical institute as just released the latest population data on their website. You can annotate it, click and it is on Wikidata.
+You are reading the news on your tablet using your browser, a new prime minister is being nominated. You can select the relevant text and insert this information in wikidata.
+Given a statement from Wikidata (or another source), we can use this tool to mark up a reference and import that reference to Wikidata. This could help with providing references for the millions of statements that currently don't have one. So more people annotating through this tool will add more and more references to the Wikidata. So this way many claims can be converted to proper statements.
+</div>
+</div>
+<div class="info">
+Information about project
+<div class="glossary">
+Glossary of Wikidata terms used:
+Item
+It is a page in Wikidata main namespace representing a real-life topic, concept, or subject. Items are identified by a prefixed id, or by a sitelink to an external page, or by a unique combination of multilingual label and description.
+Wikidata statement.svg
+
+Properties
+It is a descriptor of a value for a particular item. In other words, it is an attribute for an item.
+Statements
+is a piece of data about an item, recorded on the item's page. A statement consists of a claim (a property-value pair such as "Season: Winter", together with optional qualifiers), supported by optional references (giving the source for the claim).
+Claim
+It is simply a statement without references.
+Value
+Simply an information about item that explains something about it.
+Quantifier
+is a part of the claim that says something about the specific claim, often in a descriptive way.
+The side picture explains the terms, by using an item named London.
+</div>
+<div class="working">
+How it will work?
+I am going to create a Mediawiki extension for this project that will offer a GUI on highlighting a sentence.
+This GUI will analyze the statement using Pundit software, as a triple (subject, object, predicate), offer a change screen and then feed the same to Wikidata by linking to its items and property. The tool will offer suggestions based on the existing properties and items on Wikidata. For the whole process, we are going to use Wikidata's regularly improving API to achieve our goal. Through this whole data I saved or searched will be shared with the global world.
+Following schema shows how the extension will work in details:
+Firstly we are going to track the user using api to check if he/she is login and if not redirect to login page. User can still anonymously annotate text as usual like an anonymous user edits pages on mediawiki.
+Pundit integrated with Mediawiki will be packaged as an extension that can be enable or as a browser plugin.
+We will provide a GUI to the user so that he/she can annotate text.
+Next, the interface should propose to:
+chose a subject (i.e. an item)
+choose a predicate (i.e.a property)
+choose an object (i.e. data value, or statement)
+The proposed predicated should already exist on wikidata, if not we will present user with an interface with title:
+'Can't find what you are looking for? Propose a property', and then move him to property proposal page. After this step, till now the annotation has become a claim.
+In the next step we will gather sources of the annotation such as gathering website url, book's name (Wikisource) and many more. If we can't find sources we will provide an interface to user to input them himself, so as to convert the claim to statement through references.
+Pundit will analyze the annotation as subject, object and predicate, pack it as statement and then save it at Pundit server.
+A php (extended from wikibase api) script will be run to update the item's page on wikidata with the necessary information about the statement created. This will be also be done sometimes through Javascript post request to wikibase api.
+The flow will be unidirectional, that the user create annotations, save it on Pundit server then it is synchronized with wikidata.
+Further extensions to this project can be Bidirectionality, extension should be made independent of Pundit server.
+</div>
+<div class="tools">
+Tools to be used:
+1. Wikibase api: I am going to use api for wikidata provided by addwiki for the interaction related to wikidata, it is in currently stable and is the most regularly maintained api. I will interact with wikidata item pages through this api. Second job this api will do is to retrieve items, values and properties from wikidata as to present to user so he/she can create their own statements. Also the login status of the user will be checked through this api.
+2. Pundit: Pundit is the free open source software for augmenting web pages with semantically structured annotations. I am going to use this to analyze the structure of the sentence that is annotated into subject, predicate and object. Afterwards feeding it with properties, items and values from wikidata. The reason I chose Pundit is basically its an open source software, well established and regularly maintained. On the other hand creators of this beautiful software are ready to help in case I need any. Example of how Pundit works, will explain in detail the process of annotating by it.
+</div>
+</div>
+<div class="deliverables">
+Deliverables
+<div class="timeline">
+Timeline	Task
+April 22 - May 3	Familiarising myself with the mentors, codebase and my project. As I am already in contact with my mentors for a long time, had gone through the codebase,
+so it won't take much long to accomplish this task.
+May 4 - May 16	Create an external extension for the Annotator and write its initial code.
+May 17 - May 27	Write unit tests and test the initial code.
+May 27 - June 12	Start creating a GUI by either building it from scratch or using existing base of Pundit
+June 13 - June 22	Write more unit tests and vigorously test the GUI and the extension by creating various scenarios
+June 23	Midterm Evaluation
+June 24- July 5	Use wikidata api to retrieve existing properties on selected text and show suggestions.
+July 6 - July 18	Parse the triple(subject-predicate-object) to the wikidata as properties and items using wikidata api.
+July 19 - July 22	Brush up everything clean and nice
+July 22 - August 1	Write unit tests and test repeatedly.
+August 2 - August 15	Find and fix all the bugs found and clean up the extension
+August 18	Firm pencil down date.
+August 21	Submit the extension to google and launch the extension on initial scale with help of mediawiki and my mentors.
+</div>
+<div class="deliverables-details">
+Details on Deliverables:
+</div>
+</div>
+<div class="about">
+About Me
+
+I am a 19 year old, second year student currently enrolled in Electrical Engineering (IV Year Course) at IIT Roorkee. I developed a passion for programming and web development in my freshman year. I am regularly contributing to Mediawiki since November 2013. I am an active member of SDSLabs [1] at IIT Roorkee. I am currently proficient in Javascript, PHP, Python and Node.js. I have been using linux for the past two years and thus a initial source of inspiration for open source. I open source all my projects that I do individually so that the mass can gain something from it. I have been developing apps regularly at SDSLabs, we code late night at our lab and we all enjoy it. SDSLabs github profile. I usually work between 4:00 p.m. to 11:00 p.m. in weekdays and 11:00 a.m. to 11:00 p.m. in weekends, rest time is spent in usual exception of studies.
+I am having summer vacations from April end to July mid so I think I would be able to complete my project in time and will continue working on developing it further in time once GSoC is completed. Coming from remote village in valleys of Himachal Pradesh, I love the idea of open source and think that 'Sharing is Caring' and hope that this idea will spread more through the communities like Mediawiki and projects like GSoC.
+I am eagerly looking towards my project, as I selected this project because it involves the idea of sharing i.e. collaborating data and no doubt it involves my favourite language Javascript, and also some PHP in serverend. This project is in a way interesting because it aims at connecting data around the world with their sources and help people save their important data, so I am excited about this.
+Past Projects:
+Build web app for a local startup at IIT Roorkee, Roorkee Delivers.
+Created a code sharing website OpenCode
+A [web app that makes matches on the basis of common interest between two people.
+jQuery plugin for shopping cart ( jCart ) and cookies ( jCookie ).
+Github Profile.
+Contribution to Mediawiki (Gerrit Repo).
+I have mostly worked on improve the extension Multimedia Viewer.
+I have also contributed to open source project Moodle.
+</div>
+</div>
+</body>
+
+<link rel="stylesheet" href="../../Pundit/css/pundit.css" type="text/css">
+<script src="../../Pundit/dojo/dojo/dojo.js.uncompressed.js" type="text/javascript"></script>
+<script src="../../assets/js/pundit-conf.js" type="text/javascript"></script>
+<script>
+    dojo.registerModulePath("pundit", "../../src");
+    dojo.require('pundit.Init');
+</script>
+</html>
