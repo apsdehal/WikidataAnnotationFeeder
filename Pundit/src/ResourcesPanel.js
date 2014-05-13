@@ -107,9 +107,10 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
 //            Freebase:{label: 'Freebase'},
 //            DBPedia:{label:'DBpedia'},
 //            Wordnet:{label:'Wordnet'}
-            Wikidata: {label:'Wikidata'},
+              wikidataSelector: {label:'Wikidata'},
         };
-        
+
+
         
         //DEBUG Find a better way to do this...
         //Do I need an object or is enought an array????
@@ -509,6 +510,8 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
         //Stop loading
         self.lastSearchedTerm = '';
         for (var i in self.namedEntitiesSources){
+            console.log(_PUNDIT['wikidataSelector']);
+            console.log(i);
             _PUNDIT[i].cancelRequests();
             self.setLoading(self._id + '-container-suggestions-' + i, false);
         }
@@ -645,7 +648,7 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
         // Stop loading
         self.lastSearchedTerm = '';
         for (var i in self.namedEntitiesSources){
-            _PUNDIT[i].cancelRequests();
+            // _PUNDIT[i].cancelRequests();
             self.setLoading(self._id + '-container-suggestions-' + i, false);
         }    
     }, // hide

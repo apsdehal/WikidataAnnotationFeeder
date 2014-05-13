@@ -2,7 +2,7 @@
 
 var punditConfig = {
 
-    debugAllModules: true,
+    debugAllModules: false,
 
     // annotationServerBaseURL : '',
 
@@ -35,9 +35,8 @@ var punditConfig = {
     modules: {
 
         'pundit.Help': {
-            introductionFile: 'example-introduction.html',
             introductionWindowTitle: 'Welcome to Pundit examples! :)',
-            showIntroductionAtLogin: true
+            showIntroductionAtLogin: false
         },
         'pundit.NamedContentHandler': {
             active: false

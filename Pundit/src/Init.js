@@ -281,6 +281,7 @@ dojo.declare("pundit.Init", pundit.BaseComponent, {
             dojo.require("pundit.selectors.BibServerSelector");
             dojo.require("pundit.selectors.DandelionGeoSelector");
             dojo.require("pundit.selectors.DandelionPOISelector");
+            dojo.require("pundit.selectors.WikidataSelector");
         }
 
         // Used for other components initialization
@@ -312,6 +313,7 @@ dojo.declare("pundit.Init", pundit.BaseComponent, {
             }
 
         }
+        console.log(_PUNDIT);
         
         // TODO -> imageFragmentHandler
         if (p.config.isModuleActive("pundit.ImageFragmentHandler")) {

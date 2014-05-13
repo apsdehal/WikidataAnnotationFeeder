@@ -33,14 +33,9 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
         // Ms to wait after a keystroke before querying the service
         keyInputTimerLength: 500,
         keywordMinimumLength: 3,
-        
-        WikidataSearchURL: 'https://www.googleapis.com/Wikidata/v1/search',
-        WikidataSchemaBaseURL: 'http://www.Wikidata.com/schema',
-        WikidataImagesBaseURL: 'https://usercontent.googleapis.com/Wikidata/v1/image',
-        WikidataTopicURL: 'https://www.googleapis.com/Wikidata/v1/topic',
-        WikidataMQLReadURL: 'https://www.googleapis.com/Wikidata/v1/mqlread',
-        WikidataItemsBaseURL: 'http://www.Wikidata.com',
-        WikidataAPIKey: 'AIzaSyCJjAj7Nd2wKsZ8d7XQ9ZvUwN5SF0tZBsE',
+
+        url: 'https://www.wikidata.org/w/api.php',
+        lang: 'en',
         
         // TODO: let the user configure the Wikidata query somehow? 
         layouts: ['list', 'tile']
@@ -56,7 +51,7 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
     getItemsForTerm: function(term, func, errorFunc) {
         var self = this;
         
-        API.searchItem(term, func);
+        this.searchItems(term, func);
         
     }, // getItemsForTerm()
     
@@ -204,6 +199,91 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
 
         _PUNDIT.loadingBox.setJobOk(req.jobId);
 
+    },
+
+
+    /**
+     * Basic setup function for taking up various type of actions for AJAX requests
+     *
+     * @param params object Parameters to be passed to AJAX call
+     * @param cb function Callback function to be called on the result of the query that happened.
+     */
+
+    basicCall: function( params , cb ){
+        var handle = this
+
+        dojo.io.script.get({
+            url: handle.opts.url,
+            handleAs: 'json',
+            content: params,
+            callbackParamName: 'callback',
+            load: function( response ) {
+                    if( response.success == 1 )
+                        cb( response );
+            },
+        });
+    },
+
+    /**
+     * Function to get a specific type of entity from wikiapi
+     *
+     * @param type string Defines what to search among Item and Properties
+     * @param search string Basic parameter to be searched
+     * @param cb function Callback to be applied on the result.
+     */
+
+    searchEntities: function( type, search, cb ){
+        var params = {
+            action: 'wbsearchentities',
+            type:type,
+            format: 'json',
+            language: this.opts.lang,
+            search: search,
+        };
+        this.basicCall( params, cb );
+    },
+
+    /**
+     * Function to get an arsenal of items from wikiapi
+     *
+     * @param search string Basic parameter to be searched
+     * @param cb function Callback to be applied on the result.
+     */
+
+    searchItems: function( search, cb ){
+        this.searchEntities('item', search, cb);
+    },
+
+
+    /**
+     * Function to get an arsenal of properties from wikiapi
+     *
+     * @param search string Basic parameter to be searched
+     * @param cb function Callback to be applied on the result.
+     */
+
+    searchProperties: function( search, cb ){
+        this.searchEntities('property', search, cb);
+    },
+
+    /**
+     * Function to get an arsenal of value items from wikiapi
+     *
+     * @param search string Basic parameter to be searched
+     * @param cb function Callback to be applied on the result.
+     */
+
+    searchValues: function( search, cb ){
+        this.searchEntities('item', search, cb);
+    },
+
+    getEntities: function( id, cb ){
+        var params = {
+            action: 'wbgetentities',
+            ids:id,
+            format: 'json',
+        };
+        this.basicCall(params, cb);
     },
     
     cancelRequests: function(){
