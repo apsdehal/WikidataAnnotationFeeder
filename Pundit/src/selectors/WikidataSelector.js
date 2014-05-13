@@ -60,7 +60,7 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
             self.requests[term].ef = errorFunc;
         }
 
-        self.request[term].jobId = _PUNDIT.loadingBox.addJob('Wikidata Lookup query: ' + term);
+        self.requests[term].jobId = _PUNDIT.loadingBox.addJob('Wikidata Lookup query: ' + term);
         
         var params = {
             action: 'wbsearchentities',
@@ -71,13 +71,14 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
         };
 
         dojo.io.script.get({
-            url: handle.opts.url,
+            url: self.opts.url,
             handleAs: 'json',
             content: params,
             callbackParamName: 'callback',
             load: function( response ) {
                 if ( response.success == 1 ) {
-                    self.requests[term].len = response.search.length;
+                    console.log(response);
+                    self.requests[term].len = response.length;
                     self.log('Loaded search term '+term+': '+self.requests[term].len+' items');
                     if (self.requests[term].len == 0) {
                         _PUNDIT.loadingBox.setJobOk(self.requests[term].jobId);
@@ -88,8 +89,8 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
                 }
             },
             error: function( response, ioArgs ) {
-               self.log(self.name +' getItemsForTerm got an error');
-               _PUNDIT.loadingBox.setJobKo(req.jobId);
+               self.log(self.name + ' getItemsForTerm got an error');
+               _PUNDIT.loadingBox.setJobKo(self.requests[term].jobId);
                self.setLoading(false);
                func([]); 
             }
@@ -97,8 +98,28 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
         
     }, // getItemsForTerm()
     
-    _getItemsFromWikidataResults: function (r, term) {
-        var self = this, 
+    _getItemsFromWikidataResults: function (response, term) {
+        var self = this,
+            len = response.length;
+            result = [];
+
+        for (var i = 0; i<len; i++){
+            var current = response[i], 
+                item;
+
+            item = {
+                type: ['subject'],
+                label: current.label,
+                value: current.url,
+                id: current.id,
+                description: current.description
+            };
+
+            self.requests[term].items.push(item);
+
+            self._itemRequestDone(term);
+            result.push(item);    
+        }        
           
         
     }, // _getItemsFromWikidataResults(r, func)
@@ -154,7 +175,6 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
                     if( response.success == 1 )
                         cb( response );
             },
-            error: function( response )
         });
     },
 
