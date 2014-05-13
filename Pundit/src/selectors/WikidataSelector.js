@@ -50,42 +50,56 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
     // (async) Return a list of items for the given term, calling the callback func
     getItemsForTerm: function(term, func, errorFunc) {
         var self = this;
+        self.requests[term] = {
+            f: func,
+            items: [],
+            done: 0
+        };
+
+        if (typeof errofunc != 'undefined'){
+            self.requests[term].ef = errorFunc;
+        }
+
+        self.request[term].jobId = _PUNDIT.loadingBox.addJob('Wikidata Lookup query: ' + term);
         
-        this.searchItems(term, func);
+        var params = {
+            action: 'wbsearchentities',
+            type:'item',
+            format: 'json',
+            language: this.opts.lang,
+            search: term,
+        };
+
+        dojo.io.script.get({
+            url: handle.opts.url,
+            handleAs: 'json',
+            content: params,
+            callbackParamName: 'callback',
+            load: function( response ) {
+                if ( response.success == 1 ) {
+                    self.requests[term].len = response.results.length;
+                    self.log('Loaded search term '+term+': '+self.requests[term].len+' items');
+                    if (self.requests[term].len == 0) {
+                        _PUNDIT.loadingBox.setJobOk(self.requests[term].jobId);
+                        self._itemRequestDone(term);
+                    } else {
+                        self._getItemsFromWikidataResults(response.results, term);
+                    }
+                }
+            },
+            error: function( response, ioArgs ) {
+               self.log(self.name +' getItemsForTerm got an error');
+               _PUNDIT.loadingBox.setJobKo(req.jobId);
+               self.setLoading(false);
+               func([]); 
+            }
+        });
         
     }, // getItemsForTerm()
     
     _getItemsFromWikidataResults: function (r, term) {
         var self = this, 
-            len, ar;
-        
-        // Request has been canceled    
-        if (typeof(self.requests[term]) === 'undefined')
-            return;
-    
-        ar = r.result;
-        len = ar.length;
-
-        self.log('Getting details for '+len+ 'items');
-        
-        for (var i=0; i<len; i++) {
-
-            // The item borns as half empty, will get filled up
-            // by later calls.
-            var item = {
-                type: ['subject'],
-                label: ar[i].name,
-                mid: ar[i].mid,
-                WikidataId: ar[i].id,
-                image: self.opts.WikidataImagesBaseURL + ar[i].mid,
-                // placehold values to get filled by async calls laters
-                description: -1,
-                value: -1
-            };
-
-            self.requests[term].items.push(item);
-            self._getItemDetails(item, term);
-        };
+          
         
     }, // _getItemsFromWikidataResults(r, func)
     
@@ -94,89 +108,8 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
     // - TOPIC call to get the description
     _getItemDetails: function(item, term) {
         var self = this;
-        
-        dojo.io.script.get({
-            callbackParamName: "callback",
-            url: self.opts.WikidataMQLReadURL,
-            content: {
-                query: dojo.toJson({
-                    "id": null,
-                    "mid": item.mid,
-                    "type": [{}],
-                }),
-                limit: self.opts.limit,
-                key: self.opts.WikidataAPIKey
-            },
-            load: function(r) {
-                self.log('MQL read for '+item.mid+' done');
-                
-                // Put some stuff into the item
-                item.value = self.opts.WikidataItemsBaseURL + r.result.mid;
-                item.typeLabels = [];
-                item.rdftype = [];
-                
-                // Take the types labels for the bucket
-                for (var l=r.result.type.length; l--;) {
-                    var o = r.result.type[l],
-                        uri = self.opts.WikidataSchemaBaseURL + o.id;
-                    item.rdftype.push(uri);
-                    item.typeLabels.push({uri: uri, label: o.name });
-                }
-
-                // Description is not -1: this call is the last one, we're done
-                if (item.description !== -1) {
-                    self.log('MQL was last, calling itemRequestDone for item '+item.label);
-                    item.rdfData = self._finalizeBucket(item);
-                    self._itemRequestDone(term);
-                }
-            }
-        }); // dojo.io.script.get()
-
-        dojo.io.script.get({
-            callbackParamName: "callback",
-            url: self.opts.WikidataTopicURL + item.mid,
-            content: {
-                key: self.opts.WikidataAPIKey,
-                filter: '/common/topic/description'
-            },
-            failOk: false,
-            load: function(r) { 
-                self.log('TOPIC description for '+item.mid+' done');
-
-                if (typeof(r.property) !== 'undefined' && r.property['/common/topic/description'].values.length > 0)
-                    item.description = r.property['/common/topic/description'].values[0].value;
-                else
-                    item.description = item.label;
-
-                // Value != -1: this call is the last one, we're done
-                if (item.value !== -1) {
-                    self.log('TOPIC was last, calling itemRequestDone for item '+item.label);
-                    item.rdfData = self._finalizeBucket(item);
-                    self._itemRequestDone(term);
-                }
-            },
-            error: function(e) {
-                item.description = item.label;
-
-                // Value != -1: this call is the last one, we're done
-                if (item.value !== -1) {
-                    item.rdfData = self._finalizeBucket(item);
-                    self._itemRequestDone(term);
-                }
-                return false;
-            }
-        });
-        
     }, // _getItemDetails()
-    
-    _finalizeBucket: function(item) {
-        // Update the bucket to set types labels
-        var b = semlibItems.createBucketForItem(item);
-        for (var l=item.typeLabels.length; l--;) 
-            b.updateTripleObject(item.typeLabels[l].uri, ns.items.label, item.typeLabels[l].label, 'literal');
-        return b.bucket;
-    },
-    
+        
     
     _itemRequestDone: function(term) {
         var self = this,
@@ -209,7 +142,7 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
      * @param cb function Callback function to be called on the result of the query that happened.
      */
 
-    basicCall: function( params , cb ){
+    basicCall: function( params , cb, ecb ){
         var handle = this
 
         dojo.io.script.get({
@@ -221,6 +154,7 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
                     if( response.success == 1 )
                         cb( response );
             },
+            error: function( response )
         });
     },
 

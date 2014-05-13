@@ -510,8 +510,6 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
         //Stop loading
         self.lastSearchedTerm = '';
         for (var i in self.namedEntitiesSources){
-            console.log(_PUNDIT['wikidataSelector']);
-            console.log(i);
             _PUNDIT[i].cancelRequests();
             self.setLoading(self._id + '-container-suggestions-' + i, false);
         }
@@ -648,7 +646,7 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
         // Stop loading
         self.lastSearchedTerm = '';
         for (var i in self.namedEntitiesSources){
-            // _PUNDIT[i].cancelRequests();
+            _PUNDIT[i].cancelRequests();
             self.setLoading(self._id + '-container-suggestions-' + i, false);
         }    
     }, // hide
