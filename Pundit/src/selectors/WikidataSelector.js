@@ -77,13 +77,13 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
             callbackParamName: 'callback',
             load: function( response ) {
                 if ( response.success == 1 ) {
-                    self.requests[term].len = response.results.length;
+                    self.requests[term].len = response.search.length;
                     self.log('Loaded search term '+term+': '+self.requests[term].len+' items');
                     if (self.requests[term].len == 0) {
                         _PUNDIT.loadingBox.setJobOk(self.requests[term].jobId);
                         self._itemRequestDone(term);
                     } else {
-                        self._getItemsFromWikidataResults(response.results, term);
+                        self._getItemsFromWikidataResults(response.search, term);
                     }
                 }
             },
