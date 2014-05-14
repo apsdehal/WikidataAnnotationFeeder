@@ -313,7 +313,6 @@ dojo.declare("pundit.Init", pundit.BaseComponent, {
             }
 
         }
-        console.log(_PUNDIT);
         
         // TODO -> imageFragmentHandler
         if (p.config.isModuleActive("pundit.ImageFragmentHandler")) {

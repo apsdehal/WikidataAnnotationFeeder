@@ -312,22 +312,22 @@ dojo.declare("pundit.Configuration", pundit.BaseComponent, {
              */
             'selectors': {
                 'Freebase': {
-                    name: 'freebase', label: 'Freebase', active: true
+                    name: 'freebase', label: 'Freebase', active: false
                 },
                 'DBPedia': {
-                    name: 'dbpedia', label: 'DBPedia', active: true
+                    name: 'dbpedia', label: 'DBPedia', active: false
                 },
                 'KorboBasket': {
                     name: 'korbo', label: 'Korbo', active: false
                 },
                 'Wordnet': {
-                    name: 'wordnet', label: 'Word Net', active: true
+                    name: 'wordnet', label: 'Word Net', active: false
                 },
                 'Europeana': {
                     name: 'europeana', label: 'Europeana', active: false
                 },
                 'EuropeanaEDM': {
-                    name: 'europeanaedm', label: 'Europeana EDM', active: true
+                    name: 'europeanaedm', label: 'Europeana EDM', active: false
                 },
                 // DEBUG: not ready for prime time, keep it active = false !
                 'BibServer': {

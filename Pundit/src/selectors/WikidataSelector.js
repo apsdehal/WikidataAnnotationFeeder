@@ -77,8 +77,7 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
             callbackParamName: 'callback',
             load: function( response ) {
                 if ( response.success == 1 ) {
-                    console.log(response);
-                    self.requests[term].len = response.length;
+                    self.requests[term].len = response.search.length;
                     self.log('Loaded search term '+term+': '+self.requests[term].len+' items');
                     if (self.requests[term].len == 0) {
                         _PUNDIT.loadingBox.setJobOk(self.requests[term].jobId);
@@ -116,6 +115,9 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
             };
 
             self.requests[term].items.push(item);
+    
+            item.rdftype = [ns.rdfs_resource];
+            item.rdfData = semlibItems.createBucketForItem(item).bucket;
 
             self._itemRequestDone(term);
             result.push(item);    
@@ -141,7 +143,6 @@ dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase,
             self.log('Request was canceled, returning');
             return;
         }
-
         req.done += 1;
         self.log('Query: '+term+', done: '+req.done+'/'+req.len);
 
