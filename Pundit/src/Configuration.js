@@ -312,10 +312,10 @@ dojo.declare("pundit.Configuration", pundit.BaseComponent, {
              */
             'selectors': {
                 'Freebase': {
-                    name: 'freebase', label: 'Freebase', active: false
+                    name: 'freebase', label: 'Freebase', active: true
                 },
                 'DBPedia': {
-                    name: 'dbpedia', label: 'DBPedia', active: false
+                    name: 'dbpedia', label: 'DBPedia', active: true
                 },
                 'KorboBasket': {
                     name: 'korbo', label: 'Korbo', active: false
@@ -334,7 +334,7 @@ dojo.declare("pundit.Configuration", pundit.BaseComponent, {
                     name: 'bibserver', label: 'BibServer', active: false
                 },
                 'Wikidata':{
-                    name: 'wikidata', label: 'Wikidata', active:true
+                    name: 'wikidata', label: 'Wikidata', active: true
                 },
                 
             },
