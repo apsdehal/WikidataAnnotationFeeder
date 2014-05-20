@@ -1,3 +1,10 @@
+_PUNDIT.vocab.initJsonpVocab({
+"error_code":"200",
+"error_message":"OK",
+"result":{
+	"vocab_label":"wikidata",
+	"vocab_id":"68",
+	"vocab_type":"predicates",
 "items": [
 	{
 		"type": ["predicate"],
@@ -3746,7 +3753,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "WTA ID",
 		"domain": [],
 		"range": [],
@@ -3926,7 +3933,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "guidance system",
 		"domain": [],
 		"range": [],
@@ -3998,7 +4005,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "Répertoire du patrimoine culturel du Québec identifier",
 		"domain": [],
 		"range": [],
@@ -4655,7 +4662,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "participant",
 		"domain": [],
 		"range": [],
@@ -4961,7 +4968,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "date of disappearance",
 		"domain": [],
 		"range": [],
@@ -5267,7 +5274,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "hymenium attachment",
 		"domain": [],
 		"range": [],
@@ -5294,7 +5301,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "approved by",
 		"domain": [],
 		"range": [],
@@ -5780,7 +5787,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "United States Navy aircraft designation",
 		"domain": [],
 		"range": [],
@@ -5798,7 +5805,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "ESRB rating",
 		"domain": [],
 		"range": [],
@@ -5825,7 +5832,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "official website",
 		"domain": [],
 		"range": [],
@@ -6455,7 +6462,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "KSH code",
 		"domain": [],
 		"range": [],
@@ -6698,7 +6705,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "street address",
 		"domain": [],
 		"range": [],
@@ -6824,7 +6831,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "NFPA Fire",
 		"domain": [],
 		"range": [],
@@ -6977,7 +6984,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "asteroid taxonomy",
 		"domain": [],
 		"range": [],
@@ -7292,7 +7299,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "ResearcherID",
 		"domain": [],
 		"range": [],
@@ -7580,7 +7587,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "redshift",
 		"domain": [],
 		"range": [],
@@ -7706,7 +7713,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "refractive index",
 		"domain": [],
 		"range": [],
@@ -7814,7 +7821,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "parity",
 		"domain": [],
 		"range": [],
@@ -7832,7 +7839,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "isospin quantum number",
 		"domain": [],
 		"range": [],
@@ -7859,7 +7866,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "doubles titles",
 		"domain": [],
 		"range": [],
@@ -7931,7 +7938,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "floors below ground",
 		"domain": [],
 		"range": [],
@@ -7949,7 +7956,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "political ideology",
 		"domain": [],
 		"range": [],
@@ -8264,7 +8271,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "Dharma Drum Buddhist College place ID",
 		"domain": [],
 		"range": [],
@@ -8390,7 +8397,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "portal's main topic",
 		"domain": [],
 		"range": [],
@@ -8489,7 +8496,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "Internet Broadway Database production ID",
 		"domain": [],
 		"range": [],
@@ -8498,7 +8505,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "Internet Broadway Database person ID",
 		"domain": [],
 		"range": [],
@@ -8507,7 +8514,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "NARA person ID",
 		"domain": [],
 		"range": [],
@@ -8516,7 +8523,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "NARA geographic ID",
 		"domain": [],
 		"range": [],
@@ -8525,7 +8532,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "NARA specific records type ID",
 		"domain": [],
 		"range": [],
@@ -8552,7 +8559,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "NARA catalogue record ID",
 		"domain": [],
 		"range": [],
@@ -8561,7 +8568,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "ISFDB author ID",
 		"domain": [],
 		"range": [],
@@ -8624,7 +8631,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "Swiss Football Association Club Number",
 		"domain": [],
 		"range": [],
@@ -8642,7 +8649,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "phone number",
 		"domain": [],
 		"range": [],
@@ -8786,7 +8793,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "Rundata",
 		"domain": [],
 		"range": [],
@@ -8822,7 +8829,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "AlloCiné person ID",
 		"domain": [],
 		"range": [],
@@ -8831,7 +8838,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "represents organisation",
 		"domain": [],
 		"range": [],
@@ -9029,7 +9036,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": {,
+		"description": [],
 		"label": "IRS Employer Identification Number",
 		"domain": [],
 		"range": [],
@@ -9145,3 +9152,6 @@
 	},
 
 ]
+}
+}
+);

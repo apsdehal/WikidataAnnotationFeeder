@@ -44,7 +44,11 @@ while i < len(lines):
 		i = i +3
 		(prev, next, current) = setFwdBwd(lines, i)
 		(first, second) = getSplits(current)
-		data += second.strip('\n') + ',\n'
+		second = second.strip('\n')
+		if second == ' {':
+			data += ' [],\n'
+		else:
+			data += second + ',\n'			
 		while current.find('"labels": {') == -1:
 			i = i + 1
 			(prev, next, current) = setFwdBwd(lines, i)
