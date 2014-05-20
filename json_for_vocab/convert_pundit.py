@@ -23,7 +23,7 @@ def setFwdBwd(lines, i):
 	return (prev, next, current)
 
 def getSplits( line ):
-		split = line.split(":")
+		split = line.split(":", 1)
 		return (split[0],split[1])
 def getBWCommas( part ):
 	return re.findall(r'"(.*?)"', part)[0]		

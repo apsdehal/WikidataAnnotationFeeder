@@ -524,7 +524,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "person's principal fields of work (physics, history), not occupation (physicist, historian... therefore see Property,
+		"description": "person's principal fields of work (physics, history), not occupation (physicist, historian... therefore see Property:P106)",
 		"label": "field of work",
 		"domain": [],
 		"range": [],
@@ -560,7 +560,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "occupation of a person; see also \"field of work\" (Property,
+		"description": "occupation of a person; see also \"field of work\" (Property:P101)",
 		"label": "occupation",
 		"domain": [],
 		"range": [],
@@ -668,7 +668,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "location of grave, resting place, place of ash-scattering, etc, (e.g. city or cemetery) for a person. There may be several places,
+		"description": "location of grave, resting place, place of ash-scattering, etc, (e.g. city or cemetery) for a person. There may be several places: e.g. re-burials, cenotaphs, parts of body buried separately.",
 		"label": "place of burial",
 		"domain": [],
 		"range": [],
@@ -929,7 +929,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "producer(s) of this film or music work (film,
+		"description": "producer(s) of this film or music work (film: not executive producers, associate producers, etc.)",
 		"label": "producer",
 		"domain": [],
 		"range": [],
@@ -1064,7 +1064,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "depicted person, place, object or event (see also P921,
+		"description": "depicted person, place, object or event (see also P921: subject heading)",
 		"label": "depicts",
 		"domain": [],
 		"range": [],
@@ -1217,7 +1217,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "type of lake (list at Property_talk,
+		"description": "type of lake (list at Property_talk:P202)",
 		"label": "lake type",
 		"domain": [],
 		"range": [],
@@ -1289,7 +1289,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "International Standard Name Identifier. 16 digits dumb identifier. Example,
+		"description": "International Standard Name Identifier. 16 digits dumb identifier. Example: 0000 0001 0886 1508. (When displayed only it is preceded by the letters ISNI, separated from the identifier by a space, and the 16 digits are displayed as four blocks of four digits, with each block separated from the next by a space.)",
 		"label": "ISNI (ISO 27729)",
 		"domain": [],
 		"range": [],
@@ -1388,7 +1388,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "two-character code for identifying airlines (for airports, see P,
+		"description": "two-character code for identifying airlines (for airports, see P:238)",
 		"label": "IATA airline designator",
 		"domain": [],
 		"range": [],
@@ -1478,7 +1478,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "four-character alphanumeric code for designating airports (for airlines, see P,
+		"description": "four-character alphanumeric code for designating airports (for airlines, see P:230)",
 		"label": "ICAO airport code",
 		"domain": [],
 		"range": [],
@@ -2171,7 +2171,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "distinguishing signs or parts of license plate associated with the subject. For countries,
+		"description": "distinguishing signs or parts of license plate associated with the subject. For countries: international licence plate country code or distinguishing sign of vehicles",
 		"label": "licence plate code",
 		"domain": [],
 		"range": [],
@@ -2315,7 +2315,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "person's voice type. expected values,
+		"description": "person's voice type. expected values: soprano, mezzo-soprano, contralto, countertenor, tenor, baritone, bass (and derivatives)",
 		"label": "voice type",
 		"domain": [],
 		"range": [],
@@ -3017,7 +3017,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "home port of the vessel (if different from \"ship registry\"),
+		"description": "home port of the vessel (if different from \"ship registry\"): For civilian ships, the primary port from which the ship operates. Port of registry (the one painted on the stern) should be listed in \"Ship registry\". For warships, this will be the ship's assigned naval base",
 		"label": "home port",
 		"domain": [],
 		"range": [],
@@ -3125,7 +3125,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "with which of the 4 fundamental forces does the particle interact? strong interaction Q11415, electromagnetic,
+		"description": "with which of the 4 fundamental forces does the particle interact? strong interaction Q11415, electromagnetic: Q849919, weak interaction: Q11418, gravitation: Q11412",
 		"label": "interaction",
 		"domain": [],
 		"range": [],
@@ -3242,7 +3242,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "ship's port of registry. This is generally painted on the ship's stern (for the \"home port\", see Property,
+		"description": "ship's port of registry. This is generally painted on the ship's stern (for the \"home port\", see Property:P504)",
 		"label": "port of registry",
 		"domain": [],
 		"range": [],
@@ -3413,7 +3413,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "a website that the person or organization has an account on (use with P554) Note,
+		"description": "a website that the person or organization has an account on (use with P554) Note: only used with reliable source or if the person or organization disclosed it.",
 		"label": "website account on",
 		"domain": [],
 		"range": [],
@@ -3701,7 +3701,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "official identification code for geographic objects in the US. For Antarctica, use Property,
+		"description": "official identification code for geographic objects in the US. For Antarctica, use Property:P804",
 		"label": "GNIS ID",
 		"domain": [],
 		"range": [],
@@ -4313,7 +4313,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "street, or road, where the item is located. To add the number, use Property,
+		"description": "street, or road, where the item is located. To add the number, use Property:P670 \"street number\" as qualifier",
 		"label": "street",
 		"domain": [],
 		"range": [],
@@ -4322,7 +4322,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "number in the street address. To be used as a qualifier of Property,
+		"description": "number in the street address. To be used as a qualifier of Property:P669 \"street\"",
 		"label": "street number",
 		"domain": [],
 		"range": [],
@@ -5132,7 +5132,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "a clinically significant interaction between two pharmacologically active substances (i.e., drugs and/or active metabolites) where one substance (so-called 'precipitant') alters the pharmacokinetics or pharmacodynamics of another substance (so-called, 'object'). The property should be used in this direction,
+		"description": "a clinically significant interaction between two pharmacologically active substances (i.e., drugs and/or active metabolites) where one substance (so-called 'precipitant') alters the pharmacokinetics or pharmacodynamics of another substance (so-called, 'object'). The property should be used in this direction: <object> <drug action altered by> <precipitant>",
 		"label": "drug action altered by",
 		"domain": [],
 		"range": [],
@@ -5411,7 +5411,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Identification code for geographic objects in Antarctica, used in the US Geological Survey's Geographic Names Information System. For US ids, use Property,
+		"description": "Identification code for geographic objects in Antarctica, used in the US Geological Survey's Geographic Names Information System. For US ids, use Property:P590",
 		"label": "GNIS Antarctica ID",
 		"domain": [],
 		"range": [],
@@ -6167,7 +6167,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identifier in HDS/HLS/DHS/DSS,
+		"description": "identifier in HDS/HLS/DHS/DSS: Historical Dictionary of Switzerland (Q642074), a national encyclopedia",
 		"label": "HDS",
 		"domain": [],
 		"range": [],
@@ -6635,7 +6635,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "International Plant Names Index is a database that provides an authoritative and comprehensive list of names of plants. It is different from Property,
+		"description": "International Plant Names Index is a database that provides an authoritative and comprehensive list of names of plants. It is different from Property:P586 which is for authors not taxon. But it is related to Property:P428.",
 		"label": "IPNI taxon name identifier",
 		"domain": [],
 		"range": [],
@@ -6878,7 +6878,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "the item (an institution, law, ...) belongs to or applies to the value (a jurisdiction,
+		"description": "the item (an institution, law, ...) belongs to or applies to the value (a jurisdiction: a country, state, municipality, ...)",
 		"label": "belongs to jurisdiction",
 		"domain": [],
 		"range": [],
@@ -7976,7 +7976,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "libration point of an object (default,
+		"description": "libration point of an object (default: object-sun-earth)",
 		"label": "Lagrangian point",
 		"domain": [],
 		"range": [],
@@ -8336,7 +8336,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "circumstances of a person's death; one of,
+		"description": "circumstances of a person's death; one of: natural causes, accident, suicide, homicide, pending investigation or special 'unknown value'.  Use 'cause of death' (P509) for more immediate or underlying causes and events, e.g. heart attack, car accident",
 		"label": "manner of death",
 		"domain": [],
 		"range": [],
@@ -8633,7 +8633,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Identifier for a theatrical work, in the Theatricalia database - http,
+		"description": "Identifier for a theatrical work, in the Theatricalia database - http://theatricalia.com/",
 		"label": "Theatricalia play ID",
 		"domain": [],
 		"range": [],
@@ -8921,7 +8921,7 @@
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "OpenStreetMap tagging schema (a Key,
+		"description": "OpenStreetMap tagging schema (a Key:key or Tag:key=value)",
 		"label": "OpenStreetMap Tag or Key",
 		"domain": [],
 		"range": [],
