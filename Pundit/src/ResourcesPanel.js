@@ -105,7 +105,7 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
         
         self.namedEntitiesSources = options.namedEntitiesSources || {
 //            Freebase:{label: 'Freebase'},
-              dbpediaSelector:{label:'DBpedia'},
+              // dbpediaSelector:{label:'DBpedia'},
 //            Wordnet:{label:'Wordnet'}
               wikidataSelector: {label:'Wikidata'},
         };

@@ -312,10 +312,10 @@ dojo.declare("pundit.Configuration", pundit.BaseComponent, {
              */
             'selectors': {
                 'Freebase': {
-                    name: 'freebase', label: 'Freebase', active: true
+                    name: 'freebase', label: 'Freebase', active: false
                 },
                 'DBPedia': {
-                    name: 'dbpedia', label: 'DBPedia', active: true
+                    name: 'dbpedia', label: 'DBPedia', active: false
                 },
                 'KorboBasket': {
                     name: 'korbo', label: 'Korbo', active: false
