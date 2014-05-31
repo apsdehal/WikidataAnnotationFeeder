@@ -7,7 +7,7 @@ var punditConfig = {
     // annotationServerBaseURL : '',
 
     vocabularies: [
-        '../../json_for_vocab/result.json'
+        '../../json_for_vocab/wikidataVocab.json'
         // 'http://metasound.dibet.univpm.it/release_bot/build-development/examples/vocabs/dante_sample_taxonomy.jsonp',
 
         // DEBUG: christian's relations

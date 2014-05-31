@@ -252,15 +252,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Do not use it, use father (P22) or mother (P25) instead on subject's parent item page",
-		"label": "(OBSOLETE) grandparent",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P45"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "countries or administrative subdivisions, of equal level, that this item borders, either by land or water",
 		"label": "shares border with",
 		"domain": [],
@@ -374,51 +365,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P69"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Do not use. Use P171 and P105 instead.",
-		"label": "(OBSOLETE) order",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P70"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Do not use. Use P171 and P105 instead.",
-		"label": "(OBSOLETE) family",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P71"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Do not use. Use P171 and P105 instead.",
-		"label": "(OBSOLETE) genus",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P74"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Do not use. Use P171 and P105 instead.",
-		"label": "(OBSOLETE) phylum",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P76"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Do not use. Use P171 and P105 instead.",
-		"label": "(OBSOLETE) class",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P77"
 	},
 	{
 		"type": ["predicate"],
@@ -972,15 +918,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Do not use. Use P31 instead.",
-		"label": "(OBSOLETE) structure type",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P168"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "highest-ranking corporate officer appointed as the CEO within an organization",
 		"label": "chief executive officer",
 		"domain": [],
@@ -1013,15 +950,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P172"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "DO NOT USE. Use instead P31 (instance of)",
-		"label": "(OBSOLETE) type of election",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P173"
 	},
 	{
 		"type": ["predicate"],
@@ -1872,15 +1800,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identification code from the Internet Movie Database (IMDb) with prefix (tt-, nm-, ch-, co-)",
-		"label": "IMDb identifier",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P345"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "ID in the Joconde database of the French Ministry of Culture",
 		"label": "Joconde ID",
 		"domain": [],
@@ -1899,42 +1818,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "authority control number per the National Diet Library of Japan",
-		"label": "NDL identifier",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P349"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identification number per RKDimages of the Rijksbureau voor Kunsthistorische Documentatie",
-		"label": "RKDimages",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P350"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "gene identifier per the NCBI Entrez database",
-		"label": "Entrez Gene ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P351"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "protein identifier per the UniProt database.",
-		"label": "UniProt ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P352"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "official gene symbol",
 		"label": "gene symbol",
 		"domain": [],
@@ -1944,29 +1827,11 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Gene identifier from the HGNC database",
-		"label": "HGNC ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P354"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "subsidiary of a company or organization, opposite of parent company (P749)",
 		"label": "subsidiaries",
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P355"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Digital Object Identifier",
-		"label": "DOI",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P356"
 	},
 	{
 		"type": ["predicate"],
@@ -2043,56 +1908,11 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Sandbox property for value of type \"Commons Media File\"",
-		"label": "Sandbox-CommonsMediaFile",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P368"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Sandbox property for value of type \"Item\"",
-		"label": "Sandbox-Item",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P369"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Sandbox property for value of type \"String\"",
-		"label": "Sandbox-String",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P370"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "someone who takes a main role in presenting a radio or television program",
 		"label": "presenter",
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P371"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "name of the Wikimedia Commons category containing files related to this item (without the prefix \"Category\")",
-		"label": "Commons category",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P373"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "municipality identifier per the National Institute of Statistics and Economic Studies in France",
-		"label": "INSEE municipality code",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P374"
 	},
 	{
 		"type": ["predicate"],
@@ -2111,42 +1931,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P376"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Satellite Catalog Number, 5-digit-number including leading zeros (e.g. '00266')",
-		"label": "SCN",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P377"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "monument identifier per the Mérimée database of French cultural heritage",
-		"label": "Mérimée identifier",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P380"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identifier for cultural properties in Switzerland",
-		"label": "PCP reference number",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P381"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Dutch municipality key as defined by Statistics Netherlands (CBS)",
-		"label": "CBS municipality code",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P382"
 	},
 	{
 		"type": ["predicate"],
@@ -2183,15 +1967,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P395"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "control number issued by National Library Service (SBN) of Italy",
-		"label": "SBN identifier",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P396"
 	},
 	{
 		"type": ["predicate"],
@@ -2295,15 +2070,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "control number issued by the National Library of Australia",
-		"label": "NLA identifier",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P409"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "military rank achieved by a person (should usually have a \"start date\" qualifier)",
 		"label": "military rank",
 		"domain": [],
@@ -2363,15 +2129,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P416"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "patron saint adopted by the subject",
-		"label": "patron saint",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P417"
 	},
 	{
 		"type": ["predicate"],
@@ -2439,24 +2196,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "standard form (official abbreviation) of a personal name for use in an author citation (only for names of algae, fungi and plants)",
-		"label": "botanist author abbreviation",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P428"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "administrative division identifier in 6-digit format assigned by the interior ministry of Japan",
-		"label": "dantai code",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P429"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "identifier used in radio transmissions to refer to the subject airline",
 		"label": "callsign of airline",
 		"domain": [],
@@ -2516,33 +2255,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P438"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identifier for municipalities and independent towns in Germany",
-		"label": "German municipality key",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P439"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identifier number for districts (Landkreise) and independent towns in Germany",
-		"label": "German district key",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P440"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identifier for administrative divisions of People's Republic of China (with spaces)",
-		"label": "China administrative division code",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P442"
 	},
 	{
 		"type": ["predicate"],
@@ -2628,38 +2340,11 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "building identifier in the Structurae database (\"s\" or 'p' + 7 digits)",
-		"label": "Structurae ID (structure)",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P454"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "building identifier in the Emporis database",
-		"label": "Emporis ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P455"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "text through which an institution has been created",
 		"label": "foundational text",
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P457"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "ship identifier per IMO",
-		"label": "IMO ship number",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P458"
 	},
 	{
 		"type": ["predicate"],
@@ -2709,15 +2394,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "ID for French official texts",
-		"label": "NOR",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P464"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "sRGB hex triplet format for subject color (e.g. 7FFFD4)",
 		"label": "sRGB color hex triplet",
 		"domain": [],
@@ -2741,15 +2417,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P467"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "rank system used in several board games (e.g. go, shogi, renju), martial arts (e.g. judo, kendo, wushu) and some other games",
-		"label": "dan/kyu rank",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P468"
 	},
 	{
 		"type": ["predicate"],
@@ -2826,24 +2493,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "FilmAffinity identification number of a creative work",
-		"label": "FilmAffinity identifier",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P480"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identifier in the Palissy database of moveable objects of French cultural heritage",
-		"label": "Palissy identifier",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P481"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "studio where a musical composition was recorded",
 		"label": "recorded (at)",
 		"domain": [],
@@ -2867,15 +2516,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P485"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "unique ID in the MeSH descriptor database",
-		"label": "MeSH ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P486"
 	},
 	{
 		"type": ["predicate"],
@@ -2925,56 +2565,11 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Online \"Mendelian Inheritance in Man\" catalogue codes for diseases",
-		"label": "OMIM ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P492"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "ICD catalogue codes for diseases – Version 9",
-		"label": "ICD-9",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P493"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "ICD catalogue codes for diseases - Version 10",
-		"label": "ICD-10",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P494"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "country of origin of the creative work or subject item",
 		"label": "country of origin",
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P495"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Open Research Contributor ID for a person",
-		"label": "ORCID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P496"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "ID of a person in the China Biographical Database",
-		"label": "CBDB ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P497"
 	},
 	{
 		"type": ["predicate"],
@@ -3056,15 +2651,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P507"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "link to Italian national thesaurus at BNCF",
-		"label": "BNCF Thesaurus",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P508"
 	},
 	{
 		"type": ["predicate"],
@@ -3195,15 +2781,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "municipality identifier in Sweden \"kommunkod\" (four-digit)",
-		"label": "Swedish municipality code",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P525"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "object is a part of this subject",
 		"label": "consists of",
 		"domain": [],
@@ -3276,24 +2853,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "the subject's ID in the Find a Grave database",
-		"label": "Find a Grave ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P535"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "ATP tennis male player identifier",
-		"label": "ATP ID",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P536"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "type of twins a crystal forms",
 		"label": "twinning",
 		"domain": [],
@@ -3308,15 +2867,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P538"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "ID of a museum in the Museofile database of the French ministry of culture",
-		"label": "Museofile",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P539"
 	},
 	{
 		"type": ["predicate"],
@@ -3380,24 +2930,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P548"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "identifier for mathematicians and computer scientists at the Mathematics Genealogy Project",
-		"label": "Mathematics Genealogy Project identifier",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P549"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "the chivalric order which a person belongs to",
-		"label": "chivalric order",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P550"
 	},
 	{
 		"type": ["predicate"],
@@ -4932,15 +4464,6 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "replace with  handedness (P552) with qualifier sport (P641)",
-		"label": "(OBSOLETE) playing hand",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P741"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "alias used by someone or by which this person is universally known",
 		"label": "pseudonym",
 		"domain": [],
@@ -5967,65 +5490,11 @@ _PUNDIT.vocab.initJsonpVocab({
 	{
 		"type": ["predicate"],
 		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "phase point to describe critical point and triple point (see talk page for an example)",
-		"label": "phase point",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P873"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "UN hazard classification code",
-		"label": "UN class",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P874"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "UN code classification",
-		"label": "UN code classification",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P875"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "packaging code according to UN transportation rules",
-		"label": "UN packaging group",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P876"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "NFPA Other",
-		"label": "NFPA Other",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P877"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
 		"description": "notable sensors, electronics, and other avionics installed in the subject aircraft",
 		"label": "avionics",
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P878"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "the number or designation associated with individual warships, often painted on the hull.",
-		"label": "pennant number",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P879"
 	},
 	{
 		"type": ["predicate"],
@@ -6044,33 +5513,6 @@ _PUNDIT.vocab.initJsonpVocab({
 		"domain": [],
 		"range": [],
 		"value": "http://wikidata.org/wiki/Property:P881"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "FIPS code for US counties per former Federal Information Processing Standard FIPS 6-4. Use two-digit state code followed by three digit county code",
-		"label": "FIPS 6-4 (US counties)",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P882"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "FIPS code for US states and other associated areas (numeric or alpha) per Federal Information Processing Standard FIPS 5-2",
-		"label": "FIPS 5-2 (code for US states)",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P883"
-	},
-	{
-		"type": ["predicate"],
-		"rdftype": ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"],
-		"description": "Body water identification code",
-		"label": "State Water Register Code (Russia)",
-		"domain": [],
-		"range": [],
-		"value": "http://wikidata.org/wiki/Property:P884"
 	},
 	{
 		"type": ["predicate"],
