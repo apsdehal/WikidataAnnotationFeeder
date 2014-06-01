@@ -107,7 +107,8 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
 //            Freebase:{label: 'Freebase'},
               // dbpediaSelector:{label:'DBpedia'},
 //            Wordnet:{label:'Wordnet'}
-              wikidataSelector: {label:'Wikidata'},
+              wikidataItemsSelector: {label:'Wikidata Items'},
+              wikidataPropertiesSelector: {label:'Wikidata Properties'},
         };
 
 

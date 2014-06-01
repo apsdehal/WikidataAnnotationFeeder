@@ -23,8 +23,8 @@
   * @description 
   * TODO TODO TODO TODO 
   */
-dojo.provide("pundit.selectors.WikidataSelector");
-dojo.declare("pundit.selectors.WikidataSelector", pundit.selectors.SelectorBase, {
+dojo.provide("pundit.selectors.WikidataItemsSelector");
+dojo.declare("pundit.selectors.WikidataItemsSelector", pundit.selectors.SelectorBase, {
 
     opts: {
         // Number of items to display in the suggestion list

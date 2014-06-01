@@ -333,8 +333,11 @@ dojo.declare("pundit.Configuration", pundit.BaseComponent, {
                 'BibServer': {
                     name: 'bibserver', label: 'BibServer', active: false
                 },
-                'Wikidata':{
-                    name: 'wikidata', label: 'Wikidata', active: true
+                'WikidataItems':{
+                    name: 'wikidataItems', label: 'Wikidata Items', active: true
+                },
+                'WikidataProperties':{
+                    name: 'wikidataProperties', label: 'Wikidata Properties', active: true
                 },
                 
             },

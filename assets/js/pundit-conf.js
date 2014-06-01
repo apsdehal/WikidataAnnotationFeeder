@@ -2,12 +2,12 @@
 
 var punditConfig = {
 
-    debugAllModules: false,
+    debugAllModules: true,
 
     // annotationServerBaseURL : '',
 
     vocabularies: [
-        '../../json_for_vocab/wikidataVocab.json'
+        // '../../json_for_vocab/wikidataVocab.json'
         // 'http://metasound.dibet.univpm.it/release_bot/build-development/examples/vocabs/dante_sample_taxonomy.jsonp',
 
         // DEBUG: christian's relations
@@ -15,6 +15,7 @@ var punditConfig = {
 
         // DEBUG: christian's relations
         //'http://korbo.netseven.it/backend.php/68?callback=_PUNDIT.vocab.initJsonpVocab'
+
 
         // Wittgesntein Realtions
         // 'http://metasound.dibet.univpm.it/release_bot/build-development/examples/vocabs/wittgestein-relations.jsonp',
