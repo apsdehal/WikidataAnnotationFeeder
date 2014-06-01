@@ -2,7 +2,7 @@
 
 var punditConfig = {
 
-    debugAllModules: true,
+    debugAllModules: false,
 
     // annotationServerBaseURL : '',
 

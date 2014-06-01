@@ -861,53 +861,56 @@ dojo.declare("pundit.ResourcesPanel", pundit.BasePanel, {
     namedEntitiesLookup:function(term){
         var self = this;
         self.lastSearchedTerm = term;
-        for (var i in self.namedEntitiesSources){
-            self.setLoading(self._id + '-container-suggestions-' + i, true);
-            _PUNDIT[i].getItemsForTerm(term,
-            (function(_i){
-                return function(items,term){
-                    if (self.lastSearchedTerm === term){
-                        dojo.removeClass(self._id + '-container-suggestions-' + _i, 'pundit-lookup-error');
-                        //for (var j in items){
-                        for (var j = items.length; j--;){
-                            previewer.buildPreviewForItem(items[j]);
-                        }
-                        dojo.empty(dojo.query('#' + self._id + '-container-suggestions-' + _i + ' ul'));
-                        self['itemsDnD' + _i].selectAll();
-                        self['itemsDnD' + _i].deleteSelectedNodes();
-                        self['itemsDnD' + _i].sync()
-                        //dojo.empty(dojo.query('#' + self._id + '-container-suggestions-' + _i + ' ul')[0]);
-
-                        if (items.length === 0) {
-                            //TODO This happen only if the function is called
-                            //Make invisible 
-                            //dojo.removeClass(self._id + '-container-suggestions-' + i, 'pundit-visible');
-                            self.setLoading(self._id + '-container-suggestions-' + _i, false);
-                            dojo.query('#' + self._id + '-container-suggestions-' + _i + ' span.pundit-items-number').html('(' + self.getShownItemsNumber(self['itemsDnD' + _i]) + ')');
-                        
-                        } else {
-                            //TODO This happen only if the function is called
-                            //Make visible
-                            //dojo.addClass(self._id + '-container-suggestions-' + i, 'pundit-visible');
-                            self['itemsDnD' + _i].sync();
-                            self['itemsDnD' + _i].insertNodes(false, items);
-                            dojo.query('#' + self._id + '-container-suggestions-' + _i + ' span.pundit-items-number').html('(' + self.getShownItemsNumber(self['itemsDnD' + _i]) + ')');
-                            self.setLoading(self._id + '-container-suggestions-' + _i, false);
-                            dojo.behavior.apply();
-                        }
-                        self.adjustPanelsHeight();
-
-                    }
-                }
-            })(i),
-            (function(_i){
-                return function(){
-                    self.setLoading(self._id + '-container-suggestions-' + _i, false);
-                    dojo.query('#' + self._id + '-container-suggestions-' + _i + ' span.pundit-items-number').html('(' + 0 + ')');
-                    dojo.addClass(self._id + '-container-suggestions-' + _i, 'pundit-lookup-error');
-                }
-            })(i));
+        if( self._id == "pundit-fp-pred-suggestions"){
+            var i = 'wikidataPropertiesSelector';
+        } else {
+            var i = 'wikidataItemsSelector'; 
         }
+        self.setLoading(self._id + '-container-suggestions-' + i, true);
+        _PUNDIT[i].getItemsForTerm(term,
+        (function(_i){
+            return function(items,term){
+                if (self.lastSearchedTerm === term){
+                    dojo.removeClass(self._id + '-container-suggestions-' + _i, 'pundit-lookup-error');
+                    //for (var j in items){
+                    for (var j = items.length; j--;){
+                        previewer.buildPreviewForItem(items[j]);
+                    }
+                    dojo.empty(dojo.query('#' + self._id + '-container-suggestions-' + _i + ' ul'));
+                    self['itemsDnD' + _i].selectAll();
+                    self['itemsDnD' + _i].deleteSelectedNodes();
+                    self['itemsDnD' + _i].sync()
+                    //dojo.empty(dojo.query('#' + self._id + '-container-suggestions-' + _i + ' ul')[0]);
+
+                    if (items.length === 0) {
+                        //TODO This happen only if the function is called
+                        //Make invisible 
+                        //dojo.removeClass(self._id + '-container-suggestions-' + i, 'pundit-visible');
+                        self.setLoading(self._id + '-container-suggestions-' + _i, false);
+                        dojo.query('#' + self._id + '-container-suggestions-' + _i + ' span.pundit-items-number').html('(' + self.getShownItemsNumber(self['itemsDnD' + _i]) + ')');
+                    
+                    } else {
+                        //TODO This happen only if the function is called
+                        //Make visible
+                        //dojo.addClass(self._id + '-container-suggestions-' + i, 'pundit-visible');
+                        self['itemsDnD' + _i].sync();
+                        self['itemsDnD' + _i].insertNodes(false, items);
+                        dojo.query('#' + self._id + '-container-suggestions-' + _i + ' span.pundit-items-number').html('(' + self.getShownItemsNumber(self['itemsDnD' + _i]) + ')');
+                        self.setLoading(self._id + '-container-suggestions-' + _i, false);
+                        dojo.behavior.apply();
+                    }
+                    self.adjustPanelsHeight();
+
+                }
+            }
+        })(i),
+        (function(_i){
+            return function(){
+                self.setLoading(self._id + '-container-suggestions-' + _i, false);
+                dojo.query('#' + self._id + '-container-suggestions-' + _i + ' span.pundit-items-number').html('(' + 0 + ')');
+                dojo.addClass(self._id + '-container-suggestions-' + _i, 'pundit-lookup-error');
+            }
+        })(i));
     },
     setLoading: function(panelId, v) {
         var self = this,
