@@ -111,7 +111,9 @@ dojo.declare("pundit.selectors.WikidataPropertiesSelector", pundit.selectors.Sel
                 label: current.label,
                 value: current.url,
                 id: current.id,
-                description: current.description
+                description: current.description,
+                range: [],
+                domain: []
             };
 
             self.requests[term].items.push(item);
