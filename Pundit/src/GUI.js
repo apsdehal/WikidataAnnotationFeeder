@@ -80,7 +80,7 @@ dojo.declare("pundit.GUI", pundit.BaseComponent, {
         
         var self = this, sw, aw;
         sw = '<div id="pundit-gui-topbar" class="pundit-base pundit-logged-off pundit-disable-annotation">';
-        sw +=   '<span id="pundit-gui-topbar-title">Pundit</span>';
+        sw +=   '<span id="pundit-gui-topbar-title">Wikidata Web Annotator (Pundit)</span>';
         sw +=   '<span class="pundit-gui-button" id="pundit-aw-expander"><span class="pundit-annotations-expand-icon"></span></span>';
         sw +=   '<span class="pundit-gui-button" id="pundit-gui-expander"><span class="pundit-window-expand-icon"></span></span>';
         sw += '</div>';
