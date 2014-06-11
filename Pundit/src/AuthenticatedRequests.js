@@ -173,14 +173,14 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
 
     },
 
-    checkLogin: function(f, loginUrl) {
+    checkLogin: function(f) {
         var self = this;
         
         var args = {
             url: ns.annotationServerUsersCurrent,
             handleAs: "json",
             headers: {
-                "Accept":"application/json"
+                "Accept":"application/json",
             },
             load: function(data) {
                 if (typeof(data) === 'undefined' || typeof(data.loginStatus) === 'undefined') { 
@@ -264,7 +264,7 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
     setWrappingCallParams : function(originalCallParams) {
         var self = this,
             wrappedParams = {
-                'withCredentials': true
+                'withCredentials': false
             },
             key;
 		    
