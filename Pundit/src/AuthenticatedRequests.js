@@ -183,7 +183,6 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
                 "Accept":"application/json"
             },
             load: function(data) {
-                console.log(data);
                 if (typeof(data) === 'undefined' || typeof(data.loginStatus) === 'undefined') { 
                     data = {
                         loginStatus: 0
@@ -259,6 +258,7 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
         }
 
         self.xGet(args);
+        args.url = ns.wikimediaServerUsersLogout;
     },
 	
     setWrappingCallParams : function(originalCallParams) {

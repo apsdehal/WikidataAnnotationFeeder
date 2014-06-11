@@ -68,6 +68,10 @@ dojo.declare("pundit.NamespaceHelper", pundit.BaseComponent, {
         self.annotationServerApiOwnedNotebooks  = self.annotationServer + "api/notebooks/owned";
         self.annotationServerContact            = self.annotationServer + "api/services/email";
 
+        //Wikimedia Specific Url for GSoC project
+        self.wikimediaServerUsersCurrent = "http://tools.wmflabs.org/wikidata-annotation-tool?action=getCurrentInfo";
+        self.wikimediaServerUsersLogout = "http://tools.wmflabs.org/wikidata-annotation-tool?action=logoutCurrent";
+
 
         self.lodLiveURL  = "http://thepund.it/lodlive/app_en.html";
 
