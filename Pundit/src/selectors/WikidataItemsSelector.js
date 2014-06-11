@@ -1,4 +1,4 @@
-/* 
+    /* 
     Pundit: a novel semantic web annotation tool
     Copyright (c) 2013 Net7 SRL, <http://www.netseven.it/>
 
@@ -68,6 +68,7 @@ dojo.declare("pundit.selectors.WikidataItemsSelector", pundit.selectors.Selector
             format: 'json',
             language: this.opts.lang,
             search: term,
+            limit: this.opts.limit,
         };
 
         dojo.io.script.get({

@@ -68,6 +68,7 @@ dojo.declare("pundit.selectors.WikidataPropertiesSelector", pundit.selectors.Sel
             format: 'json',
             language: this.opts.lang,
             search: term,
+            limit: this.opts.limit,
         };
 
         dojo.io.script.get({
