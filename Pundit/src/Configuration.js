@@ -43,7 +43,7 @@ dojo.declare("pundit.Configuration", pundit.BaseComponent, {
          * with /
          * @default http://demo.as.thepund.it:8088/annotationserver/
          */
-        annotationServerBaseURL: 'http://demo.as.thepund.it:8080/annotationserver/',
+        annotationServerBaseURL: 'http://demo-cloud.as.thepund.it:8080/annotationserver/',
 
         /**
          * @property punditConfig.debugAllModules
