@@ -140,7 +140,7 @@ dojo.declare("pundit.MyPundit", pundit.BaseComponent, {
             //if (typeof(data.msg) !== 'undefined')
             //    dojo.query('#mySemlibInfoContainer').html(data.msg);
         }
-    },
+    },  
 
     initBehaviors: function() {
         var self = this;
@@ -153,6 +153,14 @@ dojo.declare("pundit.MyPundit", pundit.BaseComponent, {
                 cMenu.show(pos, 20, '', 'semlibUserMenu', 'pundit-cm-bottom');    
             });
             
+        });
+
+        dojo.connect(dojo.byId('pundit-mypundit-wikimedia-login-button'), 'onclick', function(e){
+            if (!self.logged) {
+                _PUNDIT.ga.track('gui-button', 'click', '#pundit-mypundit-wikimedia-login-button');
+                requester.showLoginForm(self.opts.wikimediaLoginServer);
+                requester.openLoginPopUp();
+            }
         });
 
         dojo.connect(dojo.byId('pundit-mypundit-login-button'), 'onclick', function(e){

@@ -173,7 +173,7 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
 
     },
 
-    checkLogin: function(f) {
+    checkLogin: function(f, loginUrl) {
         var self = this;
         
         var args = {
@@ -183,6 +183,7 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
                 "Accept":"application/json"
             },
             load: function(data) {
+                console.log(data);
                 if (typeof(data) === 'undefined' || typeof(data.loginStatus) === 'undefined') { 
                     data = {
                         loginStatus: 0
@@ -190,6 +191,7 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
                 }
                 
                 if (typeof(f) === 'function') {
+
                     f(data);
                     return;
                 } else if (data.loginStatus == 0) {
@@ -199,15 +201,20 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
                     }, self.opts.loginTimerMS);
                     return;
                 }
+                console.log(data);
                 self.login(data);
             },
             error: function(error) {}
         }
 
         self.xGet(args);
+        args.url = ns.wikimediaServerUsersCurrent;
+        self.xGet(args);
     }, // checkLogin()
-    
+
+
     login: function(data) {
+        console.log(data);
         var self = this;
         
         self.dialog.attr("title", 'You are now logged in!!');
