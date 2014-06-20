@@ -45,7 +45,7 @@ dojo.declare("pundit.MyPundit", pundit.BaseComponent, {
         var self = this,
             my = '<span class="pundit-gui-button" id="pundit-mypundit-login-button">Log in</span>'+
                 '<span class="pundit-gui-button" id="pundit-mypundit-loggedin-button"></span>' +
-                '<span class="pundit-gui-button" id="pundit-mypundit-wikimedia-login-button">Login with WikiMedia</span>' +
+                '<span class="pundit-gui-button" id="pundit-mypundit-wikimedia-push-button">Push to Wikidata</span>' +
                 '<span class="pundit-gui-button" id="pundit-mypundit-this-page-button">Annotations<span class="pundit-icon-page"></span></span>' + 
                 '<span class="pundit-gui-button" id="pundit-mypundit-myitems-button">My Items<span id="pundit-new-myitems">(+1)</span><span class="pundit-icon-favorite"></span></span>';
 
@@ -153,14 +153,6 @@ dojo.declare("pundit.MyPundit", pundit.BaseComponent, {
                 cMenu.show(pos, 20, '', 'semlibUserMenu', 'pundit-cm-bottom');    
             });
             
-        });
-
-        dojo.connect(dojo.byId('pundit-mypundit-wikimedia-login-button'), 'onclick', function(e){
-            if (!self.logged) {
-                _PUNDIT.ga.track('gui-button', 'click', '#pundit-mypundit-wikimedia-login-button');
-                requester.showLoginForm(self.opts.wikimediaLoginServer);
-                requester.openLoginPopUp();
-            }
         });
 
         dojo.connect(dojo.byId('pundit-mypundit-login-button'), 'onclick', function(e){
