@@ -153,6 +153,11 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
             self.propSuggestionPanel.hide();
             self.addDnDTriple();
         });
+
+        dojo.connect(dojo.byId('pundit-tc-push-wikidata-button'), 'onclick', function() {
+            _PUNDIT.ga.track('gui-button', 'click', '#pundit-tc-push-wikidata-button');
+            self.pushToWikidata();
+        });
                 
         dojo.subscribe("/dnd/start", null, function(s, nodes) {
             self.highlightDnDTargetsReceivingNodes(s, nodes);
@@ -1383,6 +1388,10 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
                 self.objSuggestionPanel.hide();
             }   
         }      
-    }// checkNeedToHideResourcePanel
+    },// checkNeedToHideResourcePanel
+
+    pushToWikidata: function(){
+        console.log('We are pushing');
+    }
     
 });
