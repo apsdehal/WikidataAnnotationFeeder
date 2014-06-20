@@ -46,6 +46,7 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         pu += '    <div class="pundit-tab-header">';
         pu += '      <span class="pundit-gui-button" id="pundit-tc-save-button"><span class="pundit-bicon pundit-save-icon"></span><span>Save</span></span>';
         pu += '      <span class="pundit-gui-button" id="pundit-tc-add-triple-button"><span class="pundit-bicon pundit-add-triple-icon"></span>Add a new triple</span>';
+        pu += '      <span class="pundit-gui-button" id="pundit-tc-push-wikidata-button"><span class="pundit-bicon pundit-push-wikidata-icon"></span>Push to Wikidata</span>';
         pu += '      <span class="pundit-gui-button" id="pundit-tc-reset-button"><span>Reset</span></span>';
         pu += '      <span id="pundit-tc-edit-msg">Editing annotation XY</span>';
         pu += '    </div>';
