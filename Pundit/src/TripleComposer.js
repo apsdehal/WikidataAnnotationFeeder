@@ -1391,7 +1391,15 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     },// checkNeedToHideResourcePanel
 
     pushToWikidata: function(){
-        console.log('We are pushing');
-    }
-    
+        var self = this;
+        self.reader = new pundit.AnnotationReader();
+        self.reader.getOwnedNotebooks( function( ids ){
+            for( i in ids ){
+                self.reader.getNotebookGraph(ids[i]);
+            }
+        });
+        self.reader.onNotebookAnn( function(g) {
+            console.log(g);
+        })
+\    }
 });
