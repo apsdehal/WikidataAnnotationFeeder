@@ -1393,13 +1393,32 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     pushToWikidata: function(){
         var self = this;
         self.reader = new pundit.AnnotationReader();
+        self.helper = new pundit.XpointersHelper();
+        self.annotations = [];
         self.reader.getOwnedNotebooks( function( ids ){
-            for( i in ids ){
+            for(var i in ids ){
                 self.reader.getNotebookGraph(ids[i]);
             }
         });
         self.reader.onNotebookAnn( function(g) {
+            for (var i in g){
+                var splits = i.split('=');
+                self.reader.getAnnotationMetadataFromUri(splits[0]);
+            }
+        });
+        self.reader.onAnnotationItems( function(g, id,xp){
             console.log(g);
-        })
-\    }
+            console.log(xp);
+        });
+        // self.contentURIs = self.helper.getContentURIs();
+        // console.log(self.contentURIs);
+        // self.reader.getAnnotationMetadataFromUri(self.contentURIs);
+        self.reader.onAnnotationMetadata(function(graph){
+            for (var i in graph){
+                var ann = graph[i];
+                var id = ann[ns.pundit_annotationId][0].value;
+                self.reader.getAnnotationItemsFromId(id);
+            }
+        });
+    }
 });

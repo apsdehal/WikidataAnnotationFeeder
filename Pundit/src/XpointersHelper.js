@@ -351,7 +351,6 @@ dojo.declare("pundit.XpointersHelper", pundit.BaseComponent, {
         for (var i = xpArray.length - 1; i >= 0; i--) {
             var xp = xpArray[i],
                 obj = self.xPointerToXPath(xp);
-
             if (obj.valid) {
                 xpaths[xp] = obj;
             } else {
