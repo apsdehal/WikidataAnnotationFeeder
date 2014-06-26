@@ -1412,6 +1412,8 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
                 self.reader.getNotebookGraph(ids[i]);
             }
         });
+
+        /* Activated on successful post request by getNotbookGraph */
         
         self.reader.onNotebookAnn( function(g) {
             for (var i in g){
@@ -1419,6 +1421,8 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
                 self.reader.getAnnotationMetadataFromUri(splits[0]);
             }
         });
+        
+        /* Activated on successful post request by getAnnotation */
         
         self.reader.onAnnotationItems( function( g, id ){
             console.log(g);
@@ -1447,5 +1451,64 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
                 self.reader.getAnnotationItemsFromId(id);
             }
         });
-    }
+    },
+
+    /* Options for login */
+    
+    loginOpts: {
+        loginTimerMS: 2000,
+        redirectURL: 'http://tools.wmflabs.org/wikidata-annotation-tool/?action=authorize'
+    },
+
+    showLoginForm: function(){
+        var self = this,
+        h = "<div id='pundit-login-popup-content' class='off tundra'>";
+
+        h += "<div class='off'><p>To push annotations you must log into Wikimedia.</p></div>";
+        h += "<div class='waiting'><p>Please complete the process in the login window</p></div>";
+        h += "<div class='logged'><p>You are logged in as:</p> <span class='username'>XYZ</span>, but please wait till we push annotations</div>";
+        h += "<div class='pushed'><p>Annotations have been successfully pushed from your WikiMedia account</p></div>";
+
+        h += "<div id='pundit-login-popup-buttons'>";
+        h += "<span id='pundit-login-close-button'>Close</span>";
+        h += "<span id='pundit-login-open-button'>Open the login window</span>";
+
+        h += "</div>";
+        h += "</div>";
+
+        self.dialog = new dijit.Dialog({
+            style: "width: 400px"
+        });
+        dojo.addClass(dojo.byId(self.dialog.id), 'tundra');
+        // Emulating closable: false. Thanks dojo! ;)
+        dojo.destroy(self.dialog.closeButtonNode);
+
+        self.dialog.attr("content", h);
+        dojo.connect(dojo.byId('pundit-login-open-button'), 'onclick', function() {
+            _PUNDIT.ga.track('gui-button', 'click', '#pundit-login-open-button');
+            self.openLoginPopUp();
+        });
+        dojo.connect(dojo.byId('pundit-login-close-button'), 'onclick', function() { 
+            _PUNDIT.ga.track('gui-button', 'click', '#pundit-login-close-button');
+            self.dialog.hide();
+            clearTimeout(self.loginTimer);
+        });
+    },
+
+    /* Show login popup */
+    
+    openLoginPopUp : function(){
+        var self = this;
+            
+        window.open(self.loginOpts.redirectURL, 'loginpopup', 'left=260,top=120,width=480,height=360');
+
+        dojo.query('#pundit-login-popup-content').removeClass('off').addClass('waiting');
+        self.loginTimer = setTimeout(function() {
+            self.checkLogin();
+        }, self.loginOpts.loginTimerMS);
+    },
+
+    checkLogin: function(){
+
+    },
 });
