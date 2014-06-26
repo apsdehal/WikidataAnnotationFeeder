@@ -1394,25 +1394,52 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         var self = this;
         self.reader = new pundit.AnnotationReader();
         self.helper = new pundit.XpointersHelper();
+        
+        /* Object for storing annotation */
+        
+        function annotation( item, property, value ){
+            this.item = item;
+            this.property = property;
+            this.value = value;
+        }
+
+        /* Further all annotations are stored in this */
+        
         self.annotations = [];
+
         self.reader.getOwnedNotebooks( function( ids ){
             for(var i in ids ){
                 self.reader.getNotebookGraph(ids[i]);
             }
         });
+        
         self.reader.onNotebookAnn( function(g) {
             for (var i in g){
                 var splits = i.split('=');
                 self.reader.getAnnotationMetadataFromUri(splits[0]);
             }
         });
-        self.reader.onAnnotationItems( function(g, id,xp){
+        
+        self.reader.onAnnotationItems( function( g, id ){
             console.log(g);
-            console.log(xp);
+            var i = 0;
+            var prop, item, value;
+            for( type in  g){
+                if( i == 0 ){
+                    value = type.split('/')[4];
+                }
+                else if( i == 2 ){
+                    item = g[type][ns.rdfs_label][0].value;
+                    item = item.replace(/(\n)/g,"").trim()
+                } else if( i == 4 ){
+                    prop = type.split('/')[4].split(':')[1];
+                }
+                i++;
+            }
+            console.log(item + value + prop);
+            self.annotations.push(annotation(item, prop, value));
         });
-        // self.contentURIs = self.helper.getContentURIs();
-        // console.log(self.contentURIs);
-        // self.reader.getAnnotationMetadataFromUri(self.contentURIs);
+        
         self.reader.onAnnotationMetadata(function(graph){
             for (var i in graph){
                 var ann = graph[i];
