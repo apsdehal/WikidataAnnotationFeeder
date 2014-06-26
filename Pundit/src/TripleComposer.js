@@ -1508,7 +1508,56 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         }, self.loginOpts.loginTimerMS);
     },
 
-    checkLogin: function(){
+    checkLogin: function(f){
+        var self =  this;
+        dojo.io.script.get({
+            url: ns.wikimediaServerUsersCurrent,
+            handleAs: "json",
+            headers: {
+                "Accept": "application/json"
+            },
+            callbackParamName: 'callback',
+            load: function(f){
+                console.log(data);
+                if (typeof(data) === 'undefined' || typeof(data.loginStatus) === 'undefined') { 
+                    data = {
+                        loginStatus: 0
+                    };
+                }
+                
+                if (typeof(f) === 'function') {
 
+                    f(data);
+                    return;
+                }
+                self.loginAndPush(data);                
+            },
+            error: function(error){
+                console.log(error);
+            }
+        });
     },
+    loginAndPush: function(data){
+        if(data,loginStatus == 1){
+            self.dialog.attr("title", 'You are now logged in!!');
+            dojo.query('#pundit-login-popup-content span.username').html(data.fullName+" ("+data.email+")");
+            dojo.query('#pundit-login-popup-content').removeClass('waiting').addClass('logged');
+            clearTimeout(self.loginTimer);
+            self.dialog.hide();
+            self.pushAnnotations();
+        }
+    },
+    pushAnnotations: function(){
+        var anns = JSON.stringify(self.annotations);
+        var params = {
+            ann: anns
+        }
+        dojo.io.script.post({
+            url: ns.wikimediaServerUsersPush,
+            content: params,
+            load: function(data){
+                self.finishPush(data);
+            }
+        })
+    }
 });
