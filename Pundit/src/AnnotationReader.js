@@ -71,7 +71,6 @@ dojo.declare("pundit.AnnotationReader", pundit.BaseComponent, {
         },
         deferred = requester.xGet(args);
         _PUNDIT.ga.track('api', 'get', 'annotationServerApiOwnedNotebooks');
-        
     },
     
     getActiveNotebooks:function(cb){

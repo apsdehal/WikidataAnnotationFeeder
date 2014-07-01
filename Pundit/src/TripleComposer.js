@@ -26,6 +26,7 @@
  * predicates ranges/domains of already present items in the subject, predicate
  * and object targets, to be as accurate as possible with the suggestions.
  */
+dojo.require("dojo.DeferredList") 
 dojo.provide("pundit.TripleComposer");
 dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
 
@@ -1420,7 +1421,6 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     pushToWikidata: function(){
         var self = this;
         self.reader = new pundit.AnnotationReader();
-        self.helper = new pundit.XpointersHelper();
         
         /* Object for storing annotation */
         
@@ -1435,10 +1435,7 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         self.annotations = [];
 
         self.reader.getOwnedNotebooks( function( ids ){
-            for(var i in ids ){
-                self.reader.getNotebookGraph(ids[i]);
-            }
-            self.openLoginPopUp();
+            self.openLoginPopUp(ids);
         });
 
         /* Activated on successful post request by getNotbookGraph */
@@ -1453,7 +1450,6 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         /* Activated on successful post request by getAnnotation */
         
         self.reader.onAnnotationItems( function( g, id ){
-            console.log(g);
             var i = 0;
             var prop, item, value;
             for( type in  g){
@@ -1485,16 +1481,14 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     
     loginOpts: {
         loginTimerMS: 2000,
-        redirectURL: 'http://tools.wmflabs.org/bajo'
+        redirectURL: 'http://wikifeeder.local/bajo'
     },
-
-
     /* Show login popup */
     
-    openLoginPopUp : function(){
+    openLoginPopUp : function(ids){
+        var ids = ids.join('&');
         var self = this;
-        self.pushAnnotations();
-        window.open(self.loginOpts.redirectURL, 'loginpopup', 'left=260,top=120,width=800,height=800');
+        window.open(self.loginOpts.redirectURL+'?'+ids, 'loginpopup', 'left=260,top=120,width=800,height=600');
 
     },
     checkLogin: function(f){
@@ -1527,25 +1521,31 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     },
 
     pushAnnotations: function(){
+        console.log(requester)
+        console.log(self.annotations);
         var anns = JSON.stringify(self.annotations);
         var params = {
             ann: anns
         }
+        console.log("Json:"+dojo.toJson(params));
+        console.log("xhrPost"+ dojo.xhrPost)
         var args = {
             url: ns.wikimediaServerUsersPush,
             postData: dojo.toJson(params),
             load: function(data){
+                console.log(data);
                 self.finishPush(data);
             },
             error: function(error) {
                 console.log("Error while pushing annotations: " + error);
             }
         }
-        requester.xPost(args)
+        dojo.xhrPost(args)
     },
 
     finishPush: function(data){
 
     }
+
 
 });
