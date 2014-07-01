@@ -1411,6 +1411,7 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
             for(var i in ids ){
                 self.reader.getNotebookGraph(ids[i]);
             }
+            self.showLoginForm();
         });
 
         /* Activated on successful post request by getNotbookGraph */
@@ -1460,93 +1461,45 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         redirectURL: 'http://tools.wmflabs.org/wikidata-annotation-tool/?action=authorize'
     },
 
-    showLoginForm: function(){
-        var self = this,
-        h = "<div id='pundit-login-popup-content' class='off tundra'>";
-
-        h += "<div class='off'><p>To push annotations you must log into Wikimedia.</p></div>";
-        h += "<div class='waiting'><p>Please complete the process in the login window</p></div>";
-        h += "<div class='logged'><p>You are logged in as:</p> <span class='username'>XYZ</span>, but please wait till we push annotations</div>";
-        h += "<div class='pushed'><p>Annotations have been successfully pushed from your WikiMedia account</p></div>";
-
-        h += "<div id='pundit-login-popup-buttons'>";
-        h += "<span id='pundit-login-close-button'>Close</span>";
-        h += "<span id='pundit-login-open-button'>Open the login window</span>";
-
-        h += "</div>";
-        h += "</div>";
-
-        self.dialog = new dijit.Dialog({
-            style: "width: 400px"
-        });
-        dojo.addClass(dojo.byId(self.dialog.id), 'tundra');
-        // Emulating closable: false. Thanks dojo! ;)
-        dojo.destroy(self.dialog.closeButtonNode);
-
-        self.dialog.attr("content", h);
-        dojo.connect(dojo.byId('pundit-login-open-button'), 'onclick', function() {
-            _PUNDIT.ga.track('gui-button', 'click', '#pundit-login-open-button');
-            self.openLoginPopUp();
-        });
-        dojo.connect(dojo.byId('pundit-login-close-button'), 'onclick', function() { 
-            _PUNDIT.ga.track('gui-button', 'click', '#pundit-login-close-button');
-            self.dialog.hide();
-            clearTimeout(self.loginTimer);
-        });
-    },
 
     /* Show login popup */
     
     openLoginPopUp : function(){
+        console.log('hi');
         var self = this;
             
-        window.open(self.loginOpts.redirectURL, 'loginpopup', 'left=260,top=120,width=480,height=360');
-
-        dojo.query('#pundit-login-popup-content').removeClass('off').addClass('waiting');
-        self.loginTimer = setTimeout(function() {
-            self.checkLogin();
-        }, self.loginOpts.loginTimerMS);
+        window.open(self.loginOpts.redirectURL, 'loginpopup', 'left=260,top=120,width=800,height=800');
     },
 
     checkLogin: function(f){
-        var self =  this;
-        dojo.io.script.get({
-            url: ns.wikimediaServerUsersCurrent,
-            handleAs: "json",
-            headers: {
-                "Accept": "application/json"
-            },
-            callbackParamName: 'callback',
-            load: function(f){
-                console.log(data);
-                if (typeof(data) === 'undefined' || typeof(data.loginStatus) === 'undefined') { 
-                    data = {
-                        loginStatus: 0
-                    };
-                }
-                
-                if (typeof(f) === 'function') {
+        // var self =  this;
+        // dojo.io.script.get({
+        //     url: ns.wikimediaServerUsersCurrent,
+        //     handleAs: "json",
+        //     headers: {
+        //         "Accept": "application/json"
+        //     },
+        //     callbackParamName: 'callback',
+        //     load: function(data){
+        //         console.log(data);
+        //         if (typeof(data) === 'undefined' || typeof(data.loginStatus) === 'undefined') { 
+        //             data = {
+        //                 loginStatus: 0
+        //             };
+        //         }
 
-                    f(data);
-                    return;
-                }
-                self.loginAndPush(data);                
-            },
-            error: function(error){
-                console.log(error);
-            }
-        });
+        //         if (typeof(f) === 'function') {
+        //             f(data);
+        //             return;
+        //         }
+        //         self.loginAndPush(data);                
+        //     },
+        //     error: function(error){
+        //         console.log(error);
+        //     }
+        // });
     },
-    loginAndPush: function(data){
-        if(data,loginStatus == 1){
-            self.dialog.attr("title", 'You are now logged in!!');
-            dojo.query('#pundit-login-popup-content span.username').html(data.fullName+" ("+data.email+")");
-            dojo.query('#pundit-login-popup-content').removeClass('waiting').addClass('logged');
-            clearTimeout(self.loginTimer);
-            self.dialog.hide();
-            self.pushAnnotations();
-        }
-    },
+
     pushAnnotations: function(){
         var anns = JSON.stringify(self.annotations);
         var params = {
@@ -1559,5 +1512,10 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
                 self.finishPush(data);
             }
         })
+    },
+
+    finishPush: function(data){
+
     }
+
 });
