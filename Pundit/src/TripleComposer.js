@@ -1422,58 +1422,8 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         var self = this;
         self.reader = new pundit.AnnotationReader();
         
-        /* Object for storing annotation */
-        
-        function annotation( item, property, value ){
-            this.item = item;
-            this.property = property;
-            this.value = value;
-        }
-
-        /* Further all annotations are stored in this */
-        
-        self.annotations = [];
-
         self.reader.getOwnedNotebooks( function( ids ){
             self.openLoginPopUp(ids);
-        });
-
-        /* Activated on successful post request by getNotbookGraph */
-        
-        self.reader.onNotebookAnn( function(g) {
-            for (var i in g){
-                var splits = i.split('=');
-                self.reader.getAnnotationMetadataFromUri(splits[0]);
-            }
-        });
-        
-        /* Activated on successful post request by getAnnotation */
-        
-        self.reader.onAnnotationItems( function( g, id ){
-            var i = 0;
-            var prop, item, value;
-            for( type in  g){
-                if( i == 0 ){
-                    value = type.split('/')[4];
-                }
-                else if( i == 2 ){
-                    item = g[type][ns.rdfs_label][0].value;
-                    item = item.replace(/(\n)/g,"").trim()
-                } else if( i == 4 ){
-                    prop = type.split('/')[4].split(':')[1];
-                }
-                i++;
-            }
-            console.log(item + value + prop);
-            self.annotations.push(annotation(item, prop, value));
-        });
-        
-        self.reader.onAnnotationMetadata(function(graph){
-            for (var i in graph){
-                var ann = graph[i];
-                var id = ann[ns.pundit_annotationId][0].value;
-                self.reader.getAnnotationItemsFromId(id);
-            }
         });
     },
 
@@ -1491,61 +1441,4 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         window.open(self.loginOpts.redirectURL+'?'+ids, 'loginpopup', 'left=260,top=120,width=800,height=600');
 
     },
-    checkLogin: function(f){
-        // var self =  this;
-        // dojo.io.script.get({
-        //     url: ns.wikimediaServerUsersCurrent,
-        //     handleAs: "json",
-        //     headers: {
-        //         "Accept": "application/json"
-        //     },
-        //     callbackParamName: 'callback',
-        //     load: function(data){
-        //         console.log(data);
-        //         if (typeof(data) === 'undefined' || typeof(data.loginStatus) === 'undefined') { 
-        //             data = {
-        //                 loginStatus: 0
-        //             };
-        //         }
-
-        //         if (typeof(f) === 'function') {
-        //             f(data);
-        //             return;
-        //         }
-        //         self.loginAndPush(data);                
-        //     },
-        //     error: function(error){
-        //         console.log(error);
-        //     }
-        // });
-    },
-
-    pushAnnotations: function(){
-        console.log(requester)
-        console.log(self.annotations);
-        var anns = JSON.stringify(self.annotations);
-        var params = {
-            ann: anns
-        }
-        console.log("Json:"+dojo.toJson(params));
-        console.log("xhrPost"+ dojo.xhrPost)
-        var args = {
-            url: ns.wikimediaServerUsersPush,
-            postData: dojo.toJson(params),
-            load: function(data){
-                console.log(data);
-                self.finishPush(data);
-            },
-            error: function(error) {
-                console.log("Error while pushing annotations: " + error);
-            }
-        }
-        dojo.xhrPost(args)
-    },
-
-    finishPush: function(data){
-
-    }
-
-
 });
