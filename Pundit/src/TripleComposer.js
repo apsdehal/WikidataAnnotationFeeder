@@ -1003,6 +1003,33 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         if (targetType === 's'){
             //Currently no need to loop since just one item for container is accepted
             /*
+            if (flag === false) return false;
+        }
+
+        var u = target.parent.id.substr(-5),
+            self = this,
+            items = [],
+            values = [];
+
+        // Forbid two+ copies of the same item in a target
+        target.forInItems(function(item) {
+            values.push(item.data.value);
+        });
+        for (var i = nodes.length - 1; i >= 0; i--) {
+            items[i] = source.getItem(nodes[i].id);
+            if (values.length > 0 && dojo.indexOf(values, items[i].data.value) !== -1) 
+                return false;
+        }
+                
+        return self.rowAcceptItems(u, items, target);
+
+    }, // checkAcceptance()
+
+    rowAcceptItems: function(row, item, target) {
+
+        var self = this,
+        //targetType = target.parent.id.substr(6,1);
+        targetType = target.parent.id
 			self.tripleDnD[row]['p'].forInItems(function(item) {
                 // If this predicate domain is empty, dont add an empty array
                 if (item.data.domain.length > 0)
@@ -1411,7 +1438,7 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
             for(var i in ids ){
                 self.reader.getNotebookGraph(ids[i]);
             }
-            self.showLoginForm();
+            self.openLoginPopUp();
         });
 
         /* Activated on successful post request by getNotbookGraph */
@@ -1458,19 +1485,18 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     
     loginOpts: {
         loginTimerMS: 2000,
-        redirectURL: 'http://tools.wmflabs.org/wikidata-annotation-tool/?action=authorize'
+        redirectURL: 'http://tools.wmflabs.org/bajo'
     },
 
 
     /* Show login popup */
     
     openLoginPopUp : function(){
-        console.log('hi');
         var self = this;
-            
+        self.pushAnnotations();
         window.open(self.loginOpts.redirectURL, 'loginpopup', 'left=260,top=120,width=800,height=800');
-    },
 
+    },
     checkLogin: function(f){
         // var self =  this;
         // dojo.io.script.get({
@@ -1505,13 +1531,17 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         var params = {
             ann: anns
         }
-        dojo.io.script.post({
+        var args = {
             url: ns.wikimediaServerUsersPush,
-            content: params,
+            postData: dojo.toJson(params),
             load: function(data){
                 self.finishPush(data);
+            },
+            error: function(error) {
+                console.log("Error while pushing annotations: " + error);
             }
-        })
+        }
+        requester.xPost(args)
     },
 
     finishPush: function(data){
