@@ -1431,7 +1431,7 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     
     loginOpts: {
         loginTimerMS: 2000,
-        redirectURL: 'http://wikifeeder.local/bajo'
+        redirectURL: 'http://tools.wmflabs.org/bajo'
     },
     /* Show login popup */
     

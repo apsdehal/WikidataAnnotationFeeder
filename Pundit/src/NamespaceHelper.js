@@ -71,7 +71,7 @@ dojo.declare("pundit.NamespaceHelper", pundit.BaseComponent, {
         //Wikimedia Specific Url for GSoC project
         self.wikimediaServerUsersCurrent = "http://tools.wmflabs.org/wikidata-annotation-tool?action=getcurrentinfo";
         self.wikimediaServerUsersLogout = "http://tools.wmflabs.org/wikidata-annotation-tool?action=logout";
-        self.wikimediaServerUsersPush = "http://wikifeeder.local/bajo";
+        self.wikimediaServerUsersPush = "http://tools.wmflabs.org/bajo";
 
 
         self.lodLiveURL  = "http://thepund.it/lodlive/app_en.html";
