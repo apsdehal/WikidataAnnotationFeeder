@@ -1438,7 +1438,6 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     openLoginPopUp : function(ids){
         var ids = ids.join('&');
         var self = this;
-        window.open(self.loginOpts.redirectURL+'?'+ids, 'loginpopup', 'left=260,top=120,width=800,height=600');
-
+        window.open(self.loginOpts.redirectURL+'?'+ids, '_blank');
     },
 });
