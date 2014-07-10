@@ -47,7 +47,7 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         pu += '    <div class="pundit-tab-header">';
         pu += '      <span class="pundit-gui-button" id="pundit-tc-save-button"><span class="pundit-bicon pundit-save-icon"></span><span>Save</span></span>';
         pu += '      <span class="pundit-gui-button" id="pundit-tc-add-triple-button"><span class="pundit-bicon pundit-add-triple-icon"></span>Add a new triple</span>';
-        pu += '      <span class="pundit-gui-button" id="pundit-tc-push-wikidata-button"><span class="pundit-bicon pundit-push-wikidata-icon"></span>Push to Wikidata</span>';
+        pu += '      <span class="pundit-gui-button" id="pundit-tc-push-wikidata-button"><span class="pundit-bicon pundit-push-wikidata-icon"></span><span class="push-to-wikidata">Push to Wikidata</span></span>';
         pu += '      <span class="pundit-gui-button" id="pundit-tc-reset-button"><span>Reset</span></span>';
         pu += '      <span id="pundit-tc-edit-msg">Editing annotation XY</span>';
         pu += '    </div>';
@@ -106,6 +106,8 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         
         self.initDnD();
         self.initBehaviors();
+
+        self.pushToWikidata();
         
         /**
         * @event onSave
@@ -155,10 +157,10 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
             self.addDnDTriple();
         });
 
-        dojo.connect(dojo.byId('pundit-tc-push-wikidata-button'), 'onclick', function() {
-            _PUNDIT.ga.track('gui-button', 'click', '#pundit-tc-push-wikidata-button');
-            self.pushToWikidata();
-        });
+        // dojo.connect(dojo.byId('pundit-tc-push-wikidata-button'), 'onclick', function() {
+        //     _PUNDIT.ga.track('gui-button', 'click', '#pundit-tc-push-wikidata-button');
+        //     self.pushToWikidata();
+        // });
                 
         dojo.subscribe("/dnd/start", null, function(s, nodes) {
             self.highlightDnDTargetsReceivingNodes(s, nodes);
@@ -1423,7 +1425,7 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
         self.reader = new pundit.AnnotationReader();
         
         self.reader.getOwnedNotebooks( function( ids ){
-            self.openLoginPopUp(ids);
+            self.addLoginHref(ids);
         });
     },
 
@@ -1435,9 +1437,11 @@ dojo.declare("pundit.TripleComposer", pundit.BaseComponent, {
     },
     /* Show login popup */
     
-    openLoginPopUp : function(ids){
+    addLoginHref : function(ids){
         var ids = ids.join('&');
         var self = this;
-        window.open(self.loginOpts.redirectURL+'?'+ids, '_blank');
+        var loginURL = self.loginOpts.redirectURL+'?'+ids;
+        var loginURL = '<a href="' + loginURL + '" target="_blank">Push to Wikidata</a>';
+        dojo.query('.push-to-wikidata').html(loginURL);
     },
 });
