@@ -212,7 +212,6 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
 
 
     login: function(data) {
-        console.log(data);
         var self = this;
         
         self.dialog.attr("title", 'You are now logged in!!');
@@ -253,8 +252,11 @@ dojo.declare("pundit.AuthenticatedRequests", pundit.BaseComponent, {
                     self.fireOnLogout(data);
                 }
             },
-            error: function(error) {}
+            error: function(error) {
+                console.log(error);
+            }
         }
+        self.xGet(args);
     },
 	
     setWrappingCallParams : function(originalCallParams) {
