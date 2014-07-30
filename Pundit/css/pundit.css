@@ -2913,3 +2913,17 @@ ul.pundit-vertical-list li{
     z-index:1999;
     text-align: left;
 }
+
+/* Custom css under GSoC */
+body .pundit-push-wikidata-icon {
+    background: url('../img/wikidata.ico') no-repeat 0px 0px;
+    background-size: 16px 16px;
+}
+body .push-to-wikidata a{
+    color: #009bff;
+    text-decoration: none;
+}
+body .push-to-wikidata a:visited {
+    color: #009bff;
+    text-decoration: none;
+}
