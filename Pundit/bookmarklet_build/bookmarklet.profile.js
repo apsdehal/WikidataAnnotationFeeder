@@ -11,7 +11,7 @@ dependencies = {
             dependencies: []
         },
         {
-            name: "Bookmarklet.js",
+            name: "WikiData_Web_Annotator.js",
             resourceName: "dojo.Bookmarklet",
             dependencies: [
                 "pundit.Init"
