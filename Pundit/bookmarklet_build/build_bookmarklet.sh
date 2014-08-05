@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sdk=../dojo_sdk_1.6.1
+sdk=../../dojo_sdk_1.6.1
 ver=`head -1 ../VERSION.txt`
 
 # Path where to find 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pundit - Bookmarklet</title> 
+        <title>Wikidata Web Annotator - Bookmarklet</title> 
         <!-- Get Pundit + Dojo + conf, Init! -->
         <link rel="stylesheet" href="../css/pundit.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="http://thepund.it/assets/css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
@@ -32,11 +32,11 @@
                         var h = document.getElementsByTagName('head')[0],
                         d = document.createElement('script');
                         d.type = 'text/javascript';
-                        d.src = 'http://as.thepund.it/bm/demo-philosophers/src/InitBookmarklet.js?'+Math.random()*4;
+                        d.src = 'https://raw.githubusercontent.com/apsdehal/WikidataAnnotationFeeder/master/Pundit/src/InitBookmarklet.js?'+Math.random()*4;
                         d.async = false;
                         h.appendChild(d);
                     })()"> 
-                    <span>Pundit</span>
+                    <span>Wikidata Web Annotator</span>
                 </a>
             </span>
         </div>
