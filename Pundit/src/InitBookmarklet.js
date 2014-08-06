@@ -23,7 +23,7 @@
         l = document.createElement('link');
 
     l.rel = 'stylesheet';
-    l.href = 'https://raw.githubusercontent.com/apsdehal/WikidataAnnotationFeeder/master/Pundit/css/pundit.css';
+    l.href = 'https://rawgit.com/apsdehal/WikidataAnnotationFeeder/master/Pundit/css/pundit.css';
     l.type = 'text/css';
     l.media = 'screen';
     l.charset = 'utf-8';
@@ -48,11 +48,11 @@
     djConfig = {
         afterOnLoad: true,
         useXDomain: true,
-        baseUrl: "https://raw.githubusercontent.com/apsdehal/WikidataAnnotationFeeder/master/bookmarklet_build/Pundit/dojo/",
+        baseUrl: "https://rawgit.com/apsdehal/WikidataAnnotationFeeder/master/Pundit/dojo/",
         require: ["dojo.Bookmarklet"]
     };
     d.type = 'text/javascript';
-    d.src = 'https://raw.githubusercontent.com/apsdehal/WikidataAnnotationFeeder/master/Pundit/bookmarklet_build/dojo/dojo.xd.js';
+    d.src = 'https://rawgit.com/apsdehal/WikidataAnnotationFeeder/master/Pundit/dojo/dojo.xd.js';
     h.appendChild(d);
 
 })();

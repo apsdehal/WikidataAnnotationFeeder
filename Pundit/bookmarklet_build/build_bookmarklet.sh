@@ -8,7 +8,7 @@ ver=`head -1 ../VERSION.txt`
 # - dojo/ folder with the compiled bookmarklet
 # - css/ folder
 ## WITHOUT trailing slash (/)
-bmpath=https://raw.githubusercontent.com/apsdehal/WikidataAnnotationFeeder/master/Pundit
+bmpath=https://rawgit.com/apsdehal/WikidataAnnotationFeeder/master/Pundit
 
 ###########################################
 ### Dont touch anything below this line ###
